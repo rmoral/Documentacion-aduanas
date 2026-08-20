@@ -17,7 +17,16 @@
 <div class="topbar">
   <div class="wrap">
     <a class="brand" href="index.html">Aduana<span>Fácil</span> Andorra</a>
-    <div class="mono">Documentación aduanera · Particulares</div>
+    <div class="right">
+      <div class="mono">Documentación aduanera · Particulares</div>
+      <nav class="lang" aria-label="Idioma">
+        <span class="current">ES</span>
+        <a href="ca/gracias.html" lang="ca" hreflang="ca">CA</a>
+        <a href="en/gracias.html" lang="en" hreflang="en">EN</a>
+        <a href="fr/gracias.html" lang="fr" hreflang="fr">FR</a>
+        <a href="ru/gracias.html" lang="ru" hreflang="ru">RU</a>
+      </nav>
+    </div>
   </div>
 </div>
 
@@ -53,7 +62,6 @@
     });
   };
   var params = new URLSearchParams(window.location.search);
-  // Stripe redirige con ?ref=... si se usa {CHECKOUT_SESSION_ID} no aplica; usamos client_reference_id o ref
   var ref = params.get('ref') || params.get('client_reference_id') || '';
   if (ref) {
     document.getElementById('refShow').textContent = ref;

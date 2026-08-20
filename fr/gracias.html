@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commande reçue | AduanaFácil Andorra</title>
+<meta name="description" content="Nous avons bien reçu votre commande. Sous 24 heures ouvrées maximum, vous recevrez votre dossier douanier complet par email.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Documentation douanière · Particuliers</div>
+      <nav class="lang" aria-label="Langue">
+        <a href="../gracias.html" lang="es" hreflang="es">ES</a>
+        <a href="../ca/gracias.html" lang="ca" hreflang="ca">CA</a>
+        <a href="../en/gracias.html" lang="en" hreflang="en">EN</a>
+        <span class="current">FR</span>
+        <a href="../ru/gracias.html" lang="ru" hreflang="ru">RU</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page">
+  <div class="wrap" style="max-width:760px">
+    <div class="confirm-doc">
+      <div class="stamp"><b>REÇU</b>dossier en préparation</div>
+      <h1>Commande reçue&nbsp;! Nous préparons déjà vos papiers.</h1>
+      <div class="refbox">Référence de la commande&nbsp;: <b id="refShow">—</b></div>
+      <p>Sous <strong>24 heures ouvrées</strong> maximum, vous recevrez par email le dossier complet&nbsp;: déclaration sur l'honneur, facture pro forma et dossier du transporteur, personnalisés avec vos données et prêts à signer.</p>
+      <dl class="summary" id="orderSummary" style="display:none"></dl>
+      <p>Conservez votre référence&nbsp;: elle vous sera demandée pour toute question ou révision du dossier. Si la douane ou votre transporteur demande une modification, nous la corrigeons gratuitement.</p>
+      <div class="actions">
+        <a class="btn secondary" href="index.html">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Service de préparation documentaire. Nous ne sommes ni agents en douane ni conseillers fiscaux.</div>
+    <div><a href="aviso-legal.html">Mentions légales</a> · <a href="privacidad.html">Confidentialité</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var esc = function (s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+  var params = new URLSearchParams(window.location.search);
+  var ref = params.get('ref') || params.get('client_reference_id') || '';
+  if (ref) {
+    document.getElementById('refShow').textContent = ref;
+    try {
+      var data = JSON.parse(localStorage.getItem('pedido_' + ref) || 'null');
+      if (data) {
+        var box = document.getElementById('orderSummary');
+        box.innerHTML =
+          '<dt>Expéditeur</dt><dd>' + esc(data.remitente_nombre || '—') + '</dd>' +
+          '<dt>Destinataire</dt><dd>' + esc(data.destinatario_nombre || '—') + ' · ' + esc(data.destinatario_direccion || '—') + '</dd>' +
+          '<dt>Marchandise</dt><dd>' + esc(data.mercancia_descripcion || '—') + '</dd>' +
+          '<dt>Valeur déclarée</dt><dd>' + esc(data.mercancia_valor || '—') + ' €</dd>' +
+          '<dt>Email de livraison</dt><dd>' + esc(data.remitente_email || '—') + '</dd>';
+        box.style.display = 'block';
+      }
+    } catch (_) {}
+  }
+})();
+</script>
+</body>
+</html>

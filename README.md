@@ -12,16 +12,32 @@ aduanera para envíos de muebles usados de Andorra a España entre particulares.
 ## Estructura del site
 
 ```
-index.html              Landing principal (hero, qué recibes, cómo funciona,
-                        formulario de pedido en 4 pasos y FAQ)
+index.html              Landing principal en español (hero, qué recibes, cómo
+                        funciona, formulario de pedido en 4 pasos y FAQ)
 gracias.html            Confirmación de pedido (muestra referencia y resumen)
 aviso-legal.html        Aviso legal y condiciones de contratación
 privacidad.html         Política de privacidad
+ca/                     Versión en catalán (mismas 4 páginas)
+en/                     Versión en inglés (mismas 4 páginas)
+fr/                     Versión en francés (mismas 4 páginas)
+ru/                     Versión en ruso (mismas 4 páginas)
 assets/css/styles.css   Hoja de estilos compartida
 assets/js/config.js     Configuración (Stripe y endpoint de formulario)
 assets/js/app.js        Lógica del formulario multi-paso
 landingaduanamuebles.html  Documentación de guía (HTML original)
 ```
+
+## Idiomas
+
+El site está disponible en español (raíz), catalán (`/ca/`), inglés (`/en/`),
+francés (`/fr/`) y ruso (`/ru/`). Cada página incluye un selector de idioma en
+la barra superior que enlaza a la página equivalente en el resto de idiomas.
+Los textos del resumen del pedido y del botón de pago se localizan mediante el
+objeto `window.I18N` que cada página define antes de cargar `assets/js/app.js`
+(sin definir, `app.js` usa los textos en español). Los nombres de fichero y los
+`name` de los campos del formulario son idénticos en todos los idiomas, de modo
+que los pedidos llegan con el mismo esquema de datos independientemente del
+idioma.
 
 ## Funcionamiento del formulario
 
@@ -65,7 +81,5 @@ python3 -m http.server 8080
 
 ## Pendiente de completar
 
-- Datos identificativos del titular en `aviso-legal.html` y `privacidad.html`
-  (marcados con *[Completar con: ...]*).
 - `STRIPE_PAYMENT_LINK` y `FORM_ENDPOINT` en `assets/js/config.js` para activar
   el pago real y la recepción de pedidos.

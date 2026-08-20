@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Заказ получен | AduanaFácil Andorra</title>
+<meta name="description" content="Мы получили ваш заказ. Максимум через 24 рабочих часа вы получите полное таможенное досье на email.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Таможенные документы · Для частных лиц</div>
+      <nav class="lang" aria-label="Язык">
+        <a href="../gracias.html" lang="es" hreflang="es">ES</a>
+        <a href="../ca/gracias.html" lang="ca" hreflang="ca">CA</a>
+        <a href="../en/gracias.html" lang="en" hreflang="en">EN</a>
+        <a href="../fr/gracias.html" lang="fr" hreflang="fr">FR</a>
+        <span class="current">RU</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page">
+  <div class="wrap" style="max-width:760px">
+    <div class="confirm-doc">
+      <div class="stamp"><b>ПОЛУЧЕНО</b>досье готовится</div>
+      <h1>Заказ получен! Мы уже работаем над вашими документами.</h1>
+      <div class="refbox">Референс заказа: <b id="refShow">—</b></div>
+      <p>Максимум через <strong>24 рабочих часа</strong> вы получите на email полное досье: декларацию под присягой, проформа-инвойс и досье для перевозчика, оформленные на ваши данные и готовые к подписи.</p>
+      <dl class="summary" id="orderSummary" style="display:none"></dl>
+      <p>Сохраните ваш референс: он понадобится для любых вопросов или правок досье. Если таможня или ваш перевозчик запросит изменения, мы внесём их бесплатно.</p>
+      <div class="actions">
+        <a class="btn secondary" href="index.html">← На главную</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Услуги по подготовке документов. Мы не являемся таможенными агентами или налоговыми консультантами.</div>
+    <div><a href="aviso-legal.html">Правовая информация</a> · <a href="privacidad.html">Конфиденциальность</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var esc = function (s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+  var params = new URLSearchParams(window.location.search);
+  var ref = params.get('ref') || params.get('client_reference_id') || '';
+  if (ref) {
+    document.getElementById('refShow').textContent = ref;
+    try {
+      var data = JSON.parse(localStorage.getItem('pedido_' + ref) || 'null');
+      if (data) {
+        var box = document.getElementById('orderSummary');
+        box.innerHTML =
+          '<dt>Отправитель</dt><dd>' + esc(data.remitente_nombre || '—') + '</dd>' +
+          '<dt>Получатель</dt><dd>' + esc(data.destinatario_nombre || '—') + ' · ' + esc(data.destinatario_direccion || '—') + '</dd>' +
+          '<dt>Груз</dt><dd>' + esc(data.mercancia_descripcion || '—') + '</dd>' +
+          '<dt>Заявленная стоимость</dt><dd>' + esc(data.mercancia_valor || '—') + ' €</dd>' +
+          '<dt>Email для доставки</dt><dd>' + esc(data.remitente_email || '—') + '</dd>';
+        box.style.display = 'block';
+      }
+    } catch (_) {}
+  }
+})();
+</script>
+</body>
+</html>

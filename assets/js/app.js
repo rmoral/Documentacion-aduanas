@@ -9,6 +9,20 @@
   var STRIPE_PAYMENT_LINK = CFG.STRIPE_PAYMENT_LINK || '';
   var FORM_ENDPOINT = CFG.FORM_ENDPOINT || '';
 
+  // Textos localizables: cada página puede definir window.I18N antes de cargar
+  // este script; sin definir, se usan los textos en español.
+  var T = window.I18N || {};
+  var L = {
+    referencia: T.referencia || 'Referencia',
+    remitente: T.remitente || 'Remitente',
+    destinatario: T.destinatario || 'Destinatario',
+    mercancia: T.mercancia || 'Mercancía',
+    valor: T.valor || 'Valor declarado',
+    email: T.email || 'Email de entrega',
+    andorra: T.andorra || 'Andorra',
+    procesando: T.procesando || 'Procesando…'
+  };
+
   // Referencia única del pedido (ej. AF-K3X9ZQ)
   var ref = 'AF' + Date.now().toString(36).toUpperCase().slice(-6);
   document.getElementById('refnum').textContent = ref.slice(2);
@@ -66,12 +80,12 @@
   function buildSummary() {
     var g = function (id) { return esc(document.getElementById(id).value || '—'); };
     document.getElementById('summary').innerHTML =
-      '<dt>Referencia</dt><dd>' + esc(ref) + '</dd>' +
-      '<dt>Remitente</dt><dd>' + g('r_nombre') + ' · ' + g('r_doc') + ' · Andorra</dd>' +
-      '<dt>Destinatario</dt><dd>' + g('d_nombre') + ' · ' + g('d_doc') + ' · ' + g('d_dir') + '</dd>' +
-      '<dt>Mercancía</dt><dd>' + g('m_desc') + '</dd>' +
-      '<dt>Valor declarado</dt><dd>' + g('m_valor') + ' €</dd>' +
-      '<dt>Email de entrega</dt><dd>' + g('r_email') + '</dd>';
+      '<dt>' + L.referencia + '</dt><dd>' + esc(ref) + '</dd>' +
+      '<dt>' + L.remitente + '</dt><dd>' + g('r_nombre') + ' · ' + g('r_doc') + ' · ' + L.andorra + '</dd>' +
+      '<dt>' + L.destinatario + '</dt><dd>' + g('d_nombre') + ' · ' + g('d_doc') + ' · ' + g('d_dir') + '</dd>' +
+      '<dt>' + L.mercancia + '</dt><dd>' + g('m_desc') + '</dd>' +
+      '<dt>' + L.valor + '</dt><dd>' + g('m_valor') + ' €</dd>' +
+      '<dt>' + L.email + '</dt><dd>' + g('r_email') + '</dd>';
   }
 
   form.addEventListener('submit', function (e) {
@@ -82,7 +96,7 @@
 
     var btn = form.querySelector('button[type=submit]');
     btn.disabled = true;
-    btn.textContent = 'Procesando…';
+    btn.textContent = L.procesando;
 
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
