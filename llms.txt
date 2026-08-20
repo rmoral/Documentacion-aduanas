@@ -1,0 +1,36 @@
+# AduanaFácil Andorra
+
+> Servicio online de preparación de documentación aduanera para particulares
+> que envían muebles y enseres usados de Andorra a España. Expediente completo
+> (declaración jurada, factura proforma y dosier del transportista) entregado
+> por email en 24 horas laborables, por 49 € precio cerrado. Válido aunque no
+> se conserve la factura de compra de los muebles. Disponible en español,
+> catalán, inglés, francés y ruso.
+
+Datos clave del servicio:
+- Ruta cubierta: Andorra → España (aduana hispano-andorrana de la Farga de Moles).
+- Cliente tipo: particular que hace una mudanza parcial o envía muebles usados
+  a un familiar o comprador en España, sin factura de compra.
+- Documentos entregados: declaración jurada de bienes personales usados con
+  packing list y valor declarado; factura proforma a efectos aduaneros; dosier
+  del transportista (relación de documentos, autorización de despacho y
+  borrador de carta de porte CMR).
+- Fiscalidad: los muebles usados están exentos de aranceles por la unión
+  aduanera UE–Andorra; solo se liquida el IVA de importación (21 %) sobre el
+  valor residual declarado.
+- Plazo: 24 horas laborables. Precio: 49 € (IVA incluido, pago con tarjeta).
+- Garantía: correcciones gratuitas si la aduana o el transportista requieren
+  cambios; devolución íntegra si el expediente no puede prepararse.
+- El servicio prepara documentación; no es agente de aduanas ni asesor fiscal.
+  Los DUA de exportación/importación los tramita el agente de aduanas del
+  transportista apoyándose en este expediente.
+
+## Páginas
+
+- [Página principal (ES)](https://TU-DOMINIO/): servicio, proceso en 3 pasos, formulario de pedido y preguntas frecuentes.
+- [Versió en català](https://TU-DOMINIO/ca/)
+- [English version](https://TU-DOMINIO/en/)
+- [Version française](https://TU-DOMINIO/fr/)
+- [Русская версия](https://TU-DOMINIO/ru/)
+- [Aviso legal](https://TU-DOMINIO/aviso-legal.html)
+- [Política de privacidad](https://TU-DOMINIO/privacidad.html)

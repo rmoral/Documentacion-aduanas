@@ -79,7 +79,32 @@ python3 -m http.server 8080
 # http://localhost:8080
 ```
 
+## SEO y posicionamiento
+
+La estrategia completa de tráfico orgánico y posicionamiento en asistentes de
+IA está en **[`ESTRATEGIA-SEO.md`](ESTRATEGIA-SEO.md)**. Infraestructura ya
+incluida en el site:
+
+- `rel=canonical` y cluster `hreflang` (es/ca/en/fr/ru + `x-default`) en las
+  15 páginas indexables.
+- Open Graph y Twitter Card con imagen `assets/img/og-cover.png` (1200×630).
+- JSON-LD en cada portada: `Organization`, `WebSite`, `Service` (49 €) y
+  `FAQPage` con las preguntas frecuentes de cada idioma.
+- `robots.txt` (bloquea `gracias` y el HTML de guía; da la bienvenida a los
+  crawlers de IA), `sitemap.xml` con alternates por idioma y `llms.txt` con el
+  resumen citable del servicio.
+
+**Importante:** las URLs absolutas usan el marcador `https://TU-DOMINIO`.
+Cuando el dominio definitivo exista, ejecutar una sola vez:
+
+```bash
+./tools/set-domain.sh https://www.tudominio.com
+```
+
 ## Pendiente de completar
 
 - `STRIPE_PAYMENT_LINK` y `FORM_ENDPOINT` en `assets/js/config.js` para activar
   el pago real y la recepción de pedidos.
+- Reemplazar `https://TU-DOMINIO` con el dominio real (`tools/set-domain.sh`).
+- Alta en Google Search Console y Bing Webmaster Tools + envío del sitemap
+  (ver `ESTRATEGIA-SEO.md`).

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://TU-DOMINIO/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/ca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/ca/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/en/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/fr/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/ru/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/aviso-legal.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/privacidad.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/ca/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/privacidad.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/en/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/privacidad.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/fr/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/privacidad.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://TU-DOMINIO/ru/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://TU-DOMINIO/ca/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO/en/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://TU-DOMINIO/fr/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://TU-DOMINIO/ru/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://TU-DOMINIO/privacidad.html"/>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>
