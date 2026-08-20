@@ -12,9 +12,17 @@
       Pega la URL de tu endpoint (ej: "https://formspree.io/f/xxxxxxx").
       Si lo dejas vacío, los datos del pedido viajan en la referencia
       (client_reference_id) y quedan guardados en el navegador.
+
+   3. ORDER_EMAIL (fase de valoración, sin pasarela de pago):
+      Mientras STRIPE_PAYMENT_LINK esté vacío, al confirmar el pedido
+      se abre el correo del cliente con la solicitud completa dirigida
+      a esta dirección (y la página de gracias ofrece reenviarla).
+      Cámbiala por el email donde quieras recibir las solicitudes.
+      Cuando actives Stripe, el flujo de pago vuelve a tener prioridad.
 =========================================================== */
 window.SITE_CONFIG = {
   STRIPE_PAYMENT_LINK: "", // ej: "https://buy.stripe.com/xxxxxxxx"
   FORM_ENDPOINT: "",       // ej: "https://formspree.io/f/xxxxxxx"
+  ORDER_EMAIL: "rmoral81@gmail.com", // recibe las solicitudes mientras no hay pago online
   PRECIO: "49,00 €"
 };

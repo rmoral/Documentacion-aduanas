@@ -34,12 +34,13 @@
   <div class="wrap" style="max-width:760px">
     <div class="confirm-doc">
       <div class="stamp"><b>RECEIVED</b>file in preparation</div>
-      <h1>Order received! We're already working on your paperwork.</h1>
-      <div class="refbox">Order reference: <b id="refShow">—</b></div>
-      <p>Within a maximum of <strong>24 working hours</strong> you'll receive the complete file by email: sworn declaration, proforma invoice and the carrier dossier, personalised with your details and ready to sign.</p>
+      <h1>Request received! We're already working on your paperwork.</h1>
+      <div class="refbox">Request reference: <b id="refShow">—</b></div>
+      <p>We'll contact you by email to confirm your request and arrange the €49 payment. From confirmation, within a maximum of <strong>24 working hours</strong> you'll receive the complete file: sworn declaration, proforma invoice and the carrier dossier, personalised with your details and ready to sign.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Keep your reference: you'll need it for any query or revision of your file. If customs or your carrier requests a change, we fix it free of charge.</p>
       <div class="actions">
+        <a id="mailFallback" class="btn" style="display:none" href="#">Resend my request by email</a>
         <a class="btn secondary" href="index.html">← Back to home</a>
       </div>
     </div>
@@ -53,6 +54,8 @@
   </div>
 </footer>
 
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/order-email.js"></script>
 <script>
 (function () {
   'use strict';
@@ -76,6 +79,11 @@
           '<dt>Declared value</dt><dd>' + esc(data.mercancia_valor || '—') + ' €</dd>' +
           '<dt>Delivery email</dt><dd>' + esc(data.remitente_email || '—') + '</dd>';
         box.style.display = 'block';
+        var mf = document.getElementById('mailFallback');
+        if (mf && window.ORDER_EMAIL_HELPER) {
+          var href = window.ORDER_EMAIL_HELPER.mailto(data);
+          if (href) { mf.href = href; mf.style.display = 'inline-block'; }
+        }
       }
     } catch (_) {}
   }
