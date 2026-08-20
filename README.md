@@ -17,6 +17,9 @@ index.html              Landing principal en español (hero, qué recibes, cómo
 gracias.html            Confirmación de pedido (muestra referencia y resumen)
 aviso-legal.html        Aviso legal y condiciones de contratación
 privacidad.html         Política de privacidad
+guias/                  Cluster de contenidos SEO en español: índice más las
+                        guías "enviar muebles Andorra→España", "documentos de
+                        la Farga de Moles" y "declaración jurada sin factura"
 ca/                     Versión en catalán (mismas 4 páginas)
 en/                     Versión en inglés (mismas 4 páginas)
 fr/                     Versión en francés (mismas 4 páginas)

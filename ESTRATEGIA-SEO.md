@@ -259,7 +259,9 @@ próxima guía o FAQ).
 - [ ] Crear Google Business Profile.
 
 **Semanas 2–5 — Contenido core:**
-- [ ] Guías 1, 2 y 3 (★★★) en español, con schema Article+FAQPage.
+- [x] Guías 1, 2 y 3 (★★★) en español, con schema Article+FAQPage (+HowTo en
+      la guía 3), publicadas en `/guias/` con hub, enlaces desde la home y
+      presencia en sitemap.xml y llms.txt.
 - [ ] Ampliar FAQs de la home ES a 8–10 y regenerar JSON-LD.
 - [ ] Guías 4 y 5. Traducir guías 1–3 al catalán.
 - [ ] Añadir todo a sitemap.xml y llms.txt; pedir indexación en GSC.
