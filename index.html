@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papeles de Aduana para tus Muebles | Andorra → España en 24h</title>
+<meta name="description" content="Prepara en 24h toda la documentación aduanera para enviar muebles usados de Andorra a España sin factura. Declaración jurada, proforma y dosier para el transportista. Precio cerrado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Aduana<span>Fácil</span> Andorra</a>
+    <div class="mono">Documentación aduanera · Particulares</div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="stamp"><b>LISTO EN 24H</b>revisado · firmable · sin errores</div>
+    <div class="eyebrow">Andorra → España · Envíos entre particulares</div>
+    <h1>Tus muebles cruzan la frontera. Sin dolores de cabeza.</h1>
+    <p class="sub">Te preparamos <strong>toda la documentación aduanera</strong> para enviar muebles y enseres usados de Andorra a España: declaración jurada, factura proforma y el dosier completo para tu transportista. <strong>Aunque no tengas facturas.</strong></p>
+    <div class="cta-row">
+      <a class="btn" href="#pedido">Preparar mis papeles ahora</a>
+      <div class="price-tag">Precio cerrado · <b>49&nbsp;€</b> · Sin sorpresas</div>
+    </div>
+    <div class="trust">
+      <div><span class="tick">✓</span> Entrega en 24h laborables</div>
+      <div><span class="tick">✓</span> Válido sin factura de compra</div>
+      <div><span class="tick">✓</span> Listo para firmar y entregar</div>
+      <div><span class="tick">✓</span> Revisión incluida si aduanas pide cambios</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= QUÉ RECIBES ================= -->
+<section class="alt" id="que-recibes">
+  <div class="wrap">
+    <h2>Lo que recibes en tu email</h2>
+    <p class="section-lead">Un expediente completo en PDF y Word, personalizado con tus datos, que tu transportista puede presentar directamente en la aduana de la Farga de Moles.</p>
+    <div class="docs">
+      <div class="doc">
+        <span class="mono">Documento 01</span>
+        <h3>Declaración jurada</h3>
+        <p>Sustituye a la factura que no tienes. Acredita que son bienes personales usados sin carácter comercial, con packing list y valor declarado defendible.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">Documento 02</span>
+        <h3>Factura proforma</h3>
+        <p>El documento de valor que exige la aduana para calcular el IVA de importación. Emitida a efectos aduaneros, sin IVA ni IGI.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">Documento 03</span>
+        <h3>Dosier del transportista</h3>
+        <p>Relación de documentos, autorización de despacho aduanero y borrador de carta de porte (CMR). Tu transportista solo tiene que ejecutar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CÓMO FUNCIONA ================= -->
+<section id="como-funciona">
+  <div class="wrap">
+    <h2>Así de simple</h2>
+    <p class="section-lead">Cinco minutos rellenando el formulario. Nosotros hacemos el resto.</p>
+    <div class="steps">
+      <div class="step"><span class="num">PASO 1</span><h3>Rellena el formulario</h3><p>Tus datos, los del destinatario y qué muebles envías. Sin tecnicismos.</p></div>
+      <div class="step"><span class="num">PASO 2</span><h3>Paga 49&nbsp;€</h3><p>Pago seguro con tarjeta. Precio único, sin extras ocultos.</p></div>
+      <div class="step"><span class="num">PASO 3</span><h3>Recibe tu expediente en 24h</h3><p>Todos los documentos personalizados en tu email, listos para firmar y entregar al transportista.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMULARIO ================= -->
+<section class="alt" id="pedido">
+  <div class="wrap">
+    <div class="form-doc">
+      <div class="form-head">
+        <div>
+          <span class="mono">Formulario de pedido · Ref. AF-<span id="refnum"></span></span>
+          <h2>Prepara tu documentación</h2>
+        </div>
+        <span class="mono">49,00 €</span>
+      </div>
+      <div class="progress" id="progress">
+        <span data-s="1" class="active">1 · Remitente</span>
+        <span data-s="2">2 · Destinatario</span>
+        <span data-s="3">3 · Envío</span>
+        <span data-s="4">4 · Pago</span>
+      </div>
+
+      <form id="orderForm" novalidate>
+
+        <!-- STEP 1 -->
+        <div class="fstep visible" data-step="1">
+          <div class="casilla">
+            <label for="r_nombre">Casilla 1 · Nombre y apellidos del remitente <b>*</b></label>
+            <input type="text" id="r_nombre" name="remitente_nombre" required autocomplete="name">
+          </div>
+          <div class="row2">
+            <div class="casilla">
+              <label for="r_doc">Casilla 2 · NIA / Pasaporte / DNI <b>*</b></label>
+              <input type="text" id="r_doc" name="remitente_documento" required>
+            </div>
+            <div class="casilla">
+              <label for="r_tel">Casilla 3 · Teléfono <b>*</b></label>
+              <input type="tel" id="r_tel" name="remitente_telefono" required autocomplete="tel">
+            </div>
+          </div>
+          <div class="casilla">
+            <label for="r_dir">Casilla 4 · Dirección completa en Andorra <b>*</b></label>
+            <input type="text" id="r_dir" name="remitente_direccion" required placeholder="Calle, número, parroquia" autocomplete="street-address">
+          </div>
+          <div class="casilla">
+            <label for="r_email">Casilla 5 · Email (aquí recibirás los documentos) <b>*</b></label>
+            <input type="email" id="r_email" name="remitente_email" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="fstep" data-step="2">
+          <div class="casilla">
+            <label for="d_nombre">Casilla 6 · Nombre y apellidos del destinatario en España <b>*</b></label>
+            <input type="text" id="d_nombre" name="destinatario_nombre" required>
+          </div>
+          <div class="row2">
+            <div class="casilla">
+              <label for="d_doc">Casilla 7 · DNI / NIE del destinatario <b>*</b></label>
+              <input type="text" id="d_doc" name="destinatario_documento" required>
+            </div>
+            <div class="casilla">
+              <label for="d_tel">Casilla 8 · Teléfono del destinatario</label>
+              <input type="tel" id="d_tel" name="destinatario_telefono">
+            </div>
+          </div>
+          <div class="casilla">
+            <label for="d_dir">Casilla 9 · Dirección de entrega en España <b>*</b></label>
+            <input type="text" id="d_dir" name="destinatario_direccion" required placeholder="Calle, número, población, provincia">
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="fstep" data-step="3">
+          <div class="casilla">
+            <label for="m_desc">Casilla 10 · ¿Qué muebles envías? <b>*</b></label>
+            <textarea id="m_desc" name="mercancia_descripcion" rows="3" required placeholder="Ej.: canapé abatible 190x150, colchón 190x150, cómoda de madera..."></textarea>
+            <div class="hint">Describe cada mueble con sus medidas aproximadas. Todo usado, de tu propiedad.</div>
+          </div>
+          <div class="row2">
+            <div class="casilla">
+              <label for="m_valor">Casilla 11 · Valor total estimado (€) <b>*</b></label>
+              <input type="number" id="m_valor" name="mercancia_valor" min="1" required placeholder="150">
+              <div class="hint">Valor residual realista de los muebles usados. Te asesoramos si dudas.</div>
+            </div>
+            <div class="casilla">
+              <label for="m_fecha">Casilla 12 · Fecha prevista del envío</label>
+              <input type="date" id="m_fecha" name="fecha_envio">
+            </div>
+          </div>
+          <div class="casilla">
+            <label for="m_transportista">Casilla 13 · ¿Ya tienes transportista?</label>
+            <select id="m_transportista" name="tiene_transportista">
+              <option value="si">Sí, ya lo tengo contratado</option>
+              <option value="buscando">Todavía lo estoy buscando</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="fstep" data-step="4">
+          <dl class="summary" id="summary"></dl>
+          <div class="total-line">
+            <span>Preparación completa del expediente</span>
+            <span class="amt">49,00&nbsp;€</span>
+          </div>
+          <div class="guarantee">
+            <span class="tick">✓</span>
+            <span><strong>Garantía sin riesgo:</strong> si la aduana o tu transportista pide cualquier corrección en los documentos, la hacemos gratis. Y si no podemos preparar tu expediente, te devolvemos el importe íntegro.</span>
+          </div>
+          <button type="submit" class="btn" style="width:100%">Pagar 49&nbsp;€ y recibir mis documentos</button>
+          <p class="pay-note">Pago seguro con tarjeta a través de Stripe · Recibirás confirmación inmediata por email</p>
+        </div>
+
+        <p class="err" id="formErr">Revisa los campos marcados con * antes de continuar.</p>
+
+        <div class="fnav">
+          <button type="button" class="btn secondary" id="btnBack" style="visibility:hidden">← Atrás</button>
+          <button type="button" class="btn" id="btnNext">Continuar →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <div style="max-width:680px">
+      <details>
+        <summary>No tengo la factura de mis muebles. ¿Es un problema?</summary>
+        <p>No. Es la situación más habitual y exactamente para lo que sirve la declaración jurada: acredita ante la aduana que son bienes personales usados sin carácter comercial, con un valor residual declarado. Es el procedimiento estándar aceptado en la aduana hispano-andorrana.</p>
+      </details>
+      <details>
+        <summary>¿Tendré que pagar impuestos en la aduana?</summary>
+        <p>Los muebles están exentos de aranceles por la unión aduanera UE–Andorra. Solo se liquida el IVA de importación (21%) sobre el valor declarado. Con un valor residual realista de muebles usados, suele ser un importe pequeño. El agente de aduanas de tu transportista lo gestiona con nuestro expediente.</p>
+      </details>
+      <details>
+        <summary>¿El transportista puede presentar directamente vuestros documentos?</summary>
+        <p>Sí. El expediente incluye la relación de documentos, la autorización de despacho firmable y el borrador de carta de porte. Los DUA de exportación e importación los tramita el agente de aduanas del transportista apoyándose en nuestra documentación, que es justo lo que necesita.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tarda?</summary>
+        <p>Recibes el expediente completo en tu email en un máximo de 24 horas laborables desde el pago. Si tu envío es urgente, indícalo en el formulario y lo priorizamos.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si la aduana pide algún cambio?</summary>
+        <p>Lo corregimos gratis. Las revisiones derivadas de requerimientos de la aduana o del transportista están incluidas en el precio.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales.</div>
+    <div><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

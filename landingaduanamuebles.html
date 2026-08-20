@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papeles de Aduana para tus Muebles | Andorra → España en 24h</title>
+<meta name="description" content="Prepara en 24h toda la documentación aduanera para enviar muebles usados de Andorra a España sin factura. Declaración jurada, proforma y dosier para el transportista. Precio cerrado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#7A8299;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none;mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='white'/%3E%3C/svg%3E")}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;counter-reset:step}
+.step{position:relative;padding-left:0}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">Aduana<span>Fácil</span> Andorra</div>
+    <div class="mono">Documentación aduanera · Particulares</div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="stamp"><b>LISTO EN 24H</b>revisado · firmable · sin errores</div>
+    <div class="eyebrow">Andorra → España · Envíos entre particulares</div>
+    <h1>Tus muebles cruzan la frontera. Sin dolores de cabeza.</h1>
+    <p class="sub">Te preparamos <strong>toda la documentación aduanera</strong> para enviar muebles y enseres usados de Andorra a España: declaración jurada, factura proforma y el dosier completo para tu transportista. <strong>Aunque no tengas facturas.</strong></p>
+    <div class="cta-row">
+      <a class="btn" href="#pedido">Preparar mis papeles ahora</a>
+      <div class="price-tag">Precio cerrado · <b>49&nbsp;€</b> · Sin sorpresas</div>
+    </div>
+    <div class="trust">
+      <div><span class="tick">✓</span> Entrega en 24h laborables</div>
+      <div><span class="tick">✓</span> Válido sin factura de compra</div>
+      <div><span class="tick">✓</span> Listo para firmar y entregar</div>
+      <div><span class="tick">✓</span> Revisión incluida si aduanas pide cambios</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= QUÉ RECIBES ================= -->
+<section class="alt" id="que-recibes">
+  <div class="wrap">
+    <h2>Lo que recibes en tu email</h2>
+    <p class="section-lead">Un expediente completo en PDF y Word, personalizado con tus datos, que tu transportista puede presentar directamente en la aduana de la Farga de Moles.</p>
+    <div class="docs">
+      <div class="doc">
+        <span class="mono">Documento 01</span>
+        <h3>Declaración jurada</h3>
+        <p>Sustituye a la factura que no tienes. Acredita que son bienes personales usados sin carácter comercial, con packing list y valor declarado defendible.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">Documento 02</span>
+        <h3>Factura proforma</h3>
+        <p>El documento de valor que exige la aduana para calcular el IVA de importación. Emitida a efectos aduaneros, sin IVA ni IGI.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">Documento 03</span>
+        <h3>Dosier del transportista</h3>
+        <p>Relación de documentos, autorización de despacho aduanero y borrador de carta de porte (CMR). Tu transportista solo tiene que ejecutar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CÓMO FUNCIONA ================= -->
+<section id="como-funciona">
+  <div class="wrap">
+    <h2>Así de simple</h2>
+    <p class="section-lead">Cinco minutos rellenando el formulario. Nosotros hacemos el resto.</p>
+    <div class="steps">
+      <div class="step"><span class="num">PASO 1</span><h3>Rellena el formulario</h3><p>Tus datos, los del destinatario y qué muebles envías. Sin tecnicismos.</p></div>
+      <div class="step"><span class="num">PASO 2</span><h3>Paga 49&nbsp;€</h3><p>Pago seguro con tarjeta. Precio único, sin extras ocultos.</p></div>
+      <div class="step"><span class="num">PASO 3</span><h3>Recibe tu expediente en 24h</h3><p>Todos los documentos personalizados en tu email, listos para firmar y entregar al transportista.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMULARIO ================= -->
+<section class="alt" id="pedido">
+  <div class="wrap">
+    <div class="form-doc">
+      <div class="form-head">
+        <div>
+          <span class="mono">Formulario de pedido · Ref. AF-<span id="refnum"></span></span>
+          <h2>Prepara tu documentación</h2>
+        </div>
+        <span class="mono">49,00 €</span>
+      </div>
+      <div class="progress" id="progress">
+        <span data-s="1" class="active">1 · Remitente</span>
+        <span data-s="2">2 · Destinatario</span>
+        <span data-s="3">3 · Envío</span>
+        <span data-s="4">4 · Pago</span>
+      </div>
+
+      <form id="orderForm" novalidate>
+
+        <!-- STEP 1 -->
+        <div class="fstep visible" data-step="1">
+          <div class="casilla">
+            <label for="r_nombre">Casilla 1 · Nombre y apellidos del remitente <b>*</b></label>
+            <input type="text" id="r_nombre" name="remitente_nombre" required autocomplete="name">
+          </div>
+          <div class="row2">
+            <div class="casilla">
+              <label for="r_doc">Casilla 2 · NIA / Pasaporte / DNI <b>*</b></label>
+              <input type="text" id="r_doc" name="remitente_documento" required>
+            </div>
+            <div class="casilla">
+              <label for="r_tel">Casilla 3 · Teléfono <b>*</b></label>
+              <input type="tel" id="r_tel" name="remitente_telefono" required autocomplete="tel">
+            </div>
+          </div>
+          <div class="casilla">
+            <label for="r_dir">Casilla 4 · Dirección completa en Andorra <b>*</b></label>
+            <input type="text" id="r_dir" name="remitente_direccion" required placeholder="Calle, número, parroquia" autocomplete="street-address">
+          </div>
+          <div class="casilla">
+            <label for="r_email">Casilla 5 · Email (aquí recibirás los documentos) <b>*</b></label>
+            <input type="email" id="r_email" name="remitente_email" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="fstep" data-step="2">
+          <div class="casilla">
+            <label for="d_nombre">Casilla 6 · Nombre y apellidos del destinatario en España <b>*</b></label>
+            <input type="text" id="d_nombre" name="destinatario_nombre" required>
+          </div>
+          <div class="row2">
+            <div class="casilla">
+              <label for="d_doc">Casilla 7 · DNI / NIE del destinatario <b>*</b></label>
+              <input type="text" id="d_doc" name="destinatario_documento" required>
+            </div>
+            <div class="casilla">
+              <label for="d_tel">Casilla 8 · Teléfono del destinatario</label>
+              <input type="tel" id="d_tel" name="destinatario_telefono">
+            </div>
+          </div>
+          <div class="casilla">
+            <label for="d_dir">Casilla 9 · Dirección de entrega en España <b>*</b></label>
+            <input type="text" id="d_dir" name="destinatario_direccion" required placeholder="Calle, número, población, provincia">
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="fstep" data-step="3">
+          <div class="casilla">
+            <label for="m_desc">Casilla 10 · ¿Qué muebles envías? <b>*</b></label>
+            <textarea id="m_desc" name="mercancia_descripcion" rows="3" required placeholder="Ej.: canapé abatible 190x150, colchón 190x150, cómoda de madera..."></textarea>
+            <div class="hint">Describe cada mueble con sus medidas aproximadas. Todo usado, de tu propiedad.</div>
+          </div>
+          <div class="row2">
+            <div class="casilla">
+              <label for="m_valor">Casilla 11 · Valor total estimado (€) <b>*</b></label>
+              <input type="number" id="m_valor" name="mercancia_valor" min="1" required placeholder="150">
+              <div class="hint">Valor residual realista de los muebles usados. Te asesoramos si dudas.</div>
+            </div>
+            <div class="casilla">
+              <label for="m_fecha">Casilla 12 · Fecha prevista del envío</label>
+              <input type="date" id="m_fecha" name="fecha_envio">
+            </div>
+          </div>
+          <div class="casilla">
+            <label for="m_transportista">Casilla 13 · ¿Ya tienes transportista?</label>
+            <select id="m_transportista" name="tiene_transportista">
+              <option value="si">Sí, ya lo tengo contratado</option>
+              <option value="buscando">Todavía lo estoy buscando</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="fstep" data-step="4">
+          <dl class="summary" id="summary"></dl>
+          <div class="total-line">
+            <span>Preparación completa del expediente</span>
+            <span class="amt">49,00&nbsp;€</span>
+          </div>
+          <div class="guarantee">
+            <span class="tick">✓</span>
+            <span><strong>Garantía sin riesgo:</strong> si la aduana o tu transportista pide cualquier corrección en los documentos, la hacemos gratis. Y si no podemos preparar tu expediente, te devolvemos el importe íntegro.</span>
+          </div>
+          <button type="submit" class="btn" style="width:100%">Pagar 49&nbsp;€ y recibir mis documentos</button>
+          <p class="pay-note">Pago seguro con tarjeta a través de Stripe · Recibirás confirmación inmediata por email</p>
+        </div>
+
+        <p class="err" id="formErr">Revisa los campos marcados con * antes de continuar.</p>
+
+        <div class="fnav">
+          <button type="button" class="btn secondary" id="btnBack" style="visibility:hidden">← Atrás</button>
+          <button type="button" class="btn" id="btnNext">Continuar →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <div style="max-width:680px">
+      <details>
+        <summary>No tengo la factura de mis muebles. ¿Es un problema?</summary>
+        <p>No. Es la situación más habitual y exactamente para lo que sirve la declaración jurada: acredita ante la aduana que son bienes personales usados sin carácter comercial, con un valor residual declarado. Es el procedimiento estándar aceptado en la aduana hispano-andorrana.</p>
+      </details>
+      <details>
+        <summary>¿Tendré que pagar impuestos en la aduana?</summary>
+        <p>Los muebles están exentos de aranceles por la unión aduanera UE–Andorra. Solo se liquida el IVA de importación (21%) sobre el valor declarado. Con un valor residual realista de muebles usados, suele ser un importe pequeño. El agente de aduanas de tu transportista lo gestiona con nuestro expediente.</p>
+      </details>
+      <details>
+        <summary>¿El transportista puede presentar directamente vuestros documentos?</summary>
+        <p>Sí. El expediente incluye la relación de documentos, la autorización de despacho firmable y el borrador de carta de porte. Los DUA de exportación e importación los tramita el agente de aduanas del transportista apoyándose en nuestra documentación, que es justo lo que necesita.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tarda?</summary>
+        <p>Recibes el expediente completo en tu email en un máximo de 24 horas laborables desde el pago. Si tu envío es urgente, indícalo en el formulario y lo priorizamos.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si la aduana pide algún cambio?</summary>
+        <p>Lo corregimos gratis. Las revisiones derivadas de requerimientos de la aduana o del transportista están incluidas en el precio.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales.</div>
+    <div><a href="#" style="color:var(--muted)">Aviso legal</a> · <a href="#" style="color:var(--muted)">Privacidad</a></div>
+  </div>
+</footer>
+
+<script>
+/* ================= CONFIGURACIÓN =================
+   1. STRIPE_PAYMENT_LINK: crea un Payment Link de 49 € en tu dashboard de Stripe
+      (Productos → Payment Links) y pega aquí la URL.
+   2. FORM_ENDPOINT: endpoint que recibe los datos del formulario antes del pago.
+      Opciones sin backend: Formspree (https://formspree.io) o Getform.
+      Pega la URL de tu endpoint. Si lo dejas vacío, los datos se añaden
+      como parámetros a la URL de Stripe (client_reference_id = ref del pedido).
+================================================== */
+const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/TU_PAYMENT_LINK_AQUI";
+const FORM_ENDPOINT = ""; // ej: "https://formspree.io/f/xxxxxxx"
+
+const ref = 'AF' + Date.now().toString(36).toUpperCase().slice(-6);
+document.getElementById('refnum').textContent = ref.slice(2);
+
+let step = 1;
+const TOTAL = 4;
+const form = document.getElementById('orderForm');
+const err = document.getElementById('formErr');
+
+function show(n){
+  document.querySelectorAll('.fstep').forEach(s => s.classList.toggle('visible', +s.dataset.step === n));
+  document.querySelectorAll('#progress span').forEach(p => {
+    const i = +p.dataset.s;
+    p.classList.toggle('active', i === n);
+    p.classList.toggle('done', i < n);
+  });
+  document.getElementById('btnBack').style.visibility = n === 1 ? 'hidden' : 'visible';
+  document.getElementById('btnNext').style.display = n === TOTAL ? 'none' : 'inline-block';
+  err.classList.remove('show');
+  if (n === TOTAL) buildSummary();
+  document.querySelector('.form-doc').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function validStep(n){
+  let ok = true;
+  document.querySelector(`.fstep[data-step="${n}"]`).querySelectorAll('[required]').forEach(f => {
+    const valid = f.checkValidity() && f.value.trim() !== '';
+    f.style.borderColor = valid ? '' : 'var(--stamp)';
+    if(!valid) ok = false;
+  });
+  return ok;
+}
+
+document.getElementById('btnNext').addEventListener('click', () => {
+  if(!validStep(step)){ err.classList.add('show'); return; }
+  step++; show(step);
+});
+document.getElementById('btnBack').addEventListener('click', () => { step--; show(step); });
+
+function buildSummary(){
+  const g = id => document.getElementById(id).value || '—';
+  document.getElementById('summary').innerHTML = `
+    <dt>Remitente</dt><dd>${g('r_nombre')} · ${g('r_doc')} · Andorra</dd>
+    <dt>Destinatario</dt><dd>${g('d_nombre')} · ${g('d_doc')} · ${g('d_dir')}</dd>
+    <dt>Mercancía</dt><dd>${g('m_desc')}</dd>
+    <dt>Valor declarado</dt><dd>${g('m_valor')} €</dd>
+    <dt>Email de entrega</dt><dd>${g('r_email')}</dd>`;
+}
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type=submit]');
+  btn.disabled = true; btn.textContent = 'Procesando…';
+
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.referencia = ref;
+
+  try {
+    if (FORM_ENDPOINT) {
+      await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(data)
+      });
+    }
+  } catch(_) { /* el pago sigue adelante; los datos van en la referencia */ }
+
+  const url = new URL(STRIPE_PAYMENT_LINK);
+  url.searchParams.set('client_reference_id', ref);
+  url.searchParams.set('prefilled_email', data.remitente_email || '');
+  window.location.href = url.toString();
+});
+</script>
+</body>
+</html>
