@@ -66,6 +66,46 @@ window.SITE_CONFIG = {
 - **Formulario**: crea un formulario en [Formspree](https://formspree.io) o
   Getform y pega la URL del endpoint para recibir cada pedido por email.
 
+## Backoffice y persistencia (Vercel + Neon)
+
+El proyecto incluye una pequeña API serverless y un backoffice para gestionar
+los pedidos:
+
+```
+api/pedidos.js          POST público (guarda el pedido del formulario),
+                        GET y PATCH de administración (listar / cambiar estado)
+api/stripe-webhook.js   Webhook de Stripe: marca el pedido como "pagado" al
+                        completarse el checkout (client_reference_id = AF-XXXXXX)
+api/_lib/               Cliente de base de datos, autenticación y verificación
+                        de firma de Stripe
+admin.html              Backoffice en /admin: listado con filtros por estado,
+                        búsqueda, detalle de cada pedido y cambio de estado
+vercel.json             Rewrite de /admin → /admin.html
+```
+
+Los estados de un pedido son: `pendiente` → `pagado` → `en_preparacion` →
+`entregado` (y `cancelado`). El formulario guarda el pedido como `pendiente`
+antes de redirigir al pago; el webhook de Stripe lo pasa a `pagado`; el resto
+se gestiona desde el backoffice.
+
+### Puesta en marcha
+
+1. **Base de datos**: en el dashboard de Vercel, *Storage → Create Database →
+   Neon* y vincúlala al proyecto. Vercel inyecta `DATABASE_URL`
+   automáticamente. La tabla `pedidos` se crea sola en el primer uso.
+2. **Token del backoffice**: en *Settings → Environment Variables* crea
+   `ADMIN_TOKEN` con un valor largo y aleatorio. Es lo que se introduce en
+   `/admin` para entrar.
+3. **Webhook de Stripe** (cuando actives el pago): en el dashboard de Stripe,
+   *Developers → Webhooks → Add endpoint* apuntando a
+   `https://TU-DOMINIO/api/stripe-webhook` con el evento
+   `checkout.session.completed`, y guarda el signing secret en la variable
+   `STRIPE_WEBHOOK_SECRET` de Vercel.
+
+Sin base de datos configurada, el site sigue funcionando: el envío del
+formulario ignora el error de la API y continúa hacia la confirmación o el
+pago.
+
 ## Publicación
 
 Es un site 100% estático: funciona en GitHub Pages, Netlify, Vercel o cualquier

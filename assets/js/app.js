@@ -101,6 +101,7 @@
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
     data.referencia = ref;
+    data.idioma = document.documentElement.lang || 'es';
     data.fecha_pedido = new Date().toISOString();
 
     // El pedido queda registrado en el navegador para la página de confirmación
