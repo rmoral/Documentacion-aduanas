@@ -17,6 +17,9 @@ index.html              Landing principal en español (hero, qué recibes, cómo
 gracias.html            Confirmación de pedido (muestra referencia y resumen)
 aviso-legal.html        Aviso legal y condiciones de contratación
 privacidad.html         Política de privacidad
+guias/                  Cluster de contenidos SEO en español: índice más las
+                        guías "enviar muebles Andorra→España", "documentos de
+                        la Farga de Moles" y "declaración jurada sin factura"
 ca/                     Versión en catalán (mismas 4 páginas)
 en/                     Versión en inglés (mismas 4 páginas)
 fr/                     Versión en francés (mismas 4 páginas)
@@ -47,9 +50,14 @@ idioma.
    guardan en `localStorage` y, si hay endpoint configurado, se envían por POST.
 3. **Con Stripe configurado**: redirige al Payment Link con
    `client_reference_id` y el email prellenado.
-   **Sin configurar (modo demo)**: redirige a `gracias.html?ref=...`, que
-   muestra la confirmación con el resumen del pedido. El site es funcional de
-   extremo a extremo sin ningún servicio externo.
+   **Sin Stripe (fase de valoración, modo actual)**: no se cobra nada. Al
+   confirmar, se abre el correo del cliente con la solicitud completa ya
+   redactada y dirigida a `ORDER_EMAIL` (`assets/js/order-email.js` construye
+   el email, siempre en español), y después se redirige a `gracias.html?ref=...`,
+   que muestra la confirmación y un botón para **reenviar la solicitud por
+   email** por si el cliente no llegó a enviarla. Los textos del paso 4, del
+   bloque «Cómo funciona» y de la página de gracias avisan en los 5 idiomas de
+   que el pago (49 €) se coordina después por email.
 
 ## Configuración (`assets/js/config.js`)
 
@@ -57,9 +65,15 @@ idioma.
 window.SITE_CONFIG = {
   STRIPE_PAYMENT_LINK: "", // URL del Payment Link de 49 € (Stripe → Productos → Payment Links)
   FORM_ENDPOINT: "",       // Endpoint tipo Formspree/Getform para recibir los pedidos
+  ORDER_EMAIL: "...",      // Email que recibe las solicitudes mientras no hay pago online
   PRECIO: "49,00 €"
 };
 ```
+
+- **ORDER_EMAIL**: mientras `STRIPE_PAYMENT_LINK` esté vacío, las solicitudes
+  llegan a esta dirección por email (vía el correo del propio cliente).
+  Cuando se configure Stripe, el flujo de pago vuelve a tener prioridad
+  automáticamente.
 
 - **Stripe**: crea un Payment Link de 49 € y pega la URL. Recomendado: configura
   en el Payment Link la redirección tras el pago a `https://TU-DOMINIO/gracias.html`.
@@ -119,7 +133,34 @@ python3 -m http.server 8080
 # http://localhost:8080
 ```
 
+## SEO y posicionamiento
+
+La estrategia completa de tráfico orgánico y posicionamiento en asistentes de
+IA está en **[`ESTRATEGIA-SEO.md`](ESTRATEGIA-SEO.md)**. Infraestructura ya
+incluida en el site:
+
+- `rel=canonical` y cluster `hreflang` (es/ca/en/fr/ru + `x-default`) en las
+  15 páginas indexables.
+- Open Graph y Twitter Card con imagen `assets/img/og-cover.png` (1200×630).
+- JSON-LD en cada portada: `Organization`, `WebSite`, `Service` (49 €) y
+  `FAQPage` con las preguntas frecuentes de cada idioma.
+- `robots.txt` (bloquea `gracias` y el HTML de guía; da la bienvenida a los
+  crawlers de IA), `sitemap.xml` con alternates por idioma y `llms.txt` con el
+  resumen citable del servicio.
+
+**Importante:** las URLs absolutas usan el marcador `https://TU-DOMINIO`.
+Cuando el dominio definitivo exista, ejecutar una sola vez:
+
+```bash
+./tools/set-domain.sh https://www.tudominio.com
+```
+
 ## Pendiente de completar
 
 - `STRIPE_PAYMENT_LINK` y `FORM_ENDPOINT` en `assets/js/config.js` para activar
-  el pago real y la recepción de pedidos.
+  el pago online cuando termine la fase de valoración (mientras tanto las
+  solicitudes llegan por email a `ORDER_EMAIL`; revisa que esa dirección sea
+  la correcta).
+- Reemplazar `https://TU-DOMINIO` con el dominio real (`tools/set-domain.sh`).
+- Alta en Google Search Console y Bing Webmaster Tools + envío del sitemap
+  (ver `ESTRATEGIA-SEO.md`).

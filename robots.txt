@@ -1,0 +1,21 @@
+# AduanaFácil Andorra — robots.txt
+# Los crawlers de buscadores y de asistentes de IA (GPTBot, ClaudeBot,
+# Google-Extended, PerplexityBot, etc.) son bienvenidos: queremos que el
+# servicio sea citable por ChatGPT, Claude, Gemini y Perplexity.
+
+User-agent: *
+Allow: /
+# Páginas de confirmación de pedido (sin valor de búsqueda, ya llevan noindex)
+Disallow: /gracias.html
+Disallow: /ca/gracias.html
+Disallow: /en/gracias.html
+Disallow: /fr/gracias.html
+Disallow: /ru/gracias.html
+# HTML de referencia interna, no forma parte del site publicado
+Disallow: /landingaduanamuebles.html
+# Backoffice y API internos
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /api/
+
+Sitemap: https://TU-DOMINIO/sitemap.xml

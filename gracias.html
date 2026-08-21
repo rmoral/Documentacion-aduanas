@@ -34,12 +34,13 @@
   <div class="wrap" style="max-width:760px">
     <div class="confirm-doc">
       <div class="stamp"><b>RECIBIDO</b>expediente en preparación</div>
-      <h1>¡Pedido recibido! Ya estamos con tus papeles.</h1>
-      <div class="refbox">Referencia del pedido: <b id="refShow">—</b></div>
-      <p>En un máximo de <strong>24 horas laborables</strong> recibirás en tu email el expediente completo: declaración jurada, factura proforma y el dosier para tu transportista, personalizados con tus datos y listos para firmar.</p>
+      <h1>¡Solicitud recibida! Ya estamos con tus papeles.</h1>
+      <div class="refbox">Referencia de la solicitud: <b id="refShow">—</b></div>
+      <p>Te contactaremos por email para confirmar tu solicitud y coordinar el pago (49&nbsp;€). Desde la confirmación, en un máximo de <strong>24 horas laborables</strong> recibirás el expediente completo: declaración jurada, factura proforma y el dosier para tu transportista, personalizados con tus datos y listos para firmar.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Guarda tu referencia: la necesitarás para cualquier consulta o revisión del expediente. Si la aduana o tu transportista pide algún cambio, lo corregimos gratis.</p>
       <div class="actions">
+        <a id="mailFallback" class="btn" style="display:none" href="#">Reenviar mi solicitud por email</a>
         <a class="btn secondary" href="index.html">← Volver al inicio</a>
       </div>
     </div>
@@ -53,6 +54,8 @@
   </div>
 </footer>
 
+<script src="assets/js/config.js"></script>
+<script src="assets/js/order-email.js"></script>
 <script>
 (function () {
   'use strict';
@@ -76,6 +79,11 @@
           '<dt>Valor declarado</dt><dd>' + esc(data.mercancia_valor || '—') + ' €</dd>' +
           '<dt>Email de entrega</dt><dd>' + esc(data.remitente_email || '—') + '</dd>';
         box.style.display = 'block';
+        var mf = document.getElementById('mailFallback');
+        if (mf && window.ORDER_EMAIL_HELPER) {
+          var href = window.ORDER_EMAIL_HELPER.mailto(data);
+          if (href) { mf.href = href; mf.style.display = 'inline-block'; }
+        }
       }
     } catch (_) {}
   }

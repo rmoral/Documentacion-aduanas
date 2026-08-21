@@ -34,12 +34,13 @@
   <div class="wrap" style="max-width:760px">
     <div class="confirm-doc">
       <div class="stamp"><b>REÇU</b>dossier en préparation</div>
-      <h1>Commande reçue&nbsp;! Nous préparons déjà vos papiers.</h1>
-      <div class="refbox">Référence de la commande&nbsp;: <b id="refShow">—</b></div>
-      <p>Sous <strong>24 heures ouvrées</strong> maximum, vous recevrez par email le dossier complet&nbsp;: déclaration sur l'honneur, facture pro forma et dossier du transporteur, personnalisés avec vos données et prêts à signer.</p>
+      <h1>Demande reçue&nbsp;! Nous préparons déjà vos papiers.</h1>
+      <div class="refbox">Référence de la demande&nbsp;: <b id="refShow">—</b></div>
+      <p>Nous vous contacterons par email pour confirmer votre demande et convenir du paiement (49&nbsp;€). À compter de la confirmation, sous <strong>24 heures ouvrées</strong> maximum vous recevrez le dossier complet&nbsp;: déclaration sur l'honneur, facture pro forma et dossier du transporteur, personnalisés avec vos données et prêts à signer.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Conservez votre référence&nbsp;: elle vous sera demandée pour toute question ou révision du dossier. Si la douane ou votre transporteur demande une modification, nous la corrigeons gratuitement.</p>
       <div class="actions">
+        <a id="mailFallback" class="btn" style="display:none" href="#">Renvoyer ma demande par email</a>
         <a class="btn secondary" href="index.html">← Retour à l'accueil</a>
       </div>
     </div>
@@ -53,6 +54,8 @@
   </div>
 </footer>
 
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/order-email.js"></script>
 <script>
 (function () {
   'use strict';
@@ -76,6 +79,11 @@
           '<dt>Valeur déclarée</dt><dd>' + esc(data.mercancia_valor || '—') + ' €</dd>' +
           '<dt>Email de livraison</dt><dd>' + esc(data.remitente_email || '—') + '</dd>';
         box.style.display = 'block';
+        var mf = document.getElementById('mailFallback');
+        if (mf && window.ORDER_EMAIL_HELPER) {
+          var href = window.ORDER_EMAIL_HELPER.mailto(data);
+          if (href) { mf.href = href; mf.style.display = 'inline-block'; }
+        }
       }
     } catch (_) {}
   }
