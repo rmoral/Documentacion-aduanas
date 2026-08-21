@@ -15,16 +15,13 @@
       Si se deja vacío, los datos del pedido viajan solo en la referencia
       (client_reference_id) y quedan guardados en el navegador.
 
-   3. ORDER_EMAIL (fase de valoración, sin pasarela de pago):
-      Mientras STRIPE_PAYMENT_LINK esté vacío, al confirmar el pedido
-      se abre el correo del cliente con la solicitud completa dirigida
-      a esta dirección (y la página de gracias ofrece reenviarla).
-      Cámbiala por el email donde quieras recibir las solicitudes.
-      Cuando actives Stripe, el flujo de pago vuelve a tener prioridad.
+   Mientras STRIPE_PAYMENT_LINK esté vacío (fase de valoración), el
+   pedido queda registrado en la base de datos y el cliente pasa
+   directamente a la página de confirmación; los pedidos se gestionan
+   desde el backoffice (/admin).
 =========================================================== */
 window.SITE_CONFIG = {
   STRIPE_PAYMENT_LINK: "", // ej: "https://buy.stripe.com/xxxxxxxx"
   FORM_ENDPOINT: "/api/pedidos",
-  ORDER_EMAIL: "rmoral81@gmail.com", // recibe las solicitudes mientras no hay pago online
   PRECIO: "49,00 €"
 };

@@ -40,7 +40,6 @@
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Сохраните ваш референс: он понадобится для любых вопросов или правок досье. Если таможня или ваш перевозчик запросит изменения, мы внесём их бесплатно.</p>
       <div class="actions">
-        <a id="mailFallback" class="btn" style="display:none" href="#">Отправить заявку по email ещё раз</a>
         <a class="btn secondary" href="index.html">← На главную</a>
       </div>
     </div>
@@ -55,7 +54,6 @@
 </footer>
 
 <script src="../assets/js/config.js"></script>
-<script src="../assets/js/order-email.js"></script>
 <script>
 (function () {
   'use strict';
@@ -79,11 +77,6 @@
           '<dt>Заявленная стоимость</dt><dd>' + esc(data.mercancia_valor || '—') + ' €</dd>' +
           '<dt>Email для доставки</dt><dd>' + esc(data.remitente_email || '—') + '</dd>';
         box.style.display = 'block';
-        var mf = document.getElementById('mailFallback');
-        if (mf && window.ORDER_EMAIL_HELPER) {
-          var href = window.ORDER_EMAIL_HELPER.mailto(data);
-          if (href) { mf.href = href; mf.style.display = 'inline-block'; }
-        }
       }
     } catch (_) {}
   }
