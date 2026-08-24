@@ -13,5 +13,9 @@ Disallow: /fr/gracias.html
 Disallow: /ru/gracias.html
 # HTML de referencia interna, no forma parte del site publicado
 Disallow: /landingaduanamuebles.html
+# Backoffice y API internos
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /api/
 
 Sitemap: https://TU-DOMINIO/sitemap.xml

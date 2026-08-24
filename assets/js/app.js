@@ -101,6 +101,7 @@
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
     data.referencia = ref;
+    data.idioma = document.documentElement.lang || 'es';
     data.fecha_pedido = new Date().toISOString();
 
     // El pedido queda registrado en el navegador para la página de confirmación
@@ -125,19 +126,9 @@
         url.searchParams.set('prefilled_email', data.remitente_email || '');
         window.location.href = url.toString();
       } else {
-        // Fase de valoración (sin pasarela): la solicitud se envía por email.
-        // Se abre el correo del cliente con todos los datos y después se pasa
-        // a la confirmación, que ofrece reenviar el email si no se abrió.
-        var goThanks = function () {
-          window.location.href = 'gracias.html?ref=' + encodeURIComponent(ref);
-        };
-        var mailto = window.ORDER_EMAIL_HELPER ? window.ORDER_EMAIL_HELPER.mailto(data) : '';
-        if (mailto) {
-          window.location.href = mailto;
-          setTimeout(goThanks, 1500);
-        } else {
-          goThanks();
-        }
+        // Fase de valoración (sin pasarela): el pedido ya quedó registrado en
+        // la base de datos; la confirmación es directa y sin pasos visibles.
+        window.location.href = 'gracias.html?ref=' + encodeURIComponent(ref);
       }
     });
   });

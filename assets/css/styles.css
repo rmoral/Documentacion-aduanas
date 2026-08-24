@@ -96,8 +96,12 @@ h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;ma
 .casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
 .casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
 .casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:560px){.row2{grid-template-columns:1fr}}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
 .fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
 .err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
 .err.show{display:block}

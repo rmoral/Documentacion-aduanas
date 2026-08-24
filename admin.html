@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backoffice | AduanaFácil Andorra</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%231B2A4A'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EBO%3C/text%3E%3C/svg%3E">
+<style>
+.bo-wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.bo-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:34px 0 20px}
+.bo-bar h1{font-size:1.5rem;max-width:none}
+.bo-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bo-tools input[type=search]{padding:10px 12px;border:1px solid var(--ink);border-radius:2px;background:#fff;font-family:'Libre Franklin',sans-serif;font-size:.9rem;min-width:210px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px;border:1px solid var(--ink);border-radius:20px;background:#fff;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--ink);color:var(--paper)}
+.bo-table-wrap{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);overflow-x:auto;margin-bottom:60px}
+table.bo{width:100%;border-collapse:collapse;font-size:.88rem;min-width:820px}
+table.bo th{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:12px 14px;border-bottom:2px solid var(--ink);white-space:nowrap}
+table.bo td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.bo tr.row{cursor:pointer}
+table.bo tr.row:hover{background:var(--paper)}
+tr.detail td{background:var(--paper);font-size:.85rem}
+.detail dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 24px;padding:6px 2px}
+.detail dt{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.detail dd{margin:0}
+.badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:20px;border:1px solid;white-space:nowrap}
+.badge.pendiente{color:#8a6d1a;border-color:#c9a227;background:#faf3dd}
+.badge.pagado{color:var(--ok);border-color:var(--ok);background:#e7f2ea}
+.badge.en_preparacion{color:#1c5d8f;border-color:#1c5d8f;background:#e5eff7}
+.badge.entregado{color:#3d3d3d;border-color:#8a8a8a;background:#efefef}
+.badge.cancelado{color:var(--stamp);border-color:var(--stamp);background:#f9e7e5}
+select.estado{font-family:'IBM Plex Mono',monospace;font-size:.72rem;padding:6px 8px;border:1px solid var(--ink);border-radius:2px;background:var(--paper)}
+.gate{max-width:420px;margin:70px auto;background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:30px 28px}
+.gate h1{font-size:1.3rem;margin-bottom:6px;max-width:none}
+.gate p{font-size:.88rem;color:var(--ink-soft);margin-bottom:18px}
+.gate input{width:100%;padding:12px 14px;border:1px solid var(--ink);border-radius:2px;background:var(--paper);font-size:1rem;margin-bottom:14px;font-family:'IBM Plex Mono',monospace}
+.msg{font-size:.85rem;margin:12px 0;color:var(--ink-soft)}
+.msg.error{color:var(--stamp)}
+.count{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--muted)}
+.btn.small{padding:9px 16px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Aduana<span>Fácil</span> Andorra</a>
+    <div class="mono">Backoffice · Gestión de pedidos</div>
+  </div>
+</div>
+
+<!-- Puerta de acceso -->
+<div class="gate" id="gate">
+  <h1>Acceso al backoffice</h1>
+  <p>Introduce el token de administración (variable <span class="mono">ADMIN_TOKEN</span> del proyecto en Vercel).</p>
+  <input type="password" id="tokenInput" placeholder="Token de administración" autocomplete="current-password">
+  <button class="btn" id="btnLogin" style="width:100%">Entrar</button>
+  <p class="msg error" id="gateMsg" style="display:none"></p>
+</div>
+
+<!-- Panel -->
+<div class="bo-wrap" id="panel" style="display:none">
+  <div class="bo-bar">
+    <h1>Pedidos</h1>
+    <div class="bo-tools">
+      <span class="count" id="count"></span>
+      <input type="search" id="search" placeholder="Buscar ref, nombre, email…">
+      <button class="btn secondary small" id="btnRefresh">Actualizar</button>
+      <button class="btn secondary small" id="btnLogout">Salir</button>
+    </div>
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip on" data-estado="">Todos</button>
+    <button class="chip" data-estado="pendiente">Pendiente</button>
+    <button class="chip" data-estado="pagado">Pagado</button>
+    <button class="chip" data-estado="en_preparacion">En preparación</button>
+    <button class="chip" data-estado="entregado">Entregado</button>
+    <button class="chip" data-estado="cancelado">Cancelado</button>
+  </div>
+  <p class="msg" id="panelMsg" style="display:none"></p>
+  <div class="bo-table-wrap">
+    <table class="bo">
+      <thead>
+        <tr>
+          <th>Referencia</th><th>Fecha</th><th>Remitente</th><th>Email</th>
+          <th>Destino</th><th>Valor</th><th>Estado</th><th>Cambiar</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var API = 'api/pedidos';
+  var ESTADOS = ['pendiente', 'pagado', 'en_preparacion', 'entregado', 'cancelado'];
+  var LABELS = { pendiente: 'Pendiente', pagado: 'Pagado', en_preparacion: 'En preparación', entregado: 'Entregado', cancelado: 'Cancelado' };
+  var pedidos = [];
+  var filtroEstado = '';
+  var token = '';
+  try { token = sessionStorage.getItem('bo_token') || ''; } catch (_) {}
+
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+
+  function api(method, path, body) {
+    return fetch(API + (path || ''), {
+      method: method,
+      headers: {
+        'Authorization': 'Bearer ' + token,
+        'Content-Type': 'application/json'
+      },
+      body: body ? JSON.stringify(body) : undefined
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok) throw Object.assign(new Error(j.error || ('HTTP ' + r.status)), { status: r.status });
+        return j;
+      });
+    });
+  }
+
+  function fmtFecha(iso) {
+    if (!iso) return '—';
+    var d = new Date(iso);
+    return isNaN(d) ? '—' : d.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: '2-digit' }) +
+      ' ' + d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  function render() {
+    var q = ($('search').value || '').toLowerCase();
+    var rows = pedidos.filter(function (p) {
+      if (filtroEstado && p.estado !== filtroEstado) return false;
+      if (!q) return true;
+      return [p.referencia, p.remitente_nombre, p.remitente_email, p.destinatario_nombre, p.destinatario_direccion]
+        .some(function (v) { return String(v || '').toLowerCase().indexOf(q) !== -1; });
+    });
+    $('count').textContent = rows.length + ' / ' + pedidos.length + ' pedidos';
+    $('tbody').innerHTML = rows.length ? rows.map(function (p) {
+      var opts = ESTADOS.map(function (e) {
+        return '<option value="' + e + '"' + (e === p.estado ? ' selected' : '') + '>' + LABELS[e] + '</option>';
+      }).join('');
+      return '<tr class="row" data-ref="' + esc(p.referencia) + '">' +
+        '<td class="mono">' + esc(p.referencia) + '</td>' +
+        '<td>' + fmtFecha(p.creado_en) + '</td>' +
+        '<td>' + esc(p.remitente_nombre) + '</td>' +
+        '<td>' + esc(p.remitente_email) + '</td>' +
+        '<td>' + esc(p.destinatario_direccion || '—') + '</td>' +
+        '<td>' + (p.mercancia_valor != null ? esc(p.mercancia_valor) + ' €' : '—') + '</td>' +
+        '<td><span class="badge ' + esc(p.estado) + '">' + esc(LABELS[p.estado] || p.estado) + '</span></td>' +
+        '<td><select class="estado" data-ref="' + esc(p.referencia) + '">' + opts + '</select></td>' +
+        '</tr>' +
+        '<tr class="detail" data-detail="' + esc(p.referencia) + '" style="display:none"><td colspan="8"><dl>' +
+        '<dt>Documento remitente</dt><dd>' + esc(p.remitente_documento || '—') + '</dd>' +
+        '<dt>Teléfono remitente</dt><dd>' + esc(p.remitente_telefono || '—') + '</dd>' +
+        '<dt>Dirección Andorra</dt><dd>' + esc(p.remitente_direccion || '—') + '</dd>' +
+        '<dt>Destinatario</dt><dd>' + esc(p.destinatario_nombre || '—') + ' · ' + esc(p.destinatario_documento || '—') + '</dd>' +
+        '<dt>Teléfono destinatario</dt><dd>' + esc(p.destinatario_telefono || '—') + '</dd>' +
+        '<dt>Mercancía</dt><dd>' + esc(p.mercancia_descripcion || '—') + '</dd>' +
+        '<dt>Fecha envío prevista</dt><dd>' + esc(p.fecha_envio || '—') + '</dd>' +
+        '<dt>Transportista</dt><dd>' + esc(p.tiene_transportista === 'si' ? 'Contratado' : (p.tiene_transportista === 'buscando' ? 'Buscando' : '—')) + '</dd>' +
+        '<dt>Idioma</dt><dd>' + esc((p.idioma || 'es').toUpperCase()) + '</dd>' +
+        '<dt>Actualizado</dt><dd>' + fmtFecha(p.actualizado_en) + '</dd>' +
+        '</dl></td></tr>';
+    }).join('') : '<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:26px">Sin pedidos que mostrar</td></tr>';
+  }
+
+  function setMsg(text, isError) {
+    var m = $('panelMsg');
+    m.textContent = text || '';
+    m.className = 'msg' + (isError ? ' error' : '');
+    m.style.display = text ? 'block' : 'none';
+  }
+
+  function cargar() {
+    setMsg('Cargando…');
+    api('GET').then(function (j) {
+      pedidos = j.pedidos || [];
+      setMsg('');
+      render();
+    }).catch(function (e) {
+      if (e.status === 401) { salir('Token no válido o caducado.'); return; }
+      setMsg(e.status === 503 ? 'Base de datos no configurada todavía en Vercel.' : 'Error cargando pedidos: ' + e.message, true);
+    });
+  }
+
+  function entrar() {
+    token = $('tokenInput').value.trim();
+    if (!token) return;
+    try { sessionStorage.setItem('bo_token', token); } catch (_) {}
+    api('GET').then(function (j) {
+      pedidos = j.pedidos || [];
+      $('gate').style.display = 'none';
+      $('panel').style.display = 'block';
+      render();
+    }).catch(function (e) {
+      var g = $('gateMsg');
+      g.textContent = e.status === 401 ? 'Token no válido.' :
+        (e.status === 503 ? 'Base de datos no configurada todavía en Vercel.' : 'Error: ' + e.message);
+      g.style.display = 'block';
+    });
+  }
+
+  function salir(motivo) {
+    token = '';
+    try { sessionStorage.removeItem('bo_token'); } catch (_) {}
+    $('panel').style.display = 'none';
+    $('gate').style.display = 'block';
+    var g = $('gateMsg');
+    g.textContent = motivo || '';
+    g.style.display = motivo ? 'block' : 'none';
+  }
+
+  $('btnLogin').addEventListener('click', entrar);
+  $('tokenInput').addEventListener('keydown', function (e) { if (e.key === 'Enter') entrar(); });
+  $('btnRefresh').addEventListener('click', cargar);
+  $('btnLogout').addEventListener('click', function () { salir(); });
+  $('search').addEventListener('input', render);
+
+  $('chips').addEventListener('click', function (e) {
+    var chip = e.target.closest('.chip');
+    if (!chip) return;
+    filtroEstado = chip.dataset.estado;
+    document.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('on', c === chip); });
+    render();
+  });
+
+  document.addEventListener('click', function (e) {
+    var sel = e.target.closest('select.estado');
+    if (sel) return; // el cambio de estado no debe plegar/desplegar la fila
+    var row = e.target.closest('tr.row');
+    if (!row) return;
+    var det = document.querySelector('tr.detail[data-detail="' + row.dataset.ref + '"]');
+    if (det) det.style.display = det.style.display === 'none' ? '' : 'none';
+  });
+
+  document.addEventListener('change', function (e) {
+    var sel = e.target.closest('select.estado');
+    if (!sel) return;
+    var ref = sel.dataset.ref;
+    var estado = sel.value;
+    sel.disabled = true;
+    api('PATCH', '', { referencia: ref, estado: estado }).then(function () {
+      var p = pedidos.find(function (x) { return x.referencia === ref; });
+      if (p) { p.estado = estado; p.actualizado_en = new Date().toISOString(); }
+      sel.disabled = false;
+      render();
+    }).catch(function (err) {
+      sel.disabled = false;
+      setMsg('No se pudo cambiar el estado de ' + ref + ': ' + err.message, true);
+      render();
+    });
+  });
+
+  if (token) {
+    $('gate').style.display = 'none';
+    $('panel').style.display = 'block';
+    cargar();
+  }
+})();
+</script>
+</body>
+</html>

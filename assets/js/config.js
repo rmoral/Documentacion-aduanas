@@ -7,22 +7,21 @@
       confirmación (gracias.html) sin pasar por el pago.
 
    2. FORM_ENDPOINT:
-      Endpoint que recibe los datos del formulario antes del pago.
-      Opciones sin backend: Formspree (https://formspree.io) o Getform.
-      Pega la URL de tu endpoint (ej: "https://formspree.io/f/xxxxxxx").
-      Si lo dejas vacío, los datos del pedido viajan en la referencia
+      Endpoint que recibe y guarda los datos del formulario antes del pago.
+      Por defecto apunta a la función serverless del propio proyecto
+      ("/api/pedidos"), que persiste cada pedido en la base de datos Neon
+      vinculada en Vercel. También admite un endpoint externo tipo
+      Formspree/Getform si se prefiere (ej: "https://formspree.io/f/xxxxxxx").
+      Si se deja vacío, los datos del pedido viajan solo en la referencia
       (client_reference_id) y quedan guardados en el navegador.
 
-   3. ORDER_EMAIL (fase de valoración, sin pasarela de pago):
-      Mientras STRIPE_PAYMENT_LINK esté vacío, al confirmar el pedido
-      se abre el correo del cliente con la solicitud completa dirigida
-      a esta dirección (y la página de gracias ofrece reenviarla).
-      Cámbiala por el email donde quieras recibir las solicitudes.
-      Cuando actives Stripe, el flujo de pago vuelve a tener prioridad.
+   Mientras STRIPE_PAYMENT_LINK esté vacío (fase de valoración), el
+   pedido queda registrado en la base de datos y el cliente pasa
+   directamente a la página de confirmación; los pedidos se gestionan
+   desde el backoffice (/admin).
 =========================================================== */
 window.SITE_CONFIG = {
   STRIPE_PAYMENT_LINK: "", // ej: "https://buy.stripe.com/xxxxxxxx"
-  FORM_ENDPOINT: "",       // ej: "https://formspree.io/f/xxxxxxx"
-  ORDER_EMAIL: "rmoral81@gmail.com", // recibe las solicitudes mientras no hay pago online
+  FORM_ENDPOINT: "/api/pedidos",
   PRECIO: "49,00 €"
 };
