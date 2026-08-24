@@ -113,6 +113,18 @@ Sin base de datos configurada, el site sigue funcionando: el envío del
 formulario ignora el error de la API y continúa hacia la confirmación o el
 pago.
 
+## Analítica
+
+Todas las páginas públicas cargan `assets/js/analytics.js` (con `defer`), que
+inyecta **Plausible** (analítica sin cookies, no requiere banner de
+consentimiento) para el dominio `www.aduanafacilandorra.com`. Para que
+empiece a registrar datos hay que **crear la cuenta en
+[plausible.io](https://plausible.io) y dar de alta el dominio**; hasta
+entonces el script es inocuo. El fichero admite también Google Analytics 4:
+basta rellenar la constante `GA4_ID` (formato `G-XXXXXXXXXX`). En local
+(`localhost`/`file:`) no se envía nada. Las guías nuevas del blog automático
+incluyen el script por plantilla (ver `BLOG-AUTOMATICO.md`).
+
 ## Publicación
 
 Es un site 100% estático: funciona en GitHub Pages, Netlify, Vercel o cualquier

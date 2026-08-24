@@ -60,6 +60,8 @@ for page in guide_pages:
         err(f"{rel}: debe tener exactamente un <h1> (tiene {html.count('<h1')})")
     if "Actualizado" not in html and "Actualitzat" not in html:
         warn(f"{rel}: no se encuentra la fecha visible 'Actualizado'")
+    if "analytics.js" not in html:
+        warn(f"{rel}: falta el script de analítica (assets/js/analytics.js)")
 
     # JSON-LD válido y coherente con la FAQ visible
     blocks = re.findall(
