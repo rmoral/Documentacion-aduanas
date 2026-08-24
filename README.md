@@ -116,13 +116,13 @@ pago.
 ## Analítica
 
 Todas las páginas públicas cargan `assets/js/analytics.js` (con `defer`), que
-inyecta **Plausible** (analítica sin cookies, no requiere banner de
-consentimiento) para el dominio `www.aduanafacilandorra.com`. Para que
-empiece a registrar datos hay que **crear la cuenta en
-[plausible.io](https://plausible.io) y dar de alta el dominio**; hasta
-entonces el script es inocuo. El fichero admite también Google Analytics 4:
-basta rellenar la constante `GA4_ID` (formato `G-XXXXXXXXXX`). En local
-(`localhost`/`file:`) no se envía nada. Las guías nuevas del blog automático
+gestiona **Google Analytics 4** (`GA4_ID = "G-EMPCWR18RR"`) con un **banner de
+consentimiento** en el idioma de cada página: GA4 y sus cookies solo se cargan
+si el visitante acepta, la elección se guarda en `localStorage`
+(`cookie_consent_v1`) y la política de privacidad lo refleja en los 5 idiomas.
+El fichero también admite **Plausible** (analítica sin cookies, se carga sin
+consentimiento) rellenando `PLAUSIBLE_DOMAIN`. En local (`localhost`/`file:`)
+no se envía nada ni se muestra el banner. Las guías nuevas del blog automático
 incluyen el script por plantilla (ver `BLOG-AUTOMATICO.md`).
 
 ## Publicación
