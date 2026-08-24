@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git clone https://github.com/rmoral/Documentacion-aduanas:*)",
+      "Bash(git config user.email:*)",
+      "Bash(git config user.name:*)",
+      "Bash(python3:*)",
+      "WebSearch"
+    ]
+  }
+}
