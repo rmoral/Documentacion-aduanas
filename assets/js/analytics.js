@@ -19,7 +19,7 @@
 (function () {
   'use strict';
 
-  var GA4_ID = 'G-EMPCWR18RR';
+  var GA4_ID = 'G-R90F53PYSP';
   var PLAUSIBLE_DOMAIN = '';
   var CONSENT_KEY = 'cookie_consent_v1';
 

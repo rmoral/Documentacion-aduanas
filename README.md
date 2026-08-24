@@ -116,7 +116,7 @@ pago.
 ## Analítica
 
 Todas las páginas públicas cargan `assets/js/analytics.js` (con `defer`), que
-gestiona **Google Analytics 4** (`GA4_ID = "G-EMPCWR18RR"`) con un **banner de
+gestiona **Google Analytics 4** (`GA4_ID = "G-R90F53PYSP"`) con un **banner de
 consentimiento** en el idioma de cada página: GA4 y sus cookies solo se cargan
 si el visitante acepta, la elección se guarda en `localStorage`
 (`cookie_consent_v1`) y la política de privacidad lo refleja en los 5 idiomas.
