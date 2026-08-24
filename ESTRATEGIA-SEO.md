@@ -50,9 +50,9 @@ realista aspirar a la posición 1–3 en casi todas las búsquedas del nicho en
 | `landingaduanamuebles.html` accesible | Duplicado exacto de la home indexable | Bloqueado en `robots.txt` |
 | Nada pensado para crawlers de IA | Invisible para GPTBot/ClaudeBot | `llms.txt` con resumen citable del servicio; robots.txt da la bienvenida explícita a los bots de IA |
 
-### ⚠️ Acción obligatoria antes de que nada de esto funcione
-Todo lo anterior usa el marcador `https://TU-DOMINIO`. En cuanto el dominio
-definitivo esté decidido, ejecutar **una sola vez**:
+### ✅ Dominio fijado
+El dominio definitivo es **https://www.aduanafacilandorra.com** (aplicado con
+`tools/set-domain.sh` en agosto 2026). Si cambiara, ejecutar de nuevo:
 
 ```bash
 ./tools/set-domain.sh https://www.tudominio.com
