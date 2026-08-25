@@ -9,7 +9,7 @@ buscan los clientes, después la cola larga.
 
 | # | Tema (título orientativo) | Slug propuesto | Keyword principal | Estado |
 |---|---|---|---|---|
-| 1 | Cuánto IVA pagarás al importar muebles usados de Andorra (con ejemplos) | iva-importacion-muebles-usados | IVA importación Andorra España | pendiente |
+| 1 | Cuánto IVA pagarás al importar muebles usados de Andorra (con ejemplos) | iva-importacion-muebles-usados | IVA importación Andorra España | publicado (2026-08-25) |
 | 2 | Mudanza de Andorra a España: trámites, plazos y costes | mudanza-andorra-espana | mudanza Andorra España | pendiente |
 | 3 | Qué es la factura proforma que pide la aduana y cómo se hace | factura-proforma-aduana | factura proforma aduana | pendiente |
 | 4 | Cómo elegir transportista para cruzar la frontera Andorra–España | transportistas-andorra-espana | transporte muebles Andorra España | pendiente |
