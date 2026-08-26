@@ -31,6 +31,7 @@ Datos clave del servicio:
 - [Qué documentos pide la aduana de la Farga de Moles](https://www.aduanafacilandorra.com/guias/documentos-aduana-farga-de-moles/): checklist completa (identidad, proforma, declaración jurada, packing list, autorización de despacho, CMR, DUA), quién prepara cada documento y motivos de rechazo habituales.
 - [La declaración jurada: enviar muebles sin factura de compra](https://www.aduanafacilandorra.com/guias/declaracion-jurada-muebles-sin-factura/): contenido obligatorio de la declaración, cómo declarar el valor residual, modelo de ejemplo comentado y preguntas frecuentes.
 - [Cuánto IVA pagarás al importar muebles usados de Andorra](https://www.aduanafacilandorra.com/guias/iva-importacion-muebles-usados/): 21 % sobre el valor residual declarado y 0 € de aranceles; ejemplos numéricos por tipo de envío, quién paga el impuesto y cuándo, la franquicia por traslado de residencia y los errores de valoración que provocan requerimientos.
+- [Mudanza de Andorra a España: trámites, plazos y costes](https://www.aduanafacilandorra.com/guias/mudanza-andorra-espana/): comparación entre envío ordinario (IVA 21 % sobre valor residual) y franquicia por traslado de residencia (sin IVA, más justificantes), trámites paso a paso, plazos realistas por fase, partidas de coste y errores clásicos.
 - [Índice de guías](https://www.aduanafacilandorra.com/guias/)
 
 ## Páginas
