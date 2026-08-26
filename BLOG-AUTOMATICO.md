@@ -62,7 +62,7 @@ Requisitos:
   `/#pedido`. Sección «Sigue leyendo» con 2–3 guías relacionadas.
 - **Footer** con el disclaimer estándar de las guías.
 - **Analítica**: incluye antes de `</head>` la línea
-  `<script defer src="../../assets/js/analytics.js"></script>` (las guías
+  `<script defer src="/assets/js/analytics.js"></script>` (las guías
   existentes ya la llevan; si copias su plantilla, vendrá incluida).
 - **Idioma**: español. No crees versiones en otros idiomas.
 
