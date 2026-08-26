@@ -55,9 +55,11 @@ Requisitos:
 - **Base de URLs**: copia la base del canonical de `guias/index.html` (si
   aún es el marcador `https://TU-DOMINIO`, usa el marcador; si ya hay
   dominio real, usa el dominio real). Nunca mezcles ambas.
-- **Enlaces internos**: al menos 2 enlaces a otras guías existentes y el CTA
-  estándar (`cta-guide`) hacia `../../index.html#pedido`. Sección «Sigue
-  leyendo» con 2–3 guías relacionadas.
+- **Enlaces internos**: SIEMPRE con rutas absolutas desde la raíz
+  (`/guias/<slug>/`, `/`, `/#pedido`, `/assets/...`), nunca relativas — así
+  la resolución no depende de si la URL de la página lleva barra final. Al
+  menos 2 enlaces a otras guías y el CTA estándar (`cta-guide`) hacia
+  `/#pedido`. Sección «Sigue leyendo» con 2–3 guías relacionadas.
 - **Footer** con el disclaimer estándar de las guías.
 - **Analítica**: incluye antes de `</head>` la línea
   `<script defer src="../../assets/js/analytics.js"></script>` (las guías

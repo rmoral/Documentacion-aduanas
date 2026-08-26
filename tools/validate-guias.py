@@ -98,14 +98,17 @@ for page in guide_pages:
         if f"/guias/{slug}/" not in llms:
             err(f"{rel}: la URL /guias/{slug}/ no está en llms.txt")
         hub = (ROOT / "guias" / "index.html").read_text(encoding="utf-8")
-        if f'href="{slug}/"' not in hub:
+        if f'href="/guias/{slug}/"' not in hub and f'href="{slug}/"' not in hub:
             err(f"guias/index.html: falta la tarjeta de la guía '{slug}'")
 
     # Enlaces internos resueltos
     for href in re.findall(r'href="([^"#]+?)(?:#[^"]*)?"', html):
         if href.startswith(("http", "data:", "mailto:", "tel:")):
             continue
-        target = (page.parent / href).resolve()
+        if href.startswith("/"):
+            target = (ROOT / href.lstrip("/")).resolve()
+        else:
+            target = (page.parent / href).resolve()
         if target.is_dir():
             target = target / "index.html"
         if not target.exists():
