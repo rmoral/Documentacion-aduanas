@@ -61,31 +61,31 @@
     es: {
       label: 'Aviso de cookies',
       msg: 'Usamos cookies de análisis (Google Analytics) para entender cómo se usa la web y mejorarla.',
-      more: 'Más información', accept: 'Aceptar', reject: 'Rechazar',
+      more: 'Más información sobre cookies', accept: 'Aceptar', reject: 'Rechazar',
       privacy: '/privacidad.html'
     },
     ca: {
       label: 'Avís de galetes',
       msg: "Fem servir galetes d'anàlisi (Google Analytics) per entendre com s'utilitza el web i millorar-lo.",
-      more: 'Més informació', accept: 'Acceptar', reject: 'Rebutjar',
+      more: 'Més informació sobre les galetes', accept: 'Acceptar', reject: 'Rebutjar',
       privacy: '/ca/privacidad.html'
     },
     en: {
       label: 'Cookie notice',
       msg: 'We use analytics cookies (Google Analytics) to understand how the site is used and improve it.',
-      more: 'More information', accept: 'Accept', reject: 'Reject',
+      more: 'More about our cookies', accept: 'Accept', reject: 'Reject',
       privacy: '/en/privacidad.html'
     },
     fr: {
       label: 'Avis relatif aux cookies',
       msg: "Nous utilisons des cookies de mesure d'audience (Google Analytics) pour comprendre l'utilisation du site et l'améliorer.",
-      more: 'En savoir plus', accept: 'Accepter', reject: 'Refuser',
+      more: 'En savoir plus sur les cookies', accept: 'Accepter', reject: 'Refuser',
       privacy: '/fr/privacidad.html'
     },
     ru: {
       label: 'Уведомление о cookie',
       msg: 'Мы используем аналитические cookie (Google Analytics), чтобы понимать, как используется сайт, и улучшать его.',
-      more: 'Подробнее', accept: 'Принять', reject: 'Отклонить',
+      more: 'Подробнее о файлах cookie', accept: 'Принять', reject: 'Отклонить',
       privacy: '/ru/privacidad.html'
     }
   };

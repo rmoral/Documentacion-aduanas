@@ -64,6 +64,11 @@ Requisitos:
 - **Analítica**: incluye antes de `</head>` la línea
   `<script defer src="/assets/js/analytics.js"></script>` (las guías
   existentes ya la llevan; si copias su plantilla, vendrá incluida).
+- **CSS**: las páginas llevan la hoja de estilos incrustada
+  (`<style data-inline="styles.css">`); al copiar la plantilla de una guía
+  existente ya viene incluida. Si algún día se edita
+  `assets/css/styles.css`, hay que propagarlo con
+  `python3 tools/inline-css.py`.
 - **Idioma**: español. No crees versiones en otros idiomas.
 
 ## 4. Integrar

@@ -62,6 +62,12 @@ for page in guide_pages:
         warn(f"{rel}: no se encuentra la fecha visible 'Actualizado'")
     if "analytics.js" not in html:
         warn(f"{rel}: falta el script de analítica (assets/js/analytics.js)")
+    m = re.search(r'<style data-inline="styles\.css">\n(.*?)\n</style>', html, re.S)
+    css_src = (ROOT / "assets" / "css" / "styles.css").read_text(encoding="utf-8").strip()
+    if not m:
+        warn(f"{rel}: sin CSS inline — ejecuta python3 tools/inline-css.py")
+    elif m.group(1).strip() != css_src:
+        warn(f"{rel}: CSS inline desactualizado — ejecuta python3 tools/inline-css.py")
 
     # JSON-LD válido y coherente con la FAQ visible
     blocks = re.findall(
