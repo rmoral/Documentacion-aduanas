@@ -13,7 +13,7 @@ buscan los clientes, después la cola larga.
 | 2 | Mudanza de Andorra a España: trámites, plazos y costes | mudanza-andorra-espana | mudanza Andorra España | publicado (2026-08-26) |
 | 3 | Qué es la factura proforma que pide la aduana y cómo se hace | factura-proforma-aduana | factura proforma aduana | publicado (2026-08-27) |
 | 4 | Cómo elegir transportista para cruzar la frontera Andorra–España | transportistas-andorra-espana | transporte muebles Andorra España | publicado (2026-08-28) |
-| 5 | Comprar muebles o enseres en Andorra y llevarlos a España | comprar-muebles-en-andorra | comprar muebles en Andorra | pendiente |
+| 5 | Comprar muebles o enseres en Andorra y llevarlos a España | comprar-muebles-en-andorra | comprar muebles en Andorra | publicado (2026-08-29) |
 | 6 | Franquicia por traslado de residencia: mudarte de Andorra a España sin pagar IVA | franquicia-traslado-residencia | franquicia traslado residencia Andorra | pendiente |
 | 7 | Qué es el DUA y por qué no tienes que rellenarlo tú | que-es-el-dua | DUA exportación Andorra | pendiente |
 | 8 | La carta de porte CMR explicada para particulares | carta-de-porte-cmr | carta de porte CMR | pendiente |
