@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enviar electrodomésticos usados de Andorra a España</title>
+<meta name="description" content="Nevera, lavadora, televisión: los electrodomésticos usados cruzan la aduana Andorra → España como enseres personales, con el 21% de IVA sobre su valor residual y sin aranceles. Cómo declararlos con marca y modelo, cómo valorarlos (se deprecian rápido) y cómo prepararlos para el transporte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/enviar-electrodomesticos-andorra-espana/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/enviar-electrodomesticos-andorra-espana/">
+<meta property="og:title" content="Enviar electrodomésticos usados de Andorra a España">
+<meta property="og:description" content="Nevera, lavadora, televisión: cruzan como enseres personales con IVA del 21% sobre el valor residual y sin aranceles. Cómo declararlos, valorarlos y prepararlos para el viaje.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-03">
+<meta property="article:modified_time" content="2026-09-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enviar electrodomésticos usados de Andorra a España">
+<meta name="twitter:description" content="Nevera, lavadora, televisión: cruzan como enseres personales con IVA del 21% sobre el valor residual y sin aranceles. Cómo declararlos, valorarlos y prepararlos para el viaje.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/enviar-electrodomesticos-andorra-espana/#article",
+   "headline": "Enviar electrodomésticos usados de Andorra a España",
+   "description": "Cómo pasan la aduana Andorra → España los electrodomésticos usados de un particular: mismo régimen que los muebles (21% de IVA sobre el valor residual, sin aranceles), declaración por partidas con marca y modelo, valoración con depreciación rápida y preparación práctica de nevera, lavadora y electrónica para el transporte.",
+   "inLanguage": "es",
+   "datePublished": "2026-09-03",
+   "dateModified": "2026-09-03",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/enviar-electrodomesticos-andorra-espana/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/enviar-electrodomesticos-andorra-espana/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Enviar electrodomésticos usados"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/enviar-electrodomesticos-andorra-espana/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Puedo enviar un electrodoméstico averiado o para piezas?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Sí, siempre que lo declares como lo que es: «lavadora averiada, para piezas» con un valor residual bajo y realista. Lo que no funciona es enviarlo sin mencionarlo, porque el estado del aparato y su valor deben ser coherentes. Antes de cargarlo, haz números: entre el hueco que ocupa en el camión y el valor que tiene, a veces compensa más reciclarlo en Andorra y no enviarlo."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿La aduana pide facturas o números de serie de los aparatos?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Para bienes usados de particular no se exigen facturas de compra: la declaración jurada las sustituye. Pero anotar marca, modelo y — en electrónica de valor, como televisores u ordenadores — el número de serie en el inventario da una credibilidad enorme al expediente: demuestra que declaras aparatos concretos e identificables, no una lista genérica. Es gratis y evita preguntas."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Los electrodomésticos entran en la franquicia por traslado de residencia?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Sí: en una mudanza completa por cambio de residencia habitual, los electrodomésticos son enseres personales como los muebles y pueden acogerse a la franquicia (sin IVA) si cumplen el requisito de posesión y uso previo de al menos 6 meses. Un aparato comprado hace menos de 6 meses queda fuera: se declara aparte como importación ordinaria, con su factura como documento de valor."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Quién prepara la nevera y la lavadora para el transporte?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Tú, salvo que contrates una mudanza con servicio completo que lo incluya (pregúntalo al pedir presupuesto). Lo básico: desenchufa y descongela la nevera al menos 24 horas antes y sécala; vacía por completo de agua la lavadora y el lavavajillas (tambor, mangueras y filtro) y embala cables y mangueras aparte. Un aparato que gotea en el camión es la avería de tus cajas de libros."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Enviar electrodomésticos usados</nav>
+    <h1>Enviar electrodomésticos usados de Andorra a España</h1>
+    <div class="updated">Actualizado · Septiembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>Tus electrodomésticos usados cruzan la aduana <strong>igual que los muebles</strong>: como enseres personales, con el <strong>21% de IVA sobre su valor residual</strong> y <strong>sin aranceles</strong>. La diferencia práctica está en cómo se declaran — por partidas con <strong>marca y modelo</strong> — en que se deprecian más rápido que un mueble, y en que hay que <strong>prepararlos físicamente</strong> para el viaje (nevera descongelada, lavadora sin agua).</p>
+    </div>
+
+    <h2>¿Cambia algo respecto a enviar muebles?</h2>
+    <p>En lo aduanero, no. Una nevera, una lavadora o un televisor usados de un particular son <strong>enseres personales</strong> exactamente igual que un sofá: viajan con el mismo expediente — <a href="/guias/factura-proforma-aduana/">factura proforma</a>, <a href="/guias/declaracion-jurada-muebles-sin-factura/">declaración jurada</a> de bienes usados y packing list — y tributan igual: IVA de importación del 21% sobre el valor residual declarado, cero aranceles por la unión aduanera UE–Andorra. No necesitas licencias ni trámites especiales por tratarse de aparatos eléctricos: el régimen de efectos personales usados los cubre.</p>
+    <p>Las diferencias reales son tres, y ninguna es normativa: los electrodomésticos <strong>se identifican mejor</strong> (marca y modelo), <strong>pierden valor más deprisa</strong> que un mueble, y <strong>exigen preparación física</strong> antes de subirlos al camión. Vamos con cada una.</p>
+
+    <h2>¿Cómo se declaran? Marca, modelo y estado</h2>
+    <p>Con los muebles basta «mesa de comedor extensible»; con los aparatos, lo que hace creíble el inventario es identificarlos: <strong>«frigorífico combi [marca] [modelo], año aproximado, funcionando»</strong>. En electrónica de cierto valor — televisores, ordenadores, consolas — añade el número de serie. Ese detalle convierte una lista genérica en una declaración de bienes concretos, que es justo lo que la aduana quiere ver.</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Partida de ejemplo</th><th>Cómo declararla</th></tr>
+      <tr><td>Frigorífico</td><td>Marca, modelo, año aproximado y estado («funcionando»)</td></tr>
+      <tr><td>Lavadora</td><td>Marca, modelo, año aproximado; si va averiada, dilo («para piezas»)</td></tr>
+      <tr><td>Televisor / ordenador</td><td>Marca, modelo, pulgadas y número de serie</td></tr>
+      <tr><td>Pequeño electrodoméstico</td><td>Agrupado en una partida razonable («caja pequeño electrodoméstico cocina: 40 €»)</td></tr>
+    </table>
+    </div>
+
+    <h2>¿Cuánto valen? La depreciación va más rápido</h2>
+    <p>Un mueble macizo de diez años puede conservar buena parte de su valor; un electrodoméstico de diez años, casi nunca. La tecnología avanza, la eficiencia energética cambia de letra cada pocos años y el mercado de segunda mano lo refleja sin piedad. Aplica el <a href="/guias/calcular-valor-residual-muebles/">método del valor residual</a> con esa realidad en mente: busca lo que se pide de verdad por aparatos equivalentes en segunda mano y ajústalo al estado del tuyo.</p>
+    <p>Ejemplos ilustrativos (no tarifas): una lavadora de 8 años que costó 500 € puede defenderse hoy en torno a 60 € (12,60 € de IVA); un frigorífico de 5 años, sobre 150 € (31,50 € de IVA); un televisor de 6 años, 80 € (16,80 €). La cuenta completa, con quién paga y cuándo, está en la <a href="/guias/iva-importacion-muebles-usados/">guía del IVA</a>.</p>
+    <div class="note-box"><strong>La coherencia manda también aquí:</strong> un frigorífico «funcionando» declarado a 10 € chirría tanto como uno «para piezas» declarado a 200 €. Estado y valor deben contarse la misma historia — y ser la misma en proforma, declaración jurada y packing list.</div>
+
+    <h2>Preparar los aparatos para el viaje</h2>
+    <p>Esto no lo pide la aduana: lo pide el sentido común (y tu transportista). Un aparato mal preparado moja o avería el resto de la carga.</p>
+    <ul>
+      <li><strong>Frigorífico y congelador:</strong> desenchúfalos al menos <strong>24 horas antes</strong>, descongélalos, sécalos y viaja con las puertas sujetas y los estantes embalados aparte. Pregunta al transportista si lo cargará de pie: es lo recomendable para el circuito del gas.</li>
+      <li><strong>Lavadora y lavavajillas:</strong> vacíalos por completo de agua — tambor, mangueras y filtro — y embala cables y mangueras. Si conservas los pernos de bloqueo del tambor de la lavadora, es el momento de reencontrarte con ellos.</li>
+      <li><strong>Horno, microondas y pequeño aparato:</strong> limpios y sin bandejas sueltas dentro; lo suelto viaja aparte.</li>
+      <li><strong>Electrónica:</strong> caja original si la tienes; si no, embalaje rígido y una foto del aparato encendido antes de embalar — tu mejor prueba de que salió funcionando, por si toca <a href="/guias/carta-de-porte-cmr/">reclamar daños con reservas en el CMR</a>.</li>
+      <li><strong>Fotografía el estado general</strong> de cada aparato antes de embalar. Dos minutos que valen una reclamación.</li>
+    </ul>
+
+    <h2>Tres casos particulares</h2>
+    <ul>
+      <li><strong>El aparato averiado.</strong> Puede viajar declarado como tal («para piezas») con valor bajo y realista. Pero haz números antes: entre el espacio que ocupa y lo poco que vale, a veces gana el punto limpio de Andorra.</li>
+      <li><strong>El aparato casi nuevo.</strong> Si vas con <a href="/guias/franquicia-traslado-residencia/">franquicia por traslado de residencia</a>, lo comprado hace menos de 6 meses queda fuera de la franquicia y tributa aparte, con su factura de compra como valor. En envío ordinario, declara su valor real de mercado — que siendo casi nuevo, será cercano al de compra.</li>
+      <li><strong>El lote de cocina completo.</strong> Perfectamente normal en una mudanza: cada aparato grande con su partida, y el pequeño electrodoméstico agrupado con un valor de conjunto razonable.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>Tu expediente con los aparatos bien declarados</h2>
+      <p>Preparamos el inventario con marcas, modelos y valores defendibles, la declaración jurada, la proforma y el dosier del transportista — coherentes entre sí y listos en 24 horas laborables.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Puedo enviar un electrodoméstico averiado o para piezas?</summary>
+      <p>Sí, siempre que lo declares como lo que es: «lavadora averiada, para piezas» con un valor residual bajo y realista. Lo que no funciona es enviarlo sin mencionarlo, porque el estado del aparato y su valor deben ser coherentes. Antes de cargarlo, haz números: entre el hueco que ocupa en el camión y el valor que tiene, a veces compensa más reciclarlo en Andorra y no enviarlo.</p>
+    </details>
+    <details>
+      <summary>¿La aduana pide facturas o números de serie de los aparatos?</summary>
+      <p>Para bienes usados de particular no se exigen facturas de compra: la declaración jurada las sustituye. Pero anotar marca, modelo y — en electrónica de valor, como televisores u ordenadores — el número de serie en el inventario da una credibilidad enorme al expediente: demuestra que declaras aparatos concretos e identificables, no una lista genérica. Es gratis y evita preguntas.</p>
+    </details>
+    <details>
+      <summary>¿Los electrodomésticos entran en la franquicia por traslado de residencia?</summary>
+      <p>Sí: en una mudanza completa por cambio de residencia habitual, los electrodomésticos son enseres personales como los muebles y pueden acogerse a la franquicia (sin IVA) si cumplen el requisito de posesión y uso previo de al menos 6 meses. Un aparato comprado hace menos de 6 meses queda fuera: se declara aparte como importación ordinaria, con su factura como documento de valor.</p>
+    </details>
+    <details>
+      <summary>¿Quién prepara la nevera y la lavadora para el transporte?</summary>
+      <p>Tú, salvo que contrates una mudanza con servicio completo que lo incluya (pregúntalo al pedir presupuesto). Lo básico: desenchufa y descongela la nevera al menos 24 horas antes y sécala; vacía por completo de agua la lavadora y el lavavajillas (tambor, mangueras y filtro) y embala cables y mangueras aparte. Un aparato que gotea en el camión es la avería de tus cajas de libros.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/calcular-valor-residual-muebles/">Cómo calcular el valor residual: el método en 4 pasos</a></li>
+        <li><a href="/guias/iva-importacion-muebles-usados/">Cuánto IVA pagarás, con ejemplos numéricos</a></li>
+        <li><a href="/guias/transportistas-andorra-espana/">Cómo elegir transportista para la ruta</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales. Esta guía es información general y los importes de sus ejemplos son ilustrativos; la valoración definitiva depende de tus aparatos y su estado.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

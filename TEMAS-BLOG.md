@@ -18,7 +18,7 @@ buscan los clientes, después la cola larga.
 | 7 | Qué es el DUA y por qué no tienes que rellenarlo tú | que-es-el-dua | DUA exportación Andorra | publicado (2026-08-31) |
 | 8 | La carta de porte CMR explicada para particulares | carta-de-porte-cmr | carta de porte CMR | publicado (2026-09-01) |
 | 9 | Cómo calcular el valor residual de tus muebles usados (método práctico) | calcular-valor-residual-muebles | valor residual muebles usados | publicado (2026-09-02) |
-| 10 | Enviar electrodomésticos usados de Andorra a España | enviar-electrodomesticos-andorra-espana | enviar electrodomésticos Andorra España | pendiente |
+| 10 | Enviar electrodomésticos usados de Andorra a España | enviar-electrodomesticos-andorra-espana | enviar electrodomésticos Andorra España | publicado (2026-09-03) |
 | 11 | Heredar en Andorra: enviar los muebles y enseres de una herencia a España | enviar-herencia-andorra-espana | herencia muebles Andorra España | pendiente |
 | 12 | Llevar muebles de España a Andorra: el despacho en sentido inverso y el IGI | muebles-espana-andorra-igi | llevar muebles a Andorra IGI | pendiente |
 | 13 | La unión aduanera UE–Andorra: qué cubre y qué no | union-aduanera-ue-andorra | unión aduanera UE Andorra | pendiente |
