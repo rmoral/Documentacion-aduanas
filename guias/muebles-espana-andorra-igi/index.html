@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Llevar muebles de España a Andorra: el despacho en sentido inverso y el IGI</title>
+<meta name="description" content="El viaje contrario también pasa por la Farga de Moles: exportación española, importación andorrana y el IGI del 4,5% (en vez del IVA del 21%) sobre el valor residual de tus muebles usados. Qué cambia, qué documentos sirven igual y cómo se organiza el envío España → Andorra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/muebles-espana-andorra-igi/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/muebles-espana-andorra-igi/">
+<meta property="og:title" content="Llevar muebles de España a Andorra: el despacho en sentido inverso y el IGI">
+<meta property="og:description" content="Exportación española, importación andorrana y el IGI del 4,5% sobre el valor residual. Qué cambia respecto al sentido habitual y qué documentos sirven igual.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Llevar muebles de España a Andorra: el despacho en sentido inverso y el IGI">
+<meta name="twitter:description" content="Exportación española, importación andorrana y el IGI del 4,5% sobre el valor residual. Qué cambia respecto al sentido habitual y qué documentos sirven igual.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/muebles-espana-andorra-igi/#article",
+   "headline": "Llevar muebles de España a Andorra: el despacho en sentido inverso y el IGI",
+   "description": "Cómo funciona el envío de muebles y enseres usados de España a Andorra: la exportación española y la importación andorrana en la Farga de Moles, el IGI del 4,5% sobre el valor residual en lugar del IVA español del 21%, los documentos que sirven igual en ambos sentidos y la mudanza por traslado de residencia a Andorra.",
+   "inLanguage": "es",
+   "datePublished": "2026-09-05",
+   "dateModified": "2026-09-05",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/muebles-espana-andorra-igi/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/muebles-espana-andorra-igi/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Muebles de España a Andorra y el IGI"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/muebles-espana-andorra-igi/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Pago IVA español al sacar mis muebles de España hacia Andorra?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No. Sacar tus propios muebles usados de España no es una venta: es una exportación de bienes personales, y la salida no genera IVA español. El impuesto de este viaje se paga a la entrada en Andorra: el IGI, que la aduana andorrana liquida al importar. Por eso la cuenta del sentido inverso es más amable — el IGI general es del 4,5%, frente al 21% del IVA español que se paga en el sentido Andorra → España."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto IGI pagaré por muebles usados al entrar en Andorra?",
+     "acceptedAnswer": {"@type": "Answer", "text": "El tipo general del IGI es el 4,5%, y para bienes usados de particular se aplica sobre un valor realista de segunda mano — el mismo concepto de valor residual que en el sentido contrario. Un lote de muebles usados declarado por 300 € son 13,50 € de IGI. Alimentos, libros y algunos productos tienen tipo reducido del 1%, pero para una mudanza de muebles la referencia es el 4,5% general."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Sirven los mismos documentos que en el sentido Andorra → España?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Sí, el juego es el mismo: factura proforma con el valor residual, declaración jurada de bienes personales usados, packing list, autorización de despacho para el agente y carta de porte CMR del transportista. Lo que cambia es el papel de cada aduana: la española tramita la exportación y la andorrana la importación con su liquidación de IGI. La coherencia entre documentos importa exactamente igual: son las mismas ventanillas de la Farga de Moles, miradas desde el otro lado."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Hay franquicia si me mudo a vivir a Andorra?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La normativa aduanera andorrana contempla regímenes especiales para las mudanzas por traslado de residencia al Principado, con sus propios requisitos y justificantes (residencia, antigüedad de los bienes). Es la Duana andorrana quien lo concede, así que confírmalo antes de organizar el envío con la propia Duana o con el agente de aduanas del transportista — igual que en España, este tipo de franquicia se solicita en el despacho, no después."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Muebles de España a Andorra y el IGI</nav>
+    <h1>Llevar muebles de España a Andorra: el despacho en sentido inverso y el IGI</h1>
+    <div class="updated">Actualizado · Septiembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros entre Andorra y España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El viaje España → Andorra pasa por las mismas dos ventanillas de la Farga de Moles, pero con los papeles cambiados: <strong>exportación española</strong> a la salida e <strong>importación andorrana</strong> a la entrada. El impuesto lo liquida la aduana andorrana: el <strong>IGI</strong>, con tipo general del <strong>4,5%</strong> sobre el valor residual de tus muebles usados — bastante más amable que el 21% del sentido contrario. Los documentos del expediente son <strong>los mismos</strong>.</p>
+    </div>
+
+    <h2>¿Qué cambia al invertir el sentido?</h2>
+    <p>Casi todo lo que cuentan nuestras guías del sentido Andorra → España sirve aquí, reflejado en un espejo. Andorra sigue estando fuera de la UE, así que llevar tus muebles de Lleida o Barcelona a Escaldes sigue siendo un envío internacional con dos despachos: España tramita la <strong>exportación</strong> (la salida legal de la UE) y la Duana andorrana tramita la <strong>importación</strong>, que es donde se pagan impuestos. Los muebles siguen sin pagar aranceles — la unión aduanera UE–Andorra cubre los bienes industriales en ambos sentidos — y el expediente sigue siendo el mismo juego de documentos coherentes.</p>
+    <p>El cambio importante es el impuesto de la entrada: donde el sentido Andorra → España liquida el <a href="/guias/iva-importacion-muebles-usados/">IVA español del 21%</a>, el sentido España → Andorra liquida el <strong>IGI andorrano</strong>.</p>
+
+    <h2>El IGI: el «IVA andorrano» del 4,5%</h2>
+    <p>El IGI (Impost General Indirecte) es el equivalente andorrano del IVA, y su tipo general — el que aplica a muebles y enseres — es del <strong>4,5%</strong>, uno de los más bajos de Europa. Se liquida en la aduana al importar, sobre el valor de la mercancía: para bienes usados de particular, un <a href="/guias/calcular-valor-residual-muebles/">valor residual</a> realista, igual que en el sentido contrario.</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th></th><th>Andorra → España</th><th>España → Andorra</th></tr>
+      <tr><td><strong>Impuesto de importación</strong></td><td>IVA español, 21%</td><td>IGI andorrano, 4,5% (tipo general)</td></tr>
+      <tr><td><strong>Sobre qué se aplica</strong></td><td>Valor residual declarado</td><td>Valor residual declarado</td></tr>
+      <tr><td><strong>Ejemplo: lote de 300 €</strong></td><td>63 €</td><td>13,50 €</td></tr>
+      <tr><td><strong>Aranceles</strong></td><td>0 € (unión aduanera)</td><td>0 € (unión aduanera)</td></tr>
+      <tr><td><strong>Quién liquida</strong></td><td>Aduana española (AEAT)</td><td>Duana andorrana</td></tr>
+    </table>
+    </div>
+    <p>La moraleja del ejemplo: el mismo salón que en dirección sur tributa 63 € tributa 13,50 € en dirección norte. El coste fiscal casi nunca es el problema de este sentido — el papeleo coherente, en cambio, sigue siéndolo igual.</p>
+
+    <h2>Los documentos: el mismo juego, con los papeles cambiados</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Documento</th><th>¿Cambia algo?</th></tr>
+      <tr><td><a href="/guias/factura-proforma-aduana/">Factura proforma</a></td><td>El mismo documento de valor; ahora el remitente está en España y el destinatario en Andorra</td></tr>
+      <tr><td><a href="/guias/declaracion-jurada-muebles-sin-factura/">Declaración jurada</a></td><td>Idéntica lógica: bienes personales usados, sin carácter comercial, con su motivación de valor</td></tr>
+      <tr><td>Packing list</td><td>El mismo inventario por bultos, coherente con todo lo demás</td></tr>
+      <tr><td>Autorización de despacho</td><td>Para el agente que gestione los dos despachos — exportación española e importación andorrana</td></tr>
+      <tr><td><a href="/guias/carta-de-porte-cmr/">Carta de porte CMR</a></td><td>Igual: transporte internacional por carretera es, en ambos sentidos</td></tr>
+    </table>
+    </div>
+    <div class="note-box"><strong>El transportista adecuado también es el mismo:</strong> las empresas que hacen la ruta cada semana la hacen en los dos sentidos, con agente de aduanas a ambos lados. Los criterios para elegirlo — y las preguntas del presupuesto con desglose — están en la <a href="/guias/transportistas-andorra-espana/">guía del transportista</a>.</div>
+
+    <h2>Paso a paso del envío España → Andorra</h2>
+    <ol>
+      <li><strong>Inventaría y valora</strong> lo que viaja, por partidas y con valor residual realista — el método es el mismo de siempre.</li>
+      <li><strong>Prepara el expediente:</strong> proforma, declaración jurada y packing list con remitente en España y destinatario en Andorra.</li>
+      <li><strong>Contrata transportista de la ruta</strong> y entrega el dosier a su agente de aduanas, con la autorización de despacho firmada.</li>
+      <li><strong>El agente tramita ambos despachos:</strong> la exportación ante la aduana española y la importación ante la Duana, que liquida el IGI.</li>
+      <li><strong>Guarda los justificantes</strong> de ambos despachos y del IGI pagado, junto a tu copia del expediente.</li>
+    </ol>
+
+    <h2>¿Te mudas a vivir a Andorra?</h2>
+    <p>Si el envío es tu mudanza por traslado de residencia al Principado, la normativa aduanera andorrana contempla regímenes especiales para los enseres de quien se instala, con sus requisitos y justificantes propios (residencia autorizada, antigüedad y uso de los bienes). Quien lo concede es la <strong>Duana andorrana</strong>, así que la regla práctica es la misma que contamos para la <a href="/guias/franquicia-traslado-residencia/">franquicia española</a> pero mirando al norte: confírmalo con la Duana o con el agente de aduanas <em>antes</em> de cargar, porque este tipo de régimen se solicita en el despacho, no se reclama después.</p>
+
+    <div class="cta-guide">
+      <h2>El expediente, en el sentido que toque</h2>
+      <p>La proforma, la declaración jurada y el packing list son el mismo juego de documentos en ambas direcciones. Te lo preparamos coherente y listo para el agente de aduanas en 24 horas laborables — cuéntanos tu caso en el formulario.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Pago IVA español al sacar mis muebles de España hacia Andorra?</summary>
+      <p>No. Sacar tus propios muebles usados de España no es una venta: es una exportación de bienes personales, y la salida no genera IVA español. El impuesto de este viaje se paga a la entrada en Andorra: el IGI, que la aduana andorrana liquida al importar. Por eso la cuenta del sentido inverso es más amable — el IGI general es del 4,5%, frente al 21% del IVA español que se paga en el sentido Andorra → España.</p>
+    </details>
+    <details>
+      <summary>¿Cuánto IGI pagaré por muebles usados al entrar en Andorra?</summary>
+      <p>El tipo general del IGI es el 4,5%, y para bienes usados de particular se aplica sobre un valor realista de segunda mano — el mismo concepto de valor residual que en el sentido contrario. Un lote de muebles usados declarado por 300 € son 13,50 € de IGI. Alimentos, libros y algunos productos tienen tipo reducido del 1%, pero para una mudanza de muebles la referencia es el 4,5% general.</p>
+    </details>
+    <details>
+      <summary>¿Sirven los mismos documentos que en el sentido Andorra → España?</summary>
+      <p>Sí, el juego es el mismo: factura proforma con el valor residual, declaración jurada de bienes personales usados, packing list, autorización de despacho para el agente y carta de porte CMR del transportista. Lo que cambia es el papel de cada aduana: la española tramita la exportación y la andorrana la importación con su liquidación de IGI. La coherencia entre documentos importa exactamente igual: son las mismas ventanillas de la Farga de Moles, miradas desde el otro lado.</p>
+    </details>
+    <details>
+      <summary>¿Hay franquicia si me mudo a vivir a Andorra?</summary>
+      <p>La normativa aduanera andorrana contempla regímenes especiales para las mudanzas por traslado de residencia al Principado, con sus propios requisitos y justificantes (residencia, antigüedad de los bienes). Es la Duana andorrana quien lo concede, así que confírmalo antes de organizar el envío con la propia Duana o con el agente de aduanas del transportista — igual que en España, este tipo de franquicia se solicita en el despacho, no después.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/iva-importacion-muebles-usados/">El sentido contrario: el IVA del 21% al entrar en España</a></li>
+        <li><a href="/guias/calcular-valor-residual-muebles/">Cómo calcular el valor residual, válido en ambos sentidos</a></li>
+        <li><a href="/guias/que-es-el-dua/">Qué es el DUA y quién presenta las declaraciones</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales. Esta guía es información general; verifica los tipos y regímenes vigentes del IGI con la Duana andorrana antes de tu envío.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
