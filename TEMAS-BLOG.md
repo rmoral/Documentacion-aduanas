@@ -22,7 +22,7 @@ buscan los clientes, después la cola larga.
 | 11 | Heredar en Andorra: enviar los muebles y enseres de una herencia a España | enviar-herencia-andorra-espana | herencia muebles Andorra España | publicado (2026-09-04) |
 | 12 | Llevar muebles de España a Andorra: el despacho en sentido inverso y el IGI | muebles-espana-andorra-igi | llevar muebles a Andorra IGI | publicado (2026-09-05) |
 | 13 | La unión aduanera UE–Andorra: qué cubre y qué no | union-aduanera-ue-andorra | unión aduanera UE Andorra | publicado (2026-09-06) |
-| 14 | Los errores más caros en la aduana de la Farga de Moles (y cómo evitarlos) | errores-aduana-farga-de-moles | errores aduana Andorra | pendiente |
+| 14 | Los errores más caros en la aduana de la Farga de Moles (y cómo evitarlos) | errores-aduana-farga-de-moles | errores aduana Andorra | publicado (2026-09-07) |
 | 15 | Enviar cajas y efectos personales por mensajería de Andorra a España | enviar-cajas-mensajeria-andorra-espana | enviar paquete Andorra España aduana | pendiente |
 | 16 | Mudanza parcial: enviar solo una parte de tus enseres a España | mudanza-parcial-andorra-espana | mudanza parcial Andorra | pendiente |
 | 17 | Vender tus muebles a un comprador en España: quién paga qué en la aduana | vender-muebles-comprador-espana | vender muebles Andorra España | pendiente |
