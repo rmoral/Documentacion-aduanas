@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El packing list perfecto: cómo inventariar tu envío o mudanza</title>
+<meta name="description" content="El packing list es la columna vertebral del expediente aduanero: el inventario por bultos del que beben la proforma, la declaración jurada y el CMR. Método en 5 pasos para hacerlo bien, el formato que funciona, las reglas de oro y los errores que convierten cajas en preguntas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/packing-list-mudanza/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/packing-list-mudanza/">
+<meta property="og:title" content="El packing list perfecto: cómo inventariar tu envío o mudanza">
+<meta property="og:description" content="El inventario por bultos del que bebe todo el expediente: método en 5 pasos, el formato que funciona y los errores que convierten cajas en preguntas de la aduana.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-12">
+<meta property="article:modified_time" content="2026-09-12">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El packing list perfecto: cómo inventariar tu envío o mudanza">
+<meta name="twitter:description" content="El inventario por bultos del que bebe todo el expediente: método en 5 pasos, el formato que funciona y los errores que convierten cajas en preguntas de la aduana.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/packing-list-mudanza/#article",
+   "headline": "El packing list perfecto: cómo inventariar tu envío o mudanza",
+   "description": "Cómo hacer el packing list de un envío o mudanza Andorra → España: qué es y para qué sirve (aduana, transporte, reclamaciones), el formato por bultos numerados, el método en 5 pasos, las reglas de oro de coherencia con la proforma, la declaración jurada y el CMR, y los errores habituales al inventariar.",
+   "inLanguage": "es",
+   "datePublished": "2026-09-12",
+   "dateModified": "2026-09-12",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/packing-list-mudanza/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/packing-list-mudanza/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "El packing list perfecto"}
+   ]
+  },
+  {
+   "@type": "HowTo",
+   "@id": "https://www.aduanafacilandorra.com/guias/packing-list-mudanza/#howto",
+   "name": "Cómo hacer el packing list de un envío o mudanza",
+   "inLanguage": "es",
+   "step": [
+    {"@type": "HowToStep", "position": 1, "name": "Numera físicamente cada bulto", "text": "Rotula cada caja y cada mueble sin caja con un número visible e indeleble (caja 1, caja 2, mueble 7). El número físico y el de la lista deben ser el mismo."},
+    {"@type": "HowToStep", "position": 2, "name": "Describe el contenido de cada bulto", "text": "Una línea concreta por bulto: «caja 3: vajilla y menaje de cocina», «bulto 7: sofá 3 plazas». Concreto sin ser exhaustivo — nada de «efectos varios»."},
+    {"@type": "HowToStep", "position": 3, "name": "Añade lo que pida el transportista", "text": "Peso o medidas aproximadas por bulto si el presupuesto lo requiere, y marca los frágiles. Al transportista le sirve para cargar; a ti, para reclamar."},
+    {"@type": "HowToStep", "position": 4, "name": "Cuadra el packing list con el resto del expediente", "text": "Las partidas valoradas de la factura proforma y la declaración jurada deben corresponderse con los bultos de la lista, y el total de bultos con el que figure en la carta de porte CMR."},
+    {"@type": "HowToStep", "position": 5, "name": "Reparte copias y fotografía", "text": "Una copia para ti, otra viaja con el expediente del transportista y su agente. Foto de cada bulto cerrado y numerado: tu mejor prueba ante daños o pérdidas."}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/packing-list-mudanza/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Tengo que listar cada objeto de cada caja?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No: el nivel razonable es una descripción concreta por bulto («caja 4: ropa de invierno», «caja 9: 30 libros»), no el inventario objeto a objeto. La excepción son las piezas de valor singular — electrónica, instrumentos, antigüedades —, que merecen línea propia con marca y modelo (y número de serie si lo tienen). La regla práctica: cualquier persona debería poder saber qué hay en una caja leyendo su línea, sin abrirla."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿El packing list lleva valores en euros?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Los valores viven en la factura proforma, que es el documento de valor del expediente; el packing list describe bultos y contenidos. Puedes añadir una columna de valor por bulto si te resulta cómodo, pero lo imprescindible no es eso: es que las partidas valoradas de la proforma se correspondan con los bultos de la lista, de modo que quien lea los dos documentos vea el mismo envío. Un total que no cuadra entre documentos es la pregunta más fácil de evitar."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Sirve el packing list para reclamar daños o pérdidas?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Es tu base de reclamación: si en la entrega faltan bultos o llegan dañados, el packing list numerado — más las fotos de cada bulto cerrado antes de la carga — es lo que demuestra qué viajaba y en qué estado salió. Las reservas se anotan en el propio CMR antes de firmar la entrega, cotejando bulto a bulto contra tu lista: sin lista, la reclamación se convierte en tu palabra contra la del transportista."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿En qué idioma escribo el packing list?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Para la ruta Andorra–España, en español (o catalán) sin problema: es la lengua de trabajo de las dos aduanas de la Farga de Moles y de los transportistas del corredor. Lo que importa no es el idioma sino la claridad: descripciones concretas, numeración limpia y coherencia con el resto del expediente. Si tu envío siguiera viaje fuera de la península, tu transitario te dirá si conviene una versión en inglés."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › El packing list perfecto</nav>
+    <h1>El packing list perfecto: cómo inventariar tu envío o mudanza</h1>
+    <div class="updated">Actualizado · Septiembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El <strong>packing list</strong> es el inventario <strong>por bultos numerados</strong> de tu envío: qué hay en cada caja y cada mueble que viaja. Es la <strong>columna vertebral del expediente</strong> — de él beben la proforma, la declaración jurada y el CMR — y tu base de reclamación si algo se pierde o se rompe. Hacerlo bien cuesta una tarde con rotulador y una hoja de cálculo; no hacerlo cuesta preguntas en la Farga de Moles.</p>
+    </div>
+
+    <h2>¿Qué es y para qué sirve (de verdad)?</h2>
+    <p>De todos los documentos del <a href="/guias/documentos-aduana-farga-de-moles/">expediente</a>, el packing list es el más humilde y el más trabajador. Sirve a cuatro amos a la vez: a la <strong>aduana</strong>, que quiere saber qué cruza exactamente; al <strong>transportista</strong>, que carga y factura por bultos; a <strong>tu reclamación</strong>, si algo llega roto o no llega; y a <strong>ti mismo</strong> en el destino, cuando busques la caja de las sartenes entre cuarenta idénticas.</p>
+    <p>Y tiene un papel estructural: es el <strong>inventario maestro</strong> del que salen los demás documentos. Las partidas valoradas de la <a href="/guias/factura-proforma-aduana/">proforma</a>, la relación de la <a href="/guias/declaracion-jurada-muebles-sin-factura/">declaración jurada</a> y el número de bultos del <a href="/guias/carta-de-porte-cmr/">CMR</a> deben poder rastrearse hasta él. Cuando en las guías repetimos que el expediente debe «contar una sola historia», el packing list es el libro donde esa historia está escrita.</p>
+
+    <h2>El formato que funciona</h2>
+    <p>Nada exótico: una tabla. Esta estructura resuelve el 99% de los envíos de particulares:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Bulto nº</th><th>Tipo</th><th>Contenido</th><th>Observaciones</th></tr>
+      <tr><td>1</td><td>Caja</td><td>Vajilla y menaje de cocina</td><td>Frágil</td></tr>
+      <tr><td>2</td><td>Caja</td><td>Ropa de invierno</td><td></td></tr>
+      <tr><td>3</td><td>Caja</td><td>25 libros y decoración</td><td></td></tr>
+      <tr><td>4</td><td>Mueble</td><td>Sofá 3 plazas</td><td>Sin embalar, mantas del transportista</td></tr>
+      <tr><td>5</td><td>Mueble</td><td>Mesa comedor extensible</td><td>Patas desmontadas, en bulto 6</td></tr>
+      <tr><td>6</td><td>Paquete</td><td>Patas de mesa + herrajes</td><td></td></tr>
+      <tr><td>7</td><td>Caja</td><td>Televisor [marca, modelo, nº serie]</td><td>Frágil, embalaje rígido</td></tr>
+    </table>
+    </div>
+    <p>Fíjate en tres detalles del ejemplo: los <strong>muebles sin caja también son bultos</strong> y se numeran; las piezas desmontadas referencian dónde viajan sus componentes; y la electrónica de valor lleva marca, modelo y número de serie — el mismo criterio de la <a href="/guias/enviar-electrodomesticos-andorra-espana/">guía de electrodomésticos</a>.</p>
+
+    <h2>El método, en 5 pasos</h2>
+    <ol>
+      <li><strong>Numera físicamente cada bulto.</strong> Rotulador indeleble o etiquetas grandes: el número de la caja y el de la lista deben ser el mismo, y legible sin agacharse.</li>
+      <li><strong>Describe el contenido, bulto a bulto.</strong> Una línea concreta por bulto. La prueba del algodón: ¿alguien sabría qué hay dentro sin abrirla? «Efectos varios» suspende; «menaje de cocina» aprueba.</li>
+      <li><strong>Añade lo que pida el transportista:</strong> peso o medidas aproximadas si su presupuesto va por volumen, y la marca de frágil donde toque.</li>
+      <li><strong>Cuadra con el resto del expediente.</strong> Las partidas de la proforma deben corresponderse con bultos de la lista; el total de bultos, con el del CMR. Este paso de diez minutos es el que desactiva el <a href="/guias/errores-aduana-farga-de-moles/">error nº 3 de la aduana</a>: los documentos que se contradicen.</li>
+      <li><strong>Copias y fotos.</strong> Una copia para ti, otra al transportista y su agente. Y una foto de cada bulto cerrado y numerado antes de la carga: dos minutos que valen una reclamación entera.</li>
+    </ol>
+
+    <h2>Las reglas de oro</h2>
+    <ul>
+      <li><strong>Concreto sin ser notarial:</strong> descripción por bulto, no objeto a objeto — salvo las piezas de valor, que van con línea propia.</li>
+      <li><strong>Todo lo que viaja está en la lista.</strong> La bolsa de última hora que «se sube al camión y ya» es exactamente el bulto sin declarar que estropea despachos.</li>
+      <li><strong>Numeración continua y sin huecos:</strong> si retiras la caja 9 del envío, renumera o anótalo — un hueco en la serie es una pregunta.</li>
+      <li><strong>Un solo packing list por envío.</strong> Si haces una <a href="/guias/mudanza-parcial-andorra-espana/">mudanza en varias tandas</a>, cada tanda lleva el suyo (y, si vas con franquicia, todos cuelgan del inventario global).</li>
+      <li><strong>Los frágiles, marcados en la lista y en la caja.</strong> Al reclamar, «iba marcado como frágil» tiene otro peso.</li>
+    </ul>
+    <div class="note-box"><strong>El truco de los profesionales:</strong> haz el packing list <em>mientras</em> embalas, no después. Reconstruir de memoria qué hay en cuarenta cajas cerradas es el origen de la mitad de los «efectos varios» que luego hay que explicar.</div>
+
+    <h2>Errores habituales al inventariar</h2>
+    <ul>
+      <li><strong>El «efectos varios: 5 cajas»</strong> — la no-descripción que invita a abrir cajas en la frontera.</li>
+      <li><strong>Olvidar los muebles</strong> porque «no van en caja»: son bultos, se numeran y se listan.</li>
+      <li><strong>Totales que no cuadran</strong> con el CMR o la proforma — el clásico bulto añadido a última hora.</li>
+      <li><strong>Sin copia propia:</strong> si tu única lista viaja en el camión, no tienes contra qué cotejar en la entrega.</li>
+      <li><strong>Sin fotos:</strong> la diferencia entre reclamar con pruebas y reclamar con adjetivos.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>Tu packing list, cuadrado con todo el expediente</h2>
+      <p>Nos pasas tu lista de bultos (o te ayudamos a montarla) y te devolvemos el packing list formateado y cuadrado con la proforma, la declaración jurada y el dosier del transportista. En 24 horas laborables, por 49 € cerrados.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Tengo que listar cada objeto de cada caja?</summary>
+      <p>No: el nivel razonable es una descripción concreta por bulto («caja 4: ropa de invierno», «caja 9: 30 libros»), no el inventario objeto a objeto. La excepción son las piezas de valor singular — electrónica, instrumentos, antigüedades —, que merecen línea propia con marca y modelo (y número de serie si lo tienen). La regla práctica: cualquier persona debería poder saber qué hay en una caja leyendo su línea, sin abrirla.</p>
+    </details>
+    <details>
+      <summary>¿El packing list lleva valores en euros?</summary>
+      <p>Los valores viven en la factura proforma, que es el documento de valor del expediente; el packing list describe bultos y contenidos. Puedes añadir una columna de valor por bulto si te resulta cómodo, pero lo imprescindible no es eso: es que las partidas valoradas de la proforma se correspondan con los bultos de la lista, de modo que quien lea los dos documentos vea el mismo envío. Un total que no cuadra entre documentos es la pregunta más fácil de evitar.</p>
+    </details>
+    <details>
+      <summary>¿Sirve el packing list para reclamar daños o pérdidas?</summary>
+      <p>Es tu base de reclamación: si en la entrega faltan bultos o llegan dañados, el packing list numerado — más las fotos de cada bulto cerrado antes de la carga — es lo que demuestra qué viajaba y en qué estado salió. Las reservas se anotan en el propio CMR antes de firmar la entrega, cotejando bulto a bulto contra tu lista: sin lista, la reclamación se convierte en tu palabra contra la del transportista.</p>
+    </details>
+    <details>
+      <summary>¿En qué idioma escribo el packing list?</summary>
+      <p>Para la ruta Andorra–España, en español (o catalán) sin problema: es la lengua de trabajo de las dos aduanas de la Farga de Moles y de los transportistas del corredor. Lo que importa no es el idioma sino la claridad: descripciones concretas, numeración limpia y coherencia con el resto del expediente. Si tu envío siguiera viaje fuera de la península, tu transitario te dirá si conviene una versión en inglés.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/calcular-valor-residual-muebles/">Cómo valorar las partidas que salen de este inventario</a></li>
+        <li><a href="/guias/carta-de-porte-cmr/">El CMR: donde tu total de bultos tiene que cuadrar</a></li>
+        <li><a href="/guias/errores-aduana-farga-de-moles/">Los errores que un buen packing list desactiva</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales. Esta guía es información general basada en la práctica habitual de la ruta.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

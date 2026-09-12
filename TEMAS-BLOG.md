@@ -27,7 +27,7 @@ buscan los clientes, después la cola larga.
 | 16 | Mudanza parcial: enviar solo una parte de tus enseres a España | mudanza-parcial-andorra-espana | mudanza parcial Andorra | publicado (2026-09-09) |
 | 17 | Vender tus muebles a un comprador en España: quién paga qué en la aduana | vender-muebles-comprador-espana | vender muebles Andorra España | publicado (2026-09-10) |
 | 18 | La autorización de despacho: qué estás firmando y por qué | autorizacion-de-despacho | autorización despacho aduanero | publicado (2026-09-11) |
-| 19 | El packing list perfecto: cómo inventariar tu envío o mudanza | packing-list-mudanza | packing list mudanza | pendiente |
+| 19 | El packing list perfecto: cómo inventariar tu envío o mudanza | packing-list-mudanza | packing list mudanza | publicado (2026-09-12) |
 | 20 | Cuánto cuesta una mudanza de Andorra a España: todas las partidas | cuanto-cuesta-mudanza-andorra-espana | cuánto cuesta mudanza Andorra España | pendiente |
 | 21 | Bicicletas, esquís y material deportivo: enviarlos a España sin sustos | enviar-material-deportivo-andorra-espana | enviar bicicleta Andorra España | pendiente |
 | 22 | Instrumentos musicales y objetos de valor: cómo declararlos bien | enviar-objetos-valor-andorra-espana | enviar objetos de valor aduana | pendiente |
