@@ -32,7 +32,7 @@ buscan los clientes, después la cola larga.
 | 21 | Bicicletas, esquís y material deportivo: enviarlos a España sin sustos | enviar-material-deportivo-andorra-espana | enviar bicicleta Andorra España | publicado (2026-09-14) |
 | 22 | Instrumentos musicales y objetos de valor: cómo declararlos bien | enviar-objetos-valor-andorra-espana | enviar objetos de valor aduana | publicado (2026-09-17) |
 | 23 | Plazos reales: cuánto tarda un envío de muebles de punta a punta | plazos-envio-muebles-andorra-espana | cuánto tarda envío Andorra España | publicado (2026-09-17) |
-| 24 | Envíos urgentes: preparar la documentación sin perder el hueco del camión | envio-urgente-documentacion-aduana | envío urgente Andorra España | pendiente |
+| 24 | Envíos urgentes: preparar la documentación sin perder el hueco del camión | envio-urgente-documentacion-aduana | envío urgente Andorra España | publicado (2026-09-17) |
 | 25 | Te vas de Andorra: checklist administrativa completa de la salida | checklist-salir-de-andorra | irse de Andorra trámites | pendiente |
 | 26 | Estudiantes: llevar tus cosas de Andorra al piso de estudios en España | estudiantes-enviar-cosas-espana | estudiante mudanza Andorra España | pendiente |
 | 27 | Qué te puede preguntar la aduana y cómo se responde con papeles | preguntas-aduana-farga-de-moles | inspección aduana Andorra | pendiente |
