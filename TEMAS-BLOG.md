@@ -31,7 +31,7 @@ buscan los clientes, después la cola larga.
 | 20 | Cuánto cuesta una mudanza de Andorra a España: todas las partidas | cuanto-cuesta-mudanza-andorra-espana | cuánto cuesta mudanza Andorra España | publicado (2026-09-13) |
 | 21 | Bicicletas, esquís y material deportivo: enviarlos a España sin sustos | enviar-material-deportivo-andorra-espana | enviar bicicleta Andorra España | publicado (2026-09-14) |
 | 22 | Instrumentos musicales y objetos de valor: cómo declararlos bien | enviar-objetos-valor-andorra-espana | enviar objetos de valor aduana | publicado (2026-09-17) |
-| 23 | Plazos reales: cuánto tarda un envío de muebles de punta a punta | plazos-envio-muebles-andorra-espana | cuánto tarda envío Andorra España | pendiente |
+| 23 | Plazos reales: cuánto tarda un envío de muebles de punta a punta | plazos-envio-muebles-andorra-espana | cuánto tarda envío Andorra España | publicado (2026-09-17) |
 | 24 | Envíos urgentes: preparar la documentación sin perder el hueco del camión | envio-urgente-documentacion-aduana | envío urgente Andorra España | pendiente |
 | 25 | Te vas de Andorra: checklist administrativa completa de la salida | checklist-salir-de-andorra | irse de Andorra trámites | pendiente |
 | 26 | Estudiantes: llevar tus cosas de Andorra al piso de estudios en España | estudiantes-enviar-cosas-espana | estudiante mudanza Andorra España | pendiente |
