@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La unión aduanera UE–Andorra: qué cubre y qué no</title>
+<meta name="description" content="Desde 1991 existe una unión aduanera entre la UE y Andorra para los productos industriales (capítulos 25 a 97): tus muebles cruzan sin aranceles en ambos sentidos. Lo que la unión NO elimina: las dos aduanas, el DUA y los impuestos de importación (IVA del 21% o IGI del 4,5%). El agroalimentario queda fuera.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/union-aduanera-ue-andorra/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/union-aduanera-ue-andorra/">
+<meta property="og:title" content="La unión aduanera UE–Andorra: qué cubre y qué no">
+<meta property="og:description" content="Productos industriales sin aranceles desde 1991 — pero las dos aduanas, el DUA y el IVA/IGI siguen ahí. Qué cubre exactamente el acuerdo y el malentendido clásico.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-06">
+<meta property="article:modified_time" content="2026-09-06">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La unión aduanera UE–Andorra: qué cubre y qué no">
+<meta name="twitter:description" content="Productos industriales sin aranceles desde 1991 — pero las dos aduanas, el DUA y el IVA/IGI siguen ahí. Qué cubre exactamente el acuerdo y el malentendido clásico.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/union-aduanera-ue-andorra/#article",
+   "headline": "La unión aduanera UE–Andorra: qué cubre y qué no",
+   "description": "El acuerdo de 1990 entre la Comunidad Económica Europea y Andorra creó una unión aduanera para los productos industriales (capítulos 25 a 97 del Sistema Armonizado): cero aranceles en ambos sentidos. Qué significa para un envío de muebles, por qué siguen existiendo las dos aduanas y los impuestos de importación (IVA del 21% e IGI del 4,5%), y por qué el agroalimentario queda fuera.",
+   "inLanguage": "es",
+   "datePublished": "2026-09-06",
+   "dateModified": "2026-09-06",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/union-aduanera-ue-andorra/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/union-aduanera-ue-andorra/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "La unión aduanera UE–Andorra"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/union-aduanera-ue-andorra/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Si hay unión aduanera, ¿por qué me paran en la Farga de Moles?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Porque una unión aduanera elimina los aranceles entre las partes, pero no convierte a Andorra en territorio de la UE: sigue habiendo frontera fiscal. Andorra no forma parte del territorio del IVA comunitario, así que cada mercancía que cruza debe declararse (el DUA), y cada lado liquida su impuesto de importación — el IVA del 21% al entrar en España, el IGI del 4,5% al entrar en Andorra. La unión aduanera te ahorra los aranceles; el papeleo y el impuesto indirecto siguen ahí."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Pago aranceles por mis muebles gracias a la unión aduanera?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No: cero aranceles en ambos sentidos. Los muebles y prácticamente todo lo que compone una mudanza doméstica (electrodomésticos, ropa, libros, bicicletas) caen dentro de los capítulos 25 a 97 del Sistema Armonizado, que es exactamente el ámbito de la unión aduanera UE–Andorra. Lo único que se liquida al importar es el impuesto indirecto del país de entrada: IVA español del 21% o IGI andorrano del 4,5%, sobre el valor residual si son bienes usados."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa con la comida y las bebidas?",
+     "acceptedAnswer": {"@type": "Answer", "text": "El agroalimentario (capítulos 1 a 24 del Sistema Armonizado) queda fuera de la unión aduanera y tiene régimen propio: los productos agrícolas originarios de Andorra entran en la UE exentos de derechos, pero en general la comida y la bebida que viajan con un particular tienen sus propios límites — la franquicia de viajeros aplica un techo específico de 300 € al agroalimentario, y el alcohol y el tabaco van por cantidades, no por valor. Si tu mudanza incluye una despensa entera, decláralo aparte y pregunta antes."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cambiará todo esto con el acuerdo de asociación UE–Andorra?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Hay un acuerdo de asociación entre la UE y Andorra en tramitación desde hace años, pensado para acercar a Andorra al mercado interior europeo. Mientras no entre en vigor, el marco que rige tu envío sigue siendo el de la unión aduanera de 1990: sin aranceles industriales, con dos aduanas y con IVA o IGI en la importación. Si el acuerdo llega a aplicarse, actualizaremos las guías — pero hoy, los trámites descritos aquí son los vigentes."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › La unión aduanera UE–Andorra</nav>
+    <h1>La unión aduanera UE–Andorra: qué cubre y qué no</h1>
+    <div class="updated">Actualizado · Septiembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros entre Andorra y España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>Desde 1991, la UE y Andorra forman una <strong>unión aduanera para los productos industriales</strong> (capítulos 25 a 97 del Sistema Armonizado): tus muebles y enseres cruzan <strong>sin aranceles</strong> en ambos sentidos. Lo que la unión <strong>no</strong> elimina: las <strong>dos aduanas</strong>, la declaración (DUA) y el <strong>impuesto de importación</strong> — IVA del 21% al entrar en España, IGI del 4,5% al entrar en Andorra. El agroalimentario queda fuera del régimen.</p>
+    </div>
+
+    <h2>¿Qué es una unión aduanera (y qué no es)?</h2>
+    <p>El acuerdo entre la entonces Comunidad Económica Europea y el Principado de Andorra se firmó el 28 de junio de 1990 y se aplica desde el 1 de julio de 1991. Creó una <strong>unión aduanera</strong>: dentro de su ámbito, las mercancías circulan entre las partes <strong>sin derechos de aduana</strong> (aranceles), y Andorra aplica frente a terceros países el mismo arancel exterior que la UE.</p>
+    <p>Lo que una unión aduanera <strong>no es</strong>: un mercado interior. Andorra no es territorio de la UE ni forma parte del territorio del IVA comunitario. Por eso, aunque no haya aranceles, la frontera de la Farga de Moles sigue siendo una <strong>frontera fiscal de verdad</strong>: cada mercancía se declara a la salida y a la entrada, y cada lado liquida su impuesto indirecto al importar. Es la fuente del malentendido más repetido de esta ruta — «si hay unión aduanera, ¿por qué tengo que declarar mis muebles?». La respuesta corta: porque la unión te quita los aranceles, no el papeleo ni el IVA.</p>
+
+    <h2>Qué cubre: los capítulos 25 a 97</h2>
+    <p>El ámbito del acuerdo son los productos de los <strong>capítulos 25 a 97 del Sistema Armonizado</strong> — a efectos prácticos, todo lo industrial y manufacturado. Para una mudanza o un envío de particular, eso significa que prácticamente todo lo que cargas cae dentro:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Dentro de la unión aduanera (sin aranceles)</th><th>Fuera del régimen industrial</th></tr>
+      <tr><td>Muebles y mobiliario (capítulo 94)</td><td>Alimentos y bebidas (capítulos 1–24)</td></tr>
+      <tr><td>Electrodomésticos y electrónica</td><td>Alcohol y tabaco (además, con límites por cantidad para viajeros)</td></tr>
+      <tr><td>Ropa, calzado, textil del hogar</td><td></td></tr>
+      <tr><td>Libros, bicicletas, material deportivo, juguetes</td><td></td></tr>
+      <tr><td>Vajilla, menaje, decoración, herramientas</td><td></td></tr>
+    </table>
+    </div>
+    <p>Por eso todas nuestras guías repiten el mismo estribillo: en un envío de muebles usados entre Andorra y España, <strong>los aranceles son 0 €</strong> — no como favor de la aduana, sino por tratado.</p>
+
+    <h2>Lo que no desaparece: las dos aduanas y el impuesto de importación</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Concepto</th><th>¿Lo elimina la unión aduanera?</th></tr>
+      <tr><td>Aranceles (derechos de aduana) sobre productos industriales</td><td><strong>Sí</strong> — 0 € en ambos sentidos</td></tr>
+      <tr><td>Los dos despachos (exportación + importación) y el <a href="/guias/que-es-el-dua/">DUA</a></td><td>No — cada cruce se declara en las dos ventanillas</td></tr>
+      <tr><td>IVA de importación español (21%) al entrar en España</td><td>No — se liquida sobre el <a href="/guias/calcular-valor-residual-muebles/">valor residual</a></td></tr>
+      <tr><td>IGI andorrano (4,5%) al entrar en Andorra</td><td>No — lo liquida la <a href="/guias/muebles-espana-andorra-igi/">Duana al importar</a></td></tr>
+      <tr><td>La documentación del expediente (proforma, declaración jurada, packing list, CMR)</td><td>No — sigue siendo la llave de un cruce sin sustos</td></tr>
+    </table>
+    </div>
+    <div class="note-box"><strong>La cuenta buena:</strong> gracias a la unión aduanera, el único coste fiscal de tu envío de muebles usados es el impuesto indirecto del país de entrada — 63 € por un lote de 300 € hacia España, 13,50 € hacia Andorra. Sin el acuerdo, a eso habría que sumarle el arancel de terceros países de cada partida. La diferencia no es teórica: es dinero.</div>
+
+    <h2>El agroalimentario va por otro camino</h2>
+    <p>Los capítulos 1 a 24 — comida, bebida, plantas, productos de origen animal — quedan fuera de la unión aduanera y tienen régimen propio. Dos consecuencias prácticas para un particular:</p>
+    <ul>
+      <li><strong>Como viajero</strong>, la franquicia general de 900 € por adulto que explicamos en la <a href="/guias/comprar-muebles-en-andorra/">guía de compras</a> convive con un techo específico de <strong>300 € para el agroalimentario</strong>, y el alcohol y el tabaco se miden por cantidades, no por valor.</li>
+      <li><strong>En un envío o mudanza</strong>, la despensa no es «un bulto más»: los productos alimentarios tienen tratamiento distinto al de tus muebles. Si de verdad necesitas trasladar cantidad de comida o bebida, decláralo aparte y consúltalo antes con el agente de aduanas — lo barato es preguntarlo; lo caro es que lo encuentre la inspección.</li>
+    </ul>
+    <p>Curiosidad útil del acuerdo: los productos agrícolas <strong>originarios de Andorra</strong> entran en la UE exentos de derechos — el trato preferente existe, solo que por fuera de la unión aduanera industrial.</p>
+
+    <h2>Qué significa todo esto para tu envío</h2>
+    <ol>
+      <li><strong>Tus muebles no pagan aranceles</strong>, en ningún sentido de la ruta. Eso ya lo tienes ganado por tratado.</li>
+      <li><strong>Sí pagan el impuesto de importación</strong> del país de entrada (IVA 21% o IGI 4,5%), sobre un valor residual realista y defendible.</li>
+      <li><strong>Sí necesitan expediente</strong>: proforma, declaración jurada, packing list y <a href="/guias/carta-de-porte-cmr/">CMR</a> coherentes, con los despachos tramitados por el agente de aduanas del transportista.</li>
+      <li><strong>El agroalimentario, aparte</strong> — y con pregunta previa si hay cantidad.</li>
+    </ol>
+
+    <div class="cta-guide">
+      <h2>El tratado pone el 0% de aranceles. Nosotros, los papeles</h2>
+      <p>Tu expediente completo — declaración jurada, proforma, packing list y dosier del transportista — coherente y listo para el agente de aduanas en 24 horas laborables, por 49 € cerrados.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>Si hay unión aduanera, ¿por qué me paran en la Farga de Moles?</summary>
+      <p>Porque una unión aduanera elimina los aranceles entre las partes, pero no convierte a Andorra en territorio de la UE: sigue habiendo frontera fiscal. Andorra no forma parte del territorio del IVA comunitario, así que cada mercancía que cruza debe declararse (el DUA), y cada lado liquida su impuesto de importación — el IVA del 21% al entrar en España, el IGI del 4,5% al entrar en Andorra. La unión aduanera te ahorra los aranceles; el papeleo y el impuesto indirecto siguen ahí.</p>
+    </details>
+    <details>
+      <summary>¿Pago aranceles por mis muebles gracias a la unión aduanera?</summary>
+      <p>No: cero aranceles en ambos sentidos. Los muebles y prácticamente todo lo que compone una mudanza doméstica (electrodomésticos, ropa, libros, bicicletas) caen dentro de los capítulos 25 a 97 del Sistema Armonizado, que es exactamente el ámbito de la unión aduanera UE–Andorra. Lo único que se liquida al importar es el impuesto indirecto del país de entrada: IVA español del 21% o IGI andorrano del 4,5%, sobre el valor residual si son bienes usados.</p>
+    </details>
+    <details>
+      <summary>¿Qué pasa con la comida y las bebidas?</summary>
+      <p>El agroalimentario (capítulos 1 a 24 del Sistema Armonizado) queda fuera de la unión aduanera y tiene régimen propio: los productos agrícolas originarios de Andorra entran en la UE exentos de derechos, pero en general la comida y la bebida que viajan con un particular tienen sus propios límites — la franquicia de viajeros aplica un techo específico de 300 € al agroalimentario, y el alcohol y el tabaco van por cantidades, no por valor. Si tu mudanza incluye una despensa entera, decláralo aparte y pregunta antes.</p>
+    </details>
+    <details>
+      <summary>¿Cambiará todo esto con el acuerdo de asociación UE–Andorra?</summary>
+      <p>Hay un acuerdo de asociación entre la UE y Andorra en tramitación desde hace años, pensado para acercar a Andorra al mercado interior europeo. Mientras no entre en vigor, el marco que rige tu envío sigue siendo el de la unión aduanera de 1990: sin aranceles industriales, con dos aduanas y con IVA o IGI en la importación. Si el acuerdo llega a aplicarse, actualizaremos las guías — pero hoy, los trámites descritos aquí son los vigentes.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/iva-importacion-muebles-usados/">El IVA del 21%: el impuesto que sí se paga, con ejemplos</a></li>
+        <li><a href="/guias/muebles-espana-andorra-igi/">El sentido inverso: el IGI andorrano del 4,5%</a></li>
+        <li><a href="/guias/comprar-muebles-en-andorra/">La franquicia de viajeros de 900 € y el techo agroalimentario</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales. Esta guía es información general sobre el marco vigente; verifica los regímenes aplicables a tu caso con la Agencia Tributaria o la Duana andorrana.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

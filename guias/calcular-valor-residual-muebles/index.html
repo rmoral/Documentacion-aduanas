@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo calcular el valor residual de tus muebles usados (método práctico)</title>
+<meta name="description" content="El valor residual es lo que valen hoy tus muebles usados en el mercado de segunda mano, no lo que costaron nuevos. Método práctico en 4 pasos para valorarlos ante la aduana Andorra → España, con ejemplo completo, reglas de coherencia y los errores que provocan requerimientos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/calcular-valor-residual-muebles/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/calcular-valor-residual-muebles/">
+<meta property="og:title" content="Cómo calcular el valor residual de tus muebles usados (método práctico)">
+<meta property="og:description" content="Lo que valen hoy tus muebles en segunda mano, no lo que costaron: método en 4 pasos, ejemplo completo y las reglas de coherencia que evitan requerimientos.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-02">
+<meta property="article:modified_time" content="2026-09-02">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo calcular el valor residual de tus muebles usados (método práctico)">
+<meta name="twitter:description" content="Lo que valen hoy tus muebles en segunda mano, no lo que costaron: método en 4 pasos, ejemplo completo y las reglas de coherencia que evitan requerimientos.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/calcular-valor-residual-muebles/#article",
+   "headline": "Cómo calcular el valor residual de tus muebles usados (método práctico)",
+   "description": "Método práctico para valorar muebles y enseres usados ante la aduana Andorra → España: qué es el valor residual, por qué no existe una tabla oficial de depreciación, los 4 pasos de valoración con referencias de segunda mano, un ejemplo completo y las reglas de coherencia que evitan requerimientos.",
+   "inLanguage": "es",
+   "datePublished": "2026-09-02",
+   "dateModified": "2026-09-02",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/calcular-valor-residual-muebles/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/calcular-valor-residual-muebles/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Calcular el valor residual"}
+   ]
+  },
+  {
+   "@type": "HowTo",
+   "@id": "https://www.aduanafacilandorra.com/guias/calcular-valor-residual-muebles/#howto",
+   "name": "Cómo calcular el valor residual de muebles usados para la aduana",
+   "inLanguage": "es",
+   "step": [
+    {"@type": "HowToStep", "position": 1, "name": "Inventaría por partidas", "text": "Lista cada mueble o bloque homogéneo de enseres (no 'cosas varias'): sofá, mesa de comedor, 4 sillas, cajas de libros. Es la base del packing list."},
+    {"@type": "HowToStep", "position": 2, "name": "Busca la referencia de segunda mano", "text": "Localiza artículos equivalentes (tipo, marca, antigüedad similar) en portales de segunda mano y quédate con el precio típico al que realmente se venden. Guarda capturas de pantalla como respaldo."},
+    {"@type": "HowToStep", "position": 3, "name": "Ajusta por estado real", "text": "Corrige la referencia según el desgaste de tu pieza: un mueble impecable vale como la referencia; uno con años de uso intenso, claramente menos. Sé honesto en ambas direcciones."},
+    {"@type": "HowToStep", "position": 4, "name": "Redondea, suma y comprueba la coherencia", "text": "Redondea cada partida a cifras razonables, suma el total y comprueba que el conjunto pasa la prueba del sentido común: ¿pagarías tú ese precio por ese lote usado? Ese total es el valor de la proforma y la declaración jurada."}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/calcular-valor-residual-muebles/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Puedo declarar mis muebles a 0 € porque no pienso venderlos?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No. Que no vayas a venderlos no significa que no valgan nada: la aduana valora la mercancía, no tus intenciones. Un envío declarado a 0 € (o a importes simbólicos tipo 1 €) no resulta creíble y es una invitación al requerimiento. Todo bien usado en condiciones de uso tiene un valor residual pequeño pero real, y declararlo cuesta poco: sobre 300 € de valor, el IVA son 63 €."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa si declaro un valor demasiado bajo?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La aduana puede dudar del valor declarado, pedir justificación y, si no la ve sostenible, valorar la mercancía por sus propios medios — con el envío parado mientras tanto. Si aprecia ocultación deliberada, puede haber sanción. La paradoja es que infravalorar apenas ahorra: bajar 100 € el valor declarado ahorra 21 € de IVA y multiplica el riesgo de requerimiento. No compensa."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Necesito una tasación profesional de mis muebles?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Para enseres domésticos normales, no: una valoración propia razonada con referencias del mercado de segunda mano es la práctica habitual y suficiente. La tasación profesional tiene sentido para piezas singulares — antigüedades, arte, instrumentos de valor, colecciones — donde el valor es alto y discutible, y donde además conviene revisar el seguro del transporte."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Dónde busco referencias de precios de segunda mano?",
+     "acceptedAnswer": {"@type": "Answer", "text": "En los portales donde se vende realmente la segunda mano: busca artículos equivalentes al tuyo (mismo tipo, marca y antigüedad parecida) y fíjate en los precios a los que se publican y se venden, no en el más caro ni en el más barato. Guarda capturas de pantalla de 2–3 anuncios comparables por pieza relevante: si la aduana pregunta, esa es exactamente la justificación que sostiene tu valor declarado."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Calcular el valor residual</nav>
+    <h1>Cómo calcular el valor residual de tus muebles usados (método práctico)</h1>
+    <div class="updated">Actualizado · Septiembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El <strong>valor residual</strong> es lo que valen tus muebles <strong>hoy, usados, en el mercado de segunda mano</strong> — no lo que costaron nuevos ni lo que sentimentalmente valen para ti. Se calcula por partidas: busca el precio de artículos equivalentes en segunda mano, ajústalo al estado real de cada pieza y redondea. Ese total va a la <strong>factura proforma</strong> y es la base del IVA de importación del 21%.</p>
+    </div>
+
+    <h2>¿Qué es el valor residual (y qué no es)?</h2>
+    <p>Cuando envías muebles usados de Andorra a España, la aduana necesita un valor sobre el que liquidar el <a href="/guias/iva-importacion-muebles-usados/">IVA de importación</a>. Para bienes usados de particular, sin venta de por medio, ese valor es el <strong>valor residual</strong>: una estimación realista de lo que ese bien vale en su estado actual — lo que obtendrías por él, aproximadamente, si lo vendieras de segunda mano.</p>
+    <p>Tres cosas que el valor residual <strong>no es</strong>: no es el precio de compra original (un sofá de 1.200 € con ocho años no vale 1.200 €); no es cero (si el mueble sirve y viaja, algo vale); y no es el valor sentimental, ni al alza ni a la baja. La valoración de mercancía usada no tiene una tarifa cerrada: la normativa de valoración aduanera pide un valor sostenible ajustado al estado del bien — su desgaste, su antigüedad, su obsolescencia — y eso, en la práctica, se demuestra con referencias del mercado de segunda mano.</p>
+
+    <h2>¿Existe una tabla oficial de depreciación?</h2>
+    <p>No para los enseres de un particular. No hay una tabla pública del tipo «un mueble de 5 años vale el 30%» que puedas aplicar mecánicamente. Lo que la aduana espera es un valor <strong>razonable y justificable</strong>: si te preguntan por qué declaraste la mesa a 60 €, la buena respuesta es «porque mesas como esta se venden por eso en segunda mano», idealmente con un par de anuncios guardados que lo demuestren.</p>
+    <p>Esa flexibilidad es una ventaja: te permite valorar tu caso real en lugar de pelearte con porcentajes. A cambio, te exige método. Este es el que usamos nosotros al preparar expedientes.</p>
+
+    <h2>El método práctico, en 4 pasos</h2>
+    <ol>
+      <li><strong>Inventaría por partidas.</strong> Lista cada mueble o bloque homogéneo: «sofá 3 plazas», «mesa comedor + 4 sillas», «3 cajas de libros». Nada de «enseres varios: 400 €» — las partidas genéricas con importe gordo son las que levantan cejas. Este inventario es, además, tu packing list.</li>
+      <li><strong>Busca la referencia de segunda mano.</strong> Para cada partida relevante, localiza 2–3 artículos equivalentes (tipo, marca, antigüedad parecida) en portales de compraventa de segunda mano y quédate con el precio típico — ni el anuncio más optimista ni el de derribo. Guarda capturas: son tu justificación si algún día te preguntan.</li>
+      <li><strong>Ajusta por estado real.</strong> Tu pieza concreta puede estar mejor o peor que la referencia: un sofá impecable de casa poco usada vale como el anuncio; el mismo sofá con dos mudanzas encima y el tapizado cansado, claramente menos. Sé honesto en las dos direcciones.</li>
+      <li><strong>Redondea, suma y aplica la prueba del sentido común.</strong> Redondea cada partida a cifras naturales (60 €, no 63,50 €), suma y mírate el total con ojos de comprador: ¿pagarías tú eso por ese lote usado? Si la respuesta es sí, tienes tu valor declarado. Ese total va a la <a href="/guias/factura-proforma-aduana/">factura proforma</a> y se motiva en la <a href="/guias/declaracion-jurada-muebles-sin-factura/">declaración jurada</a>.</li>
+    </ol>
+
+    <h2>Un ejemplo completo: el salón que viaja a Lleida</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Partida</th><th>Precio nuevo (orientativo)</th><th>Valor residual declarado</th></tr>
+      <tr><td>Sofá 3 plazas (7 años, buen estado)</td><td>900 €</td><td>120 €</td></tr>
+      <tr><td>Mesa de comedor extensible (10 años)</td><td>450 €</td><td>60 €</td></tr>
+      <tr><td>4 sillas a juego</td><td>240 €</td><td>40 €</td></tr>
+      <tr><td>Mueble de TV (8 años, roces visibles)</td><td>350 €</td><td>35 €</td></tr>
+      <tr><td>Lámpara de pie + alfombra</td><td>180 €</td><td>25 €</td></tr>
+      <tr><td>2 cajas de libros y decoración</td><td>—</td><td>20 €</td></tr>
+      <tr><td><strong>Total declarado</strong></td><td></td><td><strong>300 €</strong></td></tr>
+    </table>
+    </div>
+    <p>Con 300 € de valor declarado, el IVA de importación del 21% son <strong>63 €</strong> — y ni un euro de aranceles, por la unión aduanera UE–Andorra. Fíjate en la proporción: el conjunto costó nuevo más de 2.000 € y declara 300 €, en torno al 15% — perfectamente normal para muebles con 7–10 años de uso. Los importes son un ejemplo ilustrativo, no una tarifa: tu salón puede valer más o menos según piezas y estado.</p>
+
+    <h2>Las reglas de coherencia que evitan requerimientos</h2>
+    <ul>
+      <li><strong>Cada partida con su valor.</strong> El desglose por piezas es lo que hace creíble el total. Un único importe global sin detalle es lo contrario.</li>
+      <li><strong>Nada a 0 €.</strong> Lo que viaja, vale. Si algo de verdad no vale nada, no lo envíes o agrúpalo en una partida menor («caja de menaje variado: 15 €»).</li>
+      <li><strong>El mismo inventario en todas partes.</strong> Proforma, declaración jurada, packing list y <a href="/guias/carta-de-porte-cmr/">carta de porte</a> deben contar la misma historia: mismas partidas, mismos bultos, mismo total.</li>
+      <li><strong>Poder explicar cada cifra.</strong> La pregunta de control es siempre la misma: «¿por qué este valor?». Si tienes la referencia de segunda mano guardada, la respuesta dura diez segundos.</li>
+      <li><strong>Cuidado con las piezas singulares.</strong> Antigüedades, arte o instrumentos valiosos merecen valoración aparte (y quizá tasación y seguro): ni camuflarlos entre los muebles ni valorarlos a ojo.</li>
+    </ul>
+    <div class="note-box"><strong>La tentación de infravalorar no compensa:</strong> bajar 100 € el valor declarado ahorra 21 € de IVA. A cambio multiplica la probabilidad de requerimiento, con el camión parado mientras se resuelve y sanción posible si la aduana aprecia ocultación. El valor realista es más barato que el valor «listo».</div>
+
+    <h2>Errores habituales al valorar</h2>
+    <ul>
+      <li><strong>Declarar el precio de compra</strong> «para no tener problemas»: pagas IVA de más por bienes que ya no valen eso — justo lo contrario de lo que la figura del valor residual permite.</li>
+      <li><strong>El lote global sin desglose</strong> («mudanza: 500 €»): sin partidas no hay forma de sostener el valor.</li>
+      <li><strong>Valores clavados e idénticos</strong> en todas las piezas (todo a 50 €): huele a relleno, no a valoración.</li>
+      <li><strong>Olvidar el ajuste por estado</strong>: la referencia de segunda mano es de partida; tu pieza concreta puede valer menos (o más).</li>
+      <li><strong>Valorar a última hora</strong>, la víspera de la carga: las prisas producen los totales incoherentes que después hay que explicar en la Farga de Moles.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>¿Prefieres que valoremos contigo?</h2>
+      <p>Con tu lista de enseres, dejamos el inventario valorado partida a partida con criterios defendibles, y montamos la proforma, la declaración jurada y el dosier del transportista coherentes entre sí. Todo en 24 horas laborables.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Puedo declarar mis muebles a 0 € porque no pienso venderlos?</summary>
+      <p>No. Que no vayas a venderlos no significa que no valgan nada: la aduana valora la mercancía, no tus intenciones. Un envío declarado a 0 € (o a importes simbólicos tipo 1 €) no resulta creíble y es una invitación al requerimiento. Todo bien usado en condiciones de uso tiene un valor residual pequeño pero real, y declararlo cuesta poco: sobre 300 € de valor, el IVA son 63 €.</p>
+    </details>
+    <details>
+      <summary>¿Qué pasa si declaro un valor demasiado bajo?</summary>
+      <p>La aduana puede dudar del valor declarado, pedir justificación y, si no la ve sostenible, valorar la mercancía por sus propios medios — con el envío parado mientras tanto. Si aprecia ocultación deliberada, puede haber sanción. La paradoja es que infravalorar apenas ahorra: bajar 100 € el valor declarado ahorra 21 € de IVA y multiplica el riesgo de requerimiento. No compensa.</p>
+    </details>
+    <details>
+      <summary>¿Necesito una tasación profesional de mis muebles?</summary>
+      <p>Para enseres domésticos normales, no: una valoración propia razonada con referencias del mercado de segunda mano es la práctica habitual y suficiente. La tasación profesional tiene sentido para piezas singulares — antigüedades, arte, instrumentos de valor, colecciones — donde el valor es alto y discutible, y donde además conviene revisar el seguro del transporte.</p>
+    </details>
+    <details>
+      <summary>¿Dónde busco referencias de precios de segunda mano?</summary>
+      <p>En los portales donde se vende realmente la segunda mano: busca artículos equivalentes al tuyo (mismo tipo, marca y antigüedad parecida) y fíjate en los precios a los que se publican y se venden, no en el más caro ni en el más barato. Guarda capturas de pantalla de 2–3 anuncios comparables por pieza relevante: si la aduana pregunta, esa es exactamente la justificación que sostiene tu valor declarado.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/iva-importacion-muebles-usados/">Cuánto IVA pagarás: el 21% sobre este valor, con ejemplos</a></li>
+        <li><a href="/guias/declaracion-jurada-muebles-sin-factura/">La declaración jurada: donde se motiva el valor sin facturas</a></li>
+        <li><a href="/guias/factura-proforma-aduana/">La factura proforma: donde se plasma el valor partida a partida</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales. Esta guía es información general y los importes de sus ejemplos son ilustrativos; la valoración definitiva de tu envío depende de tus bienes y su estado.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

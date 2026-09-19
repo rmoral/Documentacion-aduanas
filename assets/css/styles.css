@@ -9,7 +9,7 @@
   --ink-soft:#3D4A66;
   --stamp:#C1352B;
   --line:#D8D4CB;
-  --muted:#7A8299;
+  --muted:#62697B;
   --ok:#2E7D4F;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -29,6 +29,8 @@ body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(-
 .lang a{color:var(--muted);text-decoration:none}
 .lang a:hover{color:var(--ink);text-decoration:underline}
 .lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
 
 /* ===== Hero ===== */
 .hero{padding:64px 0 56px;position:relative;overflow:hidden}

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Te vas de Andorra: checklist administrativa completa de la salida</title>
+<meta name="description" content="Irse de Andorra bien tiene cuatro frentes: las bajas oficiales (inmigración, censo comunal, consulado), la CASS y la sanidad (vida laboral y formulario AND/E-21 si vuelves a España), los contratos del día a día y la mudanza con su expediente. La checklist completa, en calendario inverso — y por qué cada justificante vale oro para la franquicia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/">
+<meta property="og:title" content="Te vas de Andorra: checklist administrativa completa de la salida">
+<meta property="og:description" content="Bajas oficiales, CASS y sanidad, contratos y mudanza: los cuatro frentes de una salida ordenada, en calendario inverso — con los justificantes que la franquicia te pedirá.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-18">
+<meta property="article:modified_time" content="2026-09-18">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Te vas de Andorra: checklist administrativa completa de la salida">
+<meta name="twitter:description" content="Bajas oficiales, CASS y sanidad, contratos y mudanza: los cuatro frentes de una salida ordenada, en calendario inverso — con los justificantes que la franquicia te pedirá.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/#article",
+   "headline": "Te vas de Andorra: checklist administrativa completa de la salida",
+   "description": "La checklist administrativa para irse de Andorra: bajas oficiales (inmigración, censo comunal, baja consular española si aplica), CASS y sanidad (informe de vida laboral y formulario AND/E-21 al volver a España), contratos y suministros, vehículo y mudanza — organizada en calendario inverso y con los justificantes que después sostienen la franquicia por traslado de residencia.",
+   "inLanguage": "es",
+   "datePublished": "2026-09-18",
+   "dateModified": "2026-09-18",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Checklist de salida de Andorra"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Qué papeles de la salida necesito para la franquicia aduanera?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Los que prueban tus 12 meses de residencia en Andorra y el momento de tu salida: el permiso de residencia y su baja, el certificado del censo comunal, contratos de trabajo o alquiler — más el alta en el padrón español al llegar, que abre el plazo de importación. Son exactamente los justificantes del dosier de la franquicia por traslado de residencia, y la razón de la regla de oro de esta guía: pide certificado de cada baja y no tires ni un papel hasta despachar la mudanza."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué es el formulario AND/E-21 y cuándo lo pido?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Es el formulario de la seguridad social andorrana (CASS) que acredita tus cotizaciones para que, al volver a España, tengas cubierta la asistencia sanitaria mientras regularizas tu situación. Se solicita a la CASS antes de salir de Andorra, junto con el informe de vida laboral — dos gestiones de ventanilla que cuesta mucho más resolver a distancia. Si tu destino no es España, pregunta a la CASS por el certificado equivalente para tu país."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuándo doy de baja la luz, internet y el resto de suministros?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Después de la mudanza, no antes: necesitarás electricidad para el vaciado y limpieza del piso, y conexión para gestionar la propia salida. Programa las bajas con fecha (la mayoría de compañías lo permiten) para el día siguiente a la entrega de llaves, pide lectura final y factura de cierre de cada contrato, y guarda los justificantes — también sirven como prueba de la fecha en que dejaste la vivienda."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Tengo que darme de baja en el Consulado de España en Andorra?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Si estás inscrito en el Registro de Matrícula consular como residente, sí: la baja consular es la que te permite empadronarte con normalidad al llegar a España, y el consulado remite el certificado de baja al solicitarla. Si nunca te inscribiste, este paso no te aplica. Y recuerda el orden en destino: primero el padrón español — que además abre el plazo de la franquicia — y con él, el resto de altas."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Checklist de salida de Andorra</nav>
+    <h1>Te vas de Andorra: checklist administrativa completa de la salida</h1>
+    <div class="updated">Actualizado · Septiembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>Una salida ordenada de Andorra tiene <strong>cuatro frentes</strong>: las <strong>bajas oficiales</strong> (inmigración, censo del comú, consulado si aplica), la <strong>CASS y la sanidad</strong> (vida laboral y formulario AND/E-21 si vuelves a España), los <strong>contratos del día a día</strong>, y la <strong>mudanza</strong> con su expediente. Regla de oro: <strong>certificado de cada baja y ningún papel a la basura</strong> — son el dosier de tu franquicia aduanera.</p>
+    </div>
+
+    <h2>Por qué esta checklist es también una guía de aduanas</h2>
+    <p>Parece un tema de gestoría, pero cruza de lleno con tu mudanza: la <a href="/guias/franquicia-traslado-residencia/">franquicia por traslado de residencia</a> — la que deja tus enseres en 0 € de IVA — se sostiene sobre los justificantes que generas <em>precisamente</em> al hacer estas gestiones: la baja de residencia, el censo comunal, los contratos que prueban tus 12 meses en el Principado. Quien hace la salida ordenada tiene el dosier hecho sin darse cuenta; quien la hace a trompicones acaba persiguiendo certificados a distancia. Esta guía es información general — cada administración tiene sus formularios y sus plazos vigentes, confírmalos con ellas — pero el mapa completo es este.</p>
+
+    <h2>Bloque 1 · Las bajas oficiales andorranas</h2>
+    <ul>
+      <li><strong>Permiso de residencia (Immigració):</strong> comunica la baja de tu permiso al servicio de inmigración andorrano al finalizar tu etapa. Pide justificante con fecha: es la pieza que documenta el fin de tu residencia — y la que la franquicia agradecerá.</li>
+      <li><strong>Censo del comú:</strong> la baja censal en tu parroquia (el equivalente al padrón). Solicita el <strong>certificado del período censado</strong>, no solo la baja: prueba desde cuándo residías, que es lo que los 12 meses de la franquicia necesitan.</li>
+      <li><strong>Consulado de España</strong> (si eres español inscrito en el Registro de Matrícula consular): solicita la <strong>baja consular</strong> — te enviarán el certificado — para poder empadronarte sin fricción al llegar a España.</li>
+      <li><strong>Hacienda andorrana:</strong> deja resuelto (o encargado a tu gestor) el cierre fiscal de tu último ejercicio como residente. No es trámite de un día: pregúntalo con tiempo.</li>
+    </ul>
+
+    <h2>Bloque 2 · CASS y sanidad</h2>
+    <ul>
+      <li><strong>Informe de vida laboral de la CASS:</strong> el historial de tus cotizaciones andorranas. Pídelo antes de salir — a distancia todo cuesta el doble — porque lo necesitarás para trámites laborales y de pensión futuros.</li>
+      <li><strong>Formulario AND/E-21</strong> (si tu destino es España): lo emite la CASS y acredita tus cotizaciones para que tengas <strong>cubierta la asistencia sanitaria</strong> en España mientras regularizas tu situación. Es la gestión sanitaria clave de la salida.</li>
+      <li><strong>Seguro privado:</strong> si lo tienes, decide baja o adaptación de cobertura a tu nuevo país, con la fecha de la mudanza en la mano.</li>
+      <li><strong>Historiales médicos:</strong> pide copia de los tuyos (y de los niños: vacunas, pediatría) antes de irte.</li>
+    </ul>
+
+    <h2>Bloque 3 · Contratos y vida diaria</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Qué</th><th>Cuándo y cómo</th></tr>
+      <tr><td>Alquiler</td><td>Preaviso según tu contrato (míralo hoy: los preavisos largos son el reloj que manda en toda la salida); entrega de llaves documentada y devolución de fianza</td></tr>
+      <tr><td>Electricidad, agua, telecomunicaciones</td><td>Baja con fecha programada para después de la mudanza; lectura final y factura de cierre guardadas</td></tr>
+      <tr><td>Banco</td><td>Decide si mantienes o cierras la cuenta andorrana; deja domiciliaciones cubiertas hasta la última factura de cierre</td></tr>
+      <tr><td>Colegio de los niños</td><td>Baja y <strong>certificados académicos</strong> para la matrícula en destino</td></tr>
+      <tr><td>Correo y suscripciones</td><td>Cambio de dirección en todo lo que te escriba; un vecino o conocido como «radar» los primeros meses ayuda</td></tr>
+    </table>
+    </div>
+
+    <h2>Bloque 4 · El vehículo y la mudanza</h2>
+    <ul>
+      <li><strong>El coche</strong> tiene su propio expediente: la exportación y la matriculación española llevan trámites y fiscalidad específicos (lo avisamos en la <a href="/guias/franquicia-traslado-residencia/">guía de la franquicia</a>: es la pieza más burocrática del traslado). Infórmate aparte y con tiempo — esta guía cubre los enseres, no el vehículo.</li>
+      <li><strong>La mudanza</strong> es el terreno de todo nuestro cluster: decide el <a href="/guias/mudanza-andorra-espana/">régimen</a> (franquicia u ordinario), prepara el <a href="/guias/packing-list-mudanza/">inventario</a> y el expediente, y reserva <a href="/guias/transportistas-andorra-espana/">transportista</a> con los papeles ya cerrados.</li>
+      <li><strong>Lo que no viaja:</strong> vender, donar o reciclar en Andorra antes de pedir presupuesto — <a href="/guias/cuanto-cuesta-mudanza-andorra-espana/">la mudanza más barata es la que no viaja</a>.</li>
+    </ul>
+
+    <h2>El calendario inverso</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Cuándo</th><th>Qué toca</th></tr>
+      <tr><td><strong>2–3 meses antes</strong></td><td>Preaviso del alquiler; decidir régimen de la mudanza; empezar a reunir justificantes de residencia; informarse del coche y del cierre fiscal</td></tr>
+      <tr><td><strong>1 mes antes</strong></td><td>Reservar transportista con inventario hecho; CASS (vida laboral + AND/E-21); certificados del colegio; expediente aduanero cerrado</td></tr>
+      <tr><td><strong>Última semana</strong></td><td>Bajas censales y de inmigración con sus certificados; baja consular; programar cortes de suministros; revisión cruzada del expediente</td></tr>
+      <tr><td><strong>Día de la mudanza</strong></td><td>Carga con packing list en mano; lecturas finales; llaves entregadas y documentado</td></tr>
+      <tr><td><strong>Al llegar a España</strong></td><td><strong>Padrón primero</strong> (abre el plazo de la franquicia y desbloquea el resto), sanidad con el AND/E-21, y el despacho de la mudanza con el dosier completo</td></tr>
+    </table>
+    </div>
+    <div class="note-box"><strong>El orden que salva la franquicia:</strong> si tus enseres viajan con franquicia por traslado, recuerda que se solicita en el propio DUA y que el dosier debe estar completo <em>antes</em> del despacho. La secuencia ganadora: justificantes andorranos → padrón español → despacho. La perdedora: despachar «rápido» y reunir papeles después.</div>
+
+    <div class="cta-guide">
+      <h2>De toda la checklist, la mudanza te la dejamos hecha</h2>
+      <p>Inventario valorado, declaración jurada, proforma, packing list y dosier del transportista — y si vas con franquicia, el expediente montado para que el agente la solicite con tus justificantes de salida. En 24 horas laborables, por 49 € cerrados.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Qué papeles de la salida necesito para la franquicia aduanera?</summary>
+      <p>Los que prueban tus 12 meses de residencia en Andorra y el momento de tu salida: el permiso de residencia y su baja, el certificado del censo comunal, contratos de trabajo o alquiler — más el alta en el padrón español al llegar, que abre el plazo de importación. Son exactamente los justificantes del dosier de la <a href="/guias/franquicia-traslado-residencia/">franquicia por traslado de residencia</a>, y la razón de la regla de oro de esta guía: pide certificado de cada baja y no tires ni un papel hasta despachar la mudanza.</p>
+    </details>
+    <details>
+      <summary>¿Qué es el formulario AND/E-21 y cuándo lo pido?</summary>
+      <p>Es el formulario de la seguridad social andorrana (CASS) que acredita tus cotizaciones para que, al volver a España, tengas cubierta la asistencia sanitaria mientras regularizas tu situación. Se solicita a la CASS antes de salir de Andorra, junto con el informe de vida laboral — dos gestiones de ventanilla que cuesta mucho más resolver a distancia. Si tu destino no es España, pregunta a la CASS por el certificado equivalente para tu país.</p>
+    </details>
+    <details>
+      <summary>¿Cuándo doy de baja la luz, internet y el resto de suministros?</summary>
+      <p>Después de la mudanza, no antes: necesitarás electricidad para el vaciado y limpieza del piso, y conexión para gestionar la propia salida. Programa las bajas con fecha (la mayoría de compañías lo permiten) para el día siguiente a la entrega de llaves, pide lectura final y factura de cierre de cada contrato, y guarda los justificantes — también sirven como prueba de la fecha en que dejaste la vivienda.</p>
+    </details>
+    <details>
+      <summary>¿Tengo que darme de baja en el Consulado de España en Andorra?</summary>
+      <p>Si estás inscrito en el Registro de Matrícula consular como residente, sí: la baja consular es la que te permite empadronarte con normalidad al llegar a España, y el consulado remite el certificado de baja al solicitarla. Si nunca te inscribiste, este paso no te aplica. Y recuerda el orden en destino: primero el padrón español — que además abre el plazo de la franquicia — y con él, el resto de altas.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/franquicia-traslado-residencia/">La franquicia que tus justificantes de salida hacen posible</a></li>
+        <li><a href="/guias/mudanza-andorra-espana/">La mudanza completa: trámites, plazos y regímenes</a></li>
+        <li><a href="/guias/plazos-envio-muebles-andorra-espana/">Cómo encajar la mudanza en el calendario de la salida</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas, gestoría ni asesores fiscales. Esta guía es información general: los formularios, plazos y requisitos vigentes de cada trámite los fija la administración correspondiente — confírmalos antes de tu salida.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

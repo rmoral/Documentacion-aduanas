@@ -69,7 +69,7 @@ window.SITE_CONFIG = {
 ```
 
 - **Stripe**: crea un Payment Link de 49 € y pega la URL. Recomendado: configura
-  en el Payment Link la redirección tras el pago a `https://TU-DOMINIO/gracias.html`.
+  en el Payment Link la redirección tras el pago a `https://www.aduanafacilandorra.com/gracias.html`.
 - **Formulario**: crea un formulario en [Formspree](https://formspree.io) o
   Getform y pega la URL del endpoint para recibir cada pedido por email.
 
@@ -105,7 +105,7 @@ se gestiona desde el backoffice.
    `/admin` para entrar.
 3. **Webhook de Stripe** (cuando actives el pago): en el dashboard de Stripe,
    *Developers → Webhooks → Add endpoint* apuntando a
-   `https://TU-DOMINIO/api/stripe-webhook` con el evento
+   `https://www.aduanafacilandorra.com/api/stripe-webhook` con el evento
    `checkout.session.completed`, y guarda el signing secret en la variable
    `STRIPE_WEBHOOK_SECRET` de Vercel.
 4. **Enlace de pago para la API y los agentes** (cuando actives el pago):
@@ -153,6 +153,19 @@ se quiera ir más allá del enlace de pago:
   instrucciones de pago en JSON, por lo que adoptar MPP sería añadir la
   cabecera 402 al flujo cuando Stripe lo active en la cuenta.
 
+## Analítica
+
+Todas las páginas públicas cargan `assets/js/analytics.js` (con `defer`), que
+gestiona **Google Analytics 4** (`GA4_ID = "G-R90F53PYSP"`) con un **banner de
+consentimiento** en el idioma de cada página: GA4 y sus cookies solo se cargan
+si el visitante acepta, la elección se guarda en `localStorage`
+(`cookie_consent_v1`) y la política de privacidad lo refleja en los 5 idiomas.
+El fichero también admite **Plausible** (analítica sin cookies, se carga sin
+consentimiento) rellenando `PLAUSIBLE_DOMAIN`. En local (`localhost`/`file:`)
+no se envía nada ni se muestra el banner. Las guías nuevas del blog automático
+incluyen el script por plantilla (ver `BLOG-AUTOMATICO.md`).
+>>>>>>> origin/main
+
 ## Publicación
 
 Es un site 100% estático: funciona en GitHub Pages, Netlify, Vercel o cualquier
@@ -181,8 +194,9 @@ incluida en el site:
   crawlers de IA), `sitemap.xml` con alternates por idioma y `llms.txt` con el
   resumen citable del servicio.
 
-**Importante:** las URLs absolutas usan el marcador `https://TU-DOMINIO`.
-Cuando el dominio definitivo exista, ejecutar una sola vez:
+**Dominio:** las URLs absolutas apuntan a
+`https://www.aduanafacilandorra.com` (fijado con `tools/set-domain.sh`).
+Si el dominio cambiara algún día, el mismo script lo reemplaza de nuevo:
 
 ```bash
 ./tools/set-domain.sh https://www.tudominio.com
@@ -193,6 +207,5 @@ Cuando el dominio definitivo exista, ejecutar una sola vez:
 - `STRIPE_PAYMENT_LINK` en `assets/js/config.js` para activar el pago online
   cuando termine la fase de valoración (mientras tanto los pedidos quedan
   registrados en la base de datos y se gestionan desde `/admin`).
-- Reemplazar `https://TU-DOMINIO` con el dominio real (`tools/set-domain.sh`).
 - Alta en Google Search Console y Bing Webmaster Tools + envío del sitemap
   (ver `ESTRATEGIA-SEO.md`).

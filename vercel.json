@@ -1,7 +1,11 @@
 {
   "rewrites": [
-    { "source": "/admin", "destination": "/admin.html" }
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    }
   ],
+  "trailingSlash": true,
   "headers": [
     {
       "source": "/api/(mcp|pedidos)",
