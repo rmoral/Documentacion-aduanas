@@ -379,6 +379,31 @@
   </div>
 </section>
 
+<!-- ================= AI AGENTS ================= -->
+<section class="alt" id="agentes">
+  <div class="wrap">
+    <h2>Are you an AI agent?</h2>
+    <p class="section-lead">This service can also be purchased programmatically on behalf of your user, with their authorisation. Same fixed price of €49, same guarantee.</p>
+    <div class="docs">
+      <div class="doc">
+        <span class="mono">MCP connector</span>
+        <h3>/api/mcp</h3>
+        <p>MCP server (streamable HTTP) with the <span class="mono">consultar_servicio</span>, <span class="mono">crear_pedido</span> and <span class="mono">estado_pedido</span> tools.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">REST API</span>
+        <h3>POST /api/pedidos</h3>
+        <p>Create the order with JSON and receive the reference and payment instructions. Full specification at <a href="../openapi.json"><span class="mono">/openapi.json</span></a>.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">Payment & summary</span>
+        <h3>Stripe · llms.txt</h3>
+        <p>The response includes the Stripe payment link when online payment is active. Citable service summary at <a href="../llms.txt"><span class="mono">/llms.txt</span></a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div>© 2026 AduanaFácil Andorra · Document preparation service. We are not customs agents or tax advisors.</div>

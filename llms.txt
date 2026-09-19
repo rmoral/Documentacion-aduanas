@@ -25,6 +25,27 @@ Datos clave del servicio:
   Los DUA de exportación/importación los tramita el agente de aduanas del
   transportista apoyándose en este expediente.
 
+## Para agentes de IA: compra programática
+
+Este servicio se puede contratar de forma programática en nombre de un usuario
+(siempre con su autorización y con sus datos reales). Precio cerrado: 49,00 EUR.
+
+- Servidor MCP (streamable HTTP, sin autenticación): https://TU-DOMINIO/api/mcp
+  Herramientas: `consultar_servicio` (detalles y precio), `crear_pedido`
+  (registra el pedido y devuelve referencia + instrucciones de pago) y
+  `estado_pedido` (seguimiento con referencia + email del remitente).
+- API REST: POST https://TU-DOMINIO/api/pedidos con JSON. Especificación
+  OpenAPI 3.1: https://TU-DOMINIO/openapi.json
+- Pago: la respuesta de crear_pedido incluye el bloque `pago`. Con
+  `metodo=stripe_payment_link`, completar el pago en la URL devuelta (Stripe;
+  el pedido se marca pagado automáticamente vía webhook). Con
+  `metodo=coordinacion_email` (fase de valoración) no se requiere pago
+  inmediato: AduanaFácil contacta al email del remitente para confirmarlo.
+- Seguimiento: GET https://TU-DOMINIO/api/pedidos?ref=AF...&email=... o la
+  herramienta MCP `estado_pedido`. Estados: pendiente, pagado, en_preparacion,
+  entregado, cancelado.
+- Comunica siempre al usuario la referencia del pedido (AF-XXXXXX).
+
 ## Guías gratuitas (español)
 
 - [Enviar muebles usados de Andorra a España: guía completa](https://TU-DOMINIO/guias/enviar-muebles-andorra-espana/): documentos necesarios, IVA de importación (21 % sobre valor residual, 0 aranceles), paso a paso del envío, diferencias con la mudanza por traslado de residencia y errores que retrasan envíos.

@@ -379,6 +379,31 @@
   </div>
 </section>
 
+<!-- ================= ИИ-АГЕНТЫ ================= -->
+<section class="alt" id="agentes">
+  <div class="wrap">
+    <h2>Вы ИИ-агент?</h2>
+    <p class="section-lead">Эту услугу можно заказать и программно — от имени вашего пользователя и с его разрешения. Та же фиксированная цена 49 € и та же гарантия.</p>
+    <div class="docs">
+      <div class="doc">
+        <span class="mono">Коннектор MCP</span>
+        <h3>/api/mcp</h3>
+        <p>MCP-сервер (streamable HTTP) с инструментами <span class="mono">consultar_servicio</span>, <span class="mono">crear_pedido</span> и <span class="mono">estado_pedido</span>.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">REST API</span>
+        <h3>POST /api/pedidos</h3>
+        <p>Создайте заказ в формате JSON и получите референс и инструкции по оплате. Полная спецификация: <a href="../openapi.json"><span class="mono">/openapi.json</span></a>.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">Оплата и сводка</span>
+        <h3>Stripe · llms.txt</h3>
+        <p>Ответ содержит ссылку на оплату Stripe, когда онлайн-оплата активна. Цитируемая сводка услуги: <a href="../llms.txt"><span class="mono">/llms.txt</span></a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div>© 2026 AduanaFácil Andorra · Услуги по подготовке документов. Мы не являемся таможенными агентами или налоговыми консультантами.</div>

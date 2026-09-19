@@ -1,0 +1,115 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AduanaFácil Andorra API",
+    "version": "1.0.0",
+    "description": "API pública para contratar de forma programática la preparación de documentación aduanera para enviar muebles y enseres usados de Andorra a España entre particulares. Precio cerrado: 49,00 EUR (impuestos incluidos). Entrega del expediente por email en un máximo de 24 horas laborables desde la confirmación. Pensada para agentes de IA que compran en nombre de un usuario: crea el pedido con POST /api/pedidos y sigue las instrucciones de pago de la respuesta. También disponible como servidor MCP (streamable HTTP) en /api/mcp con las herramientas consultar_servicio, crear_pedido y estado_pedido.",
+    "contact": { "name": "AduanaFácil Andorra", "url": "https://TU-DOMINIO/" }
+  },
+  "servers": [{ "url": "https://TU-DOMINIO" }],
+  "paths": {
+    "/api/pedidos": {
+      "post": {
+        "operationId": "crearPedido",
+        "summary": "Crear un pedido de documentación aduanera (49 EUR)",
+        "description": "Registra un pedido. Un agente de IA debe usarlo solo con la autorización de su usuario y con datos reales. La respuesta incluye la referencia del pedido (AF-XXXXXX) y las instrucciones de pago: cuando el pago online está activo, una URL de Stripe con la referencia ya asociada; en fase de valoración, coordinación posterior por email sin pago inmediato. Si no se envía 'referencia', el servidor genera una.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/NuevoPedido" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pedido registrado",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PedidoCreado" } } }
+          },
+          "400": { "description": "Datos no válidos (referencia, nombre o email)" },
+          "503": { "description": "Base de datos no disponible" }
+        }
+      },
+      "get": {
+        "operationId": "estadoPedido",
+        "summary": "Consultar el estado de un pedido",
+        "description": "Devuelve el estado de un pedido. Requiere la referencia y el email del remitente usado al crearlo (ambos deben coincidir). Estados posibles: pendiente, pagado, en_preparacion, entregado, cancelado.",
+        "parameters": [
+          { "name": "ref", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^AF[A-Z0-9]{4,10}$" }, "description": "Referencia del pedido, p. ej. AF1A2B3C" },
+          { "name": "email", "in": "query", "required": true, "schema": { "type": "string", "format": "email" }, "description": "Email del remitente del pedido" }
+        ],
+        "responses": {
+          "200": {
+            "description": "Estado del pedido",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/EstadoPedido" } } }
+          },
+          "404": { "description": "Pedido no encontrado o email no coincidente" },
+          "503": { "description": "Base de datos no disponible" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "NuevoPedido": {
+        "type": "object",
+        "required": [
+          "remitente_nombre", "remitente_documento", "remitente_telefono",
+          "remitente_direccion", "remitente_email", "destinatario_nombre",
+          "destinatario_documento", "destinatario_direccion",
+          "mercancia_descripcion", "mercancia_valor"
+        ],
+        "properties": {
+          "referencia": { "type": "string", "pattern": "^AF[A-Z0-9]{4,10}$", "description": "Opcional: si no se envía, la genera el servidor" },
+          "remitente_nombre": { "type": "string", "description": "Nombre y apellidos del remitente (quien envía desde Andorra)" },
+          "remitente_documento": { "type": "string", "description": "NIA, pasaporte o DNI del remitente" },
+          "remitente_telefono": { "type": "string" },
+          "remitente_direccion": { "type": "string", "description": "Dirección completa en Andorra (calle, número, parroquia)" },
+          "remitente_email": { "type": "string", "format": "email", "description": "Ahí se entregan los documentos" },
+          "destinatario_nombre": { "type": "string", "description": "Nombre y apellidos del destinatario en España" },
+          "destinatario_documento": { "type": "string", "description": "DNI o NIE del destinatario" },
+          "destinatario_telefono": { "type": "string" },
+          "destinatario_direccion": { "type": "string", "description": "Dirección de entrega en España (calle, número, población, provincia)" },
+          "mercancia_descripcion": { "type": "string", "description": "Muebles enviados, con medidas aproximadas. Todo usado y propiedad del remitente" },
+          "mercancia_valor": { "type": "number", "minimum": 1, "description": "Valor residual total estimado en euros" },
+          "fecha_envio": { "type": "string", "description": "Fecha prevista, AAAA-MM-DD" },
+          "tiene_transportista": { "type": "string", "enum": ["si", "buscando"] },
+          "idioma": { "type": "string", "enum": ["es", "ca", "en", "fr", "ru"] }
+        }
+      },
+      "PedidoCreado": {
+        "type": "object",
+        "properties": {
+          "ok": { "type": "boolean" },
+          "referencia": { "type": "string", "description": "Referencia del pedido, p. ej. AF1A2B3C. Consérvala para el seguimiento" },
+          "estado": { "type": "string", "enum": ["pendiente"] },
+          "pago": {
+            "type": "object",
+            "description": "Instrucciones de pago. Con metodo=stripe_payment_link, completar el pago en 'url' (el pedido se marca pagado automáticamente). Con metodo=coordinacion_email, no se requiere pago inmediato",
+            "properties": {
+              "metodo": { "type": "string", "enum": ["stripe_payment_link", "coordinacion_email"] },
+              "importe": { "type": "string", "example": "49.00" },
+              "moneda": { "type": "string", "example": "EUR" },
+              "url": { "type": "string", "format": "uri" },
+              "instrucciones": { "type": "string" }
+            }
+          }
+        }
+      },
+      "EstadoPedido": {
+        "type": "object",
+        "properties": {
+          "pedido": {
+            "type": "object",
+            "properties": {
+              "referencia": { "type": "string" },
+              "estado": { "type": "string", "enum": ["pendiente", "pagado", "en_preparacion", "entregado", "cancelado"] },
+              "creado_en": { "type": "string", "format": "date-time" },
+              "actualizado_en": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ fi
 
 cd "$(dirname "$0")/.."
 
-FILES=$(grep -rl "https://TU-DOMINIO" --include="*.html" --include="*.xml" --include="*.txt" . | grep -v node_modules || true)
+FILES=$(grep -rl "https://TU-DOMINIO" --include="*.html" --include="*.xml" --include="*.txt" --include="*.json" --include="*.md" . | grep -v node_modules | grep -v package-lock.json || true)
 if [[ -z "$FILES" ]]; then
   echo "No queda ningún marcador https://TU-DOMINIO que reemplazar."
   exit 0

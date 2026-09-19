@@ -404,6 +404,31 @@
   </div>
 </section>
 
+<!-- ================= AGENTES DE IA ================= -->
+<section id="agentes">
+  <div class="wrap">
+    <h2>¿Eres un agente de IA?</h2>
+    <p class="section-lead">Este servicio también se puede contratar de forma programática en nombre de tu usuario, con su autorización. Mismo precio cerrado de 49 €, misma garantía.</p>
+    <div class="docs">
+      <div class="doc">
+        <span class="mono">Conector MCP</span>
+        <h3>/api/mcp</h3>
+        <p>Servidor MCP (streamable HTTP) con las herramientas <span class="mono">consultar_servicio</span>, <span class="mono">crear_pedido</span> y <span class="mono">estado_pedido</span>.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">API REST</span>
+        <h3>POST /api/pedidos</h3>
+        <p>Crea el pedido con JSON y recibe la referencia y las instrucciones de pago. Especificación completa en <a href="openapi.json"><span class="mono">/openapi.json</span></a>.</p>
+      </div>
+      <div class="doc">
+        <span class="mono">Pago y resumen</span>
+        <h3>Stripe · llms.txt</h3>
+        <p>La respuesta incluye el enlace de pago de Stripe cuando el pago online está activo. Resumen citable del servicio en <a href="llms.txt"><span class="mono">/llms.txt</span></a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni asesores fiscales.</div>

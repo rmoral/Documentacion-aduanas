@@ -108,10 +108,50 @@ se gestiona desde el backoffice.
    `https://TU-DOMINIO/api/stripe-webhook` con el evento
    `checkout.session.completed`, y guarda el signing secret en la variable
    `STRIPE_WEBHOOK_SECRET` de Vercel.
+4. **Enlace de pago para la API y los agentes** (cuando actives el pago):
+   además de pegar el Payment Link en `assets/js/config.js` (formulario web),
+   guárdalo en la variable de entorno `STRIPE_PAYMENT_LINK` de Vercel. Las
+   respuestas de `POST /api/pedidos` y de la herramienta MCP `crear_pedido`
+   incluirán entonces la URL de pago con la referencia ya asociada.
 
 Sin base de datos configurada, el site sigue funcionando: el envío del
 formulario ignora el error de la API y continúa hacia la confirmación o el
 pago.
+
+## Compra por agentes de IA (agentic commerce)
+
+El site permite que un agente de IA compre el servicio en nombre de su usuario:
+
+- **Servidor MCP** en `api/mcp.js` (endpoint `https://TU-DOMINIO/api/mcp`,
+  streamable HTTP sin estado, construido con `mcp-handler`). Herramientas:
+  `consultar_servicio`, `crear_pedido` (devuelve referencia + bloque `pago`) y
+  `estado_pedido` (referencia + email del remitente). Un agente lo añade como
+  servidor MCP remoto sin autenticación.
+- **API REST** documentada en `openapi.json` (raíz del site): `POST
+  /api/pedidos` para crear el pedido y `GET /api/pedidos?ref=...&email=...`
+  para el seguimiento sin token (exige que referencia y email coincidan).
+- **Descubrimiento**: `llms.txt` incluye la sección «Para agentes de IA» con
+  los endpoints y el flujo de pago; `robots.txt` da la bienvenida a los
+  crawlers de IA; las portadas tienen la sección visible «¿Eres un agente de
+  IA?» en los 5 idiomas; CORS abierto en `/api/mcp`, `/api/pedidos`,
+  `/openapi.json` y `/llms.txt` (vercel.json).
+- **Pago**: con `STRIPE_PAYMENT_LINK` configurada, la respuesta de creación
+  incluye la URL de Stripe con `client_reference_id`; el webhook marca el
+  pedido como pagado. Sin configurar, el bloque `pago` indica
+  `coordinacion_email` (fase de valoración, sin pago inmediato).
+
+Conectores externos que se configuran a nivel de cuenta (no de código) cuando
+se quiera ir más allá del enlace de pago:
+
+- **ACP (Agentic Commerce Protocol)** — estándar abierto de Stripe, OpenAI y
+  Meta que usan ChatGPT y otros asistentes para el checkout integrado
+  («Instant Checkout»). Se solicita desde el dashboard de Stripe con la
+  *Agentic Commerce Suite*; al activarla, la suite cubre también **UCP**
+  (Universal Commerce Protocol, de Google) sin integración adicional.
+- **MPP (Machine Payments Protocol)** — estándar de Stripe/Tempo sobre HTTP
+  402 para pagos autónomos máquina-a-máquina. Nuestra API ya devuelve las
+  instrucciones de pago en JSON, por lo que adoptar MPP sería añadir la
+  cabecera 402 al flujo cuando Stripe lo active en la cuenta.
 
 ## Publicación
 
