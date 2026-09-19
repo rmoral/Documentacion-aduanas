@@ -149,12 +149,18 @@ El site permite que un agente de IA compre el servicio en nombre de su usuario:
   descubrimiento: cuando se estabilice, añadir en el DNS del dominio un TXT
   (host sugerido `_mcp`) apuntando a
   `https://www.aduanafacilandorra.com/api/mcp`.
-- **`server.json`** (raíz del repo): manifiesto para publicar el servidor en
-  el **MCP Registry oficial** (registry.modelcontextprotocol.io). Publicación:
-  instalar `mcp-publisher`, `mcp-publisher login dns` (verifica el dominio
-  para el namespace `com.aduanafacilandorra`) y `mcp-publisher publish` desde
-  la raíz. Tras el alta, listar también el servidor en directorios usados por
-  los clientes (Smithery, PulseMCP).
+- **`server.json`** (raíz del repo): manifiesto del servidor en el **MCP
+  Registry oficial**. **Ya publicado** (2026-09-19) como
+  `com.aduanafacilandorra.www/mcp` v1.0.0, verificado por HTTP contra
+  `www.aduanafacilandorra.com` (el apex redirige con 308 y el registro no
+  sigue redirecciones, de ahí el `.www` del namespace). La clave pública de
+  verificación vive en `/.well-known/mcp-registry-auth`; la privada la
+  custodia el propietario. Para publicar nuevas versiones: subir `version`
+  en server.json y ejecutar
+  `mcp-publisher login http --domain www.aduanafacilandorra.com --private-key <hex>`
+  y `mcp-publisher publish`. Si la clave privada se pierde, generar otro par,
+  reemplazar el fichero well-known y redesplegar. Pendiente: listar también
+  el servidor en directorios usados por los clientes (Smithery, PulseMCP).
 - **JSON-LD**: el nodo `Service` de las 5 portadas incluye `potentialAction`
   (`OrderAction` → EntryPoint `POST /api/pedidos`), señalando a los crawlers
   que el servicio es comprable de forma programática.

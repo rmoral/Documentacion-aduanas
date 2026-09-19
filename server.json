@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "com.aduanafacilandorra/mcp",
+  "name": "com.aduanafacilandorra.www/mcp",
   "description": "Customs paperwork for shipping used furniture from Andorra to Spain. 49 EUR, ready in 24 hours.",
   "version": "1.0.0",
   "websiteUrl": "https://www.aduanafacilandorra.com/",
