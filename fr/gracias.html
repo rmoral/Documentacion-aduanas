@@ -222,7 +222,7 @@ footer a{color:var(--muted)}
       <div class="stamp"><b>REÇU</b>dossier en préparation</div>
       <h1>Demande reçue&nbsp;! Nous préparons déjà vos papiers.</h1>
       <div class="refbox">Référence de la demande&nbsp;: <b id="refShow">—</b></div>
-      <p>Nous vous contacterons par email pour confirmer votre demande et convenir du paiement (49&nbsp;€). À compter de la confirmation, sous <strong>24 heures ouvrées</strong> maximum vous recevrez le dossier complet&nbsp;: déclaration sur l'honneur, facture pro forma et dossier du transporteur, personnalisés avec vos données et prêts à signer.</p>
+      <p>Si vous avez effectué le paiement, votre dossier entre directement en préparation. Sinon, nous vous contacterons par email pour confirmer votre demande et convenir du paiement (49&nbsp;€). À compter de la confirmation, sous <strong>24 heures ouvrées</strong> maximum vous recevrez le dossier complet&nbsp;: déclaration sur l'honneur, facture pro forma et dossier du transporteur, personnalisés avec vos données et prêts à signer.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Conservez votre référence&nbsp;: elle vous sera demandée pour toute question ou révision du dossier. Si la douane ou votre transporteur demande une modification, nous la corrigeons gratuitement.</p>
       <div class="actions">
@@ -250,6 +250,9 @@ footer a{color:var(--muted)}
   };
   var params = new URLSearchParams(window.location.search);
   var ref = params.get('ref') || params.get('client_reference_id') || '';
+  // Al volver del pago de Stripe la URL no trae la referencia: se recupera
+  // del navegador, donde el formulario la dejó guardada
+  if (!ref) { try { ref = localStorage.getItem('ultimo_pedido') || ''; } catch (_) {} }
   if (ref) {
     document.getElementById('refShow').textContent = ref;
     try {

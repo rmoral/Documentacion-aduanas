@@ -222,7 +222,7 @@ footer a{color:var(--muted)}
       <div class="stamp"><b>ПОЛУЧЕНО</b>досье готовится</div>
       <h1>Заявка получена! Мы уже работаем над вашими документами.</h1>
       <div class="refbox">Референс заявки: <b id="refShow">—</b></div>
-      <p>Мы свяжемся с вами по email, чтобы подтвердить заявку и согласовать оплату (49&nbsp;€). После подтверждения максимум через <strong>24 рабочих часа</strong> вы получите полное досье: декларацию под присягой, проформа-инвойс и досье для перевозчика, оформленные на ваши данные и готовые к подписи.</p>
+      <p>Если вы уже завершили оплату, досье сразу поступает в работу. Если нет — мы свяжемся с вами по email, чтобы подтвердить заявку и согласовать оплату (49&nbsp;€). После подтверждения максимум через <strong>24 рабочих часа</strong> вы получите полное досье: декларацию под присягой, проформа-инвойс и досье для перевозчика, оформленные на ваши данные и готовые к подписи.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Сохраните ваш референс: он понадобится для любых вопросов или правок досье. Если таможня или ваш перевозчик запросит изменения, мы внесём их бесплатно.</p>
       <div class="actions">
@@ -250,6 +250,9 @@ footer a{color:var(--muted)}
   };
   var params = new URLSearchParams(window.location.search);
   var ref = params.get('ref') || params.get('client_reference_id') || '';
+  // Al volver del pago de Stripe la URL no trae la referencia: se recupera
+  // del navegador, donde el formulario la dejó guardada
+  if (!ref) { try { ref = localStorage.getItem('ultimo_pedido') || ''; } catch (_) {} }
   if (ref) {
     document.getElementById('refShow').textContent = ref;
     try {

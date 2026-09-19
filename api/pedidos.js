@@ -1,6 +1,6 @@
 import { db, ESTADOS } from './_lib/db.js';
 import { isAdmin } from './_lib/auth.js';
-import { REF_RE, str, guardarPedido, estadoPedido } from './_lib/pedidos-core.js';
+import { REF_RE, str, guardarPedido, estadoPedido, pagoOnline } from './_lib/pedidos-core.js';
 
 export default async function handler(req, res) {
   try {
@@ -27,6 +27,8 @@ async function crearPedido(req, res) {
    GET sin ref: listado completo, solo administración. */
 async function consultar(req, res) {
   const q = req.query || {};
+  // Configuración pública: el front y los agentes saben si el pago online está activo
+  if (q.config) return res.status(200).json({ pago_online: pagoOnline() });
   if (q.ref) {
     const row = await estadoPedido(q.ref, q.email || '');
     if (!row) return res.status(404).json({ error: 'Pedido no encontrado (comprueba referencia y email del remitente)' });

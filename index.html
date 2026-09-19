@@ -193,6 +193,10 @@ footer a{color:var(--muted)}
 .confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
 .confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
 .confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
 
@@ -534,12 +538,17 @@ footer a{color:var(--muted)}
             <span class="tick">✓</span>
             <span><strong>Garantía sin riesgo:</strong> si la aduana o tu transportista pide cualquier corrección en los documentos, la hacemos gratis. Y si no podemos preparar tu expediente, te devolvemos el importe íntegro.</span>
           </div>
-          <div class="guarantee">
+          <div class="guarantee solo-valoracion">
             <span class="tick">✓</span>
             <span><strong>Fase de lanzamiento — pago online aún no disponible:</strong> hoy no pagas nada. Envíanos tu solicitud y te responderemos por email para confirmar el expediente y acordar el pago (49&nbsp;€) antes de la entrega.</span>
           </div>
-          <button type="submit" class="btn" style="width:100%">Enviar mi solicitud por email</button>
-          <p class="pay-note">Al pulsar se abrirá tu aplicación de correo con la solicitud ya redactada: solo tienes que enviarla. Hoy no pagas nada.</p>
+          <div class="guarantee solo-pago">
+            <span class="tick">✓</span>
+            <span><strong>Pago seguro:</strong> pagas 49&nbsp;€ con tarjeta a través de Stripe. Tu pedido entra en preparación en cuanto se confirma el pago y recibes el expediente en un máximo de 24 horas laborables.</span>
+          </div>
+          <button type="submit" class="btn" style="width:100%"><span class="solo-valoracion">Enviar mi solicitud</span><span class="solo-pago">Pagar 49&nbsp;€ y recibir mis documentos</span></button>
+          <p class="pay-note solo-valoracion">Hoy no pagas nada: registramos tu solicitud y te contactamos por email para confirmar el expediente y acordar el pago (49&nbsp;€).</p>
+          <p class="pay-note solo-pago">Pago seguro con tarjeta a través de Stripe · Recibirás confirmación inmediata por email</p>
         </div>
 
         <p class="err" id="formErr">Revisa los campos marcados con * antes de continuar.</p>

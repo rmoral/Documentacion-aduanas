@@ -223,7 +223,7 @@ footer a{color:var(--muted)}
       <div class="stamp"><b>RECIBIDO</b>expediente en preparación</div>
       <h1>¡Solicitud recibida! Ya estamos con tus papeles.</h1>
       <div class="refbox">Referencia de la solicitud: <b id="refShow">—</b></div>
-      <p>Te contactaremos por email para confirmar tu solicitud y coordinar el pago (49&nbsp;€). Desde la confirmación, en un máximo de <strong>24 horas laborables</strong> recibirás el expediente completo: declaración jurada, factura proforma y el dosier para tu transportista, personalizados con tus datos y listos para firmar.</p>
+      <p>Si has completado el pago, tu expediente entra directamente en preparación. Si no, te contactaremos por email para confirmar la solicitud y coordinar el pago (49&nbsp;€). Desde la confirmación, en un máximo de <strong>24 horas laborables</strong> recibirás el expediente completo: declaración jurada, factura proforma y el dosier para tu transportista, personalizados con tus datos y listos para firmar.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Guarda tu referencia: la necesitarás para cualquier consulta o revisión del expediente. Si la aduana o tu transportista pide algún cambio, lo corregimos gratis.</p>
       <div class="actions">
@@ -251,6 +251,9 @@ footer a{color:var(--muted)}
   };
   var params = new URLSearchParams(window.location.search);
   var ref = params.get('ref') || params.get('client_reference_id') || '';
+  // Al volver del pago de Stripe la URL no trae la referencia: se recupera
+  // del navegador, donde el formulario la dejó guardada
+  if (!ref) { try { ref = localStorage.getItem('ultimo_pedido') || ''; } catch (_) {} }
   if (ref) {
     document.getElementById('refShow').textContent = ref;
     try {

@@ -1,5 +1,6 @@
 import { randomBytes } from 'node:crypto';
 import { db, ESTADOS } from './db.js';
+import { notificarPedido } from './notify.js';
 
 export const REF_RE = /^AF[A-Z0-9]{4,10}$/;
 export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -13,6 +14,10 @@ export function nuevaReferencia() {
 /* Instrucciones de pago para la respuesta de la API y del conector MCP.
    Con STRIPE_PAYMENT_LINK configurado (variable de entorno en Vercel), el
    pedido se paga en el enlace devuelto; sin configurar, fase de valoración. */
+export function pagoOnline() {
+  return (process.env.STRIPE_PAYMENT_LINK || '').indexOf('buy.stripe.com') !== -1;
+}
+
 export function buildPago(referencia, email) {
   const link = process.env.STRIPE_PAYMENT_LINK || '';
   if (link.indexOf('buy.stripe.com') !== -1) {
@@ -80,9 +85,30 @@ export async function guardarPedido(b) {
       idioma = EXCLUDED.idioma,
       actualizado_en = now()`;
 
+  const pago = buildPago(referencia, email);
+
+  // Aviso al propietario; nunca bloquea ni hace fallar el pedido
+  await notificarPedido('nuevo', {
+    referencia,
+    remitente_nombre: nombre,
+    remitente_documento: str(b.remitente_documento, 50),
+    remitente_telefono: str(b.remitente_telefono, 50),
+    remitente_direccion: str(b.remitente_direccion),
+    remitente_email: email,
+    destinatario_nombre: str(b.destinatario_nombre, 200),
+    destinatario_documento: str(b.destinatario_documento, 50),
+    destinatario_direccion: str(b.destinatario_direccion),
+    mercancia_descripcion: str(b.mercancia_descripcion, 2000),
+    mercancia_valor: valor,
+    fecha_envio: str(b.fecha_envio, 20),
+    tiene_transportista: str(b.tiene_transportista, 20),
+    idioma: str(b.idioma, 5),
+    pago_metodo: pago.metodo
+  });
+
   return {
     status: 201,
-    body: { ok: true, referencia, estado: 'pendiente', pago: buildPago(referencia, email) }
+    body: { ok: true, referencia, estado: 'pendiente', pago }
   };
 }
 

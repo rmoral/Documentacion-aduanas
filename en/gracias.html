@@ -222,7 +222,7 @@ footer a{color:var(--muted)}
       <div class="stamp"><b>RECEIVED</b>file in preparation</div>
       <h1>Request received! We're already working on your paperwork.</h1>
       <div class="refbox">Request reference: <b id="refShow">—</b></div>
-      <p>We'll contact you by email to confirm your request and arrange the €49 payment. From confirmation, within a maximum of <strong>24 working hours</strong> you'll receive the complete file: sworn declaration, proforma invoice and the carrier dossier, personalised with your details and ready to sign.</p>
+      <p>If you've completed the payment, your file goes straight into preparation. If not, we'll contact you by email to confirm your request and arrange the €49 payment. From confirmation, within a maximum of <strong>24 working hours</strong> you'll receive the complete file: sworn declaration, proforma invoice and the carrier dossier, personalised with your details and ready to sign.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Keep your reference: you'll need it for any query or revision of your file. If customs or your carrier requests a change, we fix it free of charge.</p>
       <div class="actions">
@@ -250,6 +250,9 @@ footer a{color:var(--muted)}
   };
   var params = new URLSearchParams(window.location.search);
   var ref = params.get('ref') || params.get('client_reference_id') || '';
+  // Al volver del pago de Stripe la URL no trae la referencia: se recupera
+  // del navegador, donde el formulario la dejó guardada
+  if (!ref) { try { ref = localStorage.getItem('ultimo_pedido') || ''; } catch (_) {} }
   if (ref) {
     document.getElementById('refShow').textContent = ref;
     try {

@@ -27,6 +27,18 @@
   var ref = 'AF' + Date.now().toString(36).toUpperCase().slice(-6);
   document.getElementById('refnum').textContent = ref.slice(2);
 
+  // Modo del site: con el pago online activo en el servidor, el paso 4
+  // muestra los textos de pago (.solo-pago) en lugar de los de solicitud
+  // (.solo-valoracion). Si la consulta falla, se queda en modo solicitud.
+  if (FORM_ENDPOINT && FORM_ENDPOINT.indexOf('/api/pedidos') !== -1) {
+    fetch(FORM_ENDPOINT + '?config=1')
+      .then(function (r) { return r.json(); })
+      .then(function (c) {
+        if (c && c.pago_online) document.documentElement.classList.add('pago-online');
+      })
+      .catch(function () {});
+  }
+
   var step = 1;
   var TOTAL = 4;
   var form = document.getElementById('orderForm');
@@ -105,17 +117,30 @@
     data.fecha_pedido = new Date().toISOString();
 
     // El pedido queda registrado en el navegador para la página de confirmación
-    try { localStorage.setItem('pedido_' + ref, JSON.stringify(data)); } catch (_) {}
+    // (la referencia suelta permite recuperarlo al volver del pago de Stripe)
+    try {
+      localStorage.setItem('pedido_' + ref, JSON.stringify(data));
+      localStorage.setItem('ultimo_pedido', ref);
+    } catch (_) {}
 
     var sendData = FORM_ENDPOINT
       ? fetch(FORM_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(data)
-        }).catch(function () { /* el pedido sigue adelante; los datos van en la referencia */ })
-      : Promise.resolve();
+        }).then(function (r) { return r.json(); })
+          .catch(function () { return null; /* el pedido sigue adelante */ })
+      : Promise.resolve(null);
 
-    sendData.then(function () {
+    sendData.then(function (resp) {
+      // El servidor manda: si devuelve la URL de pago, se va directo a Stripe
+      // con la referencia ya asociada al pedido registrado
+      if (resp && resp.pago && resp.pago.metodo === 'stripe_payment_link' && resp.pago.url) {
+        window.location.href = resp.pago.url;
+        return;
+      }
+
+      // Respaldo: enlace de pago configurado solo en el cliente (config.js)
       var stripeConfigured = STRIPE_PAYMENT_LINK &&
         STRIPE_PAYMENT_LINK.indexOf('buy.stripe.com') !== -1 &&
         STRIPE_PAYMENT_LINK.indexOf('TU_PAYMENT_LINK') === -1;

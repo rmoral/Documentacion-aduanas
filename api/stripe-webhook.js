@@ -1,5 +1,6 @@
 import { db } from './_lib/db.js';
 import { verifyStripeSignature } from './_lib/stripe.js';
+import { notificarPedido } from './_lib/notify.js';
 
 /* El cuerpo debe llegar sin parsear para poder verificar la firma. */
 export const config = { api: { bodyParser: false } };
@@ -32,9 +33,11 @@ export default async function handler(req, res) {
       const ref = String((event.data && event.data.object && event.data.object.client_reference_id) || '').toUpperCase();
       if (/^AF[A-Z0-9]{4,10}$/.test(ref)) {
         const sql = await db();
-        await sql`
+        const rows = await sql`
           UPDATE pedidos SET estado = 'pagado', actualizado_en = now()
-          WHERE referencia = ${ref} AND estado = 'pendiente'`;
+          WHERE referencia = ${ref} AND estado = 'pendiente'
+          RETURNING referencia, remitente_nombre, remitente_email, mercancia_valor`;
+        if (rows.length) await notificarPedido('pagado', rows[0]);
       }
     }
     // Stripe solo necesita un 200 para dar el evento por entregado

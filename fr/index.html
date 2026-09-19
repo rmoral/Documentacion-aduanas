@@ -193,6 +193,10 @@ footer a{color:var(--muted)}
 .confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
 .confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
 .confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
 
@@ -533,12 +537,17 @@ footer a{color:var(--muted)}
             <span class="tick">✓</span>
             <span><strong>Garantie sans risque&nbsp;:</strong> si la douane ou votre transporteur demande la moindre correction des documents, nous la faisons gratuitement. Et si nous ne pouvons pas préparer votre dossier, nous vous remboursons intégralement.</span>
           </div>
-          <div class="guarantee">
+          <div class="guarantee solo-valoracion">
             <span class="tick">✓</span>
             <span><strong>Phase de lancement — paiement en ligne pas encore disponible&nbsp;:</strong> vous ne payez rien aujourd'hui. Envoyez-nous votre demande et nous vous répondrons par email pour confirmer votre dossier et convenir du paiement (49&nbsp;€) avant la livraison.</span>
           </div>
-          <button type="submit" class="btn" style="width:100%">Envoyer ma demande par email</button>
-          <p class="pay-note">Votre application de messagerie s'ouvrira avec la demande déjà rédigée&nbsp;: il ne reste qu'à l'envoyer. Vous ne payez rien aujourd'hui.</p>
+          <div class="guarantee solo-pago">
+            <span class="tick">✓</span>
+            <span><strong>Paiement sécurisé&nbsp;:</strong> vous payez 49&nbsp;€ par carte via Stripe. Votre commande entre en préparation dès la confirmation du paiement et vous recevez votre dossier sous 24 heures ouvrées.</span>
+          </div>
+          <button type="submit" class="btn" style="width:100%"><span class="solo-valoracion">Envoyer ma demande</span><span class="solo-pago">Payer 49&nbsp;€ et recevoir mes documents</span></button>
+          <p class="pay-note solo-valoracion">Vous ne payez rien aujourd'hui&nbsp;: nous enregistrons votre demande et vous contactons par email pour confirmer le dossier et convenir du paiement (49&nbsp;€).</p>
+          <p class="pay-note solo-pago">Paiement sécurisé par carte via Stripe · Confirmation immédiate par email</p>
         </div>
 
         <p class="err" id="formErr">Vérifiez les champs marqués d'un * avant de continuer.</p>

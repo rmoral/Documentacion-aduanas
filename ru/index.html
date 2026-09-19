@@ -193,6 +193,10 @@ footer a{color:var(--muted)}
 .confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
 .confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
 .confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
 
@@ -533,12 +537,17 @@ footer a{color:var(--muted)}
             <span class="tick">✓</span>
             <span><strong>Гарантия без риска:</strong> если таможня или ваш перевозчик запросит любую правку документов, мы внесём её бесплатно. А если мы не сможем подготовить ваше досье — вернём всю сумму.</span>
           </div>
-          <div class="guarantee">
+          <div class="guarantee solo-valoracion">
             <span class="tick">✓</span>
             <span><strong>Фаза запуска — онлайн-оплата пока недоступна:</strong> сегодня вы ничего не платите. Отправьте заявку, и мы ответим по email, чтобы подтвердить досье и согласовать оплату (49&nbsp;€) до передачи документов.</span>
           </div>
-          <button type="submit" class="btn" style="width:100%">Отправить заявку по email</button>
-          <p class="pay-note">Откроется ваша почтовая программа с уже готовой заявкой — останется только нажать «Отправить». Сегодня вы ничего не платите.</p>
+          <div class="guarantee solo-pago">
+            <span class="tick">✓</span>
+            <span><strong>Безопасная оплата:</strong> вы платите 49&nbsp;€ картой через Stripe. Заказ поступает в работу сразу после подтверждения оплаты, и вы получаете досье максимум через 24 рабочих часа.</span>
+          </div>
+          <button type="submit" class="btn" style="width:100%"><span class="solo-valoracion">Отправить заявку</span><span class="solo-pago">Оплатить 49&nbsp;€ и получить документы</span></button>
+          <p class="pay-note solo-valoracion">Сегодня вы ничего не платите: мы регистрируем заявку и свяжемся с вами по email, чтобы подтвердить досье и согласовать оплату (49&nbsp;€).</p>
+          <p class="pay-note solo-pago">Безопасная оплата картой через Stripe · Мгновенное подтверждение на email</p>
         </div>
 
         <p class="err" id="formErr">Проверьте поля, отмеченные *, прежде чем продолжить.</p>

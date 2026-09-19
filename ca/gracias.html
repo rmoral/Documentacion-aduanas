@@ -222,7 +222,7 @@ footer a{color:var(--muted)}
       <div class="stamp"><b>REBUT</b>expedient en preparació</div>
       <h1>Sol·licitud rebuda! Ja estem amb els teus papers.</h1>
       <div class="refbox">Referència de la sol·licitud: <b id="refShow">—</b></div>
-      <p>Et contactarem per email per confirmar la teva sol·licitud i coordinar el pagament (49&nbsp;€). Des de la confirmació, en un màxim de <strong>24 hores laborables</strong> rebràs l'expedient complet: declaració jurada, factura proforma i el dossier per al teu transportista, personalitzats amb les teves dades i llestos per signar.</p>
+      <p>Si has completat el pagament, l'expedient entra directament en preparació. Si no, et contactarem per email per confirmar la sol·licitud i coordinar el pagament (49&nbsp;€). Des de la confirmació, en un màxim de <strong>24 hores laborables</strong> rebràs l'expedient complet: declaració jurada, factura proforma i el dossier per al teu transportista, personalitzats amb les teves dades i llestos per signar.</p>
       <dl class="summary" id="orderSummary" style="display:none"></dl>
       <p>Guarda la teva referència: la necessitaràs per a qualsevol consulta o revisió de l'expedient. Si la duana o el teu transportista demana algun canvi, el corregim gratis.</p>
       <div class="actions">
@@ -250,6 +250,9 @@ footer a{color:var(--muted)}
   };
   var params = new URLSearchParams(window.location.search);
   var ref = params.get('ref') || params.get('client_reference_id') || '';
+  // Al volver del pago de Stripe la URL no trae la referencia: se recupera
+  // del navegador, donde el formulario la dejó guardada
+  if (!ref) { try { ref = localStorage.getItem('ultimo_pedido') || ''; } catch (_) {} }
   if (ref) {
     document.getElementById('refShow').textContent = ref;
     try {

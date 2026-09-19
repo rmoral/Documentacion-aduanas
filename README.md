@@ -48,15 +48,18 @@ idioma.
    y barra de progreso. La tecla Enter avanza de paso, no envía el pedido.
 2. Al confirmar, se genera una **referencia única** (`AF-XXXXXX`), los datos se
    guardan en `localStorage` y, si hay endpoint configurado, se envían por POST.
-3. **Con Stripe configurado**: redirige al Payment Link con
-   `client_reference_id` y el email prellenado.
-   **Sin Stripe (fase de valoración, modo actual)**: no se cobra nada. El
-   pedido queda registrado en la base de datos vía `/api/pedidos` y el cliente
-   pasa directamente a `gracias.html?ref=...` sin ningún paso visible más (no
-   se abre el gestor de correo). Los pedidos se gestionan desde el backoffice
-   `/admin`. Los textos del paso 4, del bloque «Cómo funciona» y de la página
-   de gracias avisan en los 5 idiomas de que el pago (49 €) se coordina
-   después por email.
+3. El modo del site lo decide el **servidor** (variable `STRIPE_PAYMENT_LINK`
+   en Vercel). El front consulta `GET /api/pedidos?config=1` al cargar y los
+   textos del paso 4 cambian solos en los 5 idiomas (clases
+   `.solo-valoracion` / `.solo-pago` conmutadas por `html.pago-online`).
+   **Con pago online activo**: el POST a `/api/pedidos` devuelve la URL de
+   Stripe con la referencia ya asociada y el cliente es redirigido a pagar;
+   el webhook marca el pedido como pagado. Al volver de Stripe,
+   `gracias.html` recupera la referencia desde `localStorage`
+   (`ultimo_pedido`) aunque la URL no la traiga.
+   **Sin configurar (fase de valoración)**: no se cobra nada; el pedido queda
+   registrado como `pendiente` y el cliente pasa directamente a
+   `gracias.html?ref=...`. Los pedidos se gestionan desde `/admin`.
 
 ## Configuración (`assets/js/config.js`)
 
@@ -108,11 +111,23 @@ se gestiona desde el backoffice.
    `https://www.aduanafacilandorra.com/api/stripe-webhook` con el evento
    `checkout.session.completed`, y guarda el signing secret en la variable
    `STRIPE_WEBHOOK_SECRET` de Vercel.
-4. **Enlace de pago para la API y los agentes** (cuando actives el pago):
-   además de pegar el Payment Link en `assets/js/config.js` (formulario web),
-   guárdalo en la variable de entorno `STRIPE_PAYMENT_LINK` de Vercel. Las
-   respuestas de `POST /api/pedidos` y de la herramienta MCP `crear_pedido`
-   incluirán entonces la URL de pago con la referencia ya asociada.
+4. **Activar el pago online**: guarda la URL del Payment Link en la variable
+   de entorno `STRIPE_PAYMENT_LINK` de Vercel (es el único interruptor: activa
+   la redirección al pago del formulario web, las respuestas de la API y del
+   MCP con la URL de pago, y los textos de pago del paso 4). En el Payment
+   Link de Stripe, configura la redirección tras el pago a
+   `https://www.aduanafacilandorra.com/gracias.html`. El
+   `STRIPE_PAYMENT_LINK` de `assets/js/config.js` queda solo como respaldo si
+   la API no responde.
+5. **Notificaciones de pedidos por email (Resend)**: crea una cuenta en
+   [resend.com](https://resend.com), genera una API key y guárdala en la
+   variable `RESEND_API_KEY` de Vercel. Con eso, cada pedido nuevo y cada
+   pago confirmado envían un aviso a `NOTIFY_EMAIL` (por defecto
+   rmoral81@gmail.com). El remitente por defecto es `onboarding@resend.dev`
+   (solo entrega al email de la cuenta Resend); para enviar desde
+   `pedidos@aduanafacilandorra.com`, verifica el dominio en Resend y define
+   `RESEND_FROM`. El envío nunca bloquea el pedido: si falla, el pedido se
+   registra igualmente.
 
 Sin base de datos configurada, el site sigue funcionando: el envío del
 formulario ignora el error de la API y continúa hacia la confirmación o el
