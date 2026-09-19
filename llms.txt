@@ -31,6 +31,7 @@ Este servicio se puede contratar de forma programática en nombre de un usuario
 (siempre con su autorización y con sus datos reales). Precio cerrado: 49,00 EUR.
 
 - Servidor MCP (streamable HTTP, sin autenticación): https://www.aduanafacilandorra.com/api/mcp
+  Documento de descubrimiento: https://www.aduanafacilandorra.com/.well-known/mcp-server
   Herramientas: `consultar_servicio` (detalles y precio), `crear_pedido`
   (registra el pedido y devuelve referencia + instrucciones de pago) y
   `estado_pedido` (seguimiento con referencia + email del remitente).

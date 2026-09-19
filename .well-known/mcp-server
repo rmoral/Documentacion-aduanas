@@ -1,0 +1,18 @@
+{
+  "$comment": "Documento de descubrimiento de servidores MCP de aduanafacilandorra.com. Sigue la dirección del borrador IETF draft-serra-mcp-discovery-uri (.well-known/mcp-server); el formato se ajustará cuando el estándar se estabilice.",
+  "version": "1.0",
+  "servers": [
+    {
+      "name": "aduanafacil-andorra",
+      "description": "Preparación de documentación aduanera para enviar muebles y enseres usados de Andorra a España entre particulares. Precio cerrado 49 EUR, entrega en 24 horas laborables. Herramientas: consultar_servicio, crear_pedido (devuelve referencia e instrucciones de pago) y estado_pedido.",
+      "url": "https://www.aduanafacilandorra.com/api/mcp",
+      "transport": "streamable-http",
+      "protocol": "mcp",
+      "authentication": "none",
+      "tools": ["consultar_servicio", "crear_pedido", "estado_pedido"],
+      "documentation": "https://www.aduanafacilandorra.com/llms.txt",
+      "openapi": "https://www.aduanafacilandorra.com/openapi.json",
+      "contact": "https://www.aduanafacilandorra.com/"
+    }
+  ]
+}

@@ -281,6 +281,22 @@ footer a{color:var(--muted)}
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
     "url": "https://www.aduanafacilandorra.com/ru/#pedido"
+   },
+   "potentialAction": {
+    "@type": "OrderAction",
+    "name": "Contratar la preparación del expediente aduanero (49 EUR)",
+    "target": {
+     "@type": "EntryPoint",
+     "urlTemplate": "https://www.aduanafacilandorra.com/api/pedidos",
+     "httpMethod": "POST",
+     "contentType": "application/json",
+     "encodingType": "application/json",
+     "description": "Creación programática de pedidos para agentes de IA. Especificación: https://www.aduanafacilandorra.com/openapi.json · Servidor MCP: https://www.aduanafacilandorra.com/api/mcp"
+    },
+    "result": {
+     "@type": "Order",
+     "description": "Pedido con referencia AF-XXXXXX e instrucciones de pago en la respuesta"
+    }
    }
   },
   {

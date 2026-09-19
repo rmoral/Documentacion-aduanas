@@ -140,6 +140,27 @@ El site permite que un agente de IA compre el servicio en nombre de su usuario:
   pedido como pagado. Sin configurar, el bloque `pago` indica
   `coordinacion_email` (fase de valoración, sin pago inmediato).
 
+### Descubrimiento para agentes
+
+- **`/.well-known/mcp-server`**: documento JSON que anuncia el servidor MCP
+  (endpoint, transporte, herramientas). Sigue la dirección del borrador IETF
+  *draft-serra-mcp-discovery-uri*; revisar el formato cuando el estándar se
+  publique. El borrador define además un registro **DNS TXT** de
+  descubrimiento: cuando se estabilice, añadir en el DNS del dominio un TXT
+  (host sugerido `_mcp`) apuntando a
+  `https://www.aduanafacilandorra.com/api/mcp`.
+- **`server.json`** (raíz del repo): manifiesto para publicar el servidor en
+  el **MCP Registry oficial** (registry.modelcontextprotocol.io). Publicación:
+  instalar `mcp-publisher`, `mcp-publisher login dns` (verifica el dominio
+  para el namespace `com.aduanafacilandorra`) y `mcp-publisher publish` desde
+  la raíz. Tras el alta, listar también el servidor en directorios usados por
+  los clientes (Smithery, PulseMCP).
+- **JSON-LD**: el nodo `Service` de las 5 portadas incluye `potentialAction`
+  (`OrderAction` → EntryPoint `POST /api/pedidos`), señalando a los crawlers
+  que el servicio es comprable de forma programática.
+- **`/.well-known/security.txt`** (RFC 9116): contacto de seguridad; caduca
+  anualmente (campo `Expires`), renovar la fecha cada año.
+
 Conectores externos que se configuran a nivel de cuenta (no de código) cuando
 se quiera ir más allá del enlace de pago:
 
