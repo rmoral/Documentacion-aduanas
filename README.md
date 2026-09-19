@@ -122,7 +122,7 @@ pago.
 
 El site permite que un agente de IA compre el servicio en nombre de su usuario:
 
-- **Servidor MCP** en `api/mcp.js` (endpoint `https://TU-DOMINIO/api/mcp`,
+- **Servidor MCP** en `api/mcp.js` (endpoint `https://www.aduanafacilandorra.com/api/mcp`,
   streamable HTTP sin estado, construido con `mcp-handler`). Herramientas:
   `consultar_servicio`, `crear_pedido` (devuelve referencia + bloque `pago`) y
   `estado_pedido` (referencia + email del remitente). Un agente lo añade como
@@ -164,7 +164,6 @@ El fichero también admite **Plausible** (analítica sin cookies, se carga sin
 consentimiento) rellenando `PLAUSIBLE_DOMAIN`. En local (`localhost`/`file:`)
 no se envía nada ni se muestra el banner. Las guías nuevas del blog automático
 incluyen el script por plantilla (ver `BLOG-AUTOMATICO.md`).
->>>>>>> origin/main
 
 ## Publicación
 

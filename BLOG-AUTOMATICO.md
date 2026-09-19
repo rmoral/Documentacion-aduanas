@@ -53,7 +53,7 @@ Requisitos:
   si el artículo es un procedimiento paso a paso). `datePublished` y
   `dateModified` con la fecha real.
 - **Base de URLs**: copia la base del canonical de `guias/index.html` (si
-  aún es el marcador `https://TU-DOMINIO`, usa el marcador; si ya hay
+  aún es el marcador `https://www.aduanafacilandorra.com`, usa el marcador; si ya hay
   dominio real, usa el dominio real). Nunca mezcles ambas.
 - **Enlaces internos**: SIEMPRE con rutas absolutas desde la raíz
   (`/guias/<slug>/`, `/`, `/#pedido`, `/assets/...`), nunca relativas — así

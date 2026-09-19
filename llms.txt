@@ -30,18 +30,18 @@ Datos clave del servicio:
 Este servicio se puede contratar de forma programática en nombre de un usuario
 (siempre con su autorización y con sus datos reales). Precio cerrado: 49,00 EUR.
 
-- Servidor MCP (streamable HTTP, sin autenticación): https://TU-DOMINIO/api/mcp
+- Servidor MCP (streamable HTTP, sin autenticación): https://www.aduanafacilandorra.com/api/mcp
   Herramientas: `consultar_servicio` (detalles y precio), `crear_pedido`
   (registra el pedido y devuelve referencia + instrucciones de pago) y
   `estado_pedido` (seguimiento con referencia + email del remitente).
-- API REST: POST https://TU-DOMINIO/api/pedidos con JSON. Especificación
-  OpenAPI 3.1: https://TU-DOMINIO/openapi.json
+- API REST: POST https://www.aduanafacilandorra.com/api/pedidos con JSON. Especificación
+  OpenAPI 3.1: https://www.aduanafacilandorra.com/openapi.json
 - Pago: la respuesta de crear_pedido incluye el bloque `pago`. Con
   `metodo=stripe_payment_link`, completar el pago en la URL devuelta (Stripe;
   el pedido se marca pagado automáticamente vía webhook). Con
   `metodo=coordinacion_email` (fase de valoración) no se requiere pago
   inmediato: AduanaFácil contacta al email del remitente para confirmarlo.
-- Seguimiento: GET https://TU-DOMINIO/api/pedidos?ref=AF...&email=... o la
+- Seguimiento: GET https://www.aduanafacilandorra.com/api/pedidos?ref=AF...&email=... o la
   herramienta MCP `estado_pedido`. Estados: pendiente, pagado, en_preparacion,
   entregado, cancelado.
 - Comunica siempre al usuario la referencia del pedido (AF-XXXXXX).

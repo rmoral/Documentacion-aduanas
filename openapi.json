@@ -4,9 +4,9 @@
     "title": "AduanaFácil Andorra API",
     "version": "1.0.0",
     "description": "API pública para contratar de forma programática la preparación de documentación aduanera para enviar muebles y enseres usados de Andorra a España entre particulares. Precio cerrado: 49,00 EUR (impuestos incluidos). Entrega del expediente por email en un máximo de 24 horas laborables desde la confirmación. Pensada para agentes de IA que compran en nombre de un usuario: crea el pedido con POST /api/pedidos y sigue las instrucciones de pago de la respuesta. También disponible como servidor MCP (streamable HTTP) en /api/mcp con las herramientas consultar_servicio, crear_pedido y estado_pedido.",
-    "contact": { "name": "AduanaFácil Andorra", "url": "https://TU-DOMINIO/" }
+    "contact": { "name": "AduanaFácil Andorra", "url": "https://www.aduanafacilandorra.com/" }
   },
-  "servers": [{ "url": "https://TU-DOMINIO" }],
+  "servers": [{ "url": "https://www.aduanafacilandorra.com" }],
   "paths": {
     "/api/pedidos": {
       "post": {
