@@ -193,6 +193,10 @@ footer a{color:var(--muted)}
 .confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
 .confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
 .confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
 
@@ -249,7 +253,8 @@ footer a{color:var(--muted)}
   {"@type": "Article", "@id": "https://www.aduanafacilandorra.com/guias/plazos-envio-muebles-andorra-espana/#article", "headline": "Plazos reales: cuánto tarda un envío de muebles de punta a punta", "url": "https://www.aduanafacilandorra.com/guias/plazos-envio-muebles-andorra-espana/"},
   {"@type": "Article", "@id": "https://www.aduanafacilandorra.com/guias/envio-urgente-documentacion-aduana/#article", "headline": "Envíos urgentes: preparar la documentación sin perder el hueco del camión", "url": "https://www.aduanafacilandorra.com/guias/envio-urgente-documentacion-aduana/"},
   {"@type": "Article", "@id": "https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/#article", "headline": "Te vas de Andorra: checklist administrativa completa de la salida", "url": "https://www.aduanafacilandorra.com/guias/checklist-salir-de-andorra/"},
-  {"@type": "Article", "@id": "https://www.aduanafacilandorra.com/guias/estudiantes-enviar-cosas-espana/#article", "headline": "Estudiantes: llevar tus cosas de Andorra al piso de estudios en España", "url": "https://www.aduanafacilandorra.com/guias/estudiantes-enviar-cosas-espana/"}
+  {"@type": "Article", "@id": "https://www.aduanafacilandorra.com/guias/estudiantes-enviar-cosas-espana/#article", "headline": "Estudiantes: llevar tus cosas de Andorra al piso de estudios en España", "url": "https://www.aduanafacilandorra.com/guias/estudiantes-enviar-cosas-espana/"},
+  {"@type": "Article", "@id": "https://www.aduanafacilandorra.com/guias/preguntas-aduana-farga-de-moles/#article", "headline": "Qué te puede preguntar la aduana y cómo se responde con papeles", "url": "https://www.aduanafacilandorra.com/guias/preguntas-aduana-farga-de-moles/"}
  ]
 }
 </script>
@@ -419,6 +424,11 @@ footer a{color:var(--muted)}
         <span class="mono">Guía 29</span>
         <h3>Estudiantes: llevar tus cosas al piso de estudios</h3>
         <p>La franquicia específica del estudiante — equipo, material de estudio y mobiliario usado de la habitación, cada año escolar — y los paquetes de después.</p>
+      </a>
+      <a class="doc" href="/guias/preguntas-aduana-farga-de-moles/" style="text-decoration:none;display:block">
+        <span class="mono">Guía 30</span>
+        <h3>Qué te puede preguntar la aduana y cómo se responde</h3>
+        <p>Qué llevas, de quién es, cuánto vale, por qué viaja: cada pregunta del control mapeada con el documento que la responde — y qué pasa si algo no cuadra.</p>
       </a>
     </div>
 
