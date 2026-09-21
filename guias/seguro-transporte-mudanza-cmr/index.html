@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El seguro del transporte: qué cubre el CMR y qué no</title>
+<meta name="description" content="El CMR no es un seguro: es la responsabilidad del transportista, limitada a 8,33 DEG por kilo (unos 10–11 €/kg). Para muebles con valor, eso se queda corto. Qué cubre de verdad, las exoneraciones, la declaración de valor del artículo 24 y cuándo contratar un seguro de mercancías aparte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/seguro-transporte-mudanza-cmr/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/seguro-transporte-mudanza-cmr/">
+<meta property="og:title" content="El seguro del transporte: qué cubre el CMR y qué no">
+<meta property="og:description" content="El CMR no es un seguro: es responsabilidad limitada a unos 10–11 €/kg. Para muebles con valor se queda corto — declaración de valor o seguro de mercancías aparte.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-21">
+<meta property="article:modified_time" content="2026-09-21">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El seguro del transporte: qué cubre el CMR y qué no">
+<meta name="twitter:description" content="El CMR no es un seguro: es responsabilidad limitada a unos 10–11 €/kg. Para muebles con valor se queda corto — declaración de valor o seguro de mercancías aparte.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/seguro-transporte-mudanza-cmr/#article",
+   "headline": "El seguro del transporte: qué cubre el CMR y qué no",
+   "description": "Qué protege de verdad tus muebles en la ruta Andorra–España: la responsabilidad del transportista bajo el Convenio CMR y su límite de 8,33 DEG por kilo (unos 10–11 €/kg), las exoneraciones típicas (embalaje propio deficiente, vicio propio), la declaración de valor del artículo 24 y el interés especial del 26, el seguro de transporte de mercancías contratado aparte, y el papel de las reservas en la entrega y del packing list valorado en una reclamación.",
+   "inLanguage": "es",
+   "datePublished": "2026-09-21",
+   "dateModified": "2026-09-21",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/seguro-transporte-mudanza-cmr/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/seguro-transporte-mudanza-cmr/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "El seguro del transporte"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/seguro-transporte-mudanza-cmr/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿El precio del transporte incluye un seguro de mis muebles?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Lo que incluye por defecto no es un seguro, sino la responsabilidad del transportista que impone el Convenio CMR — y está limitada a 8,33 derechos especiales de giro por kilo, unos 10–11 €/kg según el cambio del DEG. Algunos transportistas ofrecen además un seguro de mercancías, incluido o como extra: pregúntalo siempre antes de contratar, pide las condiciones por escrito (capital asegurado, franquicia, exclusiones) y no des por hecho que «va asegurado» significa «cubierto por su valor real»."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto me pagarían si se pierde o se daña todo, según el CMR?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Como máximo, el límite del artículo 23 del Convenio: 8,33 DEG por kilo bruto faltante o dañado — orientativamente unos 10–11 €/kg, porque el DEG cotiza a diario. Una mudanza de 500 kg tendría un tope orientativo de unos 5.000–5.500 €, se lleve lo que se lleve dentro; y una cómoda de 30 kg valorada en 400 €, un tope de unos 300 € — el kilo manda, no el valor. Además la indemnización se calcula sobre el valor de la mercancía, así que nunca cobras más de lo que valía, aunque el tope por peso fuera mayor."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo aseguro mis muebles por su valor real?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Dos vías. Dentro del propio CMR: la declaración de valor del artículo 24 (y, para daños por retraso u otros perjuicios, el interés especial en la entrega del artículo 26), que se hace constar en la carta de porte contra una sobreprima pactada con el transportista y eleva el límite hasta el valor declarado. O fuera del CMR: un seguro de transporte de mercancías contratado aparte — con el transportista, tu correduría o tu aseguradora — sobre el valor declarado del inventario. Para valorar enseres usados sin factura, tu propio packing list valorado con criterio de valor residual es la base coherente: la misma cifra para la aduana y para el seguro."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué hago si un mueble llega roto?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Formula reservas por escrito en el CMR dentro de plazo: los daños visibles, en el momento de la entrega, antes de firmar; los no aparentes (lo que descubres al desembalar), dentro de los 7 días siguientes, por escrito al transportista. Firmar la entrega sin reservas debilita gravemente la reclamación posterior. Documenta con fotos (idealmente también de la carga, antes de salir), identifica el bulto por su número de packing list y reclama con el inventario valorado como soporte. Si hay seguro de mercancías, avisa también al asegurador en su plazo."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › El seguro del transporte</nav>
+    <h1>El seguro del transporte: qué cubre el CMR y qué no</h1>
+    <div class="updated">Actualizado · Septiembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El CMR <strong>no es un seguro</strong>: es la responsabilidad del transportista, y está <strong>limitada a 8,33 DEG por kilo</strong> — unos <strong>10–11 €/kg</strong>. Para muebles con valor, eso se queda corto. Si quieres cobertura por el valor real: <strong>declaración de valor</strong> en la carta de porte (art. 24 CMR) o un <strong>seguro de mercancías</strong> contratado aparte.</p>
+    </div>
+
+    <h2>El malentendido más caro de la mudanza</h2>
+    <p>«Va con CMR, así que va asegurado.» No exactamente. La <a href="/guias/carta-de-porte-cmr/">carta de porte CMR</a> documenta el contrato de transporte internacional bajo el Convenio de Ginebra de 1956, y ese convenio hace responsable al transportista de la pérdida o avería de la mercancía entre que la recibe y la entrega. Pero esa responsabilidad tiene <strong>techo legal</strong>, y se mide en kilos, no en euros de valor. Quien descubre la diferencia el día que llega la cómoda rota, la descubre tarde.</p>
+
+    <h2>¿Cuánto responde el transportista? El límite por kilo</h2>
+    <p>El artículo 23 del Convenio fija el tope: <strong>8,33 derechos especiales de giro (DEG) por kilo bruto</strong> faltante o dañado. El DEG es la unidad de cuenta del FMI y cotiza a diario; orientativamente ronda los <strong>10–11 € por kilo</strong>. Dos consecuencias prácticas:</p>
+    <ul>
+      <li>Una mudanza de <strong>500 kg</strong> tiene un tope orientativo de unos <strong>5.000–5.500 €</strong> — lleve dentro lo que lleve.</li>
+      <li>Una cómoda restaurada de <strong>30 kg</strong> valorada en 400 € tiene un tope de unos <strong>300 €</strong>: el kilo manda, no el valor.</li>
+    </ul>
+    <p>Y un matiz que corta en las dos direcciones: la indemnización se calcula sobre el <strong>valor de la mercancía</strong>, así que tampoco cobrarás más de lo que valía tu enser usado aunque pese mucho. Para lo pesado y barato (el armario de aglomerado), el límite sobra; para lo ligero y valioso (el <a href="/guias/enviar-objetos-valor-andorra-espana/">instrumento, la electrónica</a>), se queda cortísimo.</p>
+
+    <h2>Qué cubre el régimen CMR y qué no</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Situación</th><th>¿Responde el transportista?</th></tr>
+      <tr><td>Pérdida total o parcial de bultos durante el transporte</td><td>Sí, hasta el límite por kilo</td></tr>
+      <tr><td>Avería (rotura, golpes) entre la recogida y la entrega</td><td>Sí, hasta el límite por kilo</td></tr>
+      <tr><td>Retraso en la entrega</td><td>Con límites propios y solo si se reclama en plazo; los perjuicios mayores exigen interés especial declarado (art. 26)</td></tr>
+      <tr><td>Daños por <strong>embalaje deficiente</strong> hecho por ti</td><td>El Convenio le permite exonerarse: quien autoembala mal, asume el riesgo</td></tr>
+      <tr><td>Vicio propio de la cosa (la pata que ya estaba rajada)</td><td>Exonerable igualmente</td></tr>
+      <tr><td>Lo que excede del límite por kilo</td><td>No — salvo declaración de valor (art. 24) o seguro aparte</td></tr>
+    </table>
+    </div>
+    <div class="note-box"><strong>El punto ciego del autoembalaje:</strong> en mudanzas de particulares es habitual que embales tú. Si el daño se atribuye a embalaje deficiente, el transportista puede quedar exonerado — y el seguro de mercancías también suele excluirlo o limitarlo. Si algo vale de verdad, deja que lo embale el profesional y que conste.</div>
+
+    <h2>Las dos vías para cubrir el valor real</h2>
+    <h3>1. Dentro del CMR: declaración de valor e interés especial</h3>
+    <p>El propio Convenio trae el mecanismo: el remitente puede hacer constar en la carta de porte una <strong>declaración de valor</strong> superior al límite (artículo 24) contra una <strong>sobreprima</strong> pactada con el transportista; y para cubrir perjuicios más allá del valor de la mercancía (un retraso que te cuesta dinero), un <strong>interés especial en la entrega</strong> (artículo 26), también con suplemento. Ambos se escriben <strong>en la carta de porte</strong>, en sus casillas — de palabra no existen.</p>
+    <h3>2. Fuera del CMR: el seguro de transporte de mercancías</h3>
+    <p>La vía más habitual en mudanzas: una <strong>póliza de daños sobre la mercancía</strong> — contratada a través del propio transportista, de una correduría o de tu aseguradora — por el <strong>valor declarado</strong> de tu inventario, a menudo «a todo riesgo» con sus exclusiones. No sustituye a la responsabilidad CMR: se superpone, y el asegurador después repite contra el transportista si procede. Lo que debes mirar antes de firmar: capital asegurado, franquicia, exclusiones (autoembalaje, dinero y joyas, deterioro previo) y cómo se declara el valor. Las condiciones concretas varían por póliza: <strong>pídelas por escrito y confírmalas con el transportista o el asegurador</strong>.</p>
+
+    <h2>El inventario valorado: la pieza que une aduana y seguro</h2>
+    <p>Para asegurar (y para reclamar) necesitas lo mismo que para el despacho: saber <strong>qué viaja y cuánto vale</strong>. El <a href="/guias/packing-list-mudanza/">packing list</a> numerado y la valoración por <a href="/guias/calcular-valor-residual-muebles/">valor residual</a> con referencias de segunda mano sirven a la vez de base imponible ante la aduana, de valor declarable ante el seguro y de soporte de la reclamación si algo falta o llega roto. Una sola cifra coherente en todos los papeles — no un valor bajo para la aduana y alto para el seguro, que es incoherencia documentada contra ti.</p>
+
+    <h2>Si algo llega mal: las reservas y los plazos</h2>
+    <ol>
+      <li><strong>Daños visibles:</strong> reserva escrita <strong>en el acto de la entrega</strong>, en el propio CMR, antes de firmar. «Ya lo miraré luego» equivale a recibir conforme.</li>
+      <li><strong>Daños no aparentes:</strong> lo que descubres al desembalar — reserva por escrito al transportista <strong>dentro de los 7 días</strong> siguientes a la entrega.</li>
+      <li><strong>Documenta:</strong> fotos del bulto y del daño, número de bulto según el packing list, y la valoración de esa línea como cuantía reclamada.</li>
+      <li><strong>Si hay póliza aparte,</strong> comunica también el siniestro al asegurador en el plazo de sus condiciones.</li>
+    </ol>
+
+    <div class="cta-guide">
+      <h2>Un inventario que vale para la aduana y para el seguro</h2>
+      <p>Packing list numerado y valorado con referencias defendibles, declaración jurada y proforma coherentes entre sí — la misma cifra ante la aduana, el transportista y el asegurador. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿El precio del transporte incluye un seguro de mis muebles?</summary>
+      <p>Lo que incluye por defecto no es un seguro, sino la responsabilidad del transportista que impone el Convenio CMR — y está limitada a 8,33 derechos especiales de giro por kilo, unos 10–11 €/kg según el cambio del DEG. Algunos transportistas ofrecen además un seguro de mercancías, incluido o como extra: pregúntalo siempre <a href="/guias/transportistas-andorra-espana/">antes de contratar</a>, pide las condiciones por escrito (capital asegurado, franquicia, exclusiones) y no des por hecho que «va asegurado» significa «cubierto por su valor real».</p>
+    </details>
+    <details>
+      <summary>¿Cuánto me pagarían si se pierde o se daña todo, según el CMR?</summary>
+      <p>Como máximo, el límite del artículo 23 del Convenio: 8,33 DEG por kilo bruto faltante o dañado — orientativamente unos 10–11 €/kg, porque el DEG cotiza a diario. Una mudanza de 500 kg tendría un tope orientativo de unos 5.000–5.500 €, se lleve lo que se lleve dentro; y una cómoda de 30 kg valorada en 400 €, un tope de unos 300 € — el kilo manda, no el valor. Además la indemnización se calcula sobre el valor de la mercancía, así que nunca cobras más de lo que valía, aunque el tope por peso fuera mayor.</p>
+    </details>
+    <details>
+      <summary>¿Cómo aseguro mis muebles por su valor real?</summary>
+      <p>Dos vías. Dentro del propio CMR: la declaración de valor del artículo 24 (y, para daños por retraso u otros perjuicios, el interés especial en la entrega del artículo 26), que se hace constar en la <a href="/guias/carta-de-porte-cmr/">carta de porte</a> contra una sobreprima pactada con el transportista y eleva el límite hasta el valor declarado. O fuera del CMR: un seguro de transporte de mercancías contratado aparte — con el transportista, tu correduría o tu aseguradora — sobre el valor declarado del inventario. Para valorar enseres usados sin factura, tu propio <a href="/guias/calcular-valor-residual-muebles/">packing list valorado con criterio de valor residual</a> es la base coherente: la misma cifra para la aduana y para el seguro.</p>
+    </details>
+    <details>
+      <summary>¿Qué hago si un mueble llega roto?</summary>
+      <p>Formula reservas por escrito en el CMR dentro de plazo: los daños visibles, en el momento de la entrega, antes de firmar; los no aparentes (lo que descubres al desembalar), dentro de los 7 días siguientes, por escrito al transportista. Firmar la entrega sin reservas debilita gravemente la reclamación posterior. Documenta con fotos (idealmente también de la carga, antes de salir), identifica el bulto por su número de <a href="/guias/packing-list-mudanza/">packing list</a> y reclama con el inventario valorado como soporte. Si hay seguro de mercancías, avisa también al asegurador en su plazo.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/carta-de-porte-cmr/">La carta de porte CMR explicada para particulares</a></li>
+        <li><a href="/guias/transportistas-andorra-espana/">Cómo elegir transportista (y qué preguntarle del seguro)</a></li>
+        <li><a href="/guias/calcular-valor-residual-muebles/">Valorar tus muebles usados: el método del valor residual</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas, aseguradores ni asesores fiscales. Esta guía es información general; los importes en euros del límite CMR son orientativos (el DEG cotiza a diario) y las coberturas concretas dependen de cada póliza — confírmalas con tu transportista o asegurador.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
