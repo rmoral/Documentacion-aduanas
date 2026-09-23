@@ -38,7 +38,7 @@ buscan los clientes, después la cola larga.
 | 27 | Qué te puede preguntar la aduana y cómo se responde con papeles | preguntas-aduana-farga-de-moles | inspección aduana Andorra | publicado (2026-09-20) |
 | 28 | El seguro del transporte: qué cubre el CMR y qué no | seguro-transporte-mudanza-cmr | seguro mudanza internacional | publicado (2026-09-21) |
 | 29 | Temporada alta de mudanzas: cuándo reservar transportista en la ruta Andorra–España | temporada-mudanzas-andorra-espana | reservar mudanza Andorra | publicado (2026-09-22) |
-| 30 | Enviar muebles de Andorra a Baleares: el segundo salto del envío | enviar-muebles-andorra-baleares | enviar muebles Andorra Baleares | pendiente |
+| 30 | Enviar muebles de Andorra a Baleares: el segundo salto del envío | enviar-muebles-andorra-baleares | enviar muebles Andorra Baleares | publicado (2026-09-23) |
 
 ## Propuestas pendientes de aprobación
 
