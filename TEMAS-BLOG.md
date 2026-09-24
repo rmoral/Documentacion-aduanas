@@ -47,4 +47,15 @@ agota (o cuando detecta una oportunidad clara), con una línea de
 justificación. **No se publican hasta que el propietario las mueva a la tabla
 de aprobados.**
 
-*(vacío)*
+Propuestas añadidas el 2026-09-24, al agotarse el backlog de 30 temas:
+
+| Tema (título orientativo) | Slug propuesto | Keyword principal | Justificación |
+|---|---|---|---|
+| Llevarte el coche de Andorra a España: importación y matriculación | llevar-coche-andorra-espana | matricular coche andorrano en España | Búsqueda muy frecuente del mismo público que se muda; complementa la checklist de salida. Requiere verificación previa (impuesto de matriculación, ITV, plazos). |
+| Mudarse con mascotas de Andorra a España: la documentación del animal | mudanza-mascotas-andorra-espana | viajar con perro Andorra España | Acompaña a casi todas las mudanzas familiares; pasaporte europeo del animal y requisitos veterinarios. Requiere verificación previa. |
+| La franquicia por matrimonio: el ajuar y los regalos de boda | franquicia-matrimonio-ajuar | franquicia matrimonio aduana | Cuarta franquicia del Reg. 1186/2009 aún sin cubrir (tras traslado, herencia y estudiante); cierra la serie con contenido diferencial que casi nadie explica. Verificar condiciones y plazos antes de publicar. |
+| Alcohol y tabaco al cruzar: los límites que no cubre ninguna franquicia | limites-alcohol-tabaco-andorra | límites alcohol tabaco Andorra España | Duda universal del cruce y fuente típica de sanciones; ya tenemos el marco verificado a falta de confirmar las cantidades exactas vigentes. |
+| Autónomos y teletrabajo: mudar la oficina en casa de Andorra a España | mudanza-teletrabajo-material-profesional | mudanza material profesional aduana | La franquicia de traslado excluye el material profesional no portátil — matiz ya verificado que afecta a cada vez más teletrabajadores; síntesis sin datos nuevos. |
+| Caso práctico completo: la mudanza de un piso de 80 m², paso a paso | caso-practico-mudanza-andorra-espana | ejemplo mudanza Andorra España | Artículo escaparate 100% síntesis: recorre todo el cluster con un ejemplo ilustrativo continuo (inventario → valoración → expediente → cruce → entrega); ideal para AEO y para enlazar desde la home. |
+| Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | Decisión previa de toda mudanza («¿esto me lo llevo o no?»); conecta con valor residual y con la guía de vender a comprador español. Síntesis práctica sin normativa nueva. |
+| Glosario aduanero Andorra–España: los 30 términos del expediente | glosario-aduanero-andorra-espana | glosario aduanas DUA CMR | Página de referencia AEO (DUA, CMR, DEG, despacho, franquicia, valor residual…) con enlaces a cada guía; refuerza el enlazado interno de todo el cluster. Síntesis pura. |
