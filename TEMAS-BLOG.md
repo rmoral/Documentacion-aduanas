@@ -39,6 +39,16 @@ buscan los clientes, después la cola larga.
 | 28 | El seguro del transporte: qué cubre el CMR y qué no | seguro-transporte-mudanza-cmr | seguro mudanza internacional | publicado (2026-09-21) |
 | 29 | Temporada alta de mudanzas: cuándo reservar transportista en la ruta Andorra–España | temporada-mudanzas-andorra-espana | reservar mudanza Andorra | publicado (2026-09-22) |
 | 30 | Enviar muebles de Andorra a Baleares: el segundo salto del envío | enviar-muebles-andorra-baleares | enviar muebles Andorra Baleares | publicado (2026-09-23) |
+| 31 | Fin de la franquicia de 150 €: qué cambia (y qué no) en los paquetes desde Andorra | fin-franquicia-150-euros-paqueteria | franquicia 150 euros aduana | pendiente |
+| 32 | El acuerdo de asociación UE–Andorra, firmado: qué cambia y cuándo para tus envíos | acuerdo-asociacion-ue-andorra | acuerdo asociación Andorra UE | pendiente |
+| 33 | Alcohol y tabaco al cruzar: los límites que no cubre ninguna franquicia | limites-alcohol-tabaco-andorra | límites alcohol tabaco Andorra España | pendiente |
+| 34 | La franquicia por matrimonio: el ajuar y los regalos de boda | franquicia-matrimonio-ajuar | franquicia matrimonio aduana | pendiente |
+| 35 | Llevarte el coche de Andorra a España: importación y matriculación | llevar-coche-andorra-espana | matricular coche andorrano en España | pendiente |
+| 36 | Mudarse con mascotas de Andorra a España: la documentación del animal | mudanza-mascotas-andorra-espana | viajar con perro Andorra España | pendiente |
+| 37 | Autónomos y teletrabajo: mudar la oficina en casa de Andorra a España | mudanza-teletrabajo-material-profesional | mudanza material profesional aduana | pendiente |
+| 38 | Caso práctico completo: la mudanza de un piso de 80 m², paso a paso | caso-practico-mudanza-andorra-espana | ejemplo mudanza Andorra España | pendiente |
+| 39 | Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | pendiente |
+| 40 | Glosario aduanero Andorra–España: los 30 términos del expediente | glosario-aduanero-andorra-espana | glosario aduanas DUA CMR | pendiente |
 
 ## Propuestas pendientes de aprobación
 
@@ -47,15 +57,28 @@ agota (o cuando detecta una oportunidad clara), con una línea de
 justificación. **No se publican hasta que el propietario las mueva a la tabla
 de aprobados.**
 
-Propuestas añadidas el 2026-09-24, al agotarse el backlog de 30 temas:
+*(vacío — las 8 propuestas del 2026-09-24 y 2 temas de actualidad se movieron a la
+tabla de aprobados el 2026-09-26 por indicación del propietario, como temas 31–40)*
 
-| Tema (título orientativo) | Slug propuesto | Keyword principal | Justificación |
-|---|---|---|---|
-| Llevarte el coche de Andorra a España: importación y matriculación | llevar-coche-andorra-espana | matricular coche andorrano en España | Búsqueda muy frecuente del mismo público que se muda; complementa la checklist de salida. Requiere verificación previa (impuesto de matriculación, ITV, plazos). |
-| Mudarse con mascotas de Andorra a España: la documentación del animal | mudanza-mascotas-andorra-espana | viajar con perro Andorra España | Acompaña a casi todas las mudanzas familiares; pasaporte europeo del animal y requisitos veterinarios. Requiere verificación previa. |
-| La franquicia por matrimonio: el ajuar y los regalos de boda | franquicia-matrimonio-ajuar | franquicia matrimonio aduana | Cuarta franquicia del Reg. 1186/2009 aún sin cubrir (tras traslado, herencia y estudiante); cierra la serie con contenido diferencial que casi nadie explica. Verificar condiciones y plazos antes de publicar. |
-| Alcohol y tabaco al cruzar: los límites que no cubre ninguna franquicia | limites-alcohol-tabaco-andorra | límites alcohol tabaco Andorra España | Duda universal del cruce y fuente típica de sanciones; ya tenemos el marco verificado a falta de confirmar las cantidades exactas vigentes. |
-| Autónomos y teletrabajo: mudar la oficina en casa de Andorra a España | mudanza-teletrabajo-material-profesional | mudanza material profesional aduana | La franquicia de traslado excluye el material profesional no portátil — matiz ya verificado que afecta a cada vez más teletrabajadores; síntesis sin datos nuevos. |
-| Caso práctico completo: la mudanza de un piso de 80 m², paso a paso | caso-practico-mudanza-andorra-espana | ejemplo mudanza Andorra España | Artículo escaparate 100% síntesis: recorre todo el cluster con un ejemplo ilustrativo continuo (inventario → valoración → expediente → cruce → entrega); ideal para AEO y para enlazar desde la home. |
-| Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | Decisión previa de toda mudanza («¿esto me lo llevo o no?»); conecta con valor residual y con la guía de vender a comprador español. Síntesis práctica sin normativa nueva. |
-| Glosario aduanero Andorra–España: los 30 términos del expediente | glosario-aduanero-andorra-espana | glosario aduanas DUA CMR | Página de referencia AEO (DUA, CMR, DEG, despacho, franquicia, valor residual…) con enlaces a cada guía; refuerza el enlazado interno de todo el cluster. Síntesis pura. |
+## Notas de redacción para los temas 31–40 (actualidad detectada el 2026-09-26)
+
+- **#31 (fin franquicia 150 €):** Reglamento (UE) 2026/382, DOUE 18-02-2026 — desde
+  el 1-07-2026 desaparece la franquicia arancelaria de 150 € en envíos de terceros
+  países; derecho fijo transitorio de 3 €/artículo hasta julio de 2028 (supuestos
+  IOSS) y tasa de tramitación prevista a más tardar el 1-11-2026. Ángulo del
+  artículo: qué significa para envíos DESDE Andorra (los capítulos 25–97 siguen a
+  0 aranceles por la unión aduanera de 1990 y el IVA ya se pagaba desde el primer
+  euro desde 2021 — verificar en redacción cómo queda exactamente la paquetería
+  andorrana y la tasa de tramitación).
+- **#32 (acuerdo de asociación):** Coreper aprobó el texto el 16-07-2026 y la firma
+  estaba prevista para septiembre de 2026; después, ratificación por los 27 y
+  referéndum en Andorra. Verificar en redacción si la firma se ha producido ya y
+  qué calendario y efectos aduaneros concretos se anuncian (sustituye el «en
+  tramitación, sin fechas» que dicen nuestras guías actuales; valorar actualizar
+  también la guía de la unión aduanera al publicarlo).
+- **#33 (alcohol y tabaco):** verificar cantidades exactas vigentes. Gancho de
+  actualidad: incautación de 1.494 puros sin declarar en un autobús en la Farga
+  de Moles (13-09-2026, prensa local).
+- **#34–#36:** requieren verificación previa completa (franquicia matrimonio del
+  Reg. 1186/2009; matriculación de vehículo andorrano; pasaporte europeo de
+  animales). **#37–#40:** síntesis sobre el marco ya verificado.
