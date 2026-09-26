@@ -49,6 +49,26 @@ buscan los clientes, después la cola larga.
 | 38 | Caso práctico completo: la mudanza de un piso de 80 m², paso a paso | caso-practico-mudanza-andorra-espana | ejemplo mudanza Andorra España | pendiente |
 | 39 | Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | pendiente |
 | 40 | Glosario aduanero Andorra–España: los 30 términos del expediente | glosario-aduanero-andorra-espana | glosario aduanas DUA CMR | pendiente |
+| 41 | Mudarse a Andorra: la franquicia andorrana por traslado de residencia | mudarse-a-andorra-franquicia | mudanza a Andorra franquicia | pendiente |
+| 42 | Residencia fiscal y mudanza: cuándo dejas de tributar en Andorra y empiezas en España | residencia-fiscal-mudanza-andorra-espana | residencia fiscal Andorra España | pendiente |
+| 43 | Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización | aduana-retiene-envio-que-hacer | aduana retiene paquete Andorra | pendiente |
+| 44 | Cruzar «a ver si cuela»: qué te juegas exactamente al no declarar | cruzar-sin-declarar-riesgos | no declarar aduana Andorra | pendiente |
+| 45 | Hacerlo tú mismo: cruzar la frontera con una furgoneta alquilada | mudanza-furgoneta-alquilada-andorra | furgoneta alquilada mudanza Andorra | pendiente |
+| 46 | Muebles para la segunda residencia en España: por qué no hay franquicia | muebles-segunda-residencia-espana | amueblar segunda residencia aduana | pendiente |
+| 47 | Guardamuebles y trasteros: cuando tus cosas esperan meses entre dos casas | guardamuebles-mudanza-andorra-espana | guardamuebles mudanza internacional | pendiente |
+| 48 | Cómo leer un presupuesto de mudanza: partidas, letra pequeña y señales de alarma | leer-presupuesto-mudanza | presupuesto mudanza qué incluye | pendiente |
+| 49 | Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas | inventariar-muebles-desmontados | transportar muebles desmontados | pendiente |
+| 50 | Enviar una biblioteca: libros, discos y colecciones personales | enviar-libros-colecciones-andorra-espana | enviar libros Andorra España | pendiente |
+| 51 | Cuadros, antigüedades y patrimonio: cuándo hace falta permiso de exportación | cuadros-antiguedades-permiso-exportacion | exportar antigüedades Andorra | pendiente |
+| 52 | Documentos, fotos y recuerdos: enviar lo que no tiene precio | enviar-documentos-recuerdos-personales | enviar documentos personales mudanza | pendiente |
+| 53 | Bicis eléctricas, patinetes y baterías de litio: lo que el transportista te va a preguntar | enviar-baterias-litio-andorra-espana | enviar bici eléctrica batería litio | pendiente |
+| 54 | Plantas y jardín en la mudanza: qué puede cruzar y qué está restringido | enviar-plantas-mudanza-andorra-espana | llevar plantas frontera Andorra | pendiente |
+| 55 | Medicamentos y botiquín en la mudanza: cómo viajan sin problemas | medicamentos-mudanza-andorra-espana | llevar medicamentos frontera Andorra | pendiente |
+| 56 | Donar en vez de enviar: cajas para ONG y familiares, bien declaradas | donar-enviar-ong-familiares | donar muebles enviar España | pendiente |
+| 57 | Devolver compras online desde Andorra: el viaje de vuelta del paquete | devolver-compras-online-desde-andorra | devolver paquete desde Andorra | pendiente |
+| 58 | La mudanza del pequeño negocio: stock y equipamiento comercial no son ajuar | mudanza-negocio-stock-comercial | trasladar negocio Andorra España aduana | pendiente |
+| 59 | NIE, NIF y padrón: los números que te pedirá todo el papeleo en destino | nie-nif-padron-mudanza-espana | NIE padrón mudanza España | pendiente |
+| 60 | Checklist de llegada a España: los trámites de la primera semana | checklist-llegada-espana | trámites llegada España mudanza | pendiente |
 
 ## Propuestas pendientes de aprobación
 
@@ -82,3 +102,28 @@ tabla de aprobados el 2026-09-26 por indicación del propietario, como temas 31�
 - **#34–#36:** requieren verificación previa completa (franquicia matrimonio del
   Reg. 1186/2009; matriculación de vehículo andorrano; pasaporte europeo de
   animales). **#37–#40:** síntesis sobre el marco ya verificado.
+
+## Notas de redacción para los temas 41–60 (añadidos el 2026-09-26)
+
+- **Requieren verificación previa (WebSearch) al redactar:** #41 (franquicia de la
+  Duana andorrana por traslado de residencia — normativa andorrana), #42
+  (residencia fiscal: regla de los 183 días y convenio de doble imposición
+  España–Andorra; enfocar como orientación + «consúltalo con un asesor fiscal»),
+  #51 (Ley 16/1985 de Patrimonio Histórico y permisos de exportación de bienes
+  culturales — confirmar umbrales vigentes), #53 (restricciones de transporte de
+  baterías de litio — tratar en cualitativo, sin citar umbrales ADR exactos si no
+  se verifican), #54 (normativa fitosanitaria UE/pasaporte fitosanitario), #55
+  (medicamentos: cantidades de uso personal y estupefacientes con receta), #57
+  (devoluciones: cómo tratan los couriers la reexpedición Andorra→UE), #58
+  (mercancía comercial: el stock tributa como importación comercial, no como
+  ajuar — confirmar régimen aplicable a autónomos).
+- **Síntesis sobre el marco ya verificado (sin datos nuevos):** #43, #44 (sin
+  inventar cuantías de sanciones: describir consecuencias en cualitativo y
+  remitir al agente), #45, #46 (sin traslado de residencia no hay franquicia:
+  envío ordinario con IVA), #47 (el guardamuebles no interrumpe el expediente,
+  pero ojo a los plazos de las franquicias — usar los ya verificados), #48, #49,
+  #50, #52 (valor sentimental ≠ valor aduanero: se declara valor material
+  razonable), #56 (donación sigue siendo importación: regalo ≤45 € entre
+  particulares, resto reglas generales), #59, #60.
+- Mantener siempre la regla del playbook: ninguna cifra ni norma nueva sin
+  verificar; lo no verificable se formula como «confírmalo con…».
