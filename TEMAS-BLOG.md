@@ -40,7 +40,7 @@ buscan los clientes, después la cola larga.
 | 29 | Temporada alta de mudanzas: cuándo reservar transportista en la ruta Andorra–España | temporada-mudanzas-andorra-espana | reservar mudanza Andorra | publicado (2026-09-22) |
 | 30 | Enviar muebles de Andorra a Baleares: el segundo salto del envío | enviar-muebles-andorra-baleares | enviar muebles Andorra Baleares | publicado (2026-09-23) |
 | 31 | Fin de la franquicia de 150 €: qué cambia (y qué no) en los paquetes desde Andorra | fin-franquicia-150-euros-paqueteria | franquicia 150 euros aduana | publicado (2026-09-27) |
-| 32 | El acuerdo de asociación UE–Andorra, firmado: qué cambia y cuándo para tus envíos | acuerdo-asociacion-ue-andorra | acuerdo asociación Andorra UE | pendiente |
+| 32 | El acuerdo de asociación UE–Andorra, a punto de firmarse: qué cambiará (y cuándo) para tus envíos | acuerdo-asociacion-ue-andorra | acuerdo asociación Andorra UE | publicado (2026-09-28) |
 | 33 | Alcohol y tabaco al cruzar: los límites que no cubre ninguna franquicia | limites-alcohol-tabaco-andorra | límites alcohol tabaco Andorra España | pendiente |
 | 34 | La franquicia por matrimonio: el ajuar y los regalos de boda | franquicia-matrimonio-ajuar | franquicia matrimonio aduana | pendiente |
 | 35 | Llevarte el coche de Andorra a España: importación y matriculación | llevar-coche-andorra-espana | matricular coche andorrano en España | pendiente |
