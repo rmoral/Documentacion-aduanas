@@ -45,7 +45,7 @@ buscan los clientes, después la cola larga.
 | 34 | La franquicia por matrimonio: el ajuar y los regalos de boda | franquicia-matrimonio-ajuar | franquicia matrimonio aduana | publicado (2026-09-30) |
 | 35 | Llevarte el coche de Andorra a España: importación y matriculación | llevar-coche-andorra-espana | matricular coche andorrano en España | publicado (2026-10-01) |
 | 36 | Mudarse con mascotas de Andorra a España: la documentación del animal | mudanza-mascotas-andorra-espana | viajar con perro Andorra España | publicado (2026-10-02) |
-| 37 | Autónomos y teletrabajo: mudar la oficina en casa de Andorra a España | mudanza-teletrabajo-material-profesional | mudanza material profesional aduana | pendiente |
+| 37 | Autónomos y teletrabajo: mudar la oficina en casa de Andorra a España | mudanza-teletrabajo-material-profesional | mudanza material profesional aduana | publicado (2026-10-03) |
 | 38 | Caso práctico completo: la mudanza de un piso de 80 m², paso a paso | caso-practico-mudanza-andorra-espana | ejemplo mudanza Andorra España | pendiente |
 | 39 | Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | pendiente |
 | 40 | Glosario aduanero Andorra–España: los 30 términos del expediente | glosario-aduanero-andorra-espana | glosario aduanas DUA CMR | pendiente |
