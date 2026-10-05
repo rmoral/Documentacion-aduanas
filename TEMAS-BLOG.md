@@ -47,7 +47,7 @@ buscan los clientes, después la cola larga.
 | 36 | Mudarse con mascotas de Andorra a España: la documentación del animal | mudanza-mascotas-andorra-espana | viajar con perro Andorra España | publicado (2026-10-02) |
 | 37 | Autónomos y teletrabajo: mudar la oficina en casa de Andorra a España | mudanza-teletrabajo-material-profesional | mudanza material profesional aduana | publicado (2026-10-03) |
 | 38 | Caso práctico completo: la mudanza de un piso de 80 m², paso a paso | caso-practico-mudanza-andorra-espana | ejemplo mudanza Andorra España | publicado (2026-10-04) |
-| 39 | Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | pendiente |
+| 39 | Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | publicado (2026-10-05) |
 | 40 | Glosario aduanero Andorra–España: los 30 términos del expediente | glosario-aduanero-andorra-espana | glosario aduanas DUA CMR | pendiente |
 | 41 | Mudarse a Andorra: la franquicia andorrana por traslado de residencia | mudarse-a-andorra-franquicia | mudanza a Andorra franquicia | pendiente |
 | 42 | Residencia fiscal y mudanza: cuándo dejas de tributar en Andorra y empiezas en España | residencia-fiscal-mudanza-andorra-espana | residencia fiscal Andorra España | pendiente |
