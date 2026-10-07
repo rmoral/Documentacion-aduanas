@@ -49,7 +49,7 @@ buscan los clientes, después la cola larga.
 | 38 | Caso práctico completo: la mudanza de un piso de 80 m², paso a paso | caso-practico-mudanza-andorra-espana | ejemplo mudanza Andorra España | publicado (2026-10-04) |
 | 39 | Vaciar el piso antes de irte: vender, donar o reciclar en Andorra | vaciar-piso-andorra-vender-donar | vaciar piso Andorra | publicado (2026-10-05) |
 | 40 | Glosario aduanero Andorra–España: los 30 términos del expediente | glosario-aduanero-andorra-espana | glosario aduanas DUA CMR | publicado (2026-10-06) |
-| 41 | Mudarse a Andorra: la franquicia andorrana por traslado de residencia | mudarse-a-andorra-franquicia | mudanza a Andorra franquicia | pendiente |
+| 41 | Mudarse a Andorra: la franquicia andorrana por traslado de residencia | mudarse-a-andorra-franquicia | mudanza a Andorra franquicia | publicado (2026-10-07) |
 | 42 | Residencia fiscal y mudanza: cuándo dejas de tributar en Andorra y empiezas en España | residencia-fiscal-mudanza-andorra-espana | residencia fiscal Andorra España | pendiente |
 | 43 | Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización | aduana-retiene-envio-que-hacer | aduana retiene paquete Andorra | pendiente |
 | 44 | Cruzar «a ver si cuela»: qué te juegas exactamente al no declarar | cruzar-sin-declarar-riesgos | no declarar aduana Andorra | pendiente |
