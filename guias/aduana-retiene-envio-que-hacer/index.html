@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización</title>
+<meta name="description" content="Un envío retenido casi siempre es una discrepancia documental subsanable: identifica el motivo por escrito, aporta el papel que falta o ajusta la valoración a través de tu agente, y la carga sale. Los costes reales — almacenaje, camión parado, re-entregas — corren mientras tanto. Los pasos en orden, los casos especiales y cómo no volver a pasar por esto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/aduana-retiene-envio-que-hacer/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/aduana-retiene-envio-que-hacer/">
+<meta property="og:title" content="Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización">
+<meta property="og:description" content="Casi siempre es una discrepancia documental subsanable: identifica el motivo, aporta el papel vía tu agente y la carga sale. Los pasos en orden y los costes que corren mientras.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-10-09">
+<meta property="article:modified_time" content="2026-10-09">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización">
+<meta name="twitter:description" content="Casi siempre es una discrepancia documental subsanable: identifica el motivo, aporta el papel vía tu agente y la carga sale. Los pasos en orden y los costes que corren mientras.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/aduana-retiene-envio-que-hacer/#article",
+   "headline": "Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización",
+   "description": "Qué hacer cuando un envío Andorra–España queda retenido en la aduana: los motivos típicos (documento que falta, valoración sin soporte, discrepancia entre inventario y carga, franquicia sin justificar, mercancía con régimen especial), quién avisa y quién actúa (el agente de aduanas o el courier gestionan; tú aportas), los pasos en orden — identificar la causa por escrito, reunir la subsanación, presentarla, levante —, los costes que corren mientras tanto (almacenaje, paralización del camión, re-entregas), la diferencia entre retención subsanable e intervención por presunta infracción, y la prevención que evita volver a pasar por ello.",
+   "inLanguage": "es",
+   "datePublished": "2026-10-09",
+   "dateModified": "2026-10-09",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/aduana-retiene-envio-que-hacer/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/aduana-retiene-envio-que-hacer/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Envío retenido: qué hacer"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/aduana-retiene-envio-que-hacer/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cuánto puede durar una retención en la aduana?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Depende de la causa y de tu velocidad de respuesta, no de un plazo fijo que podamos prometerte: una subsanación documental simple (reenviar una declaración jurada corregida, aportar un justificante de franquicia) puede resolverse en horas o pocos días desde que el agente la presenta; una discrepancia de valoración que la aduana quiera contrastar, algo más; y una intervención por presunta infracción entra en procedimientos con sus propios tiempos. La variable que sí controlas es tu parte: cuanto antes identifiques por escrito qué piden y lo aportes por el canal correcto, antes llega el levante."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Me pueden cobrar almacenaje mientras el envío está retenido?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Sí, y es el coste silencioso de toda retención: la mercancía espera en depósito o en las instalaciones del operador, y ese almacenaje se factura — igual que la paralización del camión si la mudanza viajaba en transportista, o las re-entregas del courier en paquetería. Las tarifas las fija cada depósito u operador, así que pídelas por escrito en cuanto sepas de la retención: saber lo que corre por día te ayuda a decidir con qué urgencia mover cada papel. La lección en positivo: cada día que tu expediente ahorra es dinero contante."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa si no respondo o no aporto lo que piden?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Nada bueno: la mercancía no sale, los costes de almacenaje siguen corriendo y, agotados los plazos que el operador o la aduana fijen, el desenlace típico en paquetería es la devolución al remitente (pagando) o, en última instancia, el tratamiento de la mercancía abandonada conforme a la normativa aduanera. En una mudanza, el transportista acabará descargando en depósito y facturándotelo. Los plazos concretos de cada fase te los debe comunicar quien gestiona el envío — courier o agente —: no los dejes correr, aunque sea para decir que necesitas unos días más."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué diferencia hay entre una retención y una intervención?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La retención ordinaria es administrativa y subsanable: falta un papel, un valor necesita soporte, algo no cuadra — se aporta, se corrige y la carga sigue con su levante. La intervención es otra liga: la aduana aprecia indicios de infracción (mercancía oculta o no declarada, contrabando) y la mercancía queda intervenida mientras se tramita un expediente sancionador o diligencias — como en el caso real de los puros sin declarar que contamos en la guía de alcohol y tabaco. En retención ordinaria tu interlocutor es el agente de aduanas; ante una intervención con expediente serio, suma asesoramiento legal desde el primer momento."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Envío retenido: qué hacer</nav>
+    <h1>Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización</h1>
+    <div class="updated">Actualizado · Octubre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>Un envío retenido casi siempre es una <strong>discrepancia documental subsanable</strong>: identifica el motivo <strong>por escrito</strong>, aporta el papel que falta o la valoración corregida <strong>a través de tu agente o courier</strong>, y la carga obtiene el levante. Mientras tanto corren los costes reales — <strong>almacenaje y camión parado</strong> —, así que la velocidad de tu respuesta es dinero.</p>
+    </div>
+
+    <h2>Primero, respira: qué significa (y qué no) una retención</h2>
+    <p>«Su envío está retenido en aduanas» es de los mensajes que más asustan y de los que menos deberían: en la inmensa mayoría de los casos significa que <strong>algo del expediente no cuadra</strong> y la aduana no autoriza la salida — el <a href="/guias/glosario-aduanero-andorra-espana/">levante</a> — hasta que se aclare. No significa que hayas cometido un delito, ni que la mercancía esté perdida, ni que toque pagar «una multa» por defecto. Significa que hay una pregunta pendiente de respuesta documental — exactamente las preguntas del control que ya conoces de la guía de <a href="/guias/preguntas-aduana-farga-de-moles/">la inspección</a>, pero con la carga esperando mientras respondes.</p>
+
+    <h2>Los motivos típicos (y su subsanación)</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Motivo de la retención</th><th>Subsanación habitual</th></tr>
+      <tr><td>Falta un documento (declaración jurada, autorización de despacho, justificante de franquicia)</td><td>Aportarlo — por eso el <a href="/guias/caso-practico-mudanza-andorra-espana/">expediente completo</a> previene casi todo</td></tr>
+      <tr><td>Valoración sin soporte o que la aduana cuestiona</td><td>Presentar las <a href="/guias/calcular-valor-residual-muebles/">referencias de segunda mano</a> que defienden la cifra, o ajustarla y liquidar la diferencia</td></tr>
+      <tr><td>Discrepancia entre inventario y carga (el reconocimiento encontró algo no declarado)</td><td>Declarar lo omitido y asumir su tratamiento — y aquí la frontera con la intervención se acerca: cuida el inventario</td></tr>
+      <tr><td>Franquicia invocada sin justificantes suficientes</td><td>Completar el dosier (residencia, matrícula, matrimonio, herencia) o despachar por régimen ordinario pagando el IVA</td></tr>
+      <tr><td>Mercancía con régimen especial (alcohol, patrimonio, CITES, fitosanitario…)</td><td>El permiso o circuito correspondiente — idealmente consultado <em>antes</em> de enviar, como repiten sus guías</td></tr>
+    </table>
+    </div>
+
+    <h2>Los pasos, en orden</h2>
+    <ol>
+      <li><strong>Consigue el motivo por escrito.</strong> Quien gestiona el despacho — tu <a href="/guias/que-es-el-dua/">agente de aduanas</a> en una mudanza, el courier en <a href="/guias/enviar-cajas-mensajeria-andorra-espana/">paquetería</a> — debe decirte exactamente qué falta o qué no cuadra. «Está en aduanas» no es un motivo: pide el requerimiento concreto.</li>
+      <li><strong>Reúne la subsanación completa, de una vez.</strong> Responder a medias alarga la retención: junta todo lo pedido antes de presentar.</li>
+      <li><strong>Preséntala por el canal correcto.</strong> El agente o el courier la tramitan ante la aduana; tú no «vas a ventanilla». Si el envío iba sin agente (paquetería), sigue el procedimiento que el courier te marque y guarda copia de todo.</li>
+      <li><strong>Pregunta los costes que corren</strong> (almacenaje por día, paralización, re-entrega) por escrito — para decidir con la urgencia adecuada.</li>
+      <li><strong>Levante y lección aprendida.</strong> Con la discrepancia resuelta, la carga sale. Si no estás de acuerdo con la decisión de la aduana (una valoración, una liquidación), el camino son las <strong>alegaciones y recursos por la vía administrativa</strong>, articulados con tu agente — nunca la discusión en la ventanilla.</li>
+    </ol>
+    <div class="note-box"><strong>Plazos:</strong> no hay un «la aduana tarda X días» honesto que podamos escribirte — depende de la causa, del volumen de trabajo y, sobre todo, de lo rápido que tu subsanación llegue completa. Lo que sí es constante: cada fase tiene plazos que te deben comunicar (del requerimiento, del depósito, del courier). Apúntalos y no los agotes.</div>
+
+    <h2>Los costes reales de una retención</h2>
+    <ul>
+      <li><strong>Almacenaje:</strong> la mercancía espera en depósito y ese tiempo se factura por días — tarifas de cada operador: pídelas en cuanto haya retención.</li>
+      <li><strong>El camión:</strong> si la mudanza viajaba en transportista, la paralización o la descarga en depósito tienen coste — el escenario que la guía de <a href="/guias/plazos-envio-muebles-andorra-espana/">plazos</a> llama «el papel que faltaba».</li>
+      <li><strong>Re-entregas y gestiones del courier</strong> en paquetería.</li>
+      <li><strong>Los impuestos de siempre:</strong> resolver la retención no los quita — lo que tocaba pagar, tocaba; la retención solo añade lo anterior.</li>
+      <li><strong>La eventual sanción, solo si hay infracción:</strong> una retención documental subsanada no es una multa. Las sanciones aparecen cuando hay infracción (ocultación, falseo) y sus cuantías dependen de cada expediente — las fija la autoridad, no las adivines ni las temas por defecto.</li>
+    </ul>
+
+    <h2>Retención vs. intervención: la frontera que importa</h2>
+    <p>Todo lo anterior describe la retención <strong>administrativa y subsanable</strong>. Cosa distinta es la <strong>intervención</strong> por indicios de infracción — mercancía oculta, no declarada, contrabando —, donde la mercancía queda intervenida mientras se tramita expediente sancionador o diligencias, como en el <a href="/guias/limites-alcohol-tabaco-andorra/">caso real de los 1.494 puros</a>. Si tu situación es esa, el agente sigue siendo necesario pero ya no suficiente: busca <strong>asesoramiento legal</strong> desde el primer momento y no firmes ni declares nada sin entenderlo.</p>
+
+    <h2>La moraleja de siempre (con números de fondo)</h2>
+    <p>Prácticamente todas las retenciones de particulares en esta ruta se evitan con el expediente que este blog describe desde su primera guía: <a href="/guias/packing-list-mudanza/">inventario numerado</a> y veraz, <a href="/guias/declaracion-jurada-muebles-sin-factura/">declaración jurada</a>, valoración defendida, franquicia con su dosier y regímenes especiales consultados antes. La retención convierte en facturas de almacenaje lo que el expediente resuelve por el precio de unas horas de preparación — es, literalmente, el caso de negocio de hacer bien los papeles.</p>
+
+    <div class="cta-guide">
+      <h2>El expediente que evita la retención (o la resuelve)</h2>
+      <p>Si aún no has enviado: preparamos el dosier completo que no deja preguntas abiertas. Si ya estás retenido: ordenamos la subsanación documental para tu agente en 24 horas. Por 49 € cerrados.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Cuánto puede durar una retención en la aduana?</summary>
+      <p>Depende de la causa y de tu velocidad de respuesta, no de un plazo fijo que podamos prometerte: una subsanación documental simple (reenviar una declaración jurada corregida, aportar un justificante de franquicia) puede resolverse en horas o pocos días desde que el agente la presenta; una discrepancia de valoración que la aduana quiera contrastar, algo más; y una intervención por presunta infracción entra en procedimientos con sus propios tiempos. La variable que sí controlas es tu parte: cuanto antes identifiques por escrito qué piden y lo aportes por el canal correcto, antes llega el levante.</p>
+    </details>
+    <details>
+      <summary>¿Me pueden cobrar almacenaje mientras el envío está retenido?</summary>
+      <p>Sí, y es el coste silencioso de toda retención: la mercancía espera en depósito o en las instalaciones del operador, y ese almacenaje se factura — igual que la paralización del camión si la mudanza viajaba en transportista, o las re-entregas del courier en paquetería. Las tarifas las fija cada depósito u operador, así que pídelas por escrito en cuanto sepas de la retención: saber lo que corre por día te ayuda a decidir con qué urgencia mover cada papel. La lección en positivo: cada día que tu expediente ahorra es dinero contante.</p>
+    </details>
+    <details>
+      <summary>¿Qué pasa si no respondo o no aporto lo que piden?</summary>
+      <p>Nada bueno: la mercancía no sale, los costes de almacenaje siguen corriendo y, agotados los plazos que el operador o la aduana fijen, el desenlace típico en <a href="/guias/enviar-cajas-mensajeria-andorra-espana/">paquetería</a> es la devolución al remitente (pagando) o, en última instancia, el tratamiento de la mercancía abandonada conforme a la normativa aduanera. En una mudanza, el transportista acabará descargando en depósito y facturándotelo. Los plazos concretos de cada fase te los debe comunicar quien gestiona el envío — courier o agente —: no los dejes correr, aunque sea para decir que necesitas unos días más.</p>
+    </details>
+    <details>
+      <summary>¿Qué diferencia hay entre una retención y una intervención?</summary>
+      <p>La retención ordinaria es administrativa y subsanable: falta un papel, un valor necesita soporte, algo no cuadra — se aporta, se corrige y la carga sigue con su levante. La intervención es otra liga: la aduana aprecia indicios de infracción (mercancía oculta o no declarada, contrabando) y la mercancía queda intervenida mientras se tramita un expediente sancionador o diligencias — como en el caso real de los puros sin declarar que contamos en la guía de <a href="/guias/limites-alcohol-tabaco-andorra/">alcohol y tabaco</a>. En retención ordinaria tu interlocutor es el agente de aduanas; ante una intervención con expediente serio, suma asesoramiento legal desde el primer momento.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/preguntas-aduana-farga-de-moles/">Las preguntas del control y el papel que responde a cada una</a></li>
+        <li><a href="/guias/errores-aduana-farga-de-moles/">Los errores más caros — los que acaban en retención</a></li>
+        <li><a href="/guias/envio-urgente-documentacion-aduana/">Reconstruir un expediente contrarreloj</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni abogados. Los plazos, tarifas de depósito y procedimientos concretos de cada retención los fijan la aduana y los operadores implicados — esta guía orienta el método; tu caso, con tu agente (y, ante una intervención, con asesoramiento legal).</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
