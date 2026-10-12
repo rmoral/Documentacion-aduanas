@@ -54,7 +54,7 @@ buscan los clientes, después la cola larga.
 | 43 | Si la aduana retiene tu envío: pasos, plazos y costes de la inmovilización | aduana-retiene-envio-que-hacer | aduana retiene paquete Andorra | publicado (2026-10-09) |
 | 44 | Cruzar «a ver si cuela»: qué te juegas exactamente al no declarar | cruzar-sin-declarar-riesgos | no declarar aduana Andorra | publicado (2026-10-10) |
 | 45 | Hacerlo tú mismo: cruzar la frontera con una furgoneta alquilada | mudanza-furgoneta-alquilada-andorra | furgoneta alquilada mudanza Andorra | publicado (2026-10-11) |
-| 46 | Muebles para la segunda residencia en España: por qué no hay franquicia | muebles-segunda-residencia-espana | amueblar segunda residencia aduana | pendiente |
+| 46 | Muebles para la segunda residencia en España: por qué no hay franquicia | muebles-segunda-residencia-espana | amueblar segunda residencia aduana | publicado (2026-10-12) |
 | 47 | Guardamuebles y trasteros: cuando tus cosas esperan meses entre dos casas | guardamuebles-mudanza-andorra-espana | guardamuebles mudanza internacional | pendiente |
 | 48 | Cómo leer un presupuesto de mudanza: partidas, letra pequeña y señales de alarma | leer-presupuesto-mudanza | presupuesto mudanza qué incluye | pendiente |
 | 49 | Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas | inventariar-muebles-desmontados | transportar muebles desmontados | pendiente |
