@@ -56,7 +56,7 @@ buscan los clientes, después la cola larga.
 | 45 | Hacerlo tú mismo: cruzar la frontera con una furgoneta alquilada | mudanza-furgoneta-alquilada-andorra | furgoneta alquilada mudanza Andorra | publicado (2026-10-11) |
 | 46 | Muebles para la segunda residencia en España: por qué no hay franquicia | muebles-segunda-residencia-espana | amueblar segunda residencia aduana | publicado (2026-10-12) |
 | 47 | Guardamuebles y trasteros: cuando tus cosas esperan meses entre dos casas | guardamuebles-mudanza-andorra-espana | guardamuebles mudanza internacional | publicado (2026-10-13) |
-| 48 | Cómo leer un presupuesto de mudanza: partidas, letra pequeña y señales de alarma | leer-presupuesto-mudanza | presupuesto mudanza qué incluye | pendiente |
+| 48 | Cómo leer un presupuesto de mudanza: partidas, letra pequeña y señales de alarma | leer-presupuesto-mudanza | presupuesto mudanza qué incluye | publicado (2026-10-14) |
 | 49 | Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas | inventariar-muebles-desmontados | transportar muebles desmontados | pendiente |
 | 50 | Enviar una biblioteca: libros, discos y colecciones personales | enviar-libros-colecciones-andorra-espana | enviar libros Andorra España | pendiente |
 | 51 | Cuadros, antigüedades y patrimonio: cuándo hace falta permiso de exportación | cuadros-antiguedades-permiso-exportacion | exportar antigüedades Andorra | pendiente |
