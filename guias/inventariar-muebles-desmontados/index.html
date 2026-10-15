@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas</title>
+<meta name="description" content="Desmontar ahorra volumen pero multiplica los bultos: un armario puede ser cuatro paquetes y una bolsa de herrajes. Cómo inventariarlo sin volver loco al control — un ítem lógico con sub-bultos, valorado como mueble completo —, el truco de las fotos antes de desmontar, y la verdad incómoda de los muebles a medida: fuera de su pared, su valor residual se desploma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/inventariar-muebles-desmontados/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/inventariar-muebles-desmontados/">
+<meta property="og:title" content="Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas">
+<meta property="og:description" content="Un armario desmontado son cuatro bultos y una bolsa de herrajes: inventaríalo como un ítem lógico con sub-bultos, valorado como mueble completo. Y la verdad del «a medida».">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-10-15">
+<meta property="article:modified_time" content="2026-10-15">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas">
+<meta name="twitter:description" content="Un armario desmontado son cuatro bultos y una bolsa de herrajes: inventaríalo como un ítem lógico con sub-bultos, valorado como mueble completo. Y la verdad del «a medida».">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/inventariar-muebles-desmontados/#article",
+   "headline": "Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas",
+   "description": "La técnica de inventario para la mudanza que viaja en piezas: desmontar ahorra volumen (y dinero en el presupuesto) pero convierte cada mueble en varios bultos, así que el packing list debe tratarlo como un ítem lógico con sub-bultos etiquetados (12a, 12b, 12c y la bolsa de herrajes 12d), valorado como mueble completo y no pieza a pieza; las fotos antes y durante el desmontaje como seguro de remontaje y de reclamación; por qué el reconocimiento físico agradece esta estructura; y el capítulo honesto de los muebles a medida — cocinas, armarios empotrados, librerías de obra —, cuyo valor residual fuera de su pared se desploma y cuya criba merece una conversación sincera antes de pagar su transporte.",
+   "inLanguage": "es",
+   "datePublished": "2026-10-15",
+   "dateModified": "2026-10-15",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/inventariar-muebles-desmontados/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/inventariar-muebles-desmontados/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Muebles desmontados y a medida"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/inventariar-muebles-desmontados/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cómo apunto en el packing list un mueble desmontado en varios bultos?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Como un solo ítem lógico con sub-bultos: la línea del inventario describe el mueble completo («Armario ropero dos puertas, madera, usado») con su valor residual, y debajo enumera sus paquetes con el mismo número y letras — 12a (laterales), 12b (puertas), 12c (baldas y trasera), 12d (bolsa de herrajes). Cada paquete físico lleva su etiqueta correspondiente. Así el total de bultos del camión cuadra con el inventario, el control puede cotejar cualquier paquete, y tú puedes verificar en destino que el armario llegó entero antes de firmar."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Valoro el mueble completo o cada pieza por separado?",
+     "acceptedAnswer": {"@type": "Answer", "text": "El mueble completo, siempre: el valor residual es el del armario funcionando, no la suma imposible de «un lateral de armario» más «dos puertas». Las piezas separadas no tienen mercado y valorarlas una a una produce cifras absurdas en ambas direcciones. La estructura de ítem lógico con sub-bultos resuelve exactamente esto: un valor por mueble, varios paquetes por mueble. La única excepción práctica: si vendes o regalas parte del mueble y viaja incompleto, descríbelo así («estructura de cama sin somier») y valóralo en consecuencia."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa con los herrajes y tornillería en la aduana?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Nada especial si están donde deben: en una bolsa cerrada, etiquetada con el número del mueble (12d) y listada como sub-bulto. Son parte del mueble usado, sin valor propio que declarar aparte. El problema es el contrario y es logístico, no aduanero: la caja genérica de «tornillos varios» de toda la casa es la receta clásica para no poder montar nada en destino. Una bolsa por mueble, pegada o numerada con él, y dentro una nota con qué va dónde si el desmontaje tuvo truco — tu yo del futuro lo agradecerá más que la aduana."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Merece la pena llevarse los muebles a medida (cocina, armarios empotrados)?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Casi nunca, y conviene decirlo claro: un mueble hecho para una pared concreta pierde la mayor parte de su valor fuera de ella — su valor residual de mercado es bajo (¿quién compra una cocina cortada para otra casa?) y rara vez encaja en el espacio nuevo sin carpintero. La cuenta honesta: coste de desmontaje profesional + transporte voluminoso + adaptación en destino contra su valor residual real. Suele ganar dejarlo (un piso que se vende o alquila con cocina vale más) o venderlo con el piso. Las excepciones existen — carpintería de autor, maderas nobles, piezas reutilizables como módulos — pero son eso, excepciones: haz el número antes."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Muebles desmontados y a medida</nav>
+    <h1>Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas</h1>
+    <div class="updated">Actualizado · Octubre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>Desmontar ahorra volumen, pero un armario se convierte en <strong>cuatro bultos y una bolsa de herrajes</strong>. En el inventario: <strong>un ítem lógico con sub-bultos</strong> (12a, 12b, 12c, 12d), valorado como <strong>mueble completo</strong>. Fotos antes de desmontar, herrajes con su mueble — y con los <strong>a medida</strong>, cuenta honesta: fuera de su pared, su valor se desploma.</p>
+    </div>
+
+    <h2>Por qué desmontar — y qué complica</h2>
+    <p>El transporte se paga por volumen, y un armario desmontado ocupa una fracción del montado: desmontar es de las pocas palancas gratuitas para abaratar el <a href="/guias/leer-presupuesto-mudanza/">presupuesto</a>. El precio oculto es documental y logístico: donde el <a href="/guias/packing-list-mudanza/">packing list</a> decía «1 armario», ahora hay cuatro paquetes planos y una bolsa que suena. Si el inventario no refleja esa transformación, aparecen los dos problemas gemelos: el control que cuenta 52 bultos donde tu lista dice 48, y el salón de destino donde nadie sabe qué lateral es de qué mueble.</p>
+
+    <h2>La técnica: el ítem lógico con sub-bultos</h2>
+    <p>La solución es una convención simple que el <a href="/guias/preguntas-aduana-farga-de-moles/">reconocimiento físico</a> entiende a la primera:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Nº</th><th>Descripción en el inventario</th><th>Valor</th></tr>
+      <tr><td>12</td><td>Armario ropero 2 puertas, madera, usado — viaja desmontado en 4 bultos:</td><td>120 € (ilustrativo)</td></tr>
+      <tr><td>12a</td><td>· Laterales y techo (paquete plano)</td><td>—</td></tr>
+      <tr><td>12b</td><td>· Puertas (paquete plano)</td><td>—</td></tr>
+      <tr><td>12c</td><td>· Baldas, trasera y barra</td><td>—</td></tr>
+      <tr><td>12d</td><td>· Bolsa de herrajes y tornillería</td><td>—</td></tr>
+    </table>
+    </div>
+    <p>Las reglas que lo hacen funcionar:</p>
+    <ul class="checklist">
+      <li><strong>Un valor por mueble, no por pieza:</strong> el <a href="/guias/calcular-valor-residual-muebles/">valor residual</a> es el del armario funcionando; «un lateral» no cotiza en ningún mercado.</li>
+      <li><strong>Cada paquete físico, etiquetado con su código</strong> (12a, 12b…): el recuento del camión cuadra con la lista, bulto a bulto.</li>
+      <li><strong>Los herrajes viajan con su mueble</strong> — bolsa cerrada, numerada, listada como sub-bulto. La caja común de «tornillos de toda la casa» es el enemigo número uno del remontaje.</li>
+      <li><strong>El total de bultos del CMR y del inventario coinciden:</strong> si tu lista tiene 48 ítems pero 61 paquetes físicos, que el encabezado lo diga («48 ítems / 61 bultos»).</li>
+    </ul>
+
+    <h2>Las fotos: tres minutos que valen un mueble</h2>
+    <p>Antes de aflojar el primer tornillo, fotografía el mueble montado; durante el desmontaje, los pasos con truco (qué cable iba dónde, qué taco sostiene qué). Esas fotos sirven tres veces: como <strong>manual de remontaje</strong> en destino, como <strong>prueba del estado</strong> previo si llega dañado (la base de las <a href="/guias/seguro-transporte-mudanza-cmr/">reservas y la reclamación</a>) y como apoyo de la valoración «usado en buen estado» del inventario. Guárdalas con el expediente, no solo en el carrete.</p>
+
+    <h2>¿Quién desmonta? La letra del presupuesto</h2>
+    <p>Si desmonta el transportista, suele ir como partida de embalaje/montaje del <a href="/guias/leer-presupuesto-mudanza/">presupuesto</a> — pregunta si incluye el <em>re</em>montaje en destino, que es donde duele. Si desmontas tú, recuerda el matiz del seguro que ya conoces: el <strong>autoembalaje</strong> (y el autodesmontaje entra en el mismo saco) puede limitar la cobertura por daños en lo que tú manipulaste — otro motivo para las fotos y para dejar al profesional las piezas delicadas (lunas de espejo, mármoles, cristales).</p>
+
+    <h2>Los muebles a medida: la conversación honesta</h2>
+    <p>Cocinas, armarios empotrados, librerías de obra: hechos <strong>para una pared concreta</strong>. Fuera de ella pasan tres cosas, y las tres restan: su <strong>valor residual de mercado se desploma</strong> (nadie compra una cocina cortada para otra casa — lo que, en justicia, también modera el IVA si aún así lo llevas); casi nunca <strong>encajan en el espacio nuevo</strong> sin carpintero; y su desmontaje sin romperlos exige profesional. La cuenta completa — desmontaje + volumen + adaptación contra valor residual real — la gana casi siempre <strong>dejarlos</strong>: un piso que se vende o alquila «con cocina» vale más, y es la salida natural de la <a href="/guias/vaciar-piso-andorra-vender-donar/">criba</a>. Las excepciones (carpintería de autor, maderas nobles, módulos reutilizables) existen; trátalas como lo que son y haz el número antes de pagar su camión.</p>
+
+    <h2>Los errores del viaje en piezas</h2>
+    <ul>
+      <li><strong>Inventariar «20 paquetes planos»</strong> sin decir de qué muebles: ni el control ni tú podréis cotejar nada.</li>
+      <li><strong>La caja única de tornillería:</strong> el remontaje se convierte en un puzle sin foto de portada.</li>
+      <li><strong>Valorar piezas sueltas:</strong> cifras indefendibles — el valor es del mueble.</li>
+      <li><strong>Desmontar lo que no lo necesita:</strong> cada desmontaje es un riesgo de daño y horas; el mueble que cabe montado, viaja montado.</li>
+      <li><strong>Llevarse la cocina «porque costó mucho»:</strong> lo que costó no es lo que vale — la guía del <a href="/guias/calcular-valor-residual-muebles/">valor residual</a> explica por qué, y aquí la diferencia es máxima.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>Un inventario que cuadra bulto a bulto</h2>
+      <p>Preparamos tu packing list con la estructura de ítems y sub-bultos lista para el camión, el control y el remontaje — valores defendibles incluidos. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Cómo apunto en el packing list un mueble desmontado en varios bultos?</summary>
+      <p>Como un solo ítem lógico con sub-bultos: la línea del inventario describe el mueble completo («Armario ropero dos puertas, madera, usado») con su valor residual, y debajo enumera sus paquetes con el mismo número y letras — 12a (laterales), 12b (puertas), 12c (baldas y trasera), 12d (bolsa de herrajes). Cada paquete físico lleva su etiqueta correspondiente. Así el total de bultos del camión cuadra con el inventario, el control puede cotejar cualquier paquete, y tú puedes verificar en destino que el armario llegó entero antes de firmar.</p>
+    </details>
+    <details>
+      <summary>¿Valoro el mueble completo o cada pieza por separado?</summary>
+      <p>El mueble completo, siempre: el <a href="/guias/calcular-valor-residual-muebles/">valor residual</a> es el del armario funcionando, no la suma imposible de «un lateral de armario» más «dos puertas». Las piezas separadas no tienen mercado y valorarlas una a una produce cifras absurdas en ambas direcciones. La estructura de ítem lógico con sub-bultos resuelve exactamente esto: un valor por mueble, varios paquetes por mueble. La única excepción práctica: si vendes o regalas parte del mueble y viaja incompleto, descríbelo así («estructura de cama sin somier») y valóralo en consecuencia.</p>
+    </details>
+    <details>
+      <summary>¿Qué pasa con los herrajes y tornillería en la aduana?</summary>
+      <p>Nada especial si están donde deben: en una bolsa cerrada, etiquetada con el número del mueble (12d) y listada como sub-bulto. Son parte del mueble usado, sin valor propio que declarar aparte. El problema es el contrario y es logístico, no aduanero: la caja genérica de «tornillos varios» de toda la casa es la receta clásica para no poder montar nada en destino. Una bolsa por mueble, pegada o numerada con él, y dentro una nota con qué va dónde si el desmontaje tuvo truco — tu yo del futuro lo agradecerá más que la aduana.</p>
+    </details>
+    <details>
+      <summary>¿Merece la pena llevarse los muebles a medida (cocina, armarios empotrados)?</summary>
+      <p>Casi nunca, y conviene decirlo claro: un mueble hecho para una pared concreta pierde la mayor parte de su valor fuera de ella — su valor residual de mercado es bajo (¿quién compra una cocina cortada para otra casa?) y rara vez encaja en el espacio nuevo sin carpintero. La cuenta honesta: coste de desmontaje profesional + transporte voluminoso + adaptación en destino contra su valor residual real. Suele ganar dejarlo (un piso que se vende o alquila con cocina vale más) o venderlo con el piso, como propone la <a href="/guias/vaciar-piso-andorra-vender-donar/">guía de la criba</a>. Las excepciones existen — carpintería de autor, maderas nobles, piezas reutilizables como módulos — pero son eso, excepciones: haz el número antes.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/packing-list-mudanza/">El packing list perfecto, desde cero</a></li>
+        <li><a href="/guias/calcular-valor-residual-muebles/">El valor residual: el número de cada línea</a></li>
+        <li><a href="/guias/vaciar-piso-andorra-vender-donar/">La criba: qué merece el viaje (la cocina, casi nunca)</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas ni transportistas. Los valores del artículo son ilustrativos; la valoración real de cada mueble se defiende con referencias de mercado, y las coberturas del desmontaje las fija cada contrato de transporte.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
