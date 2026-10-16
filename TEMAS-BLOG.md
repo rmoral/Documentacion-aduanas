@@ -58,7 +58,7 @@ buscan los clientes, después la cola larga.
 | 47 | Guardamuebles y trasteros: cuando tus cosas esperan meses entre dos casas | guardamuebles-mudanza-andorra-espana | guardamuebles mudanza internacional | publicado (2026-10-13) |
 | 48 | Cómo leer un presupuesto de mudanza: partidas, letra pequeña y señales de alarma | leer-presupuesto-mudanza | presupuesto mudanza qué incluye | publicado (2026-10-14) |
 | 49 | Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas | inventariar-muebles-desmontados | transportar muebles desmontados | publicado (2026-10-15) |
-| 50 | Enviar una biblioteca: libros, discos y colecciones personales | enviar-libros-colecciones-andorra-espana | enviar libros Andorra España | pendiente |
+| 50 | Enviar una biblioteca: libros, discos y colecciones personales | enviar-libros-colecciones-andorra-espana | enviar libros Andorra España | publicado (2026-10-16) |
 | 51 | Cuadros, antigüedades y patrimonio: cuándo hace falta permiso de exportación | cuadros-antiguedades-permiso-exportacion | exportar antigüedades Andorra | pendiente |
 | 52 | Documentos, fotos y recuerdos: enviar lo que no tiene precio | enviar-documentos-recuerdos-personales | enviar documentos personales mudanza | pendiente |
 | 53 | Bicis eléctricas, patinetes y baterías de litio: lo que el transportista te va a preguntar | enviar-baterias-litio-andorra-espana | enviar bici eléctrica batería litio | pendiente |
