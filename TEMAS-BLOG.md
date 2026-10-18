@@ -60,7 +60,7 @@ buscan los clientes, después la cola larga.
 | 49 | Muebles desmontados y a medida: cómo inventariar lo que viaja en piezas | inventariar-muebles-desmontados | transportar muebles desmontados | publicado (2026-10-15) |
 | 50 | Enviar una biblioteca: libros, discos y colecciones personales | enviar-libros-colecciones-andorra-espana | enviar libros Andorra España | publicado (2026-10-16) |
 | 51 | Cuadros, antigüedades y patrimonio: cuándo hace falta permiso de exportación | cuadros-antiguedades-permiso-exportacion | exportar antigüedades Andorra | publicado (2026-10-17) |
-| 52 | Documentos, fotos y recuerdos: enviar lo que no tiene precio | enviar-documentos-recuerdos-personales | enviar documentos personales mudanza | pendiente |
+| 52 | Documentos, fotos y recuerdos: enviar lo que no tiene precio | enviar-documentos-recuerdos-personales | enviar documentos personales mudanza | publicado (2026-10-18) |
 | 53 | Bicis eléctricas, patinetes y baterías de litio: lo que el transportista te va a preguntar | enviar-baterias-litio-andorra-espana | enviar bici eléctrica batería litio | pendiente |
 | 54 | Plantas y jardín en la mudanza: qué puede cruzar y qué está restringido | enviar-plantas-mudanza-andorra-espana | llevar plantas frontera Andorra | pendiente |
 | 55 | Medicamentos y botiquín en la mudanza: cómo viajan sin problemas | medicamentos-mudanza-andorra-espana | llevar medicamentos frontera Andorra | pendiente |
