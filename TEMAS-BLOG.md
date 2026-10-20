@@ -62,7 +62,7 @@ buscan los clientes, después la cola larga.
 | 51 | Cuadros, antigüedades y patrimonio: cuándo hace falta permiso de exportación | cuadros-antiguedades-permiso-exportacion | exportar antigüedades Andorra | publicado (2026-10-17) |
 | 52 | Documentos, fotos y recuerdos: enviar lo que no tiene precio | enviar-documentos-recuerdos-personales | enviar documentos personales mudanza | publicado (2026-10-18) |
 | 53 | Bicis eléctricas, patinetes y baterías de litio: lo que el transportista te va a preguntar | enviar-baterias-litio-andorra-espana | enviar bici eléctrica batería litio | publicado (2026-10-19) |
-| 54 | Plantas y jardín en la mudanza: qué puede cruzar y qué está restringido | enviar-plantas-mudanza-andorra-espana | llevar plantas frontera Andorra | pendiente |
+| 54 | Plantas y jardín en la mudanza: qué puede cruzar y qué está restringido | enviar-plantas-mudanza-andorra-espana | llevar plantas frontera Andorra | publicado (2026-10-20) |
 | 55 | Medicamentos y botiquín en la mudanza: cómo viajan sin problemas | medicamentos-mudanza-andorra-espana | llevar medicamentos frontera Andorra | pendiente |
 | 56 | Donar en vez de enviar: cajas para ONG y familiares, bien declaradas | donar-enviar-ong-familiares | donar muebles enviar España | pendiente |
 | 57 | Devolver compras online desde Andorra: el viaje de vuelta del paquete | devolver-compras-online-desde-andorra | devolver paquete desde Andorra | pendiente |
