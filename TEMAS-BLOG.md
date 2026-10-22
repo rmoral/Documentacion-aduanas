@@ -64,7 +64,7 @@ buscan los clientes, después la cola larga.
 | 53 | Bicis eléctricas, patinetes y baterías de litio: lo que el transportista te va a preguntar | enviar-baterias-litio-andorra-espana | enviar bici eléctrica batería litio | publicado (2026-10-19) |
 | 54 | Plantas y jardín en la mudanza: qué puede cruzar y qué está restringido | enviar-plantas-mudanza-andorra-espana | llevar plantas frontera Andorra | publicado (2026-10-20) |
 | 55 | Medicamentos y botiquín en la mudanza: cómo viajan sin problemas | medicamentos-mudanza-andorra-espana | llevar medicamentos frontera Andorra | publicado (2026-10-21) |
-| 56 | Donar en vez de enviar: cajas para ONG y familiares, bien declaradas | donar-enviar-ong-familiares | donar muebles enviar España | pendiente |
+| 56 | Donar en vez de enviar: cajas para ONG y familiares, bien declaradas | donar-enviar-ong-familiares | donar muebles enviar España | publicado (2026-10-22) |
 | 57 | Devolver compras online desde Andorra: el viaje de vuelta del paquete | devolver-compras-online-desde-andorra | devolver paquete desde Andorra | pendiente |
 | 58 | La mudanza del pequeño negocio: stock y equipamiento comercial no son ajuar | mudanza-negocio-stock-comercial | trasladar negocio Andorra España aduana | pendiente |
 | 59 | NIE, NIF y padrón: los números que te pedirá todo el papeleo en destino | nie-nif-padron-mudanza-espana | NIE padrón mudanza España | pendiente |
