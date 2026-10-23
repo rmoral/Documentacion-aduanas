@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devolver compras online desde Andorra: el viaje de vuelta del paquete</title>
+<meta name="description" content="Devolver a una tienda española lo que compraste online desde Andorra no es un envío nuevo: es una mercancía de retorno — lo exportado de la UE que vuelve en el mismo estado dentro de 3 años entra sin derechos, a petición y bien declarado como devolución. La etiqueta de devolución del vendedor, los papeles que debes guardar (factura y justificante de importación), qué dinero recuperas y los casos que se complican.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/devolver-compras-online-desde-andorra/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/devolver-compras-online-desde-andorra/">
+<meta property="og:title" content="Devolver compras online desde Andorra: el viaje de vuelta del paquete">
+<meta property="og:description" content="La devolución no es un envío nuevo: es mercancía de retorno — sin derechos si vuelve en el mismo estado y bien declarada. Los papeles que debes guardar y qué dinero recuperas.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-10-23">
+<meta property="article:modified_time" content="2026-10-23">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Devolver compras online desde Andorra: el viaje de vuelta del paquete">
+<meta name="twitter:description" content="La devolución no es un envío nuevo: es mercancía de retorno — sin derechos si vuelve en el mismo estado y bien declarada. Los papeles que debes guardar y qué dinero recuperas.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/devolver-compras-online-desde-andorra/#article",
+   "headline": "Devolver compras online desde Andorra: el viaje de vuelta del paquete",
+   "description": "Cómo devolver a una tienda de España lo que compraste online viviendo en Andorra: el paquete de ida fue una exportación de la UE (por eso no debía llevar IVA español) y una importación en Andorra (donde pagaste el IGI y la tramitación); el de vuelta no es una venta nueva sino una mercancía de retorno — el artículo 203 del Código Aduanero de la Unión exime de derechos, a petición del interesado, lo que salió de la UE y vuelve en el mismo estado dentro de tres años —, así que la clave es declararlo como devolución, no como envío con valor comercial nuevo; en la práctica, la etiqueta de devolución del vendedor y su courier llevan el trámite, y tu trabajo es guardar la factura y el justificante del despacho de importación andorrano, escribir «devolución de mercancía» referenciando el envío original y no estrenar el producto (el «mismo estado» es condición); recuperas el precio según la política de la tienda, el IVA español no lo pagaste o va dentro del reembolso, y por el IGI andorrano pagado a la entrada pregunta al courier o a la Duana si procede su devolución; el plazo real no son los tres años aduaneros sino la ventana de devolución de la tienda — y conviene revisar antes de comprar si acepta devoluciones desde Andorra.",
+   "inLanguage": "es",
+   "datePublished": "2026-10-23",
+   "dateModified": "2026-10-23",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/devolver-compras-online-desde-andorra/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/devolver-compras-online-desde-andorra/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Devolver compras online"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/devolver-compras-online-desde-andorra/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Tengo que pagar aduana otra vez cuando devuelvo un paquete a España?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No debería tocar pagar, pero no es automático: hay que declararlo bien. El derecho aduanero de la UE tiene previsto este caso en la figura de las mercancías de retorno (artículo 203 del Código Aduanero de la Unión): lo que salió del territorio aduanero de la UE y vuelve en el mismo estado dentro de un plazo de tres años queda exento de derechos de importación, a petición del interesado. La condición práctica es que el paquete de vuelta viaje identificado como devolución del envío original — no como una venta nueva con un valor comercial nuevo —, que es exactamente lo que hacen las etiquetas de devolución de las tiendas y sus couriers. Si la devolución viajara mal declarada, como envío ordinario, podría generar una liquidación que nadie debía pagar y un lío administrativo para deshacerla."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Me devuelven el IGI y la tramitación que pagué en Andorra al recibir el paquete?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Son dos cosas distintas. Los gastos de tramitación del courier son un servicio ya prestado: no se devuelven. En cuanto al IGI pagado en la importación andorrana, al devolver la mercancía deja de haber importación efectiva, así que pregunta al courier que gestionó la entrada — o directamente a la Duana andorrana — si procede solicitar su devolución y con qué justificantes; guarda en todo caso el recibo del despacho de importación y la prueba de la devolución (etiqueta, seguimiento, reembolso de la tienda). No podemos prometerte el resultado, porque depende del procedimiento andorrano y de los importes en juego: en compras pequeñas, el coste en tiempo puede superar al IGI; en una compra grande, la gestión merece la pena."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo declaro el paquete de vuelta para que no haya problemas?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La regla de oro: que el viaje de vuelta apunte al de ida. Usa la etiqueta y el procedimiento de devolución del propio vendedor siempre que exista — su courier ya sabe tramitar retornos y el paquete viaja vinculado al pedido original. Si gestionas tú el envío, la declaración debe decir «devolución de mercancía» (returned goods), con la referencia del pedido o del envío original y el mismo valor de la factura de compra — nunca un valor inventado ni un «regalo». Y lleva encima los dos papeles que prueban la historia: la factura de la compra y el justificante del despacho de importación en Andorra — la propia información para viajeros de la AEAT cita factura y documento de despacho como la prueba natural en las reimportaciones. Con esos dos documentos, la vuelta se sostiene sola."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Y si la tienda no acepta devoluciones desde Andorra?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Pasa, y conviene saberlo antes de comprar: algunas tiendas online solo ofrecen etiqueta de devolución dentro de la UE, y Andorra queda fuera de su circuito logístico. Las opciones, por orden: primero, negociar con el servicio de atención — muchas aceptan la devolución si el cliente asume el porte y la gestión, y el régimen de retorno hace que para ellas no haya coste aduanero —; segundo, gestionar tú el envío de vuelta con un courier, declarado como devolución según esta guía; tercero, si los portes se comen el reembolso (ropa barata, artículos voluminosos), aceptar la realidad económica y revender el producto en el mercado local. Para el futuro, el filtro barato: antes de comprar desde Andorra, mira la política de devoluciones internacionales — el mejor problema de devolución es el que se detecta en el carrito."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Devolver compras online</nav>
+    <h1>Devolver compras online desde Andorra: el viaje de vuelta del paquete</h1>
+    <div class="updated">Actualizado · Octubre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>La devolución <strong>no es un envío nuevo</strong>: es una <strong>mercancía de retorno</strong> — lo que salió de la UE y vuelve <strong>en el mismo estado</strong> dentro de <strong>3 años</strong> entra <strong>sin derechos</strong>, bien declarado como devolución (art. 203 CAU). Usa la <strong>etiqueta del vendedor</strong>, guarda <strong>factura y justificante de importación</strong> — y el plazo real es el de la tienda, no el de la aduana.</p>
+    </div>
+
+    <h2>El viaje de ida: qué pasó cuando compraste</h2>
+    <p>Para entender la vuelta hay que recordar la ida. Cuando compras online desde Andorra a una tienda española, el paquete hizo dos cosas: fue una <strong>exportación desde la UE</strong> — por eso la tienda no debía cobrarte IVA español, o te lo descuenta al facturar a Andorra — y una <strong>importación en Andorra</strong>, donde el courier te cobró el IGI y sus gastos de tramitación al entregarlo, como cuenta la guía de la <a href="/guias/enviar-cajas-mensajeria-andorra-espana/">paquetería</a>. El paquete que quieres devolver es, a ojos de la aduana, <strong>mercancía que salió de la UE hace poco</strong> — y eso es precisamente lo que hace fácil su regreso.</p>
+
+    <h2>El viaje de vuelta: mercancías de retorno</h2>
+    <p>El derecho aduanero de la UE tiene una figura pensada para esto: las <strong>mercancías de retorno</strong> (artículo 203 del Código Aduanero de la Unión). Lo que salió del territorio aduanero de la UE como mercancía de la Unión y <strong>vuelve dentro de 3 años en el mismo estado</strong> queda <strong>exento de derechos de importación</strong>, a petición del interesado. Las tres condiciones, en cristiano:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Condición</th><th>En tu devolución</th></tr>
+      <tr><td><strong>Salió de la UE</strong></td><td>Sí: tu compra fue una exportación española — la factura y el envío original lo prueban</td></tr>
+      <tr><td><strong>Vuelve en el mismo estado</strong></td><td>Sin estrenar, con etiquetas y embalaje: la condición de la aduana coincide con la de la tienda</td></tr>
+      <tr><td><strong>Dentro de 3 años</strong></td><td>De sobra: el plazo real que te limita es la ventana de devolución de la tienda (14–30 días habituales)</td></tr>
+    </table>
+    </div>
+    <p>La exención no es automática: el paquete debe viajar <strong>declarado como devolución</strong> — vinculado al envío de ida —, no como una venta nueva con un valor comercial nuevo. Esa diferencia de papeleo es toda la diferencia entre una vuelta limpia y una liquidación absurda que luego hay que pelear.</p>
+
+    <h2>Cómo se hace en la práctica</h2>
+    <ul class="checklist">
+      <li><strong>Usa el circuito del vendedor siempre que exista:</strong> su etiqueta de devolución y su courier ya saben tramitar retornos — el paquete viaja vinculado al pedido original y el régimen se aplica sin que tú toques un formulario.</li>
+      <li><strong>Si lo envías tú:</strong> declara «<strong>devolución de mercancía</strong>» con la referencia del pedido y <strong>el valor de la factura original</strong> — ni valor inventado, ni «regalo», ni «sin valor comercial» a secas.</li>
+      <li><strong>Guarda los dos papeles que prueban la historia:</strong> la <strong>factura de compra</strong> y el <strong>justificante del despacho de importación</strong> andorrano — la propia información de la AEAT para viajeros de Andorra cita factura y documento de despacho como prueba natural de las reimportaciones.</li>
+      <li><strong>No lo estrenes:</strong> el «mismo estado» es condición aduanera además de comercial. El producto usado ya no es una mercancía de retorno limpia — ni una devolución que la tienda acepte.</li>
+      <li><strong>Fotografía el contenido antes de precintar:</strong> ante cualquier discusión con tienda o courier, la foto del qué y el cómo se envió vale más que el relato.</li>
+    </ul>
+
+    <h2>El dinero: qué recuperas y qué no</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Concepto</th><th>¿Se recupera?</th></tr>
+      <tr><td>Precio del producto</td><td><strong>Sí</strong> — lo reembolsa la tienda según su política</td></tr>
+      <tr><td>IVA español</td><td>No lo pagaste (venta a Andorra = exportación) o va dentro del reembolso</td></tr>
+      <tr><td>IGI andorrano pagado a la entrada</td><td><strong>Pregunta</strong> al courier o a la Duana si procede su devolución — guarda el recibo del despacho; en importes pequeños puede no compensar la gestión</td></tr>
+      <tr><td>Gastos de tramitación del courier (ida)</td><td>No: el servicio ya se prestó</td></tr>
+      <tr><td>Portes de la devolución</td><td>Según la política de la tienda: gratis con su etiqueta, o a tu cargo</td></tr>
+    </table>
+    </div>
+
+    <h2>Cuándo se complica</h2>
+    <p>Tres situaciones concentran casi todos los disgustos. La <strong>tienda que no devuelve fuera de la UE</strong>: su circuito de etiquetas no llega a Andorra — negocia con atención al cliente (asumiendo tú el porte suele desbloquearse), gestiona tú el envío como devolución, o asume la reventa local si los portes se comen el reembolso. El <strong>plazo de la tienda vencido</strong>: la aduana te da tres años, el comercio te da semanas — la ventana real es la suya, y desde Andorra cada día de correo cuenta. Y el <strong>producto que ya no está «en el mismo estado»</strong>: estrenado, sin etiquetas o dañado, deja de ser tanto una devolución comercial como una mercancía de retorno limpia. El filtro que evita los tres: <strong>mirar la política de devoluciones internacionales antes de comprar</strong> — el mejor problema es el que se queda en el carrito.</p>
+
+    <h2>Los errores del paquete de vuelta</h2>
+    <ul>
+      <li><strong>Declararlo como envío nuevo</strong> con cualquier valor: genera liquidaciones que nadie debía pagar y se deshacen peor de lo que se crean.</li>
+      <li><strong>Escribir «regalo» o «sin valor»:</strong> ni es verdad ni ayuda — la figura correcta existe y se llama devolución.</li>
+      <li><strong>Tirar el justificante del despacho de ida:</strong> es la mitad de tu prueba, y la que nadie puede reimprimirte.</li>
+      <li><strong>Agotar el plazo de la tienda</strong> esperando: la devolución transfronteriza necesita margen de correo — decídela pronto.</li>
+      <li><strong>Devolver lo que no compensa:</strong> si el porte supera al reembolso, la reventa local gana — es aritmética, no derrota.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>¿Papeles de un envío que se te atraganta?</h2>
+      <p>Preparamos la documentación de tu envío o devolución — declaración correcta, valores coherentes con la factura y el dosier que el courier y la aduana esperan ver. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Tengo que pagar aduana otra vez cuando devuelvo un paquete a España?</summary>
+      <p>No debería tocar pagar, pero no es automático: hay que declararlo bien. El derecho aduanero de la UE tiene previsto este caso en la figura de las mercancías de retorno (artículo 203 del Código Aduanero de la Unión): lo que salió del territorio aduanero de la UE y vuelve en el mismo estado dentro de un plazo de tres años queda exento de derechos de importación, a petición del interesado. La condición práctica es que el paquete de vuelta viaje identificado como devolución del envío original — no como una venta nueva con un valor comercial nuevo —, que es exactamente lo que hacen las etiquetas de devolución de las tiendas y sus couriers. Si la devolución viajara mal declarada, como envío ordinario, podría generar una liquidación que nadie debía pagar y un lío administrativo para deshacerla.</p>
+    </details>
+    <details>
+      <summary>¿Me devuelven el IGI y la tramitación que pagué en Andorra al recibir el paquete?</summary>
+      <p>Son dos cosas distintas. Los gastos de tramitación del courier son un servicio ya prestado: no se devuelven. En cuanto al IGI pagado en la importación andorrana, al devolver la mercancía deja de haber importación efectiva, así que pregunta al courier que gestionó la entrada — o directamente a la Duana andorrana — si procede solicitar su devolución y con qué justificantes; guarda en todo caso el recibo del despacho de importación y la prueba de la devolución (etiqueta, seguimiento, reembolso de la tienda). No podemos prometerte el resultado, porque depende del procedimiento andorrano y de los importes en juego: en compras pequeñas, el coste en tiempo puede superar al IGI; en una compra grande, la gestión merece la pena.</p>
+    </details>
+    <details>
+      <summary>¿Cómo declaro el paquete de vuelta para que no haya problemas?</summary>
+      <p>La regla de oro: que el viaje de vuelta apunte al de ida. Usa la etiqueta y el procedimiento de devolución del propio vendedor siempre que exista — su courier ya sabe tramitar retornos y el paquete viaja vinculado al pedido original. Si gestionas tú el envío, la declaración debe decir «devolución de mercancía» (returned goods), con la referencia del pedido o del envío original y el mismo valor de la factura de compra — nunca un valor inventado ni un «regalo». Y lleva encima los dos papeles que prueban la historia: la factura de la compra y el justificante del despacho de importación en Andorra — la propia información para viajeros de la AEAT cita factura y documento de despacho como la prueba natural en las reimportaciones. Con esos dos documentos, la vuelta se sostiene sola.</p>
+    </details>
+    <details>
+      <summary>¿Y si la tienda no acepta devoluciones desde Andorra?</summary>
+      <p>Pasa, y conviene saberlo antes de comprar: algunas tiendas online solo ofrecen etiqueta de devolución dentro de la UE, y Andorra queda fuera de su circuito logístico. Las opciones, por orden: primero, negociar con el servicio de atención — muchas aceptan la devolución si el cliente asume el porte y la gestión, y el régimen de retorno hace que para ellas no haya coste aduanero —; segundo, gestionar tú el envío de vuelta con un courier, declarado como devolución según esta guía; tercero, si los portes se comen el reembolso (ropa barata, artículos voluminosos), aceptar la realidad económica y revender el producto en el mercado local. Para el futuro, el filtro barato: antes de comprar desde Andorra, mira la política de devoluciones internacionales — el mejor problema de devolución es el que se detecta en el carrito.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/enviar-cajas-mensajeria-andorra-espana/">Enviar cajas por mensajería: declaración y valor</a></li>
+        <li><a href="/guias/fin-franquicia-150-euros-paqueteria/">El fin de la franquicia de 150 € en paquetería</a></li>
+        <li><a href="/guias/aduana-retiene-envio-que-hacer/">La aduana retiene tu envío: qué hacer</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos agentes de aduanas: el régimen de mercancías de retorno tiene condiciones fijadas por la normativa vigente, la devolución del IGI andorrano depende del procedimiento de la Duana, y las políticas de devolución las fija cada comercio — confirma los casos con importes relevantes con un agente o con las administraciones.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
