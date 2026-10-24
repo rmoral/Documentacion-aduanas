@@ -66,7 +66,7 @@ buscan los clientes, después la cola larga.
 | 55 | Medicamentos y botiquín en la mudanza: cómo viajan sin problemas | medicamentos-mudanza-andorra-espana | llevar medicamentos frontera Andorra | publicado (2026-10-21) |
 | 56 | Donar en vez de enviar: cajas para ONG y familiares, bien declaradas | donar-enviar-ong-familiares | donar muebles enviar España | publicado (2026-10-22) |
 | 57 | Devolver compras online desde Andorra: el viaje de vuelta del paquete | devolver-compras-online-desde-andorra | devolver paquete desde Andorra | publicado (2026-10-23) |
-| 58 | La mudanza del pequeño negocio: stock y equipamiento comercial no son ajuar | mudanza-negocio-stock-comercial | trasladar negocio Andorra España aduana | pendiente |
+| 58 | La mudanza del pequeño negocio: stock y equipamiento comercial no son ajuar | mudanza-negocio-stock-comercial | trasladar negocio Andorra España aduana | publicado (2026-10-24) |
 | 59 | NIE, NIF y padrón: los números que te pedirá todo el papeleo en destino | nie-nif-padron-mudanza-espana | NIE padrón mudanza España | pendiente |
 | 60 | Checklist de llegada a España: los trámites de la primera semana | checklist-llegada-espana | trámites llegada España mudanza | pendiente |
 
