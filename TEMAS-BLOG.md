@@ -68,7 +68,7 @@ buscan los clientes, después la cola larga.
 | 57 | Devolver compras online desde Andorra: el viaje de vuelta del paquete | devolver-compras-online-desde-andorra | devolver paquete desde Andorra | publicado (2026-10-23) |
 | 58 | La mudanza del pequeño negocio: stock y equipamiento comercial no son ajuar | mudanza-negocio-stock-comercial | trasladar negocio Andorra España aduana | publicado (2026-10-24) |
 | 59 | NIE, NIF y padrón: los números que te pedirá todo el papeleo en destino | nie-nif-padron-mudanza-espana | NIE padrón mudanza España | publicado (2026-10-25) |
-| 60 | Checklist de llegada a España: los trámites de la primera semana | checklist-llegada-espana | trámites llegada España mudanza | pendiente |
+| 60 | Checklist de llegada a España: los trámites de la primera semana | checklist-llegada-espana | trámites llegada España mudanza | publicado (2026-10-26) |
 
 ## Propuestas pendientes de aprobación
 
