@@ -77,8 +77,22 @@ agota (o cuando detecta una oportunidad clara), con una línea de
 justificación. **No se publican hasta que el propietario las mueva a la tabla
 de aprobados.**
 
-*(vacío — las 8 propuestas del 2026-09-24 y 2 temas de actualidad se movieron a la
-tabla de aprobados el 2026-09-26 por indicación del propietario, como temas 31–40)*
+Propuestas añadidas el 2026-10-27 (backlog agotado tras publicar el tema 60):
+
+| # | Título propuesto | Slug propuesto | Justificación |
+|---|------------------|----------------|---------------|
+| P1 | La tasa de tramitación de paquetería del Reg. 2026/382: qué se sabe | tasa-tramitacion-paqueteria-2026 | Actualidad: el acto delegado estaba previsto antes del 1-11-2026 — verificar estado al redactar; actualiza nuestra guía del fin de la franquicia de 150 € |
+| P2 | Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas | mudanza-invierno-farga-de-moles | Estacional (nov–mar): complementa la guía de temporada con el ángulo invernal práctico |
+| P3 | La bodega particular: por qué el vino no entra en la franquicia de mudanza | vino-bodega-mudanza-andorra-espana | Las franquicias excluyen alcohol y tabaco — verificar la exclusión en el Reg. 1186/2009 y encajar los límites de viajero ya verificados |
+| P4 | Instrumentos musicales: del violín de valor al piano de pared | enviar-instrumentos-musicales-andorra | Objeto de valor + transporte especial + CMR; búsqueda recurrente entre músicos y familias |
+| P5 | Bombonas, aerosoles y gasolina: lo que no puede subir al camión | mercancias-peligrosas-hogar-mudanza | Compañera de la guía de baterías: mercancías peligrosas domésticas, en cualitativo |
+| P6 | La ruta francesa: el Pas de la Casa y los envíos Andorra–Francia | aduana-pas-de-la-casa-francia | Segunda frontera del país, sin cubrir; misma lógica UE con matices franceses — verificar equivalencias |
+| P7 | El calendario maestro: planificar la mudanza con 3 meses | calendario-mudanza-andorra-espana | Evergreen de síntesis: ordena cronológicamente las 63 guías existentes con enlaces internos |
+| P8 | Marfil, pieles y trofeos antiguos: CITES en la mudanza | cites-mudanza-andorra-espana | Nicho real (pianos con teclas de marfil, trofeos heredados) — requiere verificación CITES/UE antes de redactar |
+
+*(las 8 propuestas del 2026-09-24 y 2 temas de actualidad se movieron a la
+tabla de aprobados el 2026-09-26 por indicación del propietario, como temas 31–40;
+los temas 41–60 se aprobaron el 2026-09-26 y quedaron publicados el 2026-10-26)*
 
 ## Notas de redacción para los temas 31–40 (actualidad detectada el 2026-09-26)
 
