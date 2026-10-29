@@ -69,7 +69,7 @@ buscan los clientes, después la cola larga.
 | 58 | La mudanza del pequeño negocio: stock y equipamiento comercial no son ajuar | mudanza-negocio-stock-comercial | trasladar negocio Andorra España aduana | publicado (2026-10-24) |
 | 59 | NIE, NIF y padrón: los números que te pedirá todo el papeleo en destino | nie-nif-padron-mudanza-espana | NIE padrón mudanza España | publicado (2026-10-25) |
 | 60 | Checklist de llegada a España: los trámites de la primera semana | checklist-llegada-espana | trámites llegada España mudanza | publicado (2026-10-26) |
-| 61 | La tasa de tramitación de paquetería del Reg. 2026/382: qué se sabe | tasa-tramitacion-paqueteria-2026 | tasa tramitación paquetes aduana | pendiente |
+| 61 | La tasa de tramitación de 2 € en la paquetería: qué se sabe y a quién afecta | tasa-tramitacion-paqueteria-2026 | tasa tramitación paquetes aduana | publicado (2026-10-29) |
 | 62 | Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas | mudanza-invierno-farga-de-moles | mudanza invierno Andorra nieve | pendiente |
 | 63 | La bodega particular: por qué el vino no entra en la franquicia de mudanza | vino-bodega-mudanza-andorra-espana | llevar vino Andorra España mudanza | pendiente |
 | 64 | Instrumentos musicales: del violín de valor al piano de pared | enviar-instrumentos-musicales-andorra | enviar piano instrumentos Andorra España | pendiente |
