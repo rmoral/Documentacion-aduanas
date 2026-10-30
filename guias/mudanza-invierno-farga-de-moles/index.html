@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas</title>
+<meta name="description" content="El invierno no cambia la aduana — mismo expediente, menos cola — pero sí la carretera: la salida de Andorra es montaña, con equipamiento de invierno cuando se señaliza y los camiones como primeros restringidos si nieva. Cómo pactar una fecha flexible con el transportista, qué sufre dentro del camión con el frío (electrónica, líquidos, madera) y el plan del día del cruce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/mudanza-invierno-farga-de-moles/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/mudanza-invierno-farga-de-moles/">
+<meta property="og:title" content="Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas">
+<meta property="og:description" content="La aduana no cambia; la carretera sí. Fecha flexible con el transportista, frío controlado dentro del camión y el estado de la vía consultado en los canales oficiales.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-10-30">
+<meta property="article:modified_time" content="2026-10-30">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas">
+<meta name="twitter:description" content="La aduana no cambia; la carretera sí. Fecha flexible con el transportista, frío controlado dentro del camión y el estado de la vía consultado en los canales oficiales.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/mudanza-invierno-farga-de-moles/#article",
+   "headline": "Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas",
+   "description": "Mudarse de Andorra a España entre noviembre y marzo: la aduana funciona igual — mismo expediente, y con menos cola que en temporada alta — pero la salida del país es carretera de montaña, con equipamiento de invierno obligatorio cuando la señalización lo indica y los camiones como primeros afectados por las restricciones cuando nieva; por eso la fecha de una mudanza de invierno se pacta flexible, con cláusula de reprogramación por meteorología en el presupuesto, evitando los picos de tráfico de la temporada de esquí; dentro del camión, el frío castiga la electrónica (condensación: aclimatar antes de enchufar), congela líquidos que no merecen el viaje (pinturas, limpiadores, conservas abiertas) y estresa la madera y los instrumentos con los cambios bruscos; el día del cruce: salir temprano, documentación del expediente a mano en el coche, depósito lleno, kit de invierno, y el estado de las carreteras consultado la víspera y la misma mañana en los canales oficiales de tráfico de Andorra y de la DGT — la ventaja de la temporada baja son los precios y la disponibilidad; su peaje, la flexibilidad.",
+   "inLanguage": "es",
+   "datePublished": "2026-10-30",
+   "dateModified": "2026-10-30",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/mudanza-invierno-farga-de-moles/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/mudanza-invierno-farga-de-moles/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Mudanza en invierno"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/mudanza-invierno-farga-de-moles/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Se cierra la frontera de La Farga de Moles por nieve?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La aduana no cierra por calendario, pero la carretera que lleva a ella es de montaña y puede sufrir restricciones temporales cuando la meteorología aprieta: equipamiento de invierno obligatorio cuando la señalización lo indica, limitaciones a vehículos pesados e incluso cortes puntuales en episodios fuertes. No hay una regla fija de cuándo ni cuánto — depende de cada episodio —, así que la única fuente válida son los canales oficiales de estado del tráfico: los del Govern d'Andorra para el tramo andorrano y la DGT para el español. Consúltalos la víspera y la misma mañana del viaje, y recuerda que los camiones son los primeros afectados por cualquier restricción: tu transportista lo sabe y por eso las mudanzas de invierno se pactan con margen."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Necesito cadenas para la mudanza si nieva?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Hay que separar los dos vehículos del día. El camión es asunto del transportista profesional: su equipamiento de invierno, sus cadenas y su decisión de salir o reprogramar forman parte del servicio que contratas — un motivo más para elegir transportista con experiencia en la ruta andorrana y no al más barato sin referencias. Tu coche, en cambio, es cosa tuya: en invierno cruza con neumáticos adecuados o cadenas en el maletero (obligatorios cuando la señalización lo exige), depósito lleno, mantas y agua, y los documentos de la mudanza a mano — porque el expediente viaja contigo, no en el camión. Si no estás habituado a conducir con nieve, valora cruzar tú un día distinto al del camión."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Es mala idea mudarse en invierno de Andorra a España?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Al contrario en casi todo: el invierno es temporada baja de mudanzas, lo que suele traducirse en mejores precios, más disponibilidad de fechas y transportistas menos saturados que en los picos de mayo-septiembre — y la aduana con menos cola. El peaje es uno solo: la meteorología manda, así que la fecha se pacta flexible (una ventana de días mejor que un día cerrado, y una cláusula de reprogramación por causa meteorológica en el presupuesto, sin penalización). Un matiz de agenda local: evita los grandes fines de semana y puentes de la temporada de esquí, cuando el tráfico hacia Andorra se multiplica y los accesos se cargan — entre semana y fuera de puentes, el invierno es un aliado."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué cosas sufren con el frío dentro del camión?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Tres familias. La electrónica no se lleva mal con el frío pero sí con el cambio brusco: al pasar de un camión helado a un piso caliente se condensa humedad en su interior — deja televisores, ordenadores y equipos aclimatarse unas horas antes de enchufarlos. Los líquidos congelables directamente no merecen el viaje en invierno: pinturas, limpiadores, aerosoles ya restringidos de por sí, conservas abiertas y botellas que el hielo puede reventar dentro de una caja — consúmelos o descártalos en la criba. Y la madera maciza y los instrumentos musicales acusan los cambios bruscos de temperatura y humedad: embalaje serio, y para piezas valiosas, transporte especializado. Las plantas, como ya contamos, tienen su propio capítulo — y el invierno solo añade motivos para no subirlas al camión."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Mudanza en invierno</nav>
+    <h1>Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas</h1>
+    <div class="updated">Actualizado · Octubre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El invierno <strong>no cambia la aduana</strong> — mismo expediente, menos cola — pero <strong>sí la carretera</strong>: la salida de Andorra es montaña, con <strong>equipamiento de invierno cuando se señaliza</strong> y los <strong>camiones como primeros restringidos</strong> si nieva. La clave: <strong>fecha flexible</strong> pactada con el transportista, frío controlado dentro del camión, y el estado de la vía consultado en los <strong>canales oficiales</strong> la víspera y la mañana del cruce.</p>
+    </div>
+
+    <h2>Lo que no cambia: la aduana</h2>
+    <p>Empecemos por desmontar el miedo principal: <strong>el expediente de invierno es idéntico al de julio</strong>. Mismo <a href="/guias/packing-list-mudanza/">inventario</a>, misma <a href="/guias/franquicia-traslado-residencia/">franquicia</a> o IVA, mismo <a href="/guias/que-es-el-dua/">DUA</a>, mismos <a href="/guias/documentos-aduana-farga-de-moles/">documentos en La Farga de Moles</a>. Es más: como contamos en la guía de <a href="/guias/temporada-mudanzas-andorra-espana/">temporadas</a>, el invierno es <strong>temporada baja</strong> de mudanzas — menos camiones en el paso, menos espera en un eventual <a href="/guias/preguntas-aduana-farga-de-moles/">reconocimiento</a>, y transportistas con agenda y precios más amables que en los picos de verano. Si tu calendario lo permite, mudarse en invierno es una buena jugada económica. Su único peaje es meteorológico — y se gestiona.</p>
+
+    <h2>Lo que sí cambia: la carretera</h2>
+    <p>La salida natural de Andorra hacia España es <strong>carretera de montaña</strong>, y entre noviembre y marzo eso significa tres realidades que tu plan debe asumir:</p>
+    <ul class="checklist">
+      <li><strong>Equipamiento de invierno cuando se señaliza:</strong> en episodios de nieve, la obligación de neumáticos de invierno o cadenas se activa por señalización — para todos los vehículos, el tuyo incluido.</li>
+      <li><strong>Los camiones, primeros en las restricciones:</strong> cuando la vía se complica, los pesados son los primeros detenidos o desviados. Tu mudanza viaja en uno: si nieva fuerte, el camión no sale — y eso es una decisión correcta, no un incumplimiento.</li>
+      <li><strong>Los cortes existen y no tienen calendario:</strong> pueden ser horas o un día entero, según el episodio. Nadie serio te garantizará una fecha cerrada en enero «pase lo que pase» — desconfía de quien lo haga.</li>
+    </ul>
+    <div class="note-box">
+      <p><strong>La única fuente válida del estado de la carretera</strong> son los canales oficiales de tráfico: los del <strong>Govern d'Andorra</strong> (servicio de movilidad) para el tramo andorrano y la <strong>DGT</strong> para el español. Consúltalos al planificar, la víspera y la misma mañana — no los foros ni los grupos de la red social de turno.</p>
+    </div>
+
+    <h2>La fecha: flexible por contrato</h2>
+    <p>La herramienta que convierte el invierno de riesgo en rutina es el <a href="/guias/leer-presupuesto-mudanza/">presupuesto</a> bien pactado:</p>
+    <ul class="checklist">
+      <li><strong>Ventana, no día:</strong> pacta la mudanza en una horquilla («semana del 19») mejor que en una fecha cerrada, con el día concreto confirmado según previsión.</li>
+      <li><strong>Cláusula de reprogramación meteorológica:</strong> que el presupuesto diga por escrito que el aplazamiento por nieve o restricciones no genera penalización para ninguna de las partes, y cómo se fija la nueva fecha.</li>
+      <li><strong>Margen en el calendario de las llaves:</strong> no firmes la entrega del piso de Andorra para el día siguiente al de la mudanza — en invierno, el colchón de dos o tres días no es paranoia, es diseño.</li>
+      <li><strong>Evita los picos del esquí:</strong> los grandes fines de semana y puentes de la temporada cargan los accesos a Andorra de tráfico turístico. Entre semana, el invierno es una carretera tranquila.</li>
+    </ul>
+
+    <h2>El frío dentro del camión</h2>
+    <p>Una caja de mudanzas no es una cámara frigorífica, pero una noche a bajo cero en un camión o en un <a href="/guias/guardamuebles-mudanza-andorra-espana/">guardamuebles</a> sin climatizar deja huella en tres familias de objetos:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Qué</th><th>El riesgo</th><th>La solución</th></tr>
+      <tr><td><a href="/guias/enviar-electrodomesticos-andorra-espana/">Electrónica</a></td><td>Condensación al pasar de frío a calor</td><td><strong>Aclimatar unas horas</strong> antes de enchufar en destino</td></tr>
+      <tr><td>Líquidos congelables (pinturas, limpiadores, conservas abiertas, botellas)</td><td>Hielan, revientan y arruinan la caja entera</td><td><strong>No mudarlos en invierno:</strong> consumir, regalar o descartar en la criba</td></tr>
+      <tr><td>Madera maciza e instrumentos</td><td>Cambios bruscos de temperatura y humedad: grietas, destemple</td><td>Embalaje serio; para piezas valiosas, transporte especializado</td></tr>
+      <tr><td>Lo que ya tenía capítulo propio</td><td>—</td><td>Las <a href="/guias/enviar-plantas-mudanza-andorra-espana/">plantas</a> no suben al camión (y menos helado); las <a href="/guias/enviar-baterias-litio-andorra-espana/">baterías</a>, declaradas y mejor contigo</td></tr>
+    </table>
+    </div>
+
+    <h2>El día del cruce, versión invierno</h2>
+    <ul class="checklist">
+      <li><strong>Sal temprano:</strong> las horas centrales del día son las mejores de la carretera de montaña; los imprevistos se gestionan mejor con luz.</li>
+      <li><strong>El expediente, contigo:</strong> como siempre — inventario, declaración y DUA a mano en tu coche, no en el bulto 37. En invierno, además, el camión y tú podéis acabar cruzando a horas distintas.</li>
+      <li><strong>Tu coche, preparado:</strong> neumáticos o cadenas, depósito lleno, mantas, agua y el móvil cargado. Si no sueles conducir con nieve, plantéate cruzar un día distinto al del camión y recibir la descarga ya instalado.</li>
+      <li><strong>Última consulta oficial</strong> del estado de las vías la víspera por la noche y la mañana de la salida — y el teléfono del transportista a mano para decidir juntos.</li>
+    </ul>
+
+    <h2>Los errores de la mudanza de invierno</h2>
+    <ul>
+      <li><strong>Fecha cerrada sin cláusula meteorológica:</strong> la discusión por la penalización llega justo el día que nieva.</li>
+      <li><strong>Entregar las llaves del piso al día siguiente del camión:</strong> sin colchón, cualquier aplazamiento se vuelve crisis.</li>
+      <li><strong>Mudar la caja de pinturas y limpiadores:</strong> en invierno ni siquiera llegan mal — llegan reventados.</li>
+      <li><strong>Enchufar la tele recién bajada del camión helado:</strong> la condensación no perdona; horas de aclimatación.</li>
+      <li><strong>Mirar el tiempo en el grupo de vecinos en vez de en los canales oficiales:</strong> la decisión de salir se toma con la información de quien gestiona la vía.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>El expediente listo, nieve o sol</h2>
+      <p>Preparamos tu expediente aduanero completo con antelación, para que la única variable del día del cruce sea la carretera — nunca los papeles. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Se cierra la frontera de La Farga de Moles por nieve?</summary>
+      <p>La aduana no cierra por calendario, pero la carretera que lleva a ella es de montaña y puede sufrir restricciones temporales cuando la meteorología aprieta: equipamiento de invierno obligatorio cuando la señalización lo indica, limitaciones a vehículos pesados e incluso cortes puntuales en episodios fuertes. No hay una regla fija de cuándo ni cuánto — depende de cada episodio —, así que la única fuente válida son los canales oficiales de estado del tráfico: los del Govern d'Andorra para el tramo andorrano y la DGT para el español. Consúltalos la víspera y la misma mañana del viaje, y recuerda que los camiones son los primeros afectados por cualquier restricción: tu transportista lo sabe y por eso las mudanzas de invierno se pactan con margen.</p>
+    </details>
+    <details>
+      <summary>¿Necesito cadenas para la mudanza si nieva?</summary>
+      <p>Hay que separar los dos vehículos del día. El camión es asunto del transportista profesional: su equipamiento de invierno, sus cadenas y su decisión de salir o reprogramar forman parte del servicio que contratas — un motivo más para elegir <a href="/guias/transportistas-andorra-espana/">transportista con experiencia en la ruta andorrana</a> y no al más barato sin referencias. Tu coche, en cambio, es cosa tuya: en invierno cruza con neumáticos adecuados o cadenas en el maletero (obligatorios cuando la señalización lo exige), depósito lleno, mantas y agua, y los documentos de la mudanza a mano — porque el expediente viaja contigo, no en el camión. Si no estás habituado a conducir con nieve, valora cruzar tú un día distinto al del camión.</p>
+    </details>
+    <details>
+      <summary>¿Es mala idea mudarse en invierno de Andorra a España?</summary>
+      <p>Al contrario en casi todo: el invierno es temporada baja de mudanzas, lo que suele traducirse en mejores precios, más disponibilidad de fechas y transportistas menos saturados que en los picos de mayo-septiembre — y la aduana con menos cola, como cuenta la <a href="/guias/temporada-mudanzas-andorra-espana/">guía de temporadas</a>. El peaje es uno solo: la meteorología manda, así que la fecha se pacta flexible (una ventana de días mejor que un día cerrado, y una cláusula de reprogramación por causa meteorológica en el presupuesto, sin penalización). Un matiz de agenda local: evita los grandes fines de semana y puentes de la temporada de esquí, cuando el tráfico hacia Andorra se multiplica y los accesos se cargan — entre semana y fuera de puentes, el invierno es un aliado.</p>
+    </details>
+    <details>
+      <summary>¿Qué cosas sufren con el frío dentro del camión?</summary>
+      <p>Tres familias. La electrónica no se lleva mal con el frío pero sí con el cambio brusco: al pasar de un camión helado a un piso caliente se condensa humedad en su interior — deja televisores, ordenadores y equipos aclimatarse unas horas antes de enchufarlos. Los líquidos congelables directamente no merecen el viaje en invierno: pinturas, limpiadores, aerosoles ya restringidos de por sí, conservas abiertas y botellas que el hielo puede reventar dentro de una caja — consúmelos o descártalos en la <a href="/guias/vaciar-piso-andorra-vender-donar/">criba</a>. Y la madera maciza y los instrumentos musicales acusan los cambios bruscos de temperatura y humedad: embalaje serio, y para piezas valiosas, transporte especializado. Las <a href="/guias/enviar-plantas-mudanza-andorra-espana/">plantas</a>, como ya contamos, tienen su propio capítulo — y el invierno solo añade motivos para no subirlas al camión.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/temporada-mudanzas-andorra-espana/">La temporada de mudanzas: cuándo conviene</a></li>
+        <li><a href="/guias/preguntas-aduana-farga-de-moles/">Qué te preguntan en La Farga de Moles</a></li>
+        <li><a href="/guias/leer-presupuesto-mudanza/">Cómo leer un presupuesto de mudanza</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos transportistas ni autoridad de tráfico: las restricciones de circulación y el equipamiento obligatorio los fijan en cada momento los gestores de la vía — consulta siempre los canales oficiales del Govern d'Andorra y de la DGT antes de viajar.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
