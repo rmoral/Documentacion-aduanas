@@ -71,7 +71,7 @@ buscan los clientes, después la cola larga.
 | 60 | Checklist de llegada a España: los trámites de la primera semana | checklist-llegada-espana | trámites llegada España mudanza | publicado (2026-10-26) |
 | 61 | La tasa de tramitación de 2 € en la paquetería: qué se sabe y a quién afecta | tasa-tramitacion-paqueteria-2026 | tasa tramitación paquetes aduana | publicado (2026-10-29) |
 | 62 | Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas | mudanza-invierno-farga-de-moles | mudanza invierno Andorra nieve | publicado (2026-10-30) |
-| 63 | La bodega particular: por qué el vino no entra en la franquicia de mudanza | vino-bodega-mudanza-andorra-espana | llevar vino Andorra España mudanza | pendiente |
+| 63 | La bodega particular: por qué el vino no entra en la franquicia de mudanza | vino-bodega-mudanza-andorra-espana | llevar vino Andorra España mudanza | publicado (2026-10-31) |
 | 64 | Instrumentos musicales: del violín de valor al piano de pared | enviar-instrumentos-musicales-andorra | enviar piano instrumentos Andorra España | pendiente |
 | 65 | Bombonas, aerosoles y gasolina: lo que no puede subir al camión | mercancias-peligrosas-hogar-mudanza | mercancías peligrosas mudanza | pendiente |
 | 66 | La ruta francesa: el Pas de la Casa y los envíos Andorra–Francia | aduana-pas-de-la-casa-francia | aduana Pas de la Casa Francia | pendiente |
