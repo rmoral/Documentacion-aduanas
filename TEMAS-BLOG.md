@@ -73,7 +73,7 @@ buscan los clientes, después la cola larga.
 | 62 | Mudanza en invierno por La Farga de Moles: nieve, cadenas y fechas | mudanza-invierno-farga-de-moles | mudanza invierno Andorra nieve | publicado (2026-10-30) |
 | 63 | La bodega particular: por qué el vino no entra en la franquicia de mudanza | vino-bodega-mudanza-andorra-espana | llevar vino Andorra España mudanza | publicado (2026-10-31) |
 | 64 | Instrumentos musicales: del violín de valor al piano de pared | enviar-instrumentos-musicales-andorra | enviar piano instrumentos Andorra España | publicado (2026-11-01) |
-| 65 | Bombonas, aerosoles y gasolina: lo que no puede subir al camión | mercancias-peligrosas-hogar-mudanza | mercancías peligrosas mudanza | pendiente |
+| 65 | Bombonas, aerosoles y gasolina: lo que no puede subir al camión | mercancias-peligrosas-hogar-mudanza | mercancías peligrosas mudanza | publicado (2026-11-02) |
 | 66 | La ruta francesa: el Pas de la Casa y los envíos Andorra–Francia | aduana-pas-de-la-casa-francia | aduana Pas de la Casa Francia | pendiente |
 | 67 | El calendario maestro: planificar la mudanza con 3 meses | calendario-mudanza-andorra-espana | planificar mudanza Andorra España | pendiente |
 | 68 | Marfil, pieles y trofeos antiguos: CITES en la mudanza | cites-mudanza-andorra-espana | CITES marfil mudanza España | pendiente |
