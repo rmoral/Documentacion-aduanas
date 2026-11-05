@@ -77,6 +77,14 @@ buscan los clientes, después la cola larga.
 | 66 | La ruta francesa: el Pas de la Casa y los envíos Andorra–Francia | aduana-pas-de-la-casa-francia | aduana Pas de la Casa Francia | publicado (2026-11-03) |
 | 67 | El calendario maestro: planificar la mudanza con 3 meses | calendario-mudanza-andorra-espana | planificar mudanza Andorra España | publicado (2026-11-04) |
 | 68 | Marfil, pieles y trofeos antiguos: CITES en la mudanza | cites-mudanza-andorra-espana | CITES marfil mudanza España | publicado (2026-11-05) |
+| 69 | Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas | black-friday-compras-andorra-aduana | Black Friday Andorra aduana compras | pendiente |
+| 70 | Material de esquí comprado en Andorra: qué pasa al cruzar la frontera | material-esqui-andorra-frontera | comprar esquís Andorra pasar frontera | pendiente |
+| 71 | Los paquetes de Navidad: regalos a España con calendario y sin aduanas de más | paquetes-navidad-andorra-espana | enviar regalos Navidad Andorra España | pendiente |
+| 72 | El trastero que se quedó en Andorra: tus cosas a caballo entre dos países | trastero-andorra-despues-mudanza | dejar cosas Andorra después mudanza | pendiente |
+| 73 | Mudarse desde un piso amueblado: qué es tuyo, qué es del casero y cómo probarlo | mudanza-piso-amueblado-alquiler | mudanza piso amueblado alquiler Andorra | pendiente |
+| 74 | Cunas, sillas de coche y juguetes: la mudanza con bebés y niños | mudanza-bebes-ninos-andorra-espana | mudanza bebé niños Andorra España | pendiente |
+| 75 | Jubilarse en España tras trabajar en Andorra: pensión, CASS y la mudanza | jubilacion-pension-cass-mudanza-espana | pensión CASS jubilación España Andorra | pendiente |
+| 76 | La renta del año de la mudanza: qué documentos preparar desde ya | renta-ano-mudanza-andorra-espana | declaración renta mudanza Andorra España | pendiente |
 
 ## Propuestas pendientes de aprobación
 
@@ -90,7 +98,27 @@ de aprobados.**
 31–40 aprobadas el 2026-09-26, 41–60 aprobadas el 2026-09-26 y publicadas hasta
 el 2026-10-26)*
 
-## Notas de redacción para los temas 61–68 (aprobados el 2026-10-28)
+## Notas de redacción para los temas 69–76 (aprobados el 2026-11-05 por indicación del propietario)
+
+- **Estacionales con fecha objetivo:** #69 (Black Friday, publicar cuanto antes —
+  el pico es el 27-11; síntesis sobre franquicias de viajero y paquetería ya
+  verificadas, con el ángulo «compra presencial vs online» y los cargos de 3 €/2 €),
+  #70 (temporada de esquí: franquicia de viajero 900 €, material usado vs nuevo,
+  síntesis), #71 (Navidad: regalo ≤45 € con sublímites, calendario de envíos de
+  diciembre, síntesis).
+- **Requieren verificación previa (WebSearch) al redactar:** #75 (convenio de
+  seguridad social España–Andorra y totalización de periodos CASS para la
+  pensión — solo el marco verificable; detalle a INSS/CASS y asesor), #76
+  (documentación para la renta del año del cambio — enfoque divulgativo sobre
+  la guía de residencia fiscal ya publicada, sin asesorar: qué papeles guardar
+  y remisión al asesor fiscal; verificar solo si se citan plazos de campaña).
+- **Síntesis sobre el marco ya verificado (sin datos nuevos):** #72 (el
+  guardamuebles en origen y los 12 meses de tandas de la franquicia; qué pasa
+  si se exceden: importación ordinaria con IVA sobre valor residual), #73
+  (inventario propio vs del casero: el contrato de alquiler amueblado y las
+  fotos como prueba; solo viaja lo tuyo), #74 (ajuar infantil usado como el
+  resto; sillas de coche: homologación europea común, en cualitativo; juguetes
+  con pilas/baterías → remitir a la guía de baterías).
 
 - **Requieren verificación previa (WebSearch) al redactar:** #61 (estado del acto
   delegado de la tasa de tramitación del Reg. 2026/382, previsto antes del
