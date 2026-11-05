@@ -76,7 +76,7 @@ buscan los clientes, después la cola larga.
 | 65 | Bombonas, aerosoles y gasolina: lo que no puede subir al camión | mercancias-peligrosas-hogar-mudanza | mercancías peligrosas mudanza | publicado (2026-11-02) |
 | 66 | La ruta francesa: el Pas de la Casa y los envíos Andorra–Francia | aduana-pas-de-la-casa-francia | aduana Pas de la Casa Francia | publicado (2026-11-03) |
 | 67 | El calendario maestro: planificar la mudanza con 3 meses | calendario-mudanza-andorra-espana | planificar mudanza Andorra España | publicado (2026-11-04) |
-| 68 | Marfil, pieles y trofeos antiguos: CITES en la mudanza | cites-mudanza-andorra-espana | CITES marfil mudanza España | pendiente |
+| 68 | Marfil, pieles y trofeos antiguos: CITES en la mudanza | cites-mudanza-andorra-espana | CITES marfil mudanza España | publicado (2026-11-05) |
 
 ## Propuestas pendientes de aprobación
 
