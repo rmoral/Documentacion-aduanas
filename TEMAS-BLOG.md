@@ -77,7 +77,7 @@ buscan los clientes, después la cola larga.
 | 66 | La ruta francesa: el Pas de la Casa y los envíos Andorra–Francia | aduana-pas-de-la-casa-francia | aduana Pas de la Casa Francia | publicado (2026-11-03) |
 | 67 | El calendario maestro: planificar la mudanza con 3 meses | calendario-mudanza-andorra-espana | planificar mudanza Andorra España | publicado (2026-11-04) |
 | 68 | Marfil, pieles y trofeos antiguos: CITES en la mudanza | cites-mudanza-andorra-espana | CITES marfil mudanza España | publicado (2026-11-05) |
-| 69 | Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas | black-friday-compras-andorra-aduana | Black Friday Andorra aduana compras | pendiente |
+| 69 | Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas | black-friday-compras-andorra-aduana | Black Friday Andorra aduana compras | publicado (2026-11-06) |
 | 70 | Material de esquí comprado en Andorra: qué pasa al cruzar la frontera | material-esqui-andorra-frontera | comprar esquís Andorra pasar frontera | pendiente |
 | 71 | Los paquetes de Navidad: regalos a España con calendario y sin aduanas de más | paquetes-navidad-andorra-espana | enviar regalos Navidad Andorra España | pendiente |
 | 72 | El trastero que se quedó en Andorra: tus cosas a caballo entre dos países | trastero-andorra-despues-mudanza | dejar cosas Andorra después mudanza | pendiente |

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas</title>
+<meta name="description" content="El Black Friday con frontera tiene tres cuentas: en tienda física manda el régimen de viajero (900 € por adulto y viaje, con tickets a mano y sublímites en perfume, alcohol y tabaco); el pedido online a una tienda andorrana desde España suma IVA sin mínimo, el derecho de 3 €, la tasa de 2 € y el courier; y el andorrano que compra en tiendas de la UE paga IGI y tramitación al recibir. La ganga se recalcula antes del carrito.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/black-friday-compras-andorra-aduana/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/black-friday-compras-andorra-aduana/">
+<meta property="og:title" content="Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas">
+<meta property="og:description" content="En tienda, 900 € por adulto y viaje con tickets a mano; online a España, IVA + 3 € + 2 € + courier; online desde Andorra, IGI al recibir. La ganga se recalcula antes del carrito.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-06">
+<meta property="article:modified_time" content="2026-11-06">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas">
+<meta name="twitter:description" content="En tienda, 900 € por adulto y viaje con tickets a mano; online a España, IVA + 3 € + 2 € + courier; online desde Andorra, IGI al recibir. La ganga se recalcula antes del carrito.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/black-friday-compras-andorra-aduana/#article",
+   "headline": "Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas",
+   "description": "Las tres cuentas del Black Friday con frontera: la compra presencial en Andorra se rige por el régimen de viajero — 900 euros por viajero de 15 años o más y 450 por menor, por persona y viaje, franquicia individual con lo que sobrepasa declarado en el circuito rojo, tickets a mano, y sublímites propios en perfume (75 gramos y 375 mililitros de agua de tocador según la guía de viajeros de la AEAT), alcohol y tabaco —; el pedido online a una tienda andorrana recibido en España suma IVA del 21 % sin mínimo exento, el derecho transitorio de 3 euros por artículo en envíos de hasta 150 euros, la tasa de tramitación de 2 euros por artículo desde noviembre y los gastos del courier, así que la ganga pequeña se evapora y solo el diferencial grande sobrevive; y el residente andorrano que compra en tiendas de la UE no paga IVA español (venta a exportación) pero recibe el paquete con IGI y tramitación, y con la política de devoluciones internacionales como letra a mirar antes de comprar; los señuelos clásicos: el «sin impuestos» que la paquetería no conoce desde 2021, el reparto imaginario de un artículo caro entre acompañantes (la franquicia es individual: ante compras grandes, consulta el folleto de la AEAT antes), y el puente aéreo de reventa que convierte gangas en patrón comercial.",
+   "inLanguage": "es",
+   "datePublished": "2026-11-06",
+   "dateModified": "2026-11-06",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/black-friday-compras-andorra-aduana/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/black-friday-compras-andorra-aduana/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Black Friday desde Andorra"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/black-friday-compras-andorra-aduana/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cuánto puedo comprar en Andorra el Black Friday y pasar sin declarar?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Lo que marca el régimen de viajero de siempre, que el Black Friday no amplía: 900 euros por viajero de 15 años o más y 450 por menor, por persona y viaje, para las compras generales — electrónica incluida —, con franquicia aparte para alimentación y sublímites propios en perfume y agua de tocador (75 gramos y 375 mililitros según la guía de viajeros de la AEAT), alcohol y tabaco. Las reglas de uso: la franquicia es individual, lo que sobrepasa se declara en el circuito rojo y tributa, y los tickets de compra viajan a mano — son tu prueba de valor si te preguntan. El viernes de ofertas la frontera está más vigilada que nunca, no menos: es el día del año en que más gente vuelve con el maletero lleno."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Una tele o un móvil de más de 900 € se puede repartir entre dos viajeros?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No cuentes con ello. La franquicia es individual — lo dice el propio folleto de viajeros de la AEAT — y está pensada para las compras de cada persona, no como un fondo común familiar contra el que cargar un solo artículo caro. Con un artículo indivisible que supera tu franquicia, lo prudente es asumir que deberás declararlo y tributar por él, y consultar el folleto de la AEAT o preguntar en la propia aduana antes de hacer la compra grande — no después, con la caja de la tele asomando en el maletero. Y recuerda la otra cara: declarar y pagar el IVA de un artículo que supera la franquicia es un trámite normal y rápido; intentar colarlo es lo que convierte la ganga en expediente, como cuenta nuestra guía sobre cruzar sin declarar."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Compensa comprar online en una tienda andorrana desde España?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Haz la cuenta completa antes del carrito: al precio andorrano se suman el IVA de importación del 21 % (sin mínimo exento desde 2021), el derecho transitorio de 3 euros por artículo si el envío no supera los 150 euros, la tasa de tramitación de 2 euros por artículo desde noviembre de 2026 y los gastos de gestión del courier. En un pedido pequeño, esos cargos fijos se comen el descuento entero — la ganga de 15 euros no existe tras la frontera. El pedido que sí puede compensar es el de importe medio-alto donde el diferencial de precio andorrano supera con margen la suma de cargos, y mejor agrupado en un solo envío que goteado en varios. Y antes de pagar, mira la política de devoluciones internacionales: devolver desde el otro lado tiene su propia guía y sus propios costes que no se recuperan."}
+    },
+    {
+     "@type": "Question",
+     "name": "Vivo en Andorra: ¿qué pasa con mis compras de Black Friday en tiendas online de España?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Tu pedido sale de la UE como exportación, así que la tienda española no debe cobrarte el IVA español (o te lo descuenta al facturar a Andorra) — ese es tu descuento estructural. A cambio, el paquete entra en Andorra como importación: el courier te liquidará el IGI (tipo general del 4,5 %) y sus gastos de tramitación en la entrega. La cuenta suele seguir siendo buena, porque el IGI es bajo, pero conviene vigilar dos letras pequeñas del Black Friday: que la tienda realmente envíe a Andorra (muchas solo operan en la UE) y su política de devoluciones internacionales — si el producto falla, la devolución es el viaje de vuelta del paquete, con su procedimiento y sus costes, como contamos en la guía de devoluciones. La compra impulsiva que quizá devuelvas es mala candidata a cruzar fronteras."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Black Friday desde Andorra</nav>
+    <h1>Black Friday desde Andorra: compras, franquicias y paquetes sin sorpresas</h1>
+    <div class="updated">Actualizado · Noviembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El Black Friday con frontera tiene <strong>tres cuentas</strong>: en <strong>tienda física</strong> manda el régimen de viajero (<strong>900 €</strong> por adulto y viaje, tickets a mano, sublímites en perfume, alcohol y tabaco); el <strong>pedido online a Andorra desde España</strong> suma IVA sin mínimo + <strong>3 €</strong> + <strong>2 €</strong> + courier; y el <strong>andorrano que compra en la UE</strong> paga <strong>IGI y tramitación</strong> al recibir. La ganga se recalcula <strong>antes</strong> del carrito.</p>
+    </div>
+
+    <h2>Las tres compras del Black Friday andorrano</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Escenario</th><th>Qué manda</th><th>La cuenta extra</th></tr>
+      <tr><td><strong>Subes a Andorra</strong> y compras en tienda</td><td>Régimen de viajero</td><td>Nada dentro de la franquicia; lo que sobrepasa, se declara</td></tr>
+      <tr><td><strong>Pides online a una tienda andorrana</strong> desde España</td><td>Paquetería de tercer país</td><td>IVA 21 % sin mínimo + 3 €/artículo (≤150 €) + 2 €/artículo + courier</td></tr>
+      <tr><td><strong>Vives en Andorra</strong> y pides a tiendas de la UE</td><td>Exportación UE → importación andorrana</td><td>Sin IVA español; IGI 4,5 % + tramitación al recibir</td></tr>
+    </table>
+    </div>
+
+    <h2>La compra presencial: el clásico, con sus reglas de siempre</h2>
+    <p>El viernes de ofertas no amplía ninguna franquicia: rigen las del <a href="/guias/limites-alcohol-tabaco-andorra/">régimen de viajero</a> de todo el año. Lo esencial para el día de compras:</p>
+    <ul class="checklist">
+      <li><strong>900 € por viajero de 15 años o más</strong> (450 € por menor), por persona <strong>y viaje</strong>, para compras generales — electrónica incluida. La alimentación tiene su franquicia aparte (300 €, con sublímites).</li>
+      <li><strong>Sublímites por cantidad</strong> donde el valor no manda: perfume y agua de tocador (75 g y 375 ml según la guía de viajeros de la AEAT), y los conocidos del alcohol y el tabaco.</li>
+      <li><strong>Franquicia individual:</strong> lo que sobrepasa se declara en el circuito rojo y tributa. Con un artículo indivisible caro — la tele, el móvil de gama alta — <strong>no des por hecho el reparto entre acompañantes</strong>: consulta el folleto de la AEAT o pregunta en la aduana <em>antes</em> de la compra grande.</li>
+      <li><strong>Tickets a mano, no en el fondo de la bolsa:</strong> son tu prueba de valor en el control — y tu garantía después.</li>
+      <li><strong>Declarar es un trámite; colar es un expediente:</strong> pagar el IVA de lo que excede es rápido y queda zanjado; lo otro es la guía de <a href="/guias/cruzar-sin-declarar-riesgos/">cruzar sin declarar</a>, que no querrás protagonizar el día de más vigilancia del año.</li>
+    </ul>
+
+    <h2>El pedido online a Andorra: la ganga, recalculada</h2>
+    <p>La tienda andorrana con precios de escaparate agresivos sigue estando <strong>al otro lado de una frontera fiscal</strong>, y el paquete lo recuerda: al precio se suman el <a href="/guias/iva-importacion-muebles-usados/">IVA del 21 %</a> sin mínimo exento, el <a href="/guias/fin-franquicia-150-euros-paqueteria/">derecho transitorio de 3 €</a> por artículo en envíos de hasta 150 €, la <a href="/guias/tasa-tramitacion-paqueteria-2026/">tasa de tramitación de 2 €</a> por artículo y los gastos del courier. La aritmética del Black Friday es la de siempre, con cargos nuevos: <strong>el descuento pequeño no sobrevive al cruce</strong> — el pedido de 30 € acaba costando 45 o 50 —, mientras que el diferencial grande en un artículo de importe medio-alto puede seguir compensando, mejor <strong>agrupado en un envío</strong> que goteado. Y la letra que nadie mira en noviembre y todos lamentan en diciembre: la <strong>política de devoluciones internacionales</strong>, porque <a href="/guias/devolver-compras-online-desde-andorra/">devolver a través de la frontera</a> tiene procedimiento, plazos y costes que no vuelven.</p>
+
+    <h2>El andorrano ante las ofertas de la UE</h2>
+    <p>En la dirección contraria, el residente en Andorra juega con una ventaja estructural y dos letras pequeñas. La ventaja: su pedido a una tienda española o europea es una <strong>exportación</strong>, así que no lleva IVA español — descuento automático antes de empezar. Las letras: el paquete entra en Andorra con su <strong>IGI (4,5 % general) y la tramitación del courier</strong> — cuenta aun así favorable —, y no todas las tiendas envían a Andorra ni aceptan devoluciones desde allí. La compra dudosa que quizá vuelva es mala candidata a cruzar fronteras dos veces.</p>
+
+    <h2>Los señuelos del Black Friday fronterizo</h2>
+    <ul>
+      <li><strong>«Compra sin impuestos»:</strong> en paquetería no existe desde 2021 — el IVA se paga desde el primer euro, y desde este año con sus cargos por artículo.</li>
+      <li><strong>El reparto imaginario del artículo caro:</strong> la franquicia es individual; la tele «repartida» entre cuatro primos es una historia que el control ha oído mil veces.</li>
+      <li><strong>«Me lo baja un amigo con la furgoneta»:</strong> mercancía tuya en el vehículo de otro, sin declarar, es la receta del mal día para los dos.</li>
+      <li><strong>El puente aéreo del revendedor:</strong> comprar para revender no es régimen de viajero — el patrón repetido se detecta y tributa como lo que es: <a href="/guias/mudanza-negocio-stock-comercial/">actividad comercial</a>.</li>
+      <li><strong>El perfume «porque es pequeño»:</strong> los sublímites van por cantidad, no por tamaño del bolso.</li>
+    </ul>
+
+    <h2>El Black Friday del que se muda</h2>
+    <p>Un apunte para nuestro lector habitual: si estás en plena mudanza, el Black Friday es buen momento para <strong>comprar en destino lo que decidiste no mudar</strong> — el colchón nuevo, la batería del patinete, las bombonas de camping que dejaste en la deixalleria — y mal momento para engordar el camión con compras de última hora: lo <strong>nuevo recién comprado no es ajuar usado</strong>, no entra en la franquicia de traslado (sin sus 6 meses de uso) y complica un inventario que ya estaba cerrado. Las ofertas también existen en España; tu expediente, solo hay uno.</p>
+
+    <div class="cta-guide">
+      <h2>Compras claras, expediente limpio</h2>
+      <p>Si tu mudanza coincide con la temporada de compras, preparamos tu expediente separando el ajuar de lo recién comprado — valores correctos y cero sorpresas en el control. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Cuánto puedo comprar en Andorra el Black Friday y pasar sin declarar?</summary>
+      <p>Lo que marca el <a href="/guias/limites-alcohol-tabaco-andorra/">régimen de viajero</a> de siempre, que el Black Friday no amplía: 900 euros por viajero de 15 años o más y 450 por menor, por persona y viaje, para las compras generales — electrónica incluida —, con franquicia aparte para alimentación y sublímites propios en perfume y agua de tocador (75 gramos y 375 mililitros según la guía de viajeros de la AEAT), alcohol y tabaco. Las reglas de uso: la franquicia es individual, lo que sobrepasa se declara en el circuito rojo y tributa, y los tickets de compra viajan a mano — son tu prueba de valor si te preguntan. El viernes de ofertas la frontera está más vigilada que nunca, no menos: es el día del año en que más gente vuelve con el maletero lleno.</p>
+    </details>
+    <details>
+      <summary>¿Una tele o un móvil de más de 900 € se puede repartir entre dos viajeros?</summary>
+      <p>No cuentes con ello. La franquicia es individual — lo dice el propio folleto de viajeros de la AEAT — y está pensada para las compras de cada persona, no como un fondo común familiar contra el que cargar un solo artículo caro. Con un artículo indivisible que supera tu franquicia, lo prudente es asumir que deberás declararlo y tributar por él, y consultar el folleto de la AEAT o preguntar en la propia aduana antes de hacer la compra grande — no después, con la caja de la tele asomando en el maletero. Y recuerda la otra cara: declarar y pagar el IVA de un artículo que supera la franquicia es un trámite normal y rápido; intentar colarlo es lo que convierte la ganga en expediente, como cuenta nuestra guía sobre <a href="/guias/cruzar-sin-declarar-riesgos/">cruzar sin declarar</a>.</p>
+    </details>
+    <details>
+      <summary>¿Compensa comprar online en una tienda andorrana desde España?</summary>
+      <p>Haz la cuenta completa antes del carrito: al precio andorrano se suman el IVA de importación del 21 % (sin mínimo exento desde 2021), el derecho transitorio de 3 euros por artículo si el envío no supera los 150 euros, la <a href="/guias/tasa-tramitacion-paqueteria-2026/">tasa de tramitación de 2 euros</a> por artículo desde noviembre de 2026 y los gastos de gestión del courier. En un pedido pequeño, esos cargos fijos se comen el descuento entero — la ganga de 15 euros no existe tras la frontera. El pedido que sí puede compensar es el de importe medio-alto donde el diferencial de precio andorrano supera con margen la suma de cargos, y mejor agrupado en un solo envío que goteado en varios. Y antes de pagar, mira la política de devoluciones internacionales: <a href="/guias/devolver-compras-online-desde-andorra/">devolver desde el otro lado</a> tiene su propia guía y sus propios costes que no se recuperan.</p>
+    </details>
+    <details>
+      <summary>Vivo en Andorra: ¿qué pasa con mis compras de Black Friday en tiendas online de España?</summary>
+      <p>Tu pedido sale de la UE como exportación, así que la tienda española no debe cobrarte el IVA español (o te lo descuenta al facturar a Andorra) — ese es tu descuento estructural. A cambio, el paquete entra en Andorra como importación: el courier te liquidará el IGI (tipo general del 4,5 %) y sus gastos de tramitación en la entrega. La cuenta suele seguir siendo buena, porque el IGI es bajo, pero conviene vigilar dos letras pequeñas del Black Friday: que la tienda realmente envíe a Andorra (muchas solo operan en la UE) y su política de devoluciones internacionales — si el producto falla, la devolución es el viaje de vuelta del paquete, con su procedimiento y sus costes, como contamos en la <a href="/guias/devolver-compras-online-desde-andorra/">guía de devoluciones</a>. La compra impulsiva que quizá devuelvas es mala candidata a cruzar fronteras.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/limites-alcohol-tabaco-andorra/">Límites de alcohol, tabaco y compras desde Andorra</a></li>
+        <li><a href="/guias/tasa-tramitacion-paqueteria-2026/">La tasa de 2 € en la paquetería</a></li>
+        <li><a href="/guias/devolver-compras-online-desde-andorra/">Devolver compras online desde Andorra</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. Las franquicias y sublímites citados proceden de la información oficial de viajeros de la AEAT vigente a la fecha de publicación — confírmalos antes del viaje; el tratamiento de artículos que superan la franquicia se consulta con la aduana. Los ejemplos de precios son ilustrativos.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
