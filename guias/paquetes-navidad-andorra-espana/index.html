@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los paquetes de Navidad: regalos a España con calendario y sin aduanas de más</title>
+<meta name="description" content="El regalo navideño entre particulares tiene su franquicia — hasta 45 € por envío, ocasional y declarado con honestidad, con sublímites en alcohol, tabaco y perfume — y su calendario: en diciembre la paquetería se satura, así que el paquete sale la primera quincena. Qué escribir en la declaración, qué no meter en la caja (lo fresco, las baterías sueltas) y cuándo gana llevar los regalos en persona dentro de tus 900 €.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/paquetes-navidad-andorra-espana/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/paquetes-navidad-andorra-espana/">
+<meta property="og:title" content="Los paquetes de Navidad: regalos a España con calendario y sin aduanas de más">
+<meta property="og:description" content="El regalo entre particulares: hasta 45 € exento, ocasional y bien declarado, con sublímites en alcohol y perfume. El paquete sale la primera quincena — o los regalos viajan contigo.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Los paquetes de Navidad: regalos a España con calendario y sin aduanas de más">
+<meta name="twitter:description" content="El regalo entre particulares: hasta 45 € exento, ocasional y bien declarado, con sublímites en alcohol y perfume. El paquete sale la primera quincena — o los regalos viajan contigo.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/paquetes-navidad-andorra-espana/#article",
+   "headline": "Los paquetes de Navidad: regalos a España con calendario y sin aduanas de más",
+   "description": "El manual del paquete navideño de Andorra a España: la franquicia del envío ocasional entre particulares exime hasta 45 euros por envío — de persona a persona, sin pago ni carácter comercial, con el contenido y el valor declarados con honestidad y con sublímites por cantidad en alcohol, tabaco, perfume y café —; por encima de 45 euros, el paquete tributa como envío ordinario (IVA sobre el valor, sin mínimo exento, más los cargos y la gestión del courier), y la serie de paquetes de 44 euros al mismo destinatario se lee como lo que es; el calendario manda tanto como la norma: la paquetería de diciembre se satura y un paquete con despacho aduanero necesita margen, así que sale en la primera quincena — y el aguinaldo que se envía tarde llega en enero —; dentro de la caja, nada de lo que ya sabes que no viaja bien: lo fresco y perecedero del agroalimentario, las baterías de litio sueltas, los aerosoles; el turrón, las conservas y lo envasado viajan sin drama; y la alternativa que gana muchas veces: llevar los regalos en persona en el viaje de Navidad, dentro de la franquicia de viajero de 900 euros por adulto, con los tickets a mano.",
+   "inLanguage": "es",
+   "datePublished": "2026-11-08",
+   "dateModified": "2026-11-08",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/paquetes-navidad-andorra-espana/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/paquetes-navidad-andorra-espana/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Los paquetes de Navidad"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/paquetes-navidad-andorra-espana/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Puedo enviar regalos de Navidad de Andorra a España sin pagar aduana?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Sí, dentro de la franquicia del envío ocasional entre particulares: un paquete de persona a persona, sin pago de ningún tipo ni carácter comercial, con mercancía para uso personal o familiar del destinatario, entra exento si su valor no supera los 45 euros — con sublímites por cantidad para alcohol, tabaco, perfume y café dentro de esa cifra. Las condiciones son las que suenan: remitente y destinatario personas (no empresas), envío ocasional (la Navidad lo es por definición), y el contenido y el valor declarados con honestidad en la documentación del envío. Por encima de 45 euros, el paquete tributa como envío ordinario — IVA sobre su valor, sin mínimo exento, más la gestión del courier —, lo que no lo prohíbe: solo lo encarece. La ganga está en ajustar el regalo enviado a la franquicia y llevar lo gordo en persona."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué escribo en la declaración del paquete navideño?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La verdad, en tres piezas: naturaleza del envío («regalo entre particulares, sin valor comercial» en el campo que tu operador prevea para ello), contenido real y concreto («turrón y una bufanda», no «artículos varios») y valor real de mercado de lo que envías — no un cero imposible ni un 44,99 sospechosamente al límite si el contenido no lo justifica. La declaración honesta es la que activa la franquicia: el paquete marcado como regalo con contenido y cifra coherentes pasa sin fricción, mientras que el «regalo, 5 €» con una caja de 4 kilos es exactamente lo que invita a abrir. Recuerda también los datos completos del destinatario con teléfono — en diciembre, el courier que no puede contactar deja el paquete en depósito, y cada día de depósito es un día menos de Navidad."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuándo tengo que enviar el paquete para que llegue antes de Navidad?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La primera quincena de diciembre, y mejor al principio que al final. La paquetería de diciembre se satura en toda Europa, y el envío Andorra–España añade su paso aduanero: un despacho que en marzo tarda un día puede sumar varios en el pico navideño, y cualquier incidencia documental — una declaración incompleta, un teléfono que no contesta — se paga con días extra que diciembre no tiene. El calendario sensato: regalos comprados y empaquetados en noviembre, paquete en la agencia la primera semana de diciembre, y margen de dos semanas sobre la fecha en que quieres que llegue. El aguinaldo que sale el 18 de diciembre no es un envío: es una lotería — y para eso ya existe la de verdad."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué no debo meter en la caja de los regalos?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Las tres familias que ya conoces de otras guías, que la Navidad no indulta. Lo fresco y perecedero del agroalimentario — el embutido artesano, el queso de la parada del mercado — tiene sus propios requisitos y su propia fragilidad: lo envasado y estable (turrón, conservas, dulces industriales) viaja sin drama; lo fresco, mejor no. Las baterías de litio sueltas — la power bank de regalo, la batería extra del dron — que la paquetería rechaza a particulares: el gadget con su batería instalada, consulta mediante, y las sueltas nunca. Y los presurizados e inflamables — colonias en grandes formatos fuera de sublímite, aerosoles — con sus límites y sus riesgos. En la duda, la regla de oro navideña: lo que no enviarías en julio tampoco se envía en diciembre; el papel de regalo no cambia el régimen de nada."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Los paquetes de Navidad</nav>
+    <h1>Los paquetes de Navidad: regalos a España con calendario y sin aduanas de más</h1>
+    <div class="updated">Actualizado · Noviembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El regalo entre particulares entra exento <strong>hasta 45 € por envío</strong> — ocasional, sin pago, <strong>declarado con honestidad</strong> y con sublímites en alcohol, tabaco y perfume. El calendario manda: la paquetería de diciembre se satura, así que el paquete sale <strong>la primera quincena</strong>. Y muchas veces gana la alternativa: <strong>llevar los regalos en persona</strong>, dentro de tus 900 € de viajero.</p>
+    </div>
+
+    <h2>La franquicia del regalo: 45 € bien usados</h2>
+    <p>Diciembre es el mes estrella de la franquicia que contamos en la guía de <a href="/guias/donar-enviar-ong-familiares/">donaciones y regalos</a>: el <strong>envío ocasional entre particulares</strong>, sin pago ni carácter comercial, entra exento hasta <strong>45 € de valor</strong>. Sus reglas, aplicadas al paquete navideño:</p>
+    <ul class="checklist">
+      <li><strong>De persona a persona:</strong> de ti a tu madre, no de tu tienda a un cliente — el regalo de empresa va por otro régimen.</li>
+      <li><strong>Ocasional:</strong> la Navidad lo es por definición; el goteo semanal de paquetes de 44 €, no.</li>
+      <li><strong>Sublímites por cantidad</strong> dentro de los 45 €: el alcohol, el tabaco, el perfume y el café tienen topes propios — la botella buena para tu cuñado puede exceder el sublímite aunque el valor cuadre; revisa antes de embalar.</li>
+      <li><strong>Por encima de 45 €,</strong> el paquete tributa como <a href="/guias/enviar-cajas-mensajeria-andorra-espana/">envío ordinario</a>: IVA sobre el valor sin mínimo exento, más la gestión del courier. No está prohibido — solo deja de ser gratis.</li>
+      <li><strong>Sin trocear:</strong> tres paquetes de 44 € al mismo destinatario la misma semana se leen como un envío de 132 € repartido — y el control de diciembre ha visto muchos diciembres.</li>
+    </ul>
+
+    <h2>La declaración del paquete: la verdad, bien escrita</h2>
+    <p>La franquicia se activa con la <strong>declaración honesta</strong>, no con el papel de regalo. Tres campos bien rellenados:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Campo</th><th>Bien</th><th>Mal</th></tr>
+      <tr><td>Naturaleza</td><td>«Regalo entre particulares, sin valor comercial»</td><td>Nada, o «documentos» siendo una caja de 3 kg</td></tr>
+      <tr><td>Contenido</td><td>«Turrón, una bufanda y un libro»</td><td>«Artículos varios»</td></tr>
+      <tr><td>Valor</td><td>El real de mercado, coherente con el contenido</td><td>«0 €» — no existe — o un 44,99 que el contenido desmiente</td></tr>
+    </table>
+    </div>
+    <p>Y el detalle logístico que salva navidades: <strong>datos completos del destinatario con teléfono</strong>. En diciembre, el paquete cuyo destinatario no contesta se queda en depósito — y el depósito no celebra la Nochebuena.</p>
+
+    <h2>El calendario: diciembre no perdona</h2>
+    <p>La norma es la mitad del éxito; la otra mitad es el <strong>calendario</strong>. La paquetería europea se satura en diciembre, y el envío Andorra–España añade su paso aduanero: el despacho que en marzo tarda un día puede sumar varios en el pico, y cualquier incidencia documental se paga en días que no hay. El plan sensato:</p>
+    <ul class="checklist">
+      <li><strong>Noviembre:</strong> regalos comprados y cajas preparadas — el <a href="/guias/black-friday-compras-andorra-aduana/">Black Friday</a> con sus propias cuentas si compras ese día.</li>
+      <li><strong>Primera semana de diciembre:</strong> el paquete sale. Margen de <strong>dos semanas</strong> sobre la fecha deseada.</li>
+      <li><strong>A partir del 15:</strong> solo urgente y asumiendo riesgo — el aguinaldo que sale el 18 es una lotería.</li>
+      <li><strong>Seguimiento activado y teléfono operativo</strong> a ambos lados: la mitad de los retrasos de diciembre son un courier que no logra contactar.</li>
+    </ul>
+
+    <h2>Dentro de la caja: lo que la Navidad no indulta</h2>
+    <p>El papel de regalo no cambia el régimen de nada. Las tres familias de siempre:</p>
+    <ul>
+      <li><strong>Lo fresco del agroalimentario:</strong> el embutido artesano y el queso de mercado tienen requisitos y fragilidad propios — lo <strong>envasado y estable</strong> (turrón, conservas, dulces) viaja sin drama; lo fresco, mejor en persona o mejor no.</li>
+      <li><strong>Las <a href="/guias/enviar-baterias-litio-andorra-espana/">baterías de litio</a> sueltas:</strong> la power bank de regalo es justo lo que la paquetería rechaza a particulares — el gadget con batería instalada, consultando; las sueltas, nunca.</li>
+      <li><strong>Presurizados e inflamables:</strong> colonias en formatos que exceden el sublímite, aerosoles — los límites de la guía de <a href="/guias/mercancias-peligrosas-hogar-mudanza/">mercancías peligrosas del hogar</a> no hacen vacaciones.</li>
+    </ul>
+
+    <h2>La alternativa que gana: los regalos viajan contigo</h2>
+    <p>Si vas a bajar a España por las fiestas — y diciembre es el mes de los viajes familiares —, la cuenta cambia entera: los regalos que llevas en persona viajan dentro de tu <strong>franquicia de viajero de 900 € por adulto</strong> (450 € por menor), veinte veces la del paquete, sin courier, sin despacho y sin depósito. Con los tickets a mano y los <a href="/guias/limites-alcohol-tabaco-andorra/">sublímites de alcohol y tabaco</a> respetados, el maletero navideño es el canal más barato y fiable que existe. El paquete queda para lo que no puede esperar a tu viaje — y para eso está esta guía.</p>
+
+    <h2>Los errores del paquete navideño</h2>
+    <ul>
+      <li><strong>Enviar el 18 de diciembre</strong> y culpar al courier el 26: el margen era la mitad del regalo.</li>
+      <li><strong>«Regalo, 5 €»</strong> en una caja de cuatro kilos: la declaración incoherente es la que se abre.</li>
+      <li><strong>La botella de 70 cl «porque vale menos de 45 €»:</strong> los sublímites de alcohol van por cantidad, no solo por valor.</li>
+      <li><strong>Trocear el regalo grande en paquetes al límite:</strong> la serie se ve, y la franquicia es para lo ocasional.</li>
+      <li><strong>Enviar lo que llevarías mejor en el maletero:</strong> si viajas igualmente, el paquete es el canal caro.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>¿Un envío que se complica estas fiestas?</h2>
+      <p>Si tu paquete o tu mudanza navideña necesita papeles serios — declaración, valores, dosier — los preparamos por 49 € cerrados, en 24 horas, también en diciembre.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Puedo enviar regalos de Navidad de Andorra a España sin pagar aduana?</summary>
+      <p>Sí, dentro de la franquicia del envío ocasional entre particulares: un paquete de persona a persona, sin pago de ningún tipo ni carácter comercial, con mercancía para uso personal o familiar del destinatario, entra exento si su valor no supera los 45 euros — con sublímites por cantidad para alcohol, tabaco, perfume y café dentro de esa cifra. Las condiciones son las que suenan: remitente y destinatario personas (no empresas), envío ocasional (la Navidad lo es por definición), y el contenido y el valor declarados con honestidad en la documentación del envío. Por encima de 45 euros, el paquete tributa como <a href="/guias/enviar-cajas-mensajeria-andorra-espana/">envío ordinario</a> — IVA sobre su valor, sin mínimo exento, más la gestión del courier —, lo que no lo prohíbe: solo lo encarece. La ganga está en ajustar el regalo enviado a la franquicia y llevar lo gordo en persona.</p>
+    </details>
+    <details>
+      <summary>¿Qué escribo en la declaración del paquete navideño?</summary>
+      <p>La verdad, en tres piezas: naturaleza del envío («regalo entre particulares, sin valor comercial» en el campo que tu operador prevea para ello), contenido real y concreto («turrón y una bufanda», no «artículos varios») y valor real de mercado de lo que envías — no un cero imposible ni un 44,99 sospechosamente al límite si el contenido no lo justifica. La declaración honesta es la que activa la franquicia: el paquete marcado como regalo con contenido y cifra coherentes pasa sin fricción, mientras que el «regalo, 5 €» con una caja de 4 kilos es exactamente lo que invita a abrir. Recuerda también los datos completos del destinatario con teléfono — en diciembre, el courier que no puede contactar deja el paquete en depósito, y cada día de depósito es un día menos de Navidad.</p>
+    </details>
+    <details>
+      <summary>¿Cuándo tengo que enviar el paquete para que llegue antes de Navidad?</summary>
+      <p>La primera quincena de diciembre, y mejor al principio que al final. La paquetería de diciembre se satura en toda Europa, y el envío Andorra–España añade su paso aduanero: un despacho que en marzo tarda un día puede sumar varios en el pico navideño, y cualquier incidencia documental — una declaración incompleta, un teléfono que no contesta — se paga con días extra que diciembre no tiene. El calendario sensato: regalos comprados y empaquetados en noviembre, paquete en la agencia la primera semana de diciembre, y margen de dos semanas sobre la fecha en que quieres que llegue. El aguinaldo que sale el 18 de diciembre no es un envío: es una lotería — y para eso ya existe la de verdad.</p>
+    </details>
+    <details>
+      <summary>¿Qué no debo meter en la caja de los regalos?</summary>
+      <p>Las tres familias que ya conoces de otras guías, que la Navidad no indulta. Lo fresco y perecedero del agroalimentario — el embutido artesano, el queso de la parada del mercado — tiene sus propios requisitos y su propia fragilidad: lo envasado y estable (turrón, conservas, dulces industriales) viaja sin drama; lo fresco, mejor no. Las <a href="/guias/enviar-baterias-litio-andorra-espana/">baterías de litio</a> sueltas — la power bank de regalo, la batería extra del dron — que la paquetería rechaza a particulares: el gadget con su batería instalada, consulta mediante, y las sueltas nunca. Y los presurizados e inflamables — colonias en grandes formatos fuera de sublímite, aerosoles — con sus límites y sus riesgos. En la duda, la regla de oro navideña: lo que no enviarías en julio tampoco se envía en diciembre; el papel de regalo no cambia el régimen de nada.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/donar-enviar-ong-familiares/">Regalos y donaciones: la franquicia de los 45 €</a></li>
+        <li><a href="/guias/enviar-cajas-mensajeria-andorra-espana/">Enviar cajas por mensajería: declaración y valor</a></li>
+        <li><a href="/guias/black-friday-compras-andorra-aduana/">Black Friday desde Andorra: las tres cuentas</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. Las franquicias y sublímites citados corresponden a la normativa vigente en la fecha de publicación — confírmalos antes de enviar; los plazos de entrega navideños los fija cada operador y esta guía solo recomienda márgenes prudentes.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
