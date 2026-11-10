@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mudarse desde un piso amueblado: qué es tuyo, qué es del casero y cómo probarlo</title>
+<meta name="description" content="En un piso amueblado, el contenido de la casa no es tu mudanza: el sofá es del casero y la vajilla quizá también. Antes del presupuesto toca separar — con el anexo de inventario del contrato y las fotos de entrada como prueba —, inventariar solo lo tuyo, marcar lo que no viaja para que el camión no se lo lleve, y resolver los grises: lo que compraste tú, lo que el casero te cede y la fianza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/mudanza-piso-amueblado-alquiler/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/mudanza-piso-amueblado-alquiler/">
+<meta property="og:title" content="Mudarse desde un piso amueblado: qué es tuyo, qué es del casero y cómo probarlo">
+<meta property="og:description" content="El contenido del piso no es tu mudanza: separa con el anexo del contrato y las fotos de entrada, inventaría solo lo tuyo y marca lo que no viaja — el camión no distingue.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-10">
+<meta property="article:modified_time" content="2026-11-10">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mudarse desde un piso amueblado: qué es tuyo, qué es del casero y cómo probarlo">
+<meta name="twitter:description" content="El contenido del piso no es tu mudanza: separa con el anexo del contrato y las fotos de entrada, inventaría solo lo tuyo y marca lo que no viaja — el camión no distingue.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/mudanza-piso-amueblado-alquiler/#article",
+   "headline": "Mudarse desde un piso amueblado: qué es tuyo, qué es del casero y cómo probarlo",
+   "description": "La mudanza desde un piso de alquiler amueblado en Andorra empieza por una separación que nadie puede hacer por ti: el contenido de la casa no es tu mudanza — el sofá, la cama y quizá la vajilla son del casero y se quedan —, así que el inventario aduanero se construye solo con lo tuyo, y la prueba natural de la frontera entre ambos patrimonios ya existe: el anexo de inventario del contrato de alquiler y las fotos del día de entrada (y, si faltan, el anuncio del piso, los correos con la agencia y tus propias facturas de compra); los grises se resuelven con papeles sencillos — lo que compraste tú para el piso es tuyo y viaja con su factura si la conservas, las mejoras fijas no se llevan, y el mueble que el casero te cede al irte conviene documentarlo con una cesión firmada, recordando que la franquicia pide seis meses de posesión y uso, así que lo cedido la semana anterior viaja declarado por su valor residual —; el día del camión, los operarios no distinguen propiedad: lo que no viaja se marca con pegatinas y se recorre el piso con el jefe de equipo antes de cargar; y el mismo dosier de fotos de salida que protege tu expediente sirve para la otra batalla del amueblado: la fianza.",
+   "inLanguage": "es",
+   "datePublished": "2026-11-10",
+   "dateModified": "2026-11-10",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/mudanza-piso-amueblado-alquiler/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/mudanza-piso-amueblado-alquiler/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "Mudarse desde un piso amueblado"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/mudanza-piso-amueblado-alquiler/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cómo demuestro que los muebles de mi mudanza son míos y no del piso?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Con los papeles que ya existen: el anexo de inventario de tu contrato de alquiler amueblado — el documento que lista qué había en el piso al entrar — y las fotos del día de entrada dibujan la frontera exacta entre lo del casero y lo tuyo. Todo lo que no está en ese anexo y sí está en tu packing list es, por eliminación, tuyo. Si tu contrato no tiene anexo (pasa más de lo que debería), reconstruye: el anuncio del piso con sus fotos, los correos con la agencia y tus propias facturas y tickets de compra cuentan la misma historia. Para la aduana, tu inventario de mudanza va solo con lo tuyo y sus valores residuales; llevar el contrato en el dosier del cruce responde en diez segundos la pregunta de por qué una familia se muda «sin sofá ni camas»."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa con las cosas que compré yo para el piso de alquiler?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Son tuyas y viajan como el resto de tu ajuar: la lámpara que pusiste, la estantería que montaste, el microondas que el piso no tenía — al inventario con su valor residual, y con la factura o el ticket guardado si lo conservas (es la prueba perfecta de que no eran del piso). Dos matices. Las mejoras fijas — la lámpara empotrada, el toldo atornillado, lo que pasó a formar parte del inmueble — en general no se llevan: repasa tu contrato, porque arrancarlas puede costarte fianza. Y lo que compraste para el piso pero no quieres mudar entra en la criba de siempre: venderlo, regalárselo al siguiente inquilino (al casero le suele encantar) o dejarlo pactado por escrito a cambio de algo — cualquier cosa menos pagarle transporte a lo que compraste por veinte euros para un piso que dejas."}
+    },
+    {
+     "@type": "Question",
+     "name": "El casero me regala un mueble al irme: ¿puedo llevarlo con la franquicia?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Documéntalo y haz la cuenta honesta. Primero el papel: una cesión firmada de dos líneas — «cedo al inquilino el armario X, que deja de formar parte del inventario del piso» — te protege ante el control y ante la liquidación de la fianza a la vez. Segundo, la franquicia: el régimen de traslado pide bienes que lleven al menos seis meses en tu posesión y uso, y el mueble cedido la semana antes de la mudanza no los cumple — estrictamente, viaja declarado por su valor residual, que en un mueble usado del casero será modesto, con su IVA correspondiente si tu envío tributa. La práctica sensata: si la cesión llega con meses de antelación, guárdala fechada; si llega el último día, declara el mueble por su valor de ocasión con la cesión como procedencia — unos euros de impuestos bien pagados valen más que una incoherencia en el expediente."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo evito que el camión cargue cosas del casero — y cómo protejo la fianza?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Con el método de las pegatinas y el paseo: los operarios de la mudanza no distinguen propiedad — cargan lo que ven —, así que antes de que llegue el camión se marca de forma inconfundible lo que NO viaja (pegatinas de color en cada mueble del casero, o mejor aún, agrupado en una habitación «intocable») y se recorre el piso con el jefe de equipo, inventario en mano, antes de levantar el primer bulto. Llevarse por error el sofá del casero es el clásico que arruina una fianza y añade un viaje de devolución. Y la fianza, precisamente, se protege con el mismo dosier que tu mudanza: fotos de cada estancia el día de salida, contador de las reparaciones hechas, y el piso entregado contra el anexo de entrada. Un solo juego de fotos sirve a las dos batallas — guárdalo con el expediente los mismos cuatro años."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › Mudarse desde un piso amueblado</nav>
+    <h1>Mudarse desde un piso amueblado: qué es tuyo, qué es del casero y cómo probarlo</h1>
+    <div class="updated">Actualizado · Noviembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>En un amueblado, <strong>el contenido del piso no es tu mudanza</strong>: el sofá es del casero. La frontera la dibujan <strong>el anexo de inventario del contrato y las fotos de entrada</strong>; tu packing list va <strong>solo con lo tuyo</strong>. Lo que no viaja se <strong>marca con pegatinas</strong> antes del camión — los operarios no distinguen propiedad — y el mismo dosier de fotos de salida protege <strong>la fianza</strong>.</p>
+    </div>
+
+    <h2>El problema: dos patrimonios en una casa</h2>
+    <p>La mudanza desde un amueblado tiene una trampa de origen: lo que ves al recorrer el piso <strong>no es lo que se muda</strong>. La cama, el sofá, los armarios y quizá media cocina son del casero y se quedan; tu mudanza real son tu ropa, tus libros, tu electrónica, tus cajas — un volumen mucho menor que el piso aparenta. Esa diferencia afecta a todo lo que viene después: el <a href="/guias/leer-presupuesto-mudanza/">presupuesto</a> (pide cotización por <em>tu</em> volumen, no por «un piso de dos habitaciones»), el <a href="/guias/packing-list-mudanza/">inventario aduanero</a> (solo lo tuyo) y la entrega del piso (todo lo del casero, en su sitio y en su estado). La separación se hace <strong>al principio</strong>, con papeles — no el día del camión, a ojo.</p>
+
+    <h2>La prueba que ya existe: el anexo y las fotos de entrada</h2>
+    <p>La buena noticia del amueblado es que la frontera entre patrimonios <strong>ya está documentada</strong> — o debería:</p>
+    <ul class="checklist">
+      <li><strong>El anexo de inventario del contrato:</strong> la lista de lo que había al entrar. Todo lo que está en ella es del casero y se queda; todo lo que no está y existe, es tuyo por eliminación.</li>
+      <li><strong>Las fotos del día de entrada:</strong> el complemento gráfico del anexo — y tu defensa en la liquidación de la fianza.</li>
+      <li><strong>¿No hay anexo?</strong> Reconstruye: el anuncio del piso con sus fotos, los correos con la agencia o el casero, y tus propias <strong>facturas y tickets</strong> de lo que fuiste comprando. La historia se arma igual.</li>
+      <li><strong>Para el cruce:</strong> una copia del contrato en el dosier responde en diez segundos la pregunta razonable del control ante una mudanza familiar «sin camas ni sofá» — venías de un amueblado, y se acabó la duda.</li>
+    </ul>
+
+    <h2>Los grises, resueltos con papeles sencillos</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>El caso</th><th>Qué se hace</th></tr>
+      <tr><td><strong>Lo que compraste tú</strong> para el piso (lámparas, microondas, estantería)</td><td>Tuyo: al inventario con valor residual — y la factura guardada como prueba de que no era del piso</td></tr>
+      <tr><td><strong>Mejoras fijas</strong> (lo atornillado, lo empotrado)</td><td>En general se quedan — repasa el contrato: arrancarlas puede costar fianza</td></tr>
+      <tr><td><strong>El mueble que el casero te cede</strong> al irte</td><td>Cesión firmada de dos líneas; ojo a la franquicia (abajo)</td></tr>
+      <tr><td><strong>Lo tuyo que no quieres mudar</strong></td><td>La <a href="/guias/vaciar-piso-andorra-vender-donar/">criba</a>: vender, regalar al siguiente inquilino o pactarlo con el casero por escrito</td></tr>
+      <tr><td><strong>Duda irresoluble</strong> («¿esta batidora de quién era?»)</td><td>Pregunta al casero por escrito antes del camión — un mensaje vale más que una discusión de fianza</td></tr>
+    </table>
+    </div>
+    <div class="note-box">
+      <p><strong>El mueble cedido y la franquicia:</strong> el régimen de traslado pide bienes con al menos <strong>6 meses en tu posesión y uso</strong> — el armario que el casero te regala la última semana no los cumple. Estrictamente, viaja <strong>declarado por su valor residual</strong> (modesto en un mueble usado) con la cesión firmada como procedencia. Si la cesión llega con meses de antelación, guárdala <strong>fechada</strong>: esos meses cuentan a tu favor.</p>
+    </div>
+
+    <h2>El día del camión: pegatinas y paseo</h2>
+    <p>Los operarios de una mudanza <strong>cargan lo que ven</strong> — no llevan el anexo del contrato en la cabeza. El método que evita el desastre clásico (el sofá del casero camino de Lleida):</p>
+    <ul class="checklist">
+      <li><strong>Marca lo que NO viaja</strong> con pegatinas de color inconfundibles — o agrupa lo del casero en una habitación «intocable» cerrada.</li>
+      <li><strong>El paseo con el jefe de equipo:</strong> antes del primer bulto, recorre el piso con tu inventario en la mano — «todo lo verde se queda» — y repítelo al final contra el recuento.</li>
+      <li><strong>Que el presupuesto diga el volumen real:</strong> la cotización hecha «a piso visto» en un amueblado viene inflada — tu mudanza es la mitad de lo que parece.</li>
+    </ul>
+
+    <h2>La otra batalla del amueblado: la fianza</h2>
+    <p>No es aduana, pero es el mismo expediente: el día de salida, <strong>fotos de cada estancia</strong> con lo del casero en su sitio, los contadores, las llaves entregadas contra recibo, y el piso cotejado con el anexo de entrada. El juego de fotos que protege tu <a href="/guias/seguro-transporte-mudanza-cmr/">reclamación de transporte</a> y el que defiende tu fianza son <strong>el mismo dosier</strong> — guárdalo junto al resto los <a href="/guias/checklist-llegada-espana/">cuatro años de la carpeta</a>. Y el gesto que lo ordena todo: avisar al casero de la fecha con antelación y pactar la revisión conjunta — las fianzas se pierden más por sorpresas que por desperfectos.</p>
+
+    <h2>Los errores del inquilino que se muda</h2>
+    <ul>
+      <li><strong>Pedir presupuesto «por el piso» y no por tu volumen:</strong> pagas la mudanza del sofá que no es tuyo.</li>
+      <li><strong>Inventariar a ojo el día del camión:</strong> la separación se hace con papeles, semanas antes.</li>
+      <li><strong>Cargar el mueble del casero «sin querer»:</strong> viaje de devolución + fianza en riesgo — pegatinas y paseo.</li>
+      <li><strong>El mueble cedido sin papel:</strong> dos líneas firmadas evitan dos discusiones (control y fianza).</li>
+      <li><strong>Tirar los tickets de lo que compraste:</strong> eran la prueba gratis de qué era tuyo.</li>
+    </ul>
+
+    <div class="cta-guide">
+      <h2>Tu inventario, solo con lo tuyo</h2>
+      <p>Preparamos tu expediente de mudanza desde un amueblado — inventario limpio de lo que viaja, valores defendibles y el dosier que responde cualquier pregunta del cruce. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Cómo demuestro que los muebles de mi mudanza son míos y no del piso?</summary>
+      <p>Con los papeles que ya existen: el anexo de inventario de tu contrato de alquiler amueblado — el documento que lista qué había en el piso al entrar — y las fotos del día de entrada dibujan la frontera exacta entre lo del casero y lo tuyo. Todo lo que no está en ese anexo y sí está en tu <a href="/guias/packing-list-mudanza/">packing list</a> es, por eliminación, tuyo. Si tu contrato no tiene anexo (pasa más de lo que debería), reconstruye: el anuncio del piso con sus fotos, los correos con la agencia y tus propias facturas y tickets de compra cuentan la misma historia. Para la aduana, tu inventario de mudanza va solo con lo tuyo y sus valores residuales; llevar el contrato en el dosier del cruce responde en diez segundos la pregunta de por qué una familia se muda «sin sofá ni camas».</p>
+    </details>
+    <details>
+      <summary>¿Qué pasa con las cosas que compré yo para el piso de alquiler?</summary>
+      <p>Son tuyas y viajan como el resto de tu ajuar: la lámpara que pusiste, la estantería que montaste, el microondas que el piso no tenía — al inventario con su <a href="/guias/calcular-valor-residual-muebles/">valor residual</a>, y con la factura o el ticket guardado si lo conservas (es la prueba perfecta de que no eran del piso). Dos matices. Las mejoras fijas — la lámpara empotrada, el toldo atornillado, lo que pasó a formar parte del inmueble — en general no se llevan: repasa tu contrato, porque arrancarlas puede costarte fianza. Y lo que compraste para el piso pero no quieres mudar entra en la <a href="/guias/vaciar-piso-andorra-vender-donar/">criba</a> de siempre: venderlo, regalárselo al siguiente inquilino (al casero le suele encantar) o dejarlo pactado por escrito a cambio de algo — cualquier cosa menos pagarle transporte a lo que compraste por veinte euros para un piso que dejas.</p>
+    </details>
+    <details>
+      <summary>El casero me regala un mueble al irme: ¿puedo llevarlo con la franquicia?</summary>
+      <p>Documéntalo y haz la cuenta honesta. Primero el papel: una cesión firmada de dos líneas — «cedo al inquilino el armario X, que deja de formar parte del inventario del piso» — te protege ante el control y ante la liquidación de la fianza a la vez. Segundo, la <a href="/guias/franquicia-traslado-residencia/">franquicia</a>: el régimen de traslado pide bienes que lleven al menos seis meses en tu posesión y uso, y el mueble cedido la semana antes de la mudanza no los cumple — estrictamente, viaja declarado por su valor residual, que en un mueble usado del casero será modesto, con su IVA correspondiente si tu envío tributa. La práctica sensata: si la cesión llega con meses de antelación, guárdala fechada; si llega el último día, declara el mueble por su valor de ocasión con la cesión como procedencia — unos euros de impuestos bien pagados valen más que una incoherencia en el expediente.</p>
+    </details>
+    <details>
+      <summary>¿Cómo evito que el camión cargue cosas del casero — y cómo protejo la fianza?</summary>
+      <p>Con el método de las pegatinas y el paseo: los operarios de la mudanza no distinguen propiedad — cargan lo que ven —, así que antes de que llegue el camión se marca de forma inconfundible lo que NO viaja (pegatinas de color en cada mueble del casero, o mejor aún, agrupado en una habitación «intocable») y se recorre el piso con el jefe de equipo, inventario en mano, antes de levantar el primer bulto. Llevarse por error el sofá del casero es el clásico que arruina una fianza y añade un viaje de devolución. Y la fianza, precisamente, se protege con el mismo dosier que tu mudanza: fotos de cada estancia el día de salida, contador de las reparaciones hechas, y el piso entregado contra el anexo de entrada. Un solo juego de fotos sirve a las dos batallas — guárdalo con el expediente los mismos <a href="/guias/checklist-llegada-espana/">cuatro años</a>.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/packing-list-mudanza/">El packing list perfecto, desde cero</a></li>
+        <li><a href="/guias/vaciar-piso-andorra-vender-donar/">La criba: vender, donar o llevar</a></li>
+        <li><a href="/guias/checklist-salir-de-andorra/">Checklist para salir de Andorra sin cabos sueltos</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental. No somos asesores en arrendamientos: las obligaciones sobre inventarios, mejoras y fianzas las fija cada contrato y la normativa de alquiler aplicable — ante discrepancias con el arrendador, consulta tu contrato y asesórate; los criterios aduaneros citados corresponden a la normativa vigente en la fecha de publicación.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
