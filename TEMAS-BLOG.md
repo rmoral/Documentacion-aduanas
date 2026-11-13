@@ -84,7 +84,7 @@ buscan los clientes, después la cola larga.
 | 73 | Mudarse desde un piso amueblado: qué es tuyo, qué es del casero y cómo probarlo | mudanza-piso-amueblado-alquiler | mudanza piso amueblado alquiler Andorra | publicado (2026-11-10) |
 | 74 | Cunas, sillas de coche y juguetes: la mudanza con bebés y niños | mudanza-bebes-ninos-andorra-espana | mudanza bebé niños Andorra España | publicado (2026-11-11) |
 | 75 | Jubilarse en España tras trabajar en Andorra: pensión, CASS y la mudanza | jubilacion-pension-cass-mudanza-espana | pensión CASS jubilación España Andorra | publicado (2026-11-12) |
-| 76 | La renta del año de la mudanza: qué documentos preparar desde ya | renta-ano-mudanza-andorra-espana | declaración renta mudanza Andorra España | pendiente |
+| 76 | La renta del año de la mudanza: qué documentos preparar desde ya | renta-ano-mudanza-andorra-espana | declaración renta mudanza Andorra España | publicado (2026-11-13) |
 
 ## Propuestas pendientes de aprobación
 
