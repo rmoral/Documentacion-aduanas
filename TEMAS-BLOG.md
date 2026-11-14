@@ -93,10 +93,22 @@ agota (o cuando detecta una oportunidad clara), con una línea de
 justificación. **No se publican hasta que el propietario las mueva a la tabla
 de aprobados.**
 
-*(vacío — las 8 propuestas del 2026-10-27 se movieron a la tabla de aprobados el
-2026-10-28 por indicación del propietario, como temas 61–68; tandas anteriores:
-31–40 aprobadas el 2026-09-26, 41–60 aprobadas el 2026-09-26 y publicadas hasta
-el 2026-10-26)*
+Propuestas añadidas el 2026-11-14 (backlog agotado tras publicar el tema 76):
+
+| # | Título propuesto | Slug propuesto | Justificación |
+|---|------------------|----------------|---------------|
+| P1 | El referéndum del acuerdo UE–Andorra: qué votará el país y qué cambia para ti | referendum-acuerdo-ue-andorra | Actualidad en espera: publicar cuando haya fecha de referéndum o aval del Parlamento Europeo — verificar estado al redactar y actualizar la guía del acuerdo |
+| P2 | Cruzar con dinero en efectivo: la declaración de los 10.000 € | cruzar-efectivo-10000-euros | El que vende todo antes de mudarse cruza con efectivo — verificar la obligación de declaración UE/España y formularios vigentes |
+| P3 | Dos hogares, un camión: la mudanza compartida entre amigos | mudanza-compartida-dos-hogares | Grupaje entre particulares: expedientes y franquicias separados aunque compartan camión — síntesis sobre lo ya verificado |
+| P4 | ¿Merece la pena mudar la lavadora? La cuenta de los electrodomésticos | merece-la-pena-mudar-electrodomesticos | Evergreen de decisión: valor residual + transporte + vida útil contra comprar en destino — síntesis |
+| P5 | El inventario con el móvil: método y plantilla paso a paso | inventario-movil-plantilla-mudanza | Practico-herramienta que complementa el packing list: fotos, numeración y hoja de cálculo — síntesis |
+| P6 | Garantías y servicio técnico tras la mudanza: lo comprado en Andorra, atendido en España | garantias-servicio-tecnico-mudanza | Qué pasa con las garantías del vendedor andorrano al mudarte — en cualitativo, sin inventar plazos distintos de los generales |
+| P7 | El seguro de hogar en la mudanza: dos casas, un camión y los huecos entre pólizas | seguro-hogar-mudanza-andorra-espana | Gap real: el CMR cubre el transporte, pero ¿y la casa vacía de origen y la nueva? — cualitativo, remitiendo a cada póliza |
+| P8 | Comprar muebles de segunda mano en España viviendo en Andorra | comprar-muebles-espana-desde-andorra | La dirección inversa del e-commerce: exportación española e importación andorrana con IGI — síntesis sobre verificados |
+
+*(tandas anteriores: 31–40 y 41–60 aprobadas el 2026-09-26; 61–68 aprobadas el
+2026-10-28; 69–76 aprobadas el 2026-11-05 por indicación del propietario y
+publicadas hasta el 2026-11-13)*
 
 ## Notas de redacción para los temas 69–76 (aprobados el 2026-11-05 por indicación del propietario)
 
