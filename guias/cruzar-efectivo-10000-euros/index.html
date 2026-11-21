@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cruzar con dinero en efectivo: la declaración de los 10.000 €</title>
+<meta name="description" content="No hay límite a cuánto efectivo puedes llevar de Andorra a España: hay una declaración obligatoria desde 10.000 € (o su equivalente) por cruzar una frontera exterior de la UE. El modelo S-1 español, la declaración andorrana, qué cuenta como «efectivo» — también cheques al portador y tarjetas prepago —, por qué el umbral es por portador y qué puede pasar si no declaras. Declarar es gratis; no declarar puede costar el dinero.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/cruzar-efectivo-10000-euros/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/cruzar-efectivo-10000-euros/">
+<meta property="og:title" content="Cruzar con dinero en efectivo: la declaración de los 10.000 €">
+<meta property="og:description" content="No hay límite de efectivo en la frontera Andorra–España: hay declaración obligatoria desde 10.000 €. El modelo S-1, el lado andorrano, qué cuenta como efectivo y por qué declarar es gratis — y no declarar, carísimo.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-21">
+<meta property="article:modified_time" content="2026-11-21">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cruzar con dinero en efectivo: la declaración de los 10.000 €">
+<meta name="twitter:description" content="No hay límite de efectivo en la frontera Andorra–España: hay declaración obligatoria desde 10.000 €. El modelo S-1, el lado andorrano, qué cuenta como efectivo y por qué declarar es gratis — y no declarar, carísimo.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/cruzar-efectivo-10000-euros/#article",
+   "headline": "Cruzar con dinero en efectivo: la declaración de los 10.000 €",
+   "description": "Guía práctica sobre el efectivo en la frontera Andorra–España, pensada para quien vende el coche, los muebles o cierra cuentas antes de la mudanza y cruza con el resultado en el bolsillo: no existe un límite a la cantidad que se puede transportar, pero sí una obligación de declararla desde 10.000 euros — o su equivalente en otras divisas — porque esa frontera es una frontera exterior de la Unión Europea y le aplica el Reglamento (UE) 2018/1672, que entiende por «efectivo» no solo billetes y monedas sino también cheques al portador o sin beneficiario designado, determinadas tarjetas prepago no vinculadas a una cuenta y ciertos artículos de oro; en el lado español la declaración es el modelo S-1 — ante la aduana del propio paso fronterizo o por vía telemática en la sede de la AEAT antes del viaje, y es gratuita —, el lado andorrano regula su propia declaración desde el mismo umbral, la obligación es por portador — cada persona responde del dinero que lleva encima, y repartirlo para esquivar el umbral puede investigarse —, la aduana puede controlar también por debajo de los 10.000 euros cuando hay indicios, y no declarar puede acabar con el efectivo intervenido y un expediente sancionador conforme a la normativa de cada país — las cuantías exactas de las sanciones las fija cada legislación: confírmalas en las fuentes oficiales; la alternativa tranquila para importes grandes es la transferencia bancaria, que no pasa por la aduana aunque el banco pueda pedir justificación del origen de los fondos.",
+   "inLanguage": "es",
+   "datePublished": "2026-11-21",
+   "dateModified": "2026-11-21",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/cruzar-efectivo-10000-euros/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/cruzar-efectivo-10000-euros/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "La declaración de efectivo de 10.000 €"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/cruzar-efectivo-10000-euros/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Hay un límite de dinero en efectivo para pasar de Andorra a España?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No: la normativa no pone un tope a cuánto efectivo puedes transportar. Lo que existe es una obligación de declarar desde 10.000 euros — o su equivalente en otras monedas — al cruzar, porque la frontera Andorra–España es una frontera exterior de la Unión Europea y le aplica el Reglamento (UE) 2018/1672 sobre controles de entrada y salida de efectivo; en el lado español, la misma obligación de declarar entradas y salidas del territorio nacional desde 10.000 euros está recogida en la normativa de prevención del blanqueo, con el modelo S-1 como formulario. Declarar no cuesta nada y no es un impuesto: es un trámite informativo. La confusión habitual — «no se puede pasar con más de 10.000 €» — es falsa: se puede, declarándolo. Lo que no se puede es pasarlos callando."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Dónde y cómo se presenta el modelo S-1?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Tienes dos vías principales en el lado español: presentarlo ante los servicios de aduanas del propio paso fronterizo al cruzar, o rellenarlo por vía telemática en la sede electrónica de la Agencia Tributaria antes del viaje — una opción pensada precisamente para cruces por pasos sin aduana permanente, y cómoda en general porque llegas con el papel hecho. La declaración es gratuita. Lleva el efectivo accesible y la documentación que explique su origen — el contrato de venta del coche, el justificante de la retirada bancaria —, porque la aduana puede preguntarlo. Y recuerda que Andorra regula su propia declaración de salida desde el mismo umbral de 10.000 euros: confírmalo con la duana andorrana antes del viaje si sales con una cantidad declarable."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿El umbral de 10.000 € es por persona o por familia?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La obligación recae sobre el portador: cada persona responde del efectivo que lleva consigo, de modo que una pareja donde cada uno transporta 6.000 euros no alcanza individualmente el umbral. Ahora bien, cuidado con las ingenierías: repartir deliberadamente una suma única entre varios ocupantes del coche para esquivar la declaración puede ser investigado, y las autoridades aduaneras pueden actuar también por debajo de los 10.000 euros cuando existen indicios de vinculación con actividades ilícitas — los controles con perros detectores de billetes en la frontera existen y no miran solo los maleteros que superan el umbral. Si el dinero es de origen limpio y documentado, la declaración es un trámite sin coste: la jugada rentable es declararlo, no trocearlo."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa si cruzo con más de 10.000 € sin declarar?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Si un control detecta efectivo declarable sin declaración — o con una declaración incorrecta o incompleta —, la consecuencia habitual es la intervención del dinero y la apertura de un expediente sancionador. Las cuantías de las multas las fija la legislación nacional de cada Estado, no la normativa europea, y pueden ser muy elevadas en proporción a lo transportado: confírmalas en las fuentes oficiales españolas antes de viajar si el detalle te afecta. El contraste es difícil de exagerar: la declaración es gratuita y se hace en minutos; su ausencia puede dejarte sin el dinero durante el procedimiento y con una sanción encima. Para el presupuesto de una mudanza — el escenario típico del que cruza con el producto de vender coche y muebles —, es sencillamente la diferencia entre llegar con el dinero o sin él."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › La declaración de efectivo de 10.000 €</nav>
+    <h1>Cruzar con dinero en efectivo: la declaración de los 10.000 €</h1>
+    <div class="updated">Actualizado · Noviembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p><strong>No hay límite</strong> a cuánto efectivo puedes llevar de Andorra a España: hay una <strong>declaración obligatoria desde 10.000 €</strong> (o su equivalente) por cruzar una frontera exterior de la UE. En España es el <strong>modelo S-1</strong> — en la aduana del paso o telemático en la AEAT, <strong>gratuito</strong> —; Andorra regula su propia declaración desde el mismo umbral. No declarar puede acabar con el <strong>dinero intervenido</strong> y sanción.</p>
+    </div>
+
+    <h2>Por qué el que se muda cruza con efectivo</h2>
+    <p>El escenario es el clásico de la recta final: <a href="/guias/vaciar-piso-andorra-vender-donar/">vendes los muebles</a> que no viajan, <a href="/guias/llevar-coche-andorra-espana/">vendes el coche</a> en lugar de matricularlo, cierras la cuenta del banco andorrano — y buena parte del resultado acaba en billetes. Entre la venta de un coche usado y el vaciado de un piso, superar los 10.000 € en metálico no es ninguna excentricidad: es un martes de mudanza. Y justo ahí aparece una norma que casi nadie tiene en el radar, porque dentro de la UE no existe: <strong>la frontera Andorra–España es una frontera exterior de la Unión</strong>, y el dinero que la cruza, en cualquier dirección, tiene su propio control.</p>
+
+    <h2>La regla: declarar no es pagar</h2>
+    <p>Lo primero, para desmontar el mito: <strong>no hay un tope legal</strong> a la cantidad de efectivo que puedes transportar. Lo que establece el <strong>Reglamento (UE) 2018/1672</strong> para las entradas y salidas de la Unión — y la normativa española de prevención del blanqueo para las entradas y salidas del territorio nacional — es una <strong>obligación de declarar</strong> a partir de <strong>10.000 €</strong> o su equivalente en otras divisas. La declaración es <strong>gratuita</strong>, no es un impuesto y no da lugar a pago alguno: es un trámite informativo cuyo objetivo es la trazabilidad del dinero, no recaudar. La frase «no se puede pasar con más de 10.000 €», que circula incluso en alguna fuente oficial mal resumida, es falsa en su literalidad: <strong>se puede pasar — declarándolo</strong>. Lo que no se puede es pasarlos en silencio.</p>
+
+    <h2>Qué cuenta como «efectivo» (y no son solo billetes)</h2>
+    <p>La definición europea es más ancha que la cartera. A efectos de la declaración, suman:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Categoría</th><th>Qué incluye</th></tr>
+      <tr><td><strong>Billetes y monedas</strong></td><td>En euros o en cualquier divisa — el umbral se mide por el <strong>equivalente total</strong></td></tr>
+      <tr><td><strong>Efectos negociables al portador</strong></td><td>Cheques al portador o con el beneficiario en blanco, pagarés y similares endosados sin restricción</td></tr>
+      <tr><td><strong>Tarjetas prepago</strong></td><td>Las no vinculadas a una cuenta bancaria, por el valor que almacenan</td></tr>
+      <tr><td><strong>Determinados artículos de oro</strong></td><td>Monedas y oro de inversión en las condiciones que detalla la normativa — al margen del <a href="/guias/enviar-objetos-valor-andorra-espana/">tratamiento de tus joyas de uso personal</a></td></tr>
+    </table>
+    </div>
+    <p>La suma se hace <strong>por el conjunto</strong>: 6.000 € en billetes más un cheque al portador de 5.000 € ya es una posición declarable. Y conviene saber que la aduana puede actuar <strong>también por debajo del umbral</strong> cuando existen indicios de actividad ilícita — el control no es un interruptor que se enciende exactamente en 10.000.</p>
+
+    <h2>Dónde y cómo se declara</h2>
+    <p>En el <strong>lado español</strong>, el formulario es el <strong>modelo S-1</strong> y tiene dos vías principales:</p>
+    <ul class="checklist">
+      <li><strong>En la aduana del paso fronterizo</strong>, ante los servicios de aduanas, al cruzar — en nuestra ruta, el puesto de la Farga de Moles que ya conoces de la <a href="/guias/preguntas-aduana-farga-de-moles/">guía de preguntas de la aduana</a>.</li>
+      <li><strong>Por vía telemática</strong>, en la sede electrónica de la AEAT, <strong>antes del viaje</strong> — la opción cómoda: llegas con el papel hecho y el resguardo en el móvil.</li>
+    </ul>
+    <p>En el <strong>lado andorrano</strong>, la normativa del Principat regula su propia declaración del efectivo transportado desde el mismo umbral de 10.000 € — con formulario propio ante la duana andorrana: <strong>confírmalo antes del viaje</strong> si sales con una cantidad declarable, porque la salida de Andorra y la entrada en España/UE son dos actos distintos y cada lado aplica su norma. Y en los dos sentidos, claro: si entras en Andorra con más de 10.000 € — para comprar, para un pago — la lógica es la misma, con la declaración de salida de la UE incluida.</p>
+    <div class="note-box">
+      <strong>El papeleo que acompaña al dinero.</strong> La declaración dice cuánto llevas; la aduana puede preguntar <em>de dónde sale</em>. Cruza con el origen documentado: el contrato de <a href="/guias/vender-muebles-comprador-espana/">venta de los muebles</a>, la transferencia de la venta del coche, el justificante de la retirada bancaria. Es la misma filosofía de todo expediente de mudanza: cada cosa, con su papel.
+    </div>
+
+    <h2>Por persona, no por coche</h2>
+    <p>La obligación recae sobre <strong>el portador</strong>: cada viajero responde del efectivo que lleva consigo. Una pareja donde cada uno transporta 6.000 € no alcanza el umbral individualmente. Dicho esto, las ingenierías tienen mala prensa en la frontera: <strong>repartir deliberadamente una suma única</strong> entre los ocupantes del coche para esquivar la declaración puede ser investigado como elusión, y los controles — que incluyen perros entrenados para detectar billetes — no se limitan a los maleteros que «superan el umbral». Con dinero limpio y documentado, la cuenta es simple: <strong>declarar cuesta cero</strong>; trocear para no declarar convierte un trámite gratuito en un riesgo absurdo.</p>
+
+    <h2>Qué pasa si no declaras</h2>
+    <p>Si el control encuentra efectivo declarable sin declaración — o con una declaración incorrecta o incompleta —, lo habitual es la <strong>intervención del dinero</strong> y la apertura de un <strong>expediente sancionador</strong>. Las cuantías de las multas no las fija el reglamento europeo sino la legislación nacional de cada Estado, y pueden ser muy elevadas en proporción a lo transportado — las cifras exactas, confírmalas en las fuentes oficiales (AEAT y Sepblac en España) si el detalle te afecta. Para la economía de una mudanza, el resumen es brutal por simple: la declaración se hace <strong>en minutos y gratis</strong>; su ausencia puede dejarte <strong>sin liquidez</strong> justo cuando estrenas casa, fianza y alta de suministros.</p>
+
+    <h2>La alternativa tranquila: el banco</h2>
+    <p>Para importes grandes, la opción sin aduana es la <strong>transferencia bancaria</strong>: el dinero que viaja de cuenta a cuenta no cruza ninguna frontera física y no genera declaración aduanera. Tiene su propio peaje documental — la banca aplica sus controles de prevención de blanqueo y puede pedir justificación del origen de los fondos, en Andorra al salir y en España al recibir —, pero es papeleo de sofá, no de arcén. La estrategia sensata para la mudanza suele ser mixta: <strong>transferir el grueso</strong> con calma antes del traslado, como parte del <a href="/guias/checklist-salir-de-andorra/">checklist de salida</a>, y cruzar con un efectivo razonable — declarado si toca. Y si conservas cuentas andorranas tras la mudanza, recuerda que tienen su propio capítulo fiscal español: el modelo 720 del que hablamos en la <a href="/guias/renta-ano-mudanza-andorra-espana/">guía de la renta del año del cambio</a>.</p>
+
+    <div class="cta-guide">
+      <h2>Tu mudanza, con cada papel en su sitio</h2>
+      <p>Preparamos tu expediente aduanero Andorra → España con el inventario, los certificados y la cronología documentada — para que en la frontera todo tenga respuesta. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Hay un límite de dinero en efectivo para pasar de Andorra a España?</summary>
+      <p>No: la normativa no pone un tope a cuánto efectivo puedes transportar. Lo que existe es una obligación de declarar desde 10.000 euros — o su equivalente en otras monedas — al cruzar, porque la frontera Andorra–España es una frontera exterior de la Unión Europea y le aplica el Reglamento (UE) 2018/1672 sobre controles de entrada y salida de efectivo; en el lado español, la misma obligación de declarar entradas y salidas del territorio nacional desde 10.000 euros está recogida en la normativa de prevención del blanqueo, con el modelo S-1 como formulario. Declarar no cuesta nada y no es un impuesto: es un trámite informativo. La confusión habitual — «no se puede pasar con más de 10.000 €» — es falsa: se puede, declarándolo. Lo que no se puede es pasarlos callando.</p>
+    </details>
+    <details>
+      <summary>¿Dónde y cómo se presenta el modelo S-1?</summary>
+      <p>Tienes dos vías principales en el lado español: presentarlo ante los servicios de aduanas del propio paso fronterizo al cruzar, o rellenarlo por vía telemática en la sede electrónica de la Agencia Tributaria antes del viaje — una opción pensada precisamente para cruces por pasos sin aduana permanente, y cómoda en general porque llegas con el papel hecho. La declaración es gratuita. Lleva el efectivo accesible y la documentación que explique su origen — el contrato de venta del coche, el justificante de la retirada bancaria —, porque la aduana puede preguntarlo. Y recuerda que Andorra regula su propia declaración de salida desde el mismo umbral de 10.000 euros: confírmalo con la duana andorrana antes del viaje si sales con una cantidad declarable.</p>
+    </details>
+    <details>
+      <summary>¿El umbral de 10.000 € es por persona o por familia?</summary>
+      <p>La obligación recae sobre el portador: cada persona responde del efectivo que lleva consigo, de modo que una pareja donde cada uno transporta 6.000 euros no alcanza individualmente el umbral. Ahora bien, cuidado con las ingenierías: repartir deliberadamente una suma única entre varios ocupantes del coche para esquivar la declaración puede ser investigado, y las autoridades aduaneras pueden actuar también por debajo de los 10.000 euros cuando existen indicios de vinculación con actividades ilícitas — los controles con perros detectores de billetes en la frontera existen y no miran solo los maleteros que superan el umbral. Si el dinero es de origen limpio y documentado, la declaración es un trámite sin coste: la jugada rentable es declararlo, no trocearlo.</p>
+    </details>
+    <details>
+      <summary>¿Qué pasa si cruzo con más de 10.000 € sin declarar?</summary>
+      <p>Si un control detecta efectivo declarable sin declaración — o con una declaración incorrecta o incompleta —, la consecuencia habitual es la intervención del dinero y la apertura de un expediente sancionador. Las cuantías de las multas las fija la legislación nacional de cada Estado, no la normativa europea, y pueden ser muy elevadas en proporción a lo transportado: confírmalas en las fuentes oficiales españolas antes de viajar si el detalle te afecta. El contraste es difícil de exagerar: la declaración es gratuita y se hace en minutos; su ausencia puede dejarte sin el dinero durante el procedimiento y con una sanción encima. Para el presupuesto de una mudanza — el escenario típico del que cruza con el producto de vender coche y muebles —, es sencillamente la diferencia entre llegar con el dinero o sin él.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/vaciar-piso-andorra-vender-donar/">Vaciar el piso: vender, donar y lo que viaja</a></li>
+        <li><a href="/guias/checklist-salir-de-andorra/">Checklist de salida de Andorra: bancos y papeles</a></li>
+        <li><a href="/guias/preguntas-aduana-farga-de-moles/">Qué te pregunta la aduana en la Farga de Moles</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental aduanera. Esta guía es divulgación general y no constituye asesoramiento jurídico ni fiscal: la obligación de declarar movimientos de efectivo, sus formularios (modelo S-1, declaración andorrana) y el régimen sancionador los fijan el Reglamento (UE) 2018/1672 y la normativa española y andorrana vigentes — consulta la AEAT, el Sepblac y la duana andorrana antes de viajar con cantidades declarables.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

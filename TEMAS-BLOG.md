@@ -85,7 +85,7 @@ buscan los clientes, después la cola larga.
 | 74 | Cunas, sillas de coche y juguetes: la mudanza con bebés y niños | mudanza-bebes-ninos-andorra-espana | mudanza bebé niños Andorra España | publicado (2026-11-11) |
 | 75 | Jubilarse en España tras trabajar en Andorra: pensión, CASS y la mudanza | jubilacion-pension-cass-mudanza-espana | pensión CASS jubilación España Andorra | publicado (2026-11-12) |
 | 76 | La renta del año de la mudanza: qué documentos preparar desde ya | renta-ano-mudanza-andorra-espana | declaración renta mudanza Andorra España | publicado (2026-11-13) |
-| 77 | Cruzar con dinero en efectivo: la declaración de los 10.000 € | cruzar-efectivo-10000-euros | declarar efectivo 10000 euros frontera Andorra | pendiente |
+| 77 | Cruzar con dinero en efectivo: la declaración de los 10.000 € | cruzar-efectivo-10000-euros | declarar efectivo 10000 euros frontera Andorra | publicado (2026-11-21) |
 | 78 | Dos hogares, un camión: la mudanza compartida entre amigos | mudanza-compartida-dos-hogares | mudanza compartida Andorra España | pendiente |
 | 79 | ¿Merece la pena mudar la lavadora? La cuenta de los electrodomésticos | merece-la-pena-mudar-electrodomesticos | merece la pena mudar electrodomésticos | pendiente |
 | 80 | El inventario con el móvil: método y plantilla paso a paso | inventario-movil-plantilla-mudanza | inventario mudanza plantilla fotos | pendiente |
