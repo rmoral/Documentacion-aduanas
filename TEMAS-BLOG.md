@@ -87,7 +87,7 @@ buscan los clientes, después la cola larga.
 | 76 | La renta del año de la mudanza: qué documentos preparar desde ya | renta-ano-mudanza-andorra-espana | declaración renta mudanza Andorra España | publicado (2026-11-13) |
 | 77 | Cruzar con dinero en efectivo: la declaración de los 10.000 € | cruzar-efectivo-10000-euros | declarar efectivo 10000 euros frontera Andorra | publicado (2026-11-21) |
 | 78 | Dos hogares, un camión: la mudanza compartida entre amigos | mudanza-compartida-dos-hogares | mudanza compartida Andorra España | publicado (2026-11-22) |
-| 79 | ¿Merece la pena mudar la lavadora? La cuenta de los electrodomésticos | merece-la-pena-mudar-electrodomesticos | merece la pena mudar electrodomésticos | pendiente |
+| 79 | ¿Merece la pena mudar la lavadora? La cuenta de los electrodomésticos | merece-la-pena-mudar-electrodomesticos | merece la pena mudar electrodomésticos | publicado (2026-11-23) |
 | 80 | El inventario con el móvil: método y plantilla paso a paso | inventario-movil-plantilla-mudanza | inventario mudanza plantilla fotos | pendiente |
 | 81 | Garantías y servicio técnico tras la mudanza: lo comprado en Andorra, atendido en España | garantias-servicio-tecnico-mudanza | garantía comprado Andorra servicio técnico España | pendiente |
 | 82 | El seguro de hogar en la mudanza: dos casas, un camión y los huecos entre pólizas | seguro-hogar-mudanza-andorra-espana | seguro hogar mudanza Andorra España | pendiente |
