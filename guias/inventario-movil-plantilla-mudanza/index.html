@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El inventario con el móvil: método y plantilla paso a paso</title>
+<meta name="description" content="El inventario de la mudanza se hace con lo que ya llevas en el bolsillo: una numeración simple, una foto del contenido antes de cerrar cada caja, y una hoja de cálculo de seis columnas que luego se convierte en el documento de la aduana. El método completo — numerar, fotografiar, valorar, firmar —, la plantilla de columnas, los trucos que ahorran discusiones y los errores que convierten un inventario en un problema.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=optional" rel="stylesheet"></noscript>
+<style data-inline="styles.css">
+/* ============================================================
+   AduanaFácil Andorra · Hoja de estilos del site
+   Basada en la estructura de landingaduanamuebles.html (raíz)
+   ============================================================ */
+:root{
+  --paper:#F7F5F0;
+  --paper-dark:#EFECE4;
+  --ink:#1B2A4A;
+  --ink-soft:#3D4A66;
+  --stamp:#C1352B;
+  --line:#D8D4CB;
+  --muted:#62697B;
+  --ok:#2E7D4F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ===== Top bar ===== */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{color:var(--stamp)}
+.topbar .mono{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.topbar .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.lang{display:flex;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--ink);text-decoration:underline}
+.lang .current{color:var(--stamp);font-weight:600}
+.navlink{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--stamp);padding-bottom:2px}
+.navlink:hover{color:var(--stamp)}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .wrap{position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);font-weight:600;margin-bottom:18px}
+h1{font-weight:900;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:15ch}
+.hero p.sub{margin:22px 0 30px;font-size:1.15rem;color:var(--ink-soft);max-width:52ch}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--stamp);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:transform .12s ease, box-shadow .12s ease;box-shadow:0 3px 0 #8E241C}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 #8E241C}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);padding:14px 28px}
+.btn.secondary:hover{background:var(--ink);color:var(--paper)}
+.price-tag{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink-soft)}
+.price-tag b{font-size:1.15rem;color:var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;top:8px;right:0;transform:rotate(8deg);border:3px solid var(--stamp);color:var(--stamp);font-family:'IBM Plex Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-align:center;padding:12px 18px;border-radius:6px;font-size:.8rem;line-height:1.5;opacity:.9;user-select:none}
+.stamp b{font-size:1.05rem;display:block}
+@media(max-width:760px){.stamp{position:static;display:inline-block;margin-top:28px;transform:rotate(-3deg)}}
+
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.trust div{font-size:.9rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.tick{color:var(--ok);font-weight:900}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+section.alt{background:var(--paper-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:34px}
+
+/* documents grid */
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--ink);padding:24px 22px;position:relative}
+.doc .mono{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
+.doc h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.doc p{font-size:.92rem;color:var(--ink-soft)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--stamp);font-size:.85rem;letter-spacing:.1em;display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== Form ===== */
+#pedido{padding:64px 0 80px}
+.form-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark)}
+.form-head{border-bottom:2px solid var(--ink);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.form-head .mono{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.form-head h2{font-size:1.2rem;margin:0}
+.progress{display:flex;border-bottom:1px solid var(--line)}
+.progress span{flex:1;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 4px;color:var(--muted);border-right:1px solid var(--line)}
+.progress span:last-child{border-right:none}
+.progress span.active{background:var(--ink);color:var(--paper);font-weight:600}
+.progress span.done{color:var(--ok)}
+.fstep{display:none;padding:28px 26px}
+.fstep.visible{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fstep.visible{animation:none}.btn:hover{transform:none}}
+.casilla{margin-bottom:20px}
+.casilla label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.casilla label b{color:var(--stamp)}
+.casilla input,.casilla select,.casilla textarea{width:100%;padding:12px 14px;font-family:'Libre Franklin',sans-serif;font-size:1rem;border:1px solid var(--ink);border-radius:2px;background:var(--paper);color:var(--ink)}
+.casilla input:focus,.casilla select:focus,.casilla textarea:focus{outline:3px solid rgba(27,42,74,.25);outline-offset:1px}
+.casilla .hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+/* Las dos casillas de la fila comparten las pistas de label / campo / ayuda:
+   si un label salta de línea, los campos siguen alineados */
+.row2 .casilla{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:end}
+.row2 .casilla input,.row2 .casilla select{align-self:start}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.row2 .casilla{display:block;grid-row:auto}}
+.fnav{display:flex;justify-content:space-between;gap:12px;padding:0 26px 28px}
+.err{color:var(--stamp);font-size:.85rem;margin:0 26px 14px;display:none}
+.err.show{display:block}
+
+/* summary + pay */
+.summary{background:var(--paper);border:1px dashed var(--ink);padding:18px 20px;margin-bottom:22px;font-size:.92rem}
+.summary dt{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.summary dt:first-child{margin-top:0}
+.summary dd{margin:0;color:var(--ink)}
+.total-line{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:16px;padding-top:12px}
+.total-line .amt{font-weight:900;font-size:1.5rem}
+.guarantee{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:18px 0}
+.pay-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-weight:400;color:var(--stamp)}
+details[open] summary::after{content:'–'}
+details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:60ch}
+
+/* ===== Footer ===== */
+footer{border-top:2px solid var(--ink);padding:26px 0;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+
+/* ===== Páginas interiores (legal, gracias) ===== */
+.page{padding:56px 0 72px}
+.page .wrap{max-width:720px}
+.page h1{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px;max-width:none}
+.page .updated{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:34px}
+.page h2{font-size:1.2rem;margin:32px 0 10px}
+.page p, .page li{color:var(--ink-soft);font-size:.97rem;margin-bottom:12px}
+.page ul{padding-left:22px;margin-bottom:12px}
+.page .back{margin-top:40px}
+
+/* ===== Guías (blog/cluster de contenidos) ===== */
+.guide .wrap{max-width:760px}
+.breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--ink)}
+.guide h1{max-width:24ch}
+.byline{font-size:.85rem;color:var(--muted);margin-bottom:34px}
+.answer-box{background:#fff;border:1px solid var(--ink);border-left:6px solid var(--stamp);padding:20px 24px;margin:0 0 34px;box-shadow:4px 4px 0 var(--paper-dark)}
+.answer-box p{color:var(--ink);font-size:1.02rem;margin:0}
+.answer-box .mono{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);margin-bottom:8px}
+.guide h2{font-size:1.35rem;margin:40px 0 12px}
+.guide h3{font-size:1.05rem;margin:26px 0 8px;color:var(--ink)}
+.guide table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:.92rem;background:#fff}
+.guide th,.guide td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+.guide th{background:var(--paper-dark);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.guide .table-scroll{overflow-x:auto}
+.guide ol{padding-left:22px;margin-bottom:12px}
+.guide ol li{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+.checklist{list-style:none;padding-left:0!important}
+.checklist li{padding-left:28px;position:relative}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:900}
+.note-box{background:var(--paper-dark);border:1px dashed var(--ink);padding:16px 20px;margin:20px 0;font-size:.92rem;color:var(--ink-soft)}
+.note-box strong{color:var(--ink)}
+.cta-guide{background:#fff;border:1px solid var(--ink);box-shadow:6px 6px 0 var(--paper-dark);padding:28px 26px;margin:44px 0 10px;text-align:center}
+.cta-guide h2{margin:0 0 8px;font-size:1.25rem}
+.cta-guide p{max-width:48ch;margin:0 auto 18px}
+.cta-guide .mono{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:12px}
+.related{margin-top:44px;padding-top:24px;border-top:2px solid var(--ink)}
+.related h2{font-size:1.05rem;margin:0 0 14px}
+.related ul{list-style:none;padding-left:0}
+.related li{margin-bottom:8px}
+.related a{color:var(--ink);font-weight:600}
+
+/* ===== Página de confirmación ===== */
+.confirm-doc{background:#fff;border:1px solid var(--ink);max-width:680px;margin:0 auto;box-shadow:6px 6px 0 var(--paper-dark);padding:36px 30px;position:relative}
+.confirm-doc .stamp{position:static;display:inline-block;transform:rotate(-3deg);border-color:var(--ok);color:var(--ok);margin-bottom:24px}
+.confirm-doc h1{font-size:1.6rem;margin-bottom:12px;max-width:none}
+.confirm-doc p{color:var(--ink-soft);margin-bottom:14px}
+.confirm-doc .refbox{font-family:'IBM Plex Mono',monospace;background:var(--paper);border:1px dashed var(--ink);padding:12px 16px;margin:18px 0;font-size:.95rem}
+.confirm-doc .actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== Modo del site: valoración (por defecto) vs pago online ===== */
+html.pago-online .solo-valoracion{display:none !important}
+html:not(.pago-online) .solo-pago{display:none !important}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23C1352B'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+<!-- SEO: canonical, social y datos estructurados -->
+<link rel="canonical" href="https://www.aduanafacilandorra.com/guias/inventario-movil-plantilla-mudanza/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AduanaFácil Andorra">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.aduanafacilandorra.com/guias/inventario-movil-plantilla-mudanza/">
+<meta property="og:title" content="El inventario con el móvil: método y plantilla paso a paso">
+<meta property="og:description" content="Numerar, fotografiar antes de cerrar, valorar en una hoja de seis columnas y firmar: el inventario de aduana se hace con el móvil que ya llevas en el bolsillo. Método completo y plantilla.">
+<meta property="og:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-24">
+<meta property="article:modified_time" content="2026-11-24">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El inventario con el móvil: método y plantilla paso a paso">
+<meta name="twitter:description" content="Numerar, fotografiar antes de cerrar, valorar en una hoja de seis columnas y firmar: el inventario de aduana se hace con el móvil que ya llevas en el bolsillo. Método completo y plantilla.">
+<meta name="twitter:image" content="https://www.aduanafacilandorra.com/assets/img/og-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.aduanafacilandorra.com/guias/inventario-movil-plantilla-mudanza/#article",
+   "headline": "El inventario con el móvil: método y plantilla paso a paso",
+   "description": "Método práctico para construir el inventario de la mudanza Andorra → España con un teléfono y una hoja de cálculo: se numeran las cajas con rotulador en dos caras y en orden de embalaje, se fotografía el contenido de cada una abierta justo antes de cerrarla — la foto enlaza el número con lo que hay dentro y vale como memoria para la aduana, para el seguro y para encontrar el abrelatas en destino —, se registra cada caja como una fila en una hoja de seis columnas (número, estancia de origen, contenido resumido, valor residual estimado, observaciones como frágil o desmontado, y verificación en destino), se valoran los bienes a valor residual realista — lo que pagarían por ellos usados, nunca el precio de compra, con el método de la guía de valor residual —, los objetos de valor singular se inventarían pieza a pieza con foto propia en lugar de diluirse en cajas genéricas, y del archivo salen las dos versiones del documento: la hoja completa para ti y el transportista, y el inventario valorado y firmado que acompaña al expediente aduanero; la numeración admite prefijos por hogar cuando el camión se comparte y la copia se guarda en la nube, de modo que el día de la frontera el papel, las fotos y las cajas cuenten exactamente la misma historia.",
+   "inLanguage": "es",
+   "datePublished": "2026-11-24",
+   "dateModified": "2026-11-24",
+   "image": "https://www.aduanafacilandorra.com/assets/img/og-cover.png",
+   "mainEntityOfPage": "https://www.aduanafacilandorra.com/guias/inventario-movil-plantilla-mudanza/",
+   "author": {"@id": "https://www.aduanafacilandorra.com/#organization"},
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.aduanafacilandorra.com/#organization",
+    "name": "AduanaFácil Andorra",
+    "url": "https://www.aduanafacilandorra.com/",
+    "logo": {"@type": "ImageObject", "url": "https://www.aduanafacilandorra.com/assets/img/og-cover.png"}
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.aduanafacilandorra.com/guias/inventario-movil-plantilla-mudanza/#breadcrumb",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aduanafacilandorra.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.aduanafacilandorra.com/guias/"},
+    {"@type": "ListItem", "position": 3, "name": "El inventario con el móvil"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.aduanafacilandorra.com/guias/inventario-movil-plantilla-mudanza/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Qué columnas debe tener la hoja de cálculo del inventario?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Seis bastan, una fila por caja o bulto: el número de caja (el mismo que lleva escrita con rotulador), la estancia de origen (cocina, dormitorio — que en destino es también la estancia de llegada), el contenido resumido en una línea («vajilla diaria y cristalería», no cada tenedor), el valor residual estimado del conjunto, las observaciones (frágil, desmontado, cable aparte, «va con la caja 12») y una columna de verificación para marcar en destino que la caja llegó y se abrió. Con esa estructura salen solas las dos versiones del documento: la hoja completa es tu herramienta y la del transportista, y de ella se extrae el inventario valorado y firmado que acompaña al expediente de la aduana. Si compartes camión con otro hogar, añade un prefijo al número — A-1, B-1 — y cada hogar lleva su propia hoja: los inventarios no se mezclan."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Para qué sirven las fotos del contenido de cada caja?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Una foto del interior de cada caja abierta, hecha justo antes de cerrarla y con el número visible en el encuadre, cumple cuatro funciones a la vez: es tu memoria ante la aduana — si un inspector pregunta qué hay en la caja 23, la respuesta está en el carrete, coherente con la hoja y con el papel —; es la prueba del estado y existencia de las cosas para el seguro y para las reservas al transportista si algo llega roto o no llega; es el buscador de la primera semana en destino, cuando necesitas el abrelatas y no recuerdas en cuál de cuarenta cajas duerme; y es el soporte de la valoración, porque poner valor residual a «vajilla y cristalería» se hace mejor mirando la foto que recordando de memoria. Cuestan un segundo por caja y se almacenan solas en la nube: es la mejor relación esfuerzo-rendimiento de toda la mudanza."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo valoro las cajas en el inventario sin equivocarme?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Con el valor residual realista: lo que pagarían hoy por esos bienes usados, no lo que costaron nuevos. Para el grueso del ajuar se estima por conjuntos — la caja de ropa, la de libros — sin obsesionarse con el céntimo, aplicando el método de nuestra guía de valor residual: referencias de segunda mano reales y coherencia entre cajas parecidas. Los dos errores que ve la aduana cada semana son simétricos: valorar como nuevo lo que tiene años (la lavadora de siete años «a precio de tienda», la incoherencia clásica que detiene un despacho) y el minimalismo defensivo de poner valores ridículos a todo, que tampoco cuela y resta credibilidad al conjunto. Los objetos de valor singular — el reloj, la cámara, la bicicleta buena — no se diluyen en cajas genéricas: fila propia, foto propia y, si la tienen, su factura o tasación en el dosier."}
+    },
+    {
+     "@type": "Question",
+     "name": "¿El inventario que hago con el móvil vale directamente para la aduana?",
+     "acceptedAnswer": {"@type": "Answer", "text": "La hoja de cálculo es la materia prima; lo que acompaña al expediente aduanero es el inventario valorado y firmado que sale de ella: el documento ordenado, con los bultos numerados, los contenidos resumidos, los valores residuales y la firma del titular del traslado, coherente con el certificado de cambio de residencia y con el resto del expediente. La versión de trabajo — con tus notas, la columna de verificación y los enlaces a las fotos — es para ti y para el transportista; la aduana no necesita saber en qué caja va el cargador del portátil, necesita un documento serio que cuadre con lo que hay en el camión. Esa traducción de hoja a documento es exactamente lo que preparamos en el expediente de 49 €: tú aportas las fotos y la lista, nosotros la convertimos en los papeles que la frontera espera ver."}
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script defer src="/assets/js/analytics.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Aduana<span>Fácil</span> Andorra</a>
+    <div class="right">
+      <div class="mono">Guías · Aduana Andorra–España</div>
+      <a class="navlink" href="/">Inicio</a>
+    </div>
+  </div>
+</div>
+
+<section class="page guide">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta"><a href="/">Inicio</a> › <a href="/guias/">Guías</a> › El inventario con el móvil</nav>
+    <h1>El inventario con el móvil: método y plantilla paso a paso</h1>
+    <div class="updated">Actualizado · Noviembre 2026</div>
+    <p class="byline">Escrito por el equipo de AduanaFácil Andorra, que prepara expedientes aduaneros Andorra → España para particulares cada semana.</p>
+
+    <div class="answer-box">
+      <span class="mono">Respuesta rápida</span>
+      <p>El inventario se hace con <strong>lo que llevas en el bolsillo</strong>: numera cada caja con rotulador, haz <strong>una foto del contenido antes de cerrarla</strong> (con el número visible), y registra cada caja como una fila en una hoja de <strong>seis columnas</strong> — número, estancia, contenido, <strong>valor residual</strong>, observaciones, verificación. De ahí sale el <strong>inventario valorado y firmado</strong> del expediente aduanero.</p>
+    </div>
+
+    <h2>La idea: una caja, una fila, una foto</h2>
+    <p>El <a href="/guias/packing-list-mudanza/">packing list</a> ya te contó el qué: la aduana espera un inventario numerado y valorado, coherente con el camión. Esta guía es el cómo con las herramientas de verdad — un rotulador, el móvil y una hoja de cálculo —, pensado para hacerse <strong>mientras embalas</strong>, no como un suplicio aparte al final. El principio es uno: cada caja existe tres veces — escrita en su cartón, como fila en la hoja y como foto en el carrete — y <strong>las tres versiones cuentan lo mismo</strong>.</p>
+
+    <h2>Paso 1 · Numerar: rotulador, dos caras, en orden</h2>
+    <ul class="checklist">
+      <li><strong>Número grande en dos caras</strong> de la caja (se apilan: una cara siempre queda oculta) y en la tapa.</li>
+      <li><strong>En orden de embalaje</strong>, sin saltos ni «la 7b»: si aparece una caja más, es la siguiente de la serie.</li>
+      <li><strong>Con la estancia al lado</strong> («14 · COCINA»): en destino, el que descarga no consulta hojas — lee cartones.</li>
+      <li><strong>Camión compartido, prefijo por hogar</strong> (A-1…, B-1…), como vimos en la <a href="/guias/mudanza-compartida-dos-hogares/">mudanza compartida</a>: cada hogar, su serie y su hoja.</li>
+    </ul>
+
+    <h2>Paso 2 · La foto antes de cerrar</h2>
+    <p>Justo antes de cerrar cada caja: <strong>una foto cenital del contenido, con el número visible</strong> en el encuadre (la tapa escrita apoyada en la caja vale). Un segundo de trabajo, cuatro servicios:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Para quién</th><th>Qué resuelve</th></tr>
+      <tr><td><strong>La aduana</strong></td><td>«¿Qué hay en la 23?» tiene respuesta inmediata y coherente con el papel — la conversación de la <a href="/guias/preguntas-aduana-farga-de-moles/">frontera</a> dura segundos</td></tr>
+      <tr><td><strong>El seguro y las reservas</strong></td><td>Prueba de existencia y estado previo si algo llega roto o no llega — el soporte de cualquier reclamación al transportista</td></tr>
+      <tr><td><strong>Tú, en destino</strong></td><td>El buscador de la primera semana: el abrelatas aparece en el carrete, no abriendo cuarenta cajas</td></tr>
+      <tr><td><strong>La valoración</strong></td><td>Poner valor residual «a la caja 14» se hace mirando su foto, no de memoria</td></tr>
+    </table>
+    </div>
+    <p>Las fotos se suben solas a la nube — compártelas en un álbum con tu pareja o con quien comparta el traslado, y listo: copia de seguridad hecha.</p>
+
+    <h2>Paso 3 · La hoja: seis columnas y ni una más</h2>
+    <p>Da igual la aplicación — cualquier hoja de cálculo del móvil sirve. Una fila por caja o bulto:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Columna</th><th>Ejemplo</th></tr>
+      <tr><td><strong>1 · Nº</strong></td><td>14 (o A-14 si el camión se comparte)</td></tr>
+      <tr><td><strong>2 · Estancia</strong></td><td>Cocina</td></tr>
+      <tr><td><strong>3 · Contenido</strong> en una línea</td><td>«Vajilla diaria y cristalería» — no cada tenedor</td></tr>
+      <tr><td><strong>4 · Valor residual €</strong></td><td>El del conjunto, realista</td></tr>
+      <tr><td><strong>5 · Observaciones</strong></td><td>Frágil · desmontado · «tornillos en caja 12»</td></tr>
+      <tr><td><strong>6 · Verificado en destino</strong></td><td>Se marca al abrir — la lista de reclamaciones sale sola</td></tr>
+    </table>
+    </div>
+    <p>Los muebles y aparatos grandes que viajan sin caja son también una fila cada uno — «sofá 3 plazas», «lavadora» — con su observación de estado. Y los <a href="/guias/enviar-objetos-valor-andorra-espana/">objetos de valor singular</a> — el reloj, la cámara, la bici buena — <strong>no se diluyen</strong> en cajas genéricas: fila propia, foto propia y su factura o tasación en el dosier.</p>
+
+    <h2>Paso 4 · Valorar sin autoengaños</h2>
+    <p>La columna 4 se rellena con <strong>valor residual realista</strong> — lo que pagarían hoy por esos bienes usados —, por conjuntos y sin obsesión por el céntimo, con el método de la <a href="/guias/calcular-valor-residual-muebles/">guía de valor residual</a>. Los dos pecados son simétricos y la aduana ve ambos cada semana: valorar como nuevo lo que tiene años, y el minimalismo defensivo de poner valores ridículos a todo — que resta credibilidad al conjunto justo donde más la necesitas, en la <a href="/guias/franquicia-traslado-residencia/">franquicia</a>.</p>
+
+    <h2>Paso 5 · De la hoja al documento</h2>
+    <p>La hoja es la materia prima; al expediente aduanero va el <strong>inventario valorado y firmado</strong>: ordenado, con los bultos numerados, contenidos resumidos, valores y la firma del titular — coherente con el certificado de residencia y el resto de papeles. La versión de trabajo, con tu columna de verificación y tus notas, es para ti y el transportista. En la frontera, la regla de oro es la de siempre: <strong>papel, fotos y cajas cuentan la misma historia</strong>.</p>
+
+    <div class="note-box">
+      <strong>Los tres errores del inventario amateur.</strong> Numerar al final («¿esta caja qué era?»), la caja-cajón «cosas varias» sin foto — la que siempre da conversación —, y las dos listas paralelas (la tuya y la del transportista) que no cuadran entre sí. Las tres se evitan con el método de arriba: una pasada, mientras embalas.
+    </div>
+
+    <div class="cta-guide">
+      <h2>Tus fotos y tu lista, convertidas en expediente</h2>
+      <p>Tú aportas la hoja y las fotos; nosotros las convertimos en el inventario valorado, la declaración jurada y el dosier que la aduana espera ver. Por 49 € cerrados, en 24 horas.</p>
+      <a class="btn" href="/#pedido">Preparar mi expediente · 49 €</a>
+      <span class="mono">Correcciones incluidas si la aduana pide cambios</span>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Qué columnas debe tener la hoja de cálculo del inventario?</summary>
+      <p>Seis bastan, una fila por caja o bulto: el número de caja (el mismo que lleva escrita con rotulador), la estancia de origen (cocina, dormitorio — que en destino es también la estancia de llegada), el contenido resumido en una línea («vajilla diaria y cristalería», no cada tenedor), el valor residual estimado del conjunto, las observaciones (frágil, desmontado, cable aparte, «va con la caja 12») y una columna de verificación para marcar en destino que la caja llegó y se abrió. Con esa estructura salen solas las dos versiones del documento: la hoja completa es tu herramienta y la del transportista, y de ella se extrae el inventario valorado y firmado que acompaña al expediente de la aduana. Si compartes camión con otro hogar, añade un prefijo al número — A-1, B-1 — y cada hogar lleva su propia hoja: los inventarios <a href="/guias/mudanza-compartida-dos-hogares/">no se mezclan</a>.</p>
+    </details>
+    <details>
+      <summary>¿Para qué sirven las fotos del contenido de cada caja?</summary>
+      <p>Una foto del interior de cada caja abierta, hecha justo antes de cerrarla y con el número visible en el encuadre, cumple cuatro funciones a la vez: es tu memoria ante la aduana — si un inspector pregunta qué hay en la caja 23, la respuesta está en el carrete, coherente con la hoja y con el papel —; es la prueba del estado y existencia de las cosas para el seguro y para las reservas al transportista si algo llega roto o no llega; es el buscador de la primera semana en destino, cuando necesitas el abrelatas y no recuerdas en cuál de cuarenta cajas duerme; y es el soporte de la valoración, porque poner valor residual a «vajilla y cristalería» se hace mejor mirando la foto que recordando de memoria. Cuestan un segundo por caja y se almacenan solas en la nube: es la mejor relación esfuerzo-rendimiento de toda la mudanza.</p>
+    </details>
+    <details>
+      <summary>¿Cómo valoro las cajas en el inventario sin equivocarme?</summary>
+      <p>Con el valor residual realista: lo que pagarían hoy por esos bienes usados, no lo que costaron nuevos. Para el grueso del ajuar se estima por conjuntos — la caja de ropa, la de libros — sin obsesionarse con el céntimo, aplicando el método de nuestra <a href="/guias/calcular-valor-residual-muebles/">guía de valor residual</a>: referencias de segunda mano reales y coherencia entre cajas parecidas. Los dos errores que ve la aduana cada semana son simétricos: valorar como nuevo lo que tiene años (la lavadora de siete años «a precio de tienda», la incoherencia clásica que detiene un despacho) y el minimalismo defensivo de poner valores ridículos a todo, que tampoco cuela y resta credibilidad al conjunto. Los objetos de valor singular — el reloj, la cámara, la bicicleta buena — no se diluyen en cajas genéricas: fila propia, foto propia y, si la tienen, su factura o tasación en el dosier.</p>
+    </details>
+    <details>
+      <summary>¿El inventario que hago con el móvil vale directamente para la aduana?</summary>
+      <p>La hoja de cálculo es la materia prima; lo que acompaña al expediente aduanero es el inventario valorado y firmado que sale de ella: el documento ordenado, con los bultos numerados, los contenidos resumidos, los valores residuales y la firma del titular del traslado, coherente con el certificado de cambio de residencia y con el resto del expediente. La versión de trabajo — con tus notas, la columna de verificación y los enlaces a las fotos — es para ti y para el transportista; la aduana no necesita saber en qué caja va el cargador del portátil, necesita un documento serio que cuadre con lo que hay en el camión. Esa traducción de hoja a documento es exactamente lo que preparamos en el expediente de 49 €: tú aportas las fotos y la lista, nosotros la convertimos en los papeles que la frontera espera ver.</p>
+    </details>
+
+    <div class="related">
+      <h2>Sigue leyendo</h2>
+      <ul>
+        <li><a href="/guias/packing-list-mudanza/">El packing list: lo que la aduana espera ver</a></li>
+        <li><a href="/guias/calcular-valor-residual-muebles/">Calcular el valor residual de tus muebles</a></li>
+        <li><a href="/guias/mudanza-compartida-dos-hogares/">Dos hogares, un camión: la mudanza compartida</a></li>
+      </ul>
+    </div>
+
+    <p class="back"><a class="btn secondary" href="/">← Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 AduanaFácil Andorra · Servicio de preparación documental aduanera. Esta guía es divulgación general: el formato exacto del inventario que acompaña a un expediente puede variar según el transportista y las indicaciones de la autoridad aduanera del paso — ante un despacho concreto, manda lo que pida la aduana.</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
