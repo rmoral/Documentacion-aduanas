@@ -89,7 +89,7 @@ buscan los clientes, después la cola larga.
 | 78 | Dos hogares, un camión: la mudanza compartida entre amigos | mudanza-compartida-dos-hogares | mudanza compartida Andorra España | publicado (2026-11-22) |
 | 79 | ¿Merece la pena mudar la lavadora? La cuenta de los electrodomésticos | merece-la-pena-mudar-electrodomesticos | merece la pena mudar electrodomésticos | publicado (2026-11-23) |
 | 80 | El inventario con el móvil: método y plantilla paso a paso | inventario-movil-plantilla-mudanza | inventario mudanza plantilla fotos | publicado (2026-11-24) |
-| 81 | Garantías y servicio técnico tras la mudanza: lo comprado en Andorra, atendido en España | garantias-servicio-tecnico-mudanza | garantía comprado Andorra servicio técnico España | pendiente |
+| 81 | Garantías y servicio técnico tras la mudanza: lo comprado en Andorra, atendido en España | garantias-servicio-tecnico-mudanza | garantía comprado Andorra servicio técnico España | publicado (2026-11-25) |
 | 82 | El seguro de hogar en la mudanza: dos casas, un camión y los huecos entre pólizas | seguro-hogar-mudanza-andorra-espana | seguro hogar mudanza Andorra España | pendiente |
 | 83 | Comprar muebles de segunda mano en España viviendo en Andorra | comprar-muebles-espana-desde-andorra | comprar muebles España llevar Andorra | pendiente |
 | 84 | El referéndum del acuerdo UE–Andorra: qué votará el país y qué cambia para ti | referendum-acuerdo-ue-andorra | referéndum acuerdo asociación UE Andorra | pendiente |
