@@ -92,7 +92,7 @@ buscan los clientes, después la cola larga.
 | 81 | Garantías y servicio técnico tras la mudanza: lo comprado en Andorra, atendido en España | garantias-servicio-tecnico-mudanza | garantía comprado Andorra servicio técnico España | publicado (2026-11-25) |
 | 82 | El seguro de hogar en la mudanza: dos casas, un camión y los huecos entre pólizas | seguro-hogar-mudanza-andorra-espana | seguro hogar mudanza Andorra España | publicado (2026-11-26) |
 | 83 | Comprar muebles de segunda mano en España viviendo en Andorra | comprar-muebles-espana-desde-andorra | comprar muebles España llevar Andorra | publicado (2026-11-27) |
-| 84 | El referéndum del acuerdo UE–Andorra: qué votará el país y qué cambia para ti | referendum-acuerdo-ue-andorra | referéndum acuerdo asociación UE Andorra | pendiente |
+| 84 | El referéndum del acuerdo UE–Andorra: qué votará el país y qué cambia para ti | referendum-acuerdo-ue-andorra | referéndum acuerdo asociación UE Andorra | publicado (2026-11-28) |
 
 ## Propuestas pendientes de aprobación
 
